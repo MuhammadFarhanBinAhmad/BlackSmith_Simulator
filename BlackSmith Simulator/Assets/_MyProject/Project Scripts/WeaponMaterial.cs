@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WeaponMaterial : MonoBehaviour
 {
+    MaterialReferences materialRef;
     WeaponMaterial(int materialValueConstruct, int materialStateConstruct)
     {
         materialValue = materialValueConstruct;
@@ -28,6 +29,7 @@ public class WeaponMaterial : MonoBehaviour
     }
     public void smelting()
     {
+        
         if (materialState == 1)
         {
             thisMesh.mesh = materialModel[1]; //change model
