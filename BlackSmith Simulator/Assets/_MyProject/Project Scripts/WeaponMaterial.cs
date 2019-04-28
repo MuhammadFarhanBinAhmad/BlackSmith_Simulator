@@ -66,7 +66,7 @@ public class WeaponMaterial : MonoBehaviour
         {
             //change model
             materialReheatCount -= 1;
-            thisMaterial.material = materials[materialState - 1];
+            thisMaterial.material = materials[3];
         }
         
     }
@@ -77,7 +77,7 @@ public class WeaponMaterial : MonoBehaviour
         {
             //change model
             materialBeatCount -= 1;
-            thisMaterial.material = materials[materialState - 1];
+            thisMaterial.material = materials[4];
         }
 
     }
