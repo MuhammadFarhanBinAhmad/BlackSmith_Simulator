@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponMaterial : MonoBehaviour
-{
-    MaterialReferences materialRef;
+{   
+    
     WeaponMaterial(int materialValueConstruct, int materialStateConstruct)
     {
         materialValue = materialValueConstruct;
@@ -13,80 +13,83 @@ public class WeaponMaterial : MonoBehaviour
 
     public int materialValue;
     public int materialState;
-    int materialWeaponType;
-    int materialReheatCount;
-    int materialBeatCount;
+    public int materialWeaponType;
+    public int materialReheatCount;
+    public int materialBeatCount;
 
     public MeshFilter thisMesh;
-    public Mesh[] materialModel = new Mesh[6];
+    public Mesh[] materialModel;
+
+    public Material[] materials;
+    public MeshRenderer thisMaterial;
 
     public void Start()
     {
         thisMesh = this.GetComponent<MeshFilter>();
         thisMesh.mesh = this.GetComponent<MeshFilter>().mesh;
+        thisMesh.mesh = materialModel[materialState];
         print(thisMesh.mesh);
-        
+
+        thisMaterial = this.GetComponent<MeshRenderer>();
+        thisMaterial.material = materials[materialState-1];
     }
-    public void smelting()
-    {
-        
+    public void Smelting()
+    {    
         if (materialState == 1)
         {
-            thisMesh.mesh = materialModel[1]; //change model
-            print(thisMesh.mesh);
             materialState = 2;
+            thisMesh.mesh = materialModel[materialState]; //change model
+            thisMaterial.material = materials[materialState-1];
+            print(thisMesh.mesh);
         }
     }
 
-    public void melting()
+    public void MeltingCasting(int materialWeaponTypeLocal, Mesh materialWeaponMesh)
     {
         if (materialState == 2)
         {
-            thisMesh.mesh = materialModel[2]; //change model
-            print(thisMesh.mesh);
             materialState = 3;
+            thisMesh.mesh = materialWeaponMesh; //change model
+            thisMaterial.material = materials[materialState - 1];
+            print(thisMesh.mesh);
+            materialWeaponType = materialWeaponTypeLocal;
+            materialReheatCount = materialWeaponTypeLocal + 1;
+            materialBeatCount = materialWeaponTypeLocal;
         }
     }
 
-    public void casting(int materialWeaponTypeLocal, int materialHeatAndBeat)
-    {
-        if (materialState == 3)
-        {
-        thisMesh.mesh = materialModel[3];
-        print(thisMesh.mesh);
-        materialState = 4;
-        materialWeaponType = materialWeaponTypeLocal;
-        materialReheatCount = materialBeatCount = materialHeatAndBeat;
-        }
-    }
+  
 
     public void Heating()
     {
-        if (materialReheatCount > 0 && materialReheatCount == materialBeatCount)
+        if (materialReheatCount > 0 && materialReheatCount != materialBeatCount)
         {
             //change model
             materialReheatCount -= 1;
+            thisMaterial.material = materials[materialState - 1];
         }
         
     }
 
     public void Beating()
     {
-        if (materialBeatCount > 0 && materialReheatCount != materialBeatCount)
+        if (materialBeatCount > 0 && materialReheatCount == materialBeatCount)
         {
             //change model
             materialBeatCount -= 1;
+            thisMaterial.material = materials[materialState - 1];
         }
 
     }
 
-    public void OnTriggerEnter(Collider other)
+    public void Tempering()
     {
-
-        if (other.GetComponent<WeaponMaterial>() == null){
-            melting();
-            smelting();
+        if (materialState == 3 && materialReheatCount == 0)
+        {
+            materialState = 4;
+            //thisMesh.mesh = materialModel[materialWeaponType];
+            thisMaterial.material = materials[materialState + 1];
         }
-
     }
+
 }
