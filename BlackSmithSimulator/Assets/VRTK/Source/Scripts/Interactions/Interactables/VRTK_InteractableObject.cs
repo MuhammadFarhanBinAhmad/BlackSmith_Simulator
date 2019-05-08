@@ -121,7 +121,11 @@ namespace VRTK
             /// <summary>
             /// Only the right controller is allowed to interact.
             /// </summary>
-            RightOnly
+            RightOnly,
+            /// <summary>
+            /// Only both is allowed to interact.
+            /// </summary>
+            BothOnly
         }
 
         /// <summary>
