@@ -25,6 +25,11 @@ namespace VRTK.SecondaryControllerGrabActions
         [Tooltip("If checked all the axes will be scaled together (unless locked)")]
         public bool uniformScaling = false;
 
+        [Header("Custom Settings")]
+
+        public bool forcePositive;
+        public float multiplier = 1;
+
         [Header("Obsolete Settings")]
 
         [System.Obsolete("`VRTK_AxisScaleGrabAction.lockXAxis` has been replaced with the `VRTK_AxisScaleGrabAction.lockAxis`. This parameter will be removed in a future version of VRTK.")]
@@ -85,9 +90,13 @@ namespace VRTK.SecondaryControllerGrabActions
                 {
                     UniformScale();
                 }
-                else
+                else if (forcePositive == false)
                 {
                     NonUniformScale();
+                }
+                else if (forcePositive)
+                {
+                    NonUniformScaleCustom();
                 }
             }
         }
@@ -118,6 +127,22 @@ namespace VRTK.SecondaryControllerGrabActions
 
             Vector3 newScale = new Vector3(newScaleX, newScaleY, newScaleZ) + initialScale;
             ApplyScale(newScale);
+        }
+
+        //Custom weapon Scale to use
+        protected virtual void NonUniformScaleCustom()
+        {
+            Vector3 initialRotatedPosition = grabbedObject.transform.rotation * grabbedObject.transform.position;
+            Vector3 initialSecondGrabRotatedPosition = grabbedObject.transform.rotation * secondaryInitialGrabPoint.position;
+            Vector3 currentSecondGrabRotatedPosition = grabbedObject.transform.rotation * secondaryGrabbingObject.transform.position;
+
+            float newScaleX = CalculateAxisScale(initialRotatedPosition.x, initialSecondGrabRotatedPosition.x, currentSecondGrabRotatedPosition.x)*multiplier; //scale with multiplier
+            float newScaleY = CalculateAxisScale(initialRotatedPosition.y, initialSecondGrabRotatedPosition.y, currentSecondGrabRotatedPosition.y)*multiplier; //scale with multiplier
+            float newScaleZ = CalculateAxisScale(initialRotatedPosition.z, initialSecondGrabRotatedPosition.z, currentSecondGrabRotatedPosition.z)*multiplier; //scale with muliplier
+
+            Vector3 newScale = new Vector3(newScaleX, newScaleY, newScaleZ) + initialScale;
+            Vector3 finalScale = new Vector3(Mathf.Abs(newScale.x), Mathf.Abs(newScale.y), Mathf.Abs(newScale.z)); // Force the scale to only be positive
+            ApplyScale(finalScale);
         }
 
         protected virtual void UniformScale()
