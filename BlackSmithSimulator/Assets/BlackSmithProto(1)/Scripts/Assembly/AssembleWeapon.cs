@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AssembleWeapon : MonoBehaviour
 {
+    public int materialType;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Ore")
