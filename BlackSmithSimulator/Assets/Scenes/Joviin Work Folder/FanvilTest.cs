@@ -10,7 +10,7 @@ public class FanvilTest : MonoBehaviour
     //Output material
     public int weaponType;
     public MeshFilter[] weaponTypeModels;
-    public MeshRenderer[] weaponTypeMaterials;
+    public Material[] weaponTypeMaterials;
 
 
     private void Start()
@@ -73,7 +73,7 @@ public class FanvilTest : MonoBehaviour
     public void CreateWeapon(int weaponTypeLocal)
     {
         materialCollected[0].GetComponent<MeshFilter>().mesh = weaponTypeModels[weaponType].mesh;
-        materialCollected[0].GetComponent<MeshRenderer>().material = weaponTypeMaterials[weaponType].material;
+        materialCollected[0].GetComponent<MeshRenderer>().material = weaponTypeMaterials[weaponType];
         materialCollected[0].GetComponent<Ore>().thisWeaponType = weaponTypeLocal;
         materialCollected.RemoveAt(0);
         for (int i = 0; i < materialCollected.Count; i++)
