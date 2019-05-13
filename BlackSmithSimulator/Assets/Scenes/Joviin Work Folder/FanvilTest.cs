@@ -72,13 +72,18 @@ public class FanvilTest : MonoBehaviour
 
     public void CreateWeapon(int weaponTypeLocal)
     {
-        materialCollected[0].GetComponent<MeshFilter>().mesh = weaponTypeModels[weaponType].mesh;
+        print("CreatingWeapon");
+        materialCollected[0].GetComponent<MeshFilter>().sharedMesh = weaponTypeModels[weaponType].sharedMesh;
+        print(materialCollected[0].GetComponent<Mesh>());
+        print("Mesh Change Successful!");
         materialCollected[0].GetComponent<MeshRenderer>().material = weaponTypeMaterials[weaponType];
+        print("Material Change Successful!");
         materialCollected[0].GetComponent<Ore>().thisWeaponType = weaponTypeLocal;
         materialCollected.RemoveAt(0);
         for (int i = 0; i < materialCollected.Count; i++)
         {
             GameObject.Destroy(materialCollected[i]);
+            materialCollected.Clear();
         }
     }
 }
