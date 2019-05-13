@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AssembleWeapon : MonoBehaviour
+public class Assembly : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
