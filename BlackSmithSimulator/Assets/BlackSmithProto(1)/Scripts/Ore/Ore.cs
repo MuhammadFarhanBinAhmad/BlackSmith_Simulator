@@ -5,21 +5,21 @@ public class Ore : MonoBehaviour
 {
     //Check stages
     public int current_Stage = 1;
-    public Text current_Stage_Text;
+    //public Text current_Stage_Text;
     //material type
     public int material_Ore;
     Renderer type_Ore;
 
     //stage1
-    public float cook_Time = 5;
+    //public float cook_Time = 5;
     //stage2
-    public string current_Weapon_Type;
+    //public string current_Weapon_Type;
     public int thisWeaponType;
     //stage3
-    public int time_Hit_Needed;
+    //public int time_Hit_Needed;
     public Text current_Weapon_Type_Text;
     //stage4
-    public float cooling_Time = 5;
+    //public float cooling_Time = 5;
     //stage5
     //stage6
     public string enchantment;
