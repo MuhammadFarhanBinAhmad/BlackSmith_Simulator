@@ -6,14 +6,5 @@ public class AssembleWeapon : MonoBehaviour
 {
     public int materialType;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Ore")
-        {
-            if (other.GetComponent<Ore>().current_Stage == 5)
-            {
-                other.transform.SetParent(this.gameObject.transform);
-            }
-        }
-    }
+    
 }

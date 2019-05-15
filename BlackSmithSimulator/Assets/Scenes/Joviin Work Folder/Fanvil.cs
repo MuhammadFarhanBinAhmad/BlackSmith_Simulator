@@ -27,7 +27,7 @@ public class Fanvil : MonoBehaviour
     {
 
         //Detect or as Fanvil goes down
-        if (other.GetComponent<Ore>() != null)
+        if (other.GetComponent<BrokenWeapon>() != null)
         {
             for (int i = 0; i <materialCollected.Count; i++)
             {
@@ -40,7 +40,7 @@ public class Fanvil : MonoBehaviour
                 }
             }
             materialCollected.Add(other.gameObject);
-            materialTypeCollected = materialCollected[0].GetComponent<Ore>().material_Ore;
+            materialTypeCollected = materialCollected[0].GetComponent<BrokenWeapon>().material_Ore;
         }
 
         //Check materials gathered when hit the base
@@ -52,16 +52,14 @@ public class Fanvil : MonoBehaviour
 
         //Take in inputs from Runes
         
-        /*
-         * if(other.GetComponent<Rune>() !=null)
-         * {
-         *      weaponType = (Weapon Value from rune)
-         *      materialTypeRune = (Material Value from rune)
-         *      
-         * }
-         * 
-         */
 
+          /*if(other.GetComponent<Rune>() !=null)
+         {
+               weaponType = 
+               materialTypeRune = (Material Value from rune)
+               
+          }*/
+          
     }
 
     public void CheckMaterials()
@@ -71,7 +69,7 @@ public class Fanvil : MonoBehaviour
         int materialTypeLocal = materialTypeCollected;
         for (int i = 0; i < materialCollected.Count; i++)
         {
-           if  (materialCollected[i].GetComponent<Ore>().material_Ore != materialTypeLocal)
+           if  (materialCollected[i].GetComponent<BrokenWeapon>().material_Ore != materialTypeLocal)
             {
                 materialCollected.Clear();
                 materialTypeCollected = 0;
@@ -123,7 +121,7 @@ public class Fanvil : MonoBehaviour
         materialCollected[0].GetComponent<MeshRenderer>().material = weaponTypeMaterials[weaponTypeLocal];
         print("Material Change Successful!");
 
-        materialCollected[0].GetComponent<Ore>().thisWeaponType = weaponTypeLocal;
+        materialCollected[0].GetComponent<BrokenWeapon>().thisWeaponType = weaponTypeLocal;
         materialCollected.RemoveAt(0);
         for (int i = 0; i < materialCollected.Count; i++)
         {
@@ -148,7 +146,7 @@ public class Fanvil : MonoBehaviour
         materialCollected[0].GetComponent<MeshRenderer>().material = weaponTypeMaterials[materialTypeLocal];
         print("Material Change Successful!");
 
-        materialCollected[0].GetComponent<Ore>().thisWeaponType = weaponTypeLocal;
+        materialCollected[0].GetComponent<BrokenWeapon>().thisWeaponType = weaponTypeLocal;
         materialCollected.RemoveAt(0);
         for (int i = 0; i < materialCollected.Count; i++)
         {

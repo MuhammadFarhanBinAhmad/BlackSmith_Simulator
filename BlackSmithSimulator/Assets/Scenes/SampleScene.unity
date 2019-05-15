@@ -120,6 +120,100 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &137997966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 137997968}
+  - component: {fileID: 137997967}
+  m_Layer: 0
+  m_Name: GameObject (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &137997967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137997966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06079b387ad03474a918e8f4030706dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  the_Customer_Broken_Weapon_Data: {fileID: 11400000, guid: 7bc78209550654c4b96aaf0d443e7d8d,
+    type: 2}
+  material_Ore: 0
+  thisWeaponType: 0
+--- !u!4 &137997968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137997966}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.0442243, y: -0.1400199, z: 3.3114223}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &144289459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 144289461}
+  - component: {fileID: 144289460}
+  m_Layer: 0
+  m_Name: Rune
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &144289460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144289459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab41b0326cce4848beec0ca0c9a1aae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  the_Rune_Dispenser_Station_Data: {fileID: 11400000, guid: 2b37e0c246a8e12449e5f9e665e55379,
+    type: 2}
+  weapon_Type: 0
+  material_Type: 0
+--- !u!4 &144289461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144289459}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.9827185, y: -0.29034543, z: 2.4979873}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &183480630
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +430,53 @@ RectTransform:
   m_AnchoredPosition: {x: -226.92, y: 147.19995}
   m_SizeDelta: {x: 224.18, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &275922879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 275922881}
+  - component: {fileID: 275922880}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &275922880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275922879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06079b387ad03474a918e8f4030706dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  the_Customer_Broken_Weapon_Data: {fileID: 11400000, guid: 1ab59453268d6b64db5cdf7607c2db89,
+    type: 2}
+  material_Ore: 0
+  thisWeaponType: 0
+--- !u!4 &275922881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275922879}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.0442243, y: -0.1400199, z: 3.3114223}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &281311782
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,16 +598,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06079b387ad03474a918e8f4030706dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current_Stage: 1
-  current_Stage_Text: {fileID: 189528669}
+  the_Customer_Broken_Weapon_Data: {fileID: 0}
   material_Ore: 0
-  cook_Time: 5
-  current_Weapon_Type: 
   thisWeaponType: 0
-  time_Hit_Needed: 1
-  current_Weapon_Type_Text: {fileID: 1654222544}
-  cooling_Time: 5
-  enchantment: 
 --- !u!1 &336565890
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,7 +766,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4facecac8330948aa49d5a370f1e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current_Cast: 1
 --- !u!135 &396787629
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -723,7 +856,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb4e72d7bab44f479545a92d41eae2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressure_Pump: {fileID: 2104405977}
 --- !u!65 &456538506
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1027,7 +1159,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 2.938736e-39, y: 0, z: 0, w: 4.59179e-40}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2325,7 +2457,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4facecac8330948aa49d5a370f1e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current_Cast: 0
 --- !u!1 &1209291099
 GameObject:
   m_ObjectHideFlags: 0
@@ -3600,6 +3731,53 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748400404}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1791175004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1791175006}
+  - component: {fileID: 1791175005}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1791175005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791175004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06079b387ad03474a918e8f4030706dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  the_Customer_Broken_Weapon_Data: {fileID: 11400000, guid: 2cd1fe8b8edd94b4f8daee2aa1e28714,
+    type: 2}
+  material_Ore: 0
+  thisWeaponType: 0
+--- !u!4 &1791175006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791175004}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.0442243, y: -0.1400199, z: 3.3114223}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1963999960
 GameObject:
   m_ObjectHideFlags: 0
