@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Molding2 : MonoBehaviour
 {
+    /*
     public int mold_Prefab;
     private void Start()
     {
@@ -46,4 +47,5 @@ public class Molding2 : MonoBehaviour
             }
         }
     }
+    */
 }

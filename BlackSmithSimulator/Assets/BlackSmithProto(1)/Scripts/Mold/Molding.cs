@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Molding : MonoBehaviour
 {
+    /*
     public int current_Cast;
     // Update is called once per frame
     public void CastType()
@@ -41,4 +42,5 @@ public class Molding : MonoBehaviour
             print("Stage2Done");
         }
     }
+    */
 }

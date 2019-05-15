@@ -10,7 +10,7 @@ public class Hitting : MonoBehaviour
     {
         if (can_Hit)
         {
-            FindObjectOfType<Ore>().time_Hit_Needed--;
+            //FindObjectOfType<Ore>().time_Hit_Needed--;
             print("Hitting");
         }
     }

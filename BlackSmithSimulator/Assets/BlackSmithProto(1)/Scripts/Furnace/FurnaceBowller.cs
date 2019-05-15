@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class FurnaceBowller : MonoBehaviour
 {
+    /*
     public Text pressure_Pump;
     float pressure = 0;
     float pump = 10;
@@ -83,4 +84,5 @@ public class FurnaceBowller : MonoBehaviour
             }
         }
     }
+    */
 }
