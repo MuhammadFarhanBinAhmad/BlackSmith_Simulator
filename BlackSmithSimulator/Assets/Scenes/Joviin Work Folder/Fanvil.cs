@@ -87,13 +87,13 @@ public class Fanvil : MonoBehaviour
         if (materialCollected.Count != 0)
         {
             //Material matches material rune and not a universal material
-            if (materialTypeCollected == materialTypeRune && materialTypeCollected !=0)
+            if (materialTypeCollected == materialTypeRune && materialTypeCollected !=5)
             {
                 print("Rune matches Type Collected");
                 CreateWeapon(weaponType);
             }
             //Material is a universal material
-            else if(materialTypeCollected == 0)
+            else if(materialTypeCollected == 5)
             {
                 print("Universal material detected, using Rune as base material now");
                 CreateWeapon(weaponType, materialTypeRune);
@@ -115,7 +115,7 @@ public class Fanvil : MonoBehaviour
         print("Creating Weapon with collected materials as base");
 
         materialCollected[0].GetComponent<MeshFilter>().sharedMesh = weaponTypeModels[weaponTypeLocal].sharedMesh;
-        print(materialCollected[0].GetComponent<Mesh>());
+
         print("Mesh Change Successful!");
 
         materialCollected[0].GetComponent<MeshRenderer>().material = weaponTypeMaterials[weaponTypeLocal];
