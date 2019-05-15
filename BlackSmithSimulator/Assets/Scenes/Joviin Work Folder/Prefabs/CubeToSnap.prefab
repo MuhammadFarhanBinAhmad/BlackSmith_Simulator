@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 461791654825103142}
   - component: {fileID: 461791654825103143}
   - component: {fileID: 461791654825103147}
+  - component: {fileID: 358628112194011837}
   - component: {fileID: 461791654825103144}
   - component: {fileID: 461791654825103145}
   - component: {fileID: 461791654825103146}
@@ -31,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461791654825103149}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3859999, y: 1.4540001, z: -0.058000013}
+  m_LocalPosition: {x: 0.44619998, y: 1.4540001, z: -0.058000013}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 0}
@@ -111,6 +112,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &358628112194011837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461791654825103149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab41b0326cce4848beec0ca0c9a1aae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  the_Rune_Dispenser_Station_Data: {fileID: 11400000, guid: 2b37e0c246a8e12449e5f9e665e55379,
+    type: 2}
+  weapon_Type: 0
+  material_Type: 0
 --- !u!114 &461791654825103144
 MonoBehaviour:
   m_ObjectHideFlags: 0
