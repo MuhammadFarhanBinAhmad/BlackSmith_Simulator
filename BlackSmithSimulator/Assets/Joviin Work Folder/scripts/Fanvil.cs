@@ -7,11 +7,15 @@ public class Fanvil : MonoBehaviour
     //Input material
     public List<GameObject> materialCollected = new List<GameObject>();
     public int materialTypeCollected;
+
+    //Runes
+    public GameObject runeWeapon;
+    public GameObject runeMaterial;
     public int materialTypeRune;
 
     //Output material
     public int weaponType;
-    public MeshFilter[] weaponTypeModels;
+    public GameObject[] weaponTypeModels;
     public Material[] weaponTypeMaterials;
 
 
@@ -55,11 +59,35 @@ public class Fanvil : MonoBehaviour
 
           if(other.GetComponent<RuneData>() !=null)
           {
-            weaponType = other.GetComponent<RuneData>().weapon_Type;
-            materialTypeRune = other.GetComponent<RuneData>().material_Type;
-               
+            if (other.GetComponent<RuneData>().weapon_Type != 0)
+            {
+                runeWeapon = other.gameObject;
+                weaponType = other.GetComponent<RuneData>().weapon_Type;
+            }
+
+            if (other.GetComponent<RuneData>().material_Type != 0)
+            {
+                runeMaterial = other.gameObject;
+                materialTypeRune = other.GetComponent<RuneData>().material_Type;
+            }       
           }
           
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.GetComponent<RuneData>() != null)
+        {
+            if (other.GetComponent<RuneData>().weapon_Type != 0)
+            {
+                runeWeapon = null;
+            }
+
+            if (other.GetComponent<RuneData>().material_Type != 0)
+            {
+                runeMaterial = null;
+            }
+        }
     }
 
     public void CheckMaterials()
@@ -113,34 +141,46 @@ public class Fanvil : MonoBehaviour
     public void CreateWeapon(int weaponTypeLocal)
     {
         print("Creating Weapon with collected materials as base");
-
-        materialCollected[0].GetComponent<MeshFilter>().sharedMesh = weaponTypeModels[weaponTypeLocal].sharedMesh;
+        //materialCollected[0].GetComponent<MeshFilter>().sharedMesh = weaponTypeModels[weaponTypeLocal].sharedMesh;
+        GameObject newWeapon;
+        newWeapon = Instantiate(weaponTypeModels[weaponTypeLocal], this.transform.position, Quaternion.Euler(90, 0, 0));
 
         print("Mesh Change Successful!");
 
-        materialCollected[0].GetComponent<MeshRenderer>().material = weaponTypeMaterials[weaponTypeLocal];
+        //materialCollected[0].GetComponent<MeshRenderer>().material = weaponTypeMaterials[weaponTypeLocal];
+        newWeapon.GetComponent<MeshRenderer>().material = weaponTypeMaterials[weaponTypeLocal];
         print("Material Change Successful!");
 
-        materialCollected[0].GetComponent<BrokenWeapon>().thisWeaponType = weaponTypeLocal;
-        materialCollected.RemoveAt(0);
+        newWeapon.name = ("Weapon" + weaponTypeLocal + "Material" + materialTypeCollected);
+
+        newWeapon.GetComponent<ThisWeaponData>().this_Material_Type = materialTypeRune;
+        //materialCollected[0].GetComponent<BrokenWeapon>().thisWeaponType = weaponTypeLocal;
+        //materialCollected.RemoveAt(0);
         for (int i = 0; i < materialCollected.Count; i++)
         {
+            print("Destroying item" + i);
             GameObject.Destroy(materialCollected[i]);
             materialCollected.Clear();
+            print("Destroyed item" + materialCollected[i]);
         }
+        GameObject.Destroy(runeWeapon);
+        GameObject.Destroy(runeMaterial);
+        runeWeapon = null;
+        runeMaterial = null;
+        print("Destroyed weapons and reseting Fanvil");
+
         materialTypeRune = 0;
         materialTypeCollected = 0;
         weaponType = 0;
-        //destroy weapon rune
-        //destroy material rune
     }
 
     //If universal material is used
     public void CreateWeapon(int weaponTypeLocal, int materialTypeLocal)
     {
+        ///NOT UPDATED///
         print("Creating Weapon with Rune material as base");
 
-        materialCollected[0].GetComponent<MeshFilter>().sharedMesh = weaponTypeModels[weaponTypeLocal].sharedMesh;
+        //materialCollected[0].GetComponent<MeshFilter>().sharedMesh = weaponTypeModels[weaponTypeLocal].sharedMesh;
         print("Mesh Change Successful!");
 
         materialCollected[0].GetComponent<MeshRenderer>().material = weaponTypeMaterials[materialTypeLocal];
@@ -153,10 +193,15 @@ public class Fanvil : MonoBehaviour
             GameObject.Destroy(materialCollected[i]);
             materialCollected.Clear();
         }
+
+        GameObject.Destroy(runeWeapon);
+        GameObject.Destroy(runeMaterial);
+        runeWeapon = null;
+        runeMaterial = null;
+        print("Destoryed weapons and reseting Fanvil");
+
         materialTypeRune = 0;
         materialTypeCollected = 0;
         weaponType = 0;
-        //destroy weapon rune
-        //destroy material rune
     }
 }
