@@ -130,7 +130,7 @@ PrefabInstance:
     - target: {fileID: 2758624606784369480, guid: 60af926f0155de0478a0949b4337bf4f,
         type: 3}
       propertyPath: m_Name
-      value: CubeSnapDropZone
+      value: WeaponSnapZone
       objectReference: {fileID: 0}
     - target: {fileID: 2758624606784369480, guid: 60af926f0155de0478a0949b4337bf4f,
         type: 3}
@@ -310,7 +310,7 @@ PrefabInstance:
     - target: {fileID: 461791654825103148, guid: 52835b243ec93364aa18bfa8266b6783,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.36499992
+      value: 0.7679999
       objectReference: {fileID: 0}
     - target: {fileID: 461791654825103148, guid: 52835b243ec93364aa18bfa8266b6783,
         type: 3}
@@ -356,6 +356,15 @@ PrefabInstance:
       propertyPath: weapon_Type
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 234305796, guid: 52835b243ec93364aa18bfa8266b6783, type: 3}
+      propertyPath: material_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 234305796, guid: 52835b243ec93364aa18bfa8266b6783, type: 3}
+      propertyPath: the_Rune_Dispenser_Station_Data
+      value: 
+      objectReference: {fileID: 11400000, guid: e5cfd1451bf434648af854eb0b5a4bb2,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52835b243ec93364aa18bfa8266b6783, type: 3}
 --- !u!1 &103456710
@@ -2868,7 +2877,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 635908463}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.0000027567148}
-  m_LocalPosition: {x: 0.74, y: 1.0776, z: -4.327}
+  m_LocalPosition: {x: 0.74, y: 1.0776, z: -4.01}
   m_LocalScale: {x: 3, y: 3.15712, z: 1}
   m_Children: []
   m_Father: {fileID: 856492658}
@@ -3122,8 +3131,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650310415}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.56200004, y: 0, z: 1.1229999}
-  m_LocalScale: {x: 50, y: 50, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -3525,7 +3534,7 @@ PrefabInstance:
     - target: {fileID: 2758624606784369480, guid: 60af926f0155de0478a0949b4337bf4f,
         type: 3}
       propertyPath: m_Name
-      value: CubeSnapDropZone (1)
+      value: MaterialSnapZone
       objectReference: {fileID: 0}
     - target: {fileID: 2758624606784369480, guid: 60af926f0155de0478a0949b4337bf4f,
         type: 3}
@@ -6329,7 +6338,7 @@ PrefabInstance:
     - target: {fileID: 461791654825103148, guid: 52835b243ec93364aa18bfa8266b6783,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.51
+      value: -0.324
       objectReference: {fileID: 0}
     - target: {fileID: 461791654825103148, guid: 52835b243ec93364aa18bfa8266b6783,
         type: 3}
@@ -6339,7 +6348,7 @@ PrefabInstance:
     - target: {fileID: 461791654825103148, guid: 52835b243ec93364aa18bfa8266b6783,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.116
+      value: 0.677
       objectReference: {fileID: 0}
     - target: {fileID: 461791654825103148, guid: 52835b243ec93364aa18bfa8266b6783,
         type: 3}
@@ -6385,6 +6394,15 @@ PrefabInstance:
       propertyPath: material_Type
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 234305796, guid: 52835b243ec93364aa18bfa8266b6783, type: 3}
+      propertyPath: weapon_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 234305796, guid: 52835b243ec93364aa18bfa8266b6783, type: 3}
+      propertyPath: the_Rune_Dispenser_Station_Data
+      value: 
+      objectReference: {fileID: 11400000, guid: a5eebd0a572c97144bbc894682b1aa77,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 52835b243ec93364aa18bfa8266b6783, type: 3}
@@ -7080,7 +7098,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1703342363}
   m_LocalRotation: {x: -0, y: -0.7071057, z: -0, w: 0.7071079}
-  m_LocalPosition: {x: -2.266, y: 1.078, z: -2.228}
+  m_LocalPosition: {x: -1.97, y: 1.078, z: -2.23}
   m_LocalScale: {x: 3, y: 3.1571162, z: 1}
   m_Children: []
   m_Father: {fileID: 856492658}
@@ -7264,9 +7282,9 @@ GameObject:
   - component: {fileID: 1758115916}
   - component: {fileID: 1758115915}
   - component: {fileID: 1758115912}
-  - component: {fileID: 1758115914}
   - component: {fileID: 1758115913}
   - component: {fileID: 1758115917}
+  - component: {fileID: 1758115914}
   m_Layer: 0
   m_Name: FanvilCore
   m_TagString: Untagged
@@ -7287,7 +7305,6 @@ Transform:
   m_Children:
   - {fileID: 1569780950}
   - {fileID: 103853990}
-  - {fileID: 1887169214}
   m_Father: {fileID: 667746154}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7305,13 +7322,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materialCollected: []
   materialTypeCollected: 0
+  runeWeapon: {fileID: 0}
+  runeMaterial: {fileID: 0}
   materialTypeRune: 0
   weaponType: 0
   weaponTypeModels:
-  - {fileID: 3300000, guid: f1298a06bd979594b848cdde23823048, type: 3}
-  - {fileID: 3300000, guid: bc6bd5171403ebd4a90f535f8b1023c2, type: 3}
-  - {fileID: 3300000, guid: 4726e8fcd9ac69646a3b1e8744e5fc8a, type: 3}
-  - {fileID: 3300000, guid: 19b36c0c19af15c47a06700e9ebb309d, type: 3}
+  - {fileID: 100000, guid: f1298a06bd979594b848cdde23823048, type: 3}
+  - {fileID: 3573836475121886417, guid: 65e6185d10918a54ca9a82a75fdd2260, type: 3}
+  - {fileID: 3573836475121886417, guid: 3b51ab5220b9c5446a87c6feefd2d2de, type: 3}
+  - {fileID: 3573836475121886417, guid: 1bcd0232ba84e4d40ae11864aa1e2917, type: 3}
   weaponTypeMaterials:
   - {fileID: 2100000, guid: 757a4b4b5b2baa44e920f77b913815e1, type: 2}
   - {fileID: 2100000, guid: f107b094db59329439b8349041d6f852, type: 2}
@@ -8066,36 +8085,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875914378}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1887169213
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1887169214}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1887169214
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1887169213}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1758115911}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1964037041
 PrefabInstance:
   m_ObjectHideFlags: 0
