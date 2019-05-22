@@ -9,7 +9,7 @@ public class RuneMaker : MonoBehaviour
     //current Rune type
     public int current_Type;
     //Potion to spawn
-    public GameObject[] Rune_Types = new GameObject[8];
+    public GameObject[] Rune_Types = new GameObject[9];
     //Catalyst number
     //Calcium = 1,Nitrate = 2
     //Herb Number
