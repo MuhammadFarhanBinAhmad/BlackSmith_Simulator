@@ -5,7 +5,8 @@ using UnityEngine;
 public class RuneTypes : MonoBehaviour
 {
     public GameObject Rune;
-    public Transform home;
+    Transform home;
+    public GameObject localRune;
 
     private void Awake()
     {
@@ -19,19 +20,25 @@ public class RuneTypes : MonoBehaviour
     // Start timer when rune oj exit hitbox
     private void OnTriggerExit(Collider other)
     {
-        StartCoroutine(Runetimer(home));
+        if (other.gameObject == localRune)
+        {
+            localRune = null;
+            StartCoroutine(Runetimer(home));
+        }
+
     }
     // delay for new rune
     IEnumerator Runetimer (Transform home)
     {
-        print("making new Rune");
+        print("Creating rune" + Rune.name);
         yield return new WaitForSeconds(10f);
         CreatingNewRune();
-        print("New rune");
+        print("Created new reun" + Rune.name);
     }
 
     void CreatingNewRune()
     {
-        Instantiate(Rune, home.transform.position, home.transform.rotation);
+       GameObject newLocalRune = Instantiate(Rune, home.transform.position, home.transform.rotation);
+        localRune = newLocalRune;
     }
 }

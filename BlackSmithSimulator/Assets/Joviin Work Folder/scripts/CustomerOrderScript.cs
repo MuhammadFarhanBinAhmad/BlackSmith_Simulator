@@ -24,7 +24,7 @@ public class CustomerOrderScript : MonoBehaviour
     {
         for (int i = 0; i < numberToSpawn; i++)
         {
-            Instantiate(weaponBroken[0], this.transform.position, this.transform.rotation);
+            //Instantiate(weaponBroken[0], this.transform.position, this.transform.rotation);
         }
  
     }

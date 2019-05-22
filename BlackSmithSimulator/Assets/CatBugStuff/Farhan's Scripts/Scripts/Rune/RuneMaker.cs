@@ -16,6 +16,7 @@ public class RuneMaker : MonoBehaviour
     //Copper = 1,Iron = 2,Gold = 3,Alloy = 4
     private void FixedUpdate()
     {
+        /*
         //All Combination for Potion
         if (catalyst_In_Dispenser == 1)
         {
@@ -60,24 +61,79 @@ public class RuneMaker : MonoBehaviour
             GameObject P = Instantiate(Rune_Types[current_Type], transform.position, transform.rotation);
             EmptyPot();
         }
+        */
     }
     public void EmptyPot()
     {
         catalyst_In_Dispenser = 0;
         reactant_In_Dispenser = 0;
+        current_Type = 0;
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Reactant")
         {
             reactant_In_Dispenser = other.GetComponent<EmptyRuneData>().this_Object_Reactant;
-            print("Hit");
+            print("Reactant Detected");
+            CheckRune();
         }
         if (other.tag == "RuneCatalyst")
         {
-            print("Hit");
+            print("RuneCatalyst Dectected");
             catalyst_In_Dispenser = other.GetComponent<EmptyRuneData>().this_Object_Catalyst;
+            CheckRune();
         }
 
+    }
+
+    void CheckRune()
+    {
+        if (catalyst_In_Dispenser != 0 && reactant_In_Dispenser != 0)
+        {
+            //All Combination for Potion
+            if (catalyst_In_Dispenser == 1)
+            {
+                if (reactant_In_Dispenser == 1)
+                {
+                    current_Type = 1;
+                }
+                if (reactant_In_Dispenser == 2)
+                {
+                    current_Type = 2;
+                }
+                if (reactant_In_Dispenser == 3)
+                {
+                    current_Type = 3;
+                }
+                if (reactant_In_Dispenser == 4)
+                {
+                    current_Type = 4;
+                }
+            }
+            if (catalyst_In_Dispenser == 2)
+            {
+                if (reactant_In_Dispenser == 1)
+                {
+                    current_Type = 5;
+                }
+                if (reactant_In_Dispenser == 2)
+                {
+                    current_Type = 6;
+                }
+                if (reactant_In_Dispenser == 3)
+                {
+                    current_Type = 7;
+                }
+                if (reactant_In_Dispenser == 4)
+                {
+                    current_Type = 8;
+                }
+            }
+            if (current_Type != 0)
+            {
+                GameObject P = Instantiate(Rune_Types[current_Type], transform.position, transform.rotation);
+                EmptyPot();
+            }
+        }
     }
 }
