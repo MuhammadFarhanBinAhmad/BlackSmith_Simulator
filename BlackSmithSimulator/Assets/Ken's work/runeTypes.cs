@@ -14,7 +14,7 @@ public class runeTypes : MonoBehaviour
     // delay for new rune
     IEnumerator Runetimer (Transform home)
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(10f);
         Instantiate(Rune);
         print("New rune");
     }
