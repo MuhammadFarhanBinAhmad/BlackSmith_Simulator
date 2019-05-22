@@ -5,7 +5,7 @@ using UnityEngine;
 public class Potion_Dispenser : MonoBehaviour
 {
     public GameObject liquid_Box_Collider;//detect collider for enchantment to go
-
+    /*
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -14,5 +14,13 @@ public class Potion_Dispenser : MonoBehaviour
         {
             GameObject liquid_Content = Instantiate(liquid_Box_Collider, transform.position, transform.rotation);//spawn enchantment potion
         }
+    }
+    */
+
+    public void PourPotion()
+    {
+        GameObject liquid_Content = Instantiate(liquid_Box_Collider, this.transform.position, this.transform.rotation);//spawn enchantment potion
+        Instantiate(liquid_Box_Collider, this.transform.position, this.transform.rotation);
+        print("Pouring");
     }
 }
