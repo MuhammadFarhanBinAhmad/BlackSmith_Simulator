@@ -9,9 +9,9 @@ public class PatternRecognition : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<PatternNumberHolder>().this_Object_Number != 0)
+        if (other.GetComponent<PatternNumberHolder>() != null)
         {
-            number_Code.Add(GetComponent<PatternNumberHolder>().this_Object_Number);
+            number_Code.Add(other.GetComponent<PatternNumberHolder>().this_Object_Number);
         }
     }
 }
