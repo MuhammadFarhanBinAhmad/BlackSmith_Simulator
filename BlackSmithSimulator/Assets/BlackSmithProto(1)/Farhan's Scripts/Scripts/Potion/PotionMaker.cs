@@ -15,7 +15,7 @@ public class PotionMaker : MonoBehaviour
     //Herb Number
     //Fire = 1,Ice = 2,Wind = 3
     private void FixedUpdate()
-    {
+    {/*
         //All Combination for Potion
         if (catalyst_In_Pot == 1)
         {
@@ -52,11 +52,13 @@ public class PotionMaker : MonoBehaviour
             GameObject P = Instantiate(potion_Types[current_Type], transform.position, transform.rotation);
             EmptyPot();
         }
+        */
     }
     public void EmptyPot()
     {
         catalyst_In_Pot = 0;
         herb_In_Pot = 0;
+        current_Type = 0;
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -64,12 +66,57 @@ public class PotionMaker : MonoBehaviour
         {
             herb_In_Pot = other.GetComponent<CatalystHerb>().this_Object_Herb;
             print("Hit");
+            CheckPot();
         }
         if (other.tag == "PotionCatalyst")
         {
             print("Hit");
             catalyst_In_Pot = other.GetComponent<CatalystHerb>().this_Object_Catalyst;
+            CheckPot();
         }
         
+    }
+
+    void CheckPot()
+    {
+        if (herb_In_Pot != 0 && catalyst_In_Pot != 0)
+        {
+            if (catalyst_In_Pot == 1)
+            {
+                if (herb_In_Pot == 1)
+                {
+                    current_Type = 1;
+                }
+                if (herb_In_Pot == 2)
+                {
+                    current_Type = 2;
+                }
+                if (herb_In_Pot == 3)
+                {
+                    current_Type = 3;
+                }
+            }
+            if (catalyst_In_Pot == 2)
+            {
+                if (herb_In_Pot == 1)
+                {
+                    current_Type = 4;
+                }
+                if (herb_In_Pot == 2)
+                {
+                    current_Type = 5;
+                }
+                if (herb_In_Pot == 3)
+                {
+                    current_Type = 6;
+                }
+            }
+
+        }
+        if (current_Type != 0)
+        {
+            GameObject P = Instantiate(potion_Types[current_Type], transform.position, transform.rotation);
+            EmptyPot();
+        }
     }
 }
