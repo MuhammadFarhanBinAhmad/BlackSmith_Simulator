@@ -8,7 +8,7 @@ public class RuneTypes : MonoBehaviour
     Transform home;
     public GameObject localRune;
 
-    private void Awake()
+    private void Awake()    
     {
         //Instantiate(Rune, (home));
     }

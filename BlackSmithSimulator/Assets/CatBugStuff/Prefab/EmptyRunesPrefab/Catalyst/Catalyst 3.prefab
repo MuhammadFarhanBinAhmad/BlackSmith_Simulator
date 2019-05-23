@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3423730603981979813
+--- !u!1 &1950322231896987119
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,27 +8,27 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1279966499959961066}
-  - component: {fileID: 4176518189714569561}
-  - component: {fileID: 6663845580861058687}
-  - component: {fileID: -983944574841947453}
-  - component: {fileID: 7340056619492097771}
-  - component: {fileID: 1613737350795244484}
-  - component: {fileID: 7807739024239843118}
+  - component: {fileID: 1950322231896987116}
+  - component: {fileID: 1950322231896987112}
+  - component: {fileID: 1950322231896987115}
+  - component: {fileID: 1950322231896987114}
+  - component: {fileID: 1950322231896987117}
+  - component: {fileID: -5391077467375150933}
+  - component: {fileID: -7924474497348555817}
   m_Layer: 0
-  m_Name: AlloyRune
-  m_TagString: Untagged
+  m_Name: Catalyst 3
+  m_TagString: RuneCatalyst
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1279966499959961066
+--- !u!4 &1950322231896987116
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3423730603981979813}
+  m_GameObject: {fileID: 1950322231896987119}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
@@ -36,21 +36,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4176518189714569561
+--- !u!33 &1950322231896987112
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3423730603981979813}
-  m_Mesh: {fileID: 4300000, guid: 5a5393914b3097643b56eaa0e223af13, type: 3}
---- !u!23 &6663845580861058687
+  m_GameObject: {fileID: 1950322231896987119}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1950322231896987115
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3423730603981979813}
+  m_GameObject: {fileID: 1950322231896987119}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6976fa56fe7dc934aa09f21b68a8844b, type: 2}
+  - {fileID: 2100000, guid: da8d6f3e1bf976449b69a9410559dafd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,13 +81,42 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &-983944574841947453
+--- !u!65 &1950322231896987114
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950322231896987119}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1950322231896987117
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3423730603981979813}
+  m_GameObject: {fileID: 1950322231896987119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0f81f148cd79b46ba576616a7640e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  the_Rune_Creation_Data: {fileID: 11400000, guid: 770001c5f6fd1654fbff5914b01f109d,
+    type: 2}
+  this_Object_Catalyst: 0
+  this_Object_Reactant: 0
+--- !u!114 &-5391077467375150933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950322231896987119}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3abaf4521bf2344ea21ed3020b98eb2, type: 3}
@@ -114,29 +143,13 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
---- !u!114 &7340056619492097771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3423730603981979813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ab41b0326cce4848beec0ca0c9a1aae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  the_Rune_Dispenser_Station_Data: {fileID: 11400000, guid: 2fec7b7f2e67e604b909132efb7f5d38,
-    type: 2}
-  weapon_Type: 0
-  material_Type: 0
---- !u!54 &1613737350795244484
+--- !u!54 &-7924474497348555817
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3423730603981979813}
+  m_GameObject: {fileID: 1950322231896987119}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -146,16 +159,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &7807739024239843118
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3423730603981979813}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.866}
-  m_Center: {x: 0, y: 0, z: 0}

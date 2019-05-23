@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 1279966499959961066}
   - component: {fileID: 4176518189714569561}
   - component: {fileID: 6663845580861058687}
-  - component: {fileID: -983944574841947453}
-  - component: {fileID: 7340056619492097771}
-  - component: {fileID: 1613737350795244484}
-  - component: {fileID: 7807739024239843118}
+  - component: {fileID: -740860959888207707}
+  - component: {fileID: -6560763690024510896}
+  - component: {fileID: -846504357009703099}
+  - component: {fileID: -221232758118061747}
   m_Layer: 0
-  m_Name: AlloyRune
-  m_TagString: Untagged
+  m_Name: WindRune
+  m_TagString: EnchantmentRune
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6976fa56fe7dc934aa09f21b68a8844b, type: 2}
+  - {fileID: 2100000, guid: f5a180e78cba3b64d9cffa9c458a391d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,7 +81,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &-983944574841947453
+--- !u!114 &-740860959888207707
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,7 +114,7 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
---- !u!114 &7340056619492097771
+--- !u!114 &-6560763690024510896
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,11 +126,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab41b0326cce4848beec0ca0c9a1aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  the_Rune_Dispenser_Station_Data: {fileID: 11400000, guid: 2fec7b7f2e67e604b909132efb7f5d38,
+  the_Rune_Dispenser_Station_Data: {fileID: 11400000, guid: 6f2c56b57f4fe2f418188ec822288611,
     type: 2}
   weapon_Type: 0
   material_Type: 0
---- !u!54 &1613737350795244484
+  enchantment_Type: 0
+--- !u!54 &-846504357009703099
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,7 +147,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &7807739024239843118
+--- !u!65 &-221232758118061747
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

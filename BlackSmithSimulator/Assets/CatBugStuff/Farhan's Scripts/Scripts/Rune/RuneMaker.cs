@@ -129,6 +129,25 @@ public class RuneMaker : MonoBehaviour
                     current_Type = 8;
                 }
             }
+            if (catalyst_In_Dispenser == 3)
+            {
+                if (reactant_In_Dispenser == 1)
+                {
+                    current_Type = 9;
+                }
+                if (reactant_In_Dispenser == 2)
+                {
+                    current_Type = 10;
+                }
+                if (reactant_In_Dispenser == 3)
+                {
+                    current_Type = 11;
+                }
+                if (reactant_In_Dispenser == 4)
+                {
+                    current_Type = 12;
+                }
+            }
             if (current_Type != 0)
             {
                 GameObject P = Instantiate(Rune_Types[current_Type], transform.position, transform.rotation);

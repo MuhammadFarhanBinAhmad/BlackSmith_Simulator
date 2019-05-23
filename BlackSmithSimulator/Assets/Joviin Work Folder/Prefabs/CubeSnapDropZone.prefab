@@ -79,9 +79,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightObjectPrefab: {fileID: 461791654825103149, guid: 52835b243ec93364aa18bfa8266b6783,
     type: 3}
-  snapType: 0
+  snapType: 2
   snapDuration: 0
-  applyScalingOnSnap: 0
+  applyScalingOnSnap: 1
   cloneNewOnUnsnap: 0
   highlightColor: {r: 1, g: 1, b: 0, a: 0.5882353}
   validHighlightColor: {r: 0, g: 0, b: 0, a: 0}

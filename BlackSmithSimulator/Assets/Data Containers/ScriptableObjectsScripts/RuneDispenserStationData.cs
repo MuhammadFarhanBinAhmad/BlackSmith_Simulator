@@ -7,4 +7,5 @@ public class RuneDispenserStationData : ScriptableObject
 {
     public int type_Weapon_Data;
     public int type_Material_Data;
+    public int type_Enchantment_Data;
 }
