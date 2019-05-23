@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class PatternNumberHolder : MonoBehaviour
 {
-    public PatternRecognitionData the_Pattern_Recognition_Data;
     public int this_Object_Number;
 
-    private void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        this_Object_Number = the_Pattern_Recognition_Data.number_Position;//set number
+        if (other.name == "Hand")
+        {
+            SendNumber();
+        }
+    }
+    public void SendNumber()
+    {
+        FindObjectOfType<PatternRecognition>().number_Receive = this_Object_Number;//send number to PatternRecognition
+        FindObjectOfType<PatternRecognition>().NumberHolder();
     }
 }
