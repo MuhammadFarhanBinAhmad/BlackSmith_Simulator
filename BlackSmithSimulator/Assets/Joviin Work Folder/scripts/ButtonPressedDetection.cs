@@ -6,8 +6,6 @@ using VRTK.Controllables;
 public class ButtonPressedDetection : MonoBehaviour
 {
     public VRTK_BaseControllable controllable;
-    public string outputOnMax = "Maximum Reached";
-    public string outputOnMin = "Minimum Reached";
     public int thisObjectNumber; 
 
     protected virtual void OnEnable()
