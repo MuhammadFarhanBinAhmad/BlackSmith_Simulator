@@ -66,8 +66,8 @@ public class CustomerOrderScript : MonoBehaviour
         requestedWeapon = Random.Range(1, 5);
         requestedEnchantment = Random.Range(1, 5);
 
-        //requestedMaterialText.text = requestedMaterial.ToString();
-        //requestedWeaponText.text = requestedWeapon.ToString();
-        //requestedEnchantmentText.text = requestedEnchantment.ToString();
+        requestedMaterialText.text = requestedMaterial.ToString();
+        requestedWeaponText.text = requestedWeapon.ToString();
+        requestedEnchantmentText.text = requestedEnchantment.ToString();
     }
 }
