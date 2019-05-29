@@ -47,6 +47,7 @@ MonoBehaviour:
   the_Rune_Dispenser_Station_Data: {fileID: 0}
   weapon_Type: 2
   material_Type: 2
+  enchantment_Type: 0
 --- !u!65 &234305795
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -90,8 +91,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461791654825103149}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9462, y: 1.4540001, z: -0.469}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.25358427, y: 1.057228, z: -1.4724097}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 234305794}

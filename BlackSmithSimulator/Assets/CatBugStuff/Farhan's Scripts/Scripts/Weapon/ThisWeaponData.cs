@@ -25,6 +25,7 @@ public class ThisWeaponData : MonoBehaviour
             if (other.GetComponent<RuneData>().enchantment_Type != 0)
             {
                 this_Enchantment_Type = other.GetComponent<RuneData>().enchantment_Type;
+                other.transform.parent = this.transform;
                 print("Enchanting with enchantment type" + this_Enchantment_Type);
             }
         }
