@@ -7,8 +7,6 @@ public class CustomerOrderScript : MonoBehaviour
 {
     //To be attached to AI spawner(above the counter)
 
-    //public GameObject[] weaponBroken;
-    //public int[] numberToGive;
     public Text requestedMaterialText;
     public Text requestedWeaponText;
     public Text requestedEnchantmentText;
@@ -20,9 +18,13 @@ public class CustomerOrderScript : MonoBehaviour
 
     private void Start()
     {
-        //GiveWeapon(numberToGive[0]);
-        CreateNewRequest();
+        requestedMaterial = 1;
+        requestedWeapon = 1;
+        requestedEnchantment = 1;
 
+        requestedMaterialText.text = requestedMaterial.ToString();
+        requestedWeaponText.text = requestedWeapon.ToString();
+        requestedEnchantmentText.text = requestedEnchantment.ToString();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -39,7 +41,6 @@ public class CustomerOrderScript : MonoBehaviour
         {
             //Instantiate(weaponBroken[0], this.transform.position, this.transform.rotation);
         }
- 
     }
 
     void RecieveWeapon(GameObject weaponCollected)

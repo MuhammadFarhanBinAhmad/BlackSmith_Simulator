@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Prototype Only
+using UnityEngine.UI;
+
 public class ThisWeaponData : MonoBehaviour
 {
     //attach Scriptable object
@@ -15,7 +18,6 @@ public class ThisWeaponData : MonoBehaviour
     void Start()
     {
         this_Weapon_Type = the_Weapon_Data.weapon_Type;//Weapon type
-        this_Material_Type = the_Weapon_Data.weapon_Material;//Weapon material
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,8 +27,12 @@ public class ThisWeaponData : MonoBehaviour
             if (other.GetComponent<RuneData>().enchantment_Type != 0)
             {
                 this_Enchantment_Type = other.GetComponent<RuneData>().enchantment_Type;
-                other.transform.parent = this.transform;
                 print("Enchanting with enchantment type" + this_Enchantment_Type);
+                Destroy(other.gameObject);
+
+                //Prototype Only
+
+                GameObject.Find("DisplayEnchantmentNumber").GetComponent<Text>().text = this_Enchantment_Type.ToString();
             }
         }
     }

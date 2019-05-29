@@ -26,7 +26,6 @@ public class Fanvil : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-
         //Detect or as Fanvil goes down
         if (other.GetComponent<BrokenWeapon>() != null)
         {
@@ -91,13 +90,11 @@ public class Fanvil : MonoBehaviour
     {       
         if (weaponTypeRune != 0 && materialTypeRune != 0)
         {
-
-            //Second Check if Material Rune matches material or material used is a universal material
+            //Check if there are materials in the fanvil to use
             if (materialCollected.Count != 0)
             {
-                print("Universal material detected, using Rune as base material now");
+                //print("Material detected, creating weapon");
                 CreateWeapon(weaponTypeRune, materialTypeRune);
-
             }
         }
 
@@ -106,6 +103,7 @@ public class Fanvil : MonoBehaviour
     //If Generic material is used
     public void CreateWeapon(int weaponTypeLocal, int materialTypeLocal)
     {
+        //Instantiate new weapon
         print("Creating Weapon" + weaponTypeLocal + " With " + materialTypeLocal + "material as base");
         GameObject newWeapon;
         newWeapon = Instantiate(weaponTypeModels[weaponTypeLocal], this.transform.position, Quaternion.Euler(90, 0, 0));
@@ -114,19 +112,20 @@ public class Fanvil : MonoBehaviour
         print("Material Change Successful!");
 
         newWeapon.GetComponent<ThisWeaponData>().this_Material_Type = materialTypeLocal;
+
+        //Clearing Fanvil
         for (int i = 0; i < materialCollected.Count; i++)
         {
             print("Destroying item " + i);
             GameObject.Destroy(materialCollected[i]);
             materialCollected.Clear();
         }
-
         GameObject.Destroy(runeWeapon);
         GameObject.Destroy(runeMaterial);
         runeWeapon = null;
         runeMaterial = null;
-        print("Destroyed weapons and reseting Fanvil");
-
+        print("Destroyed runes and reseting Fanvil");
+        newWeapon = null;
         materialTypeRune = 0;
         weaponTypeRune = 0;
     }

@@ -9,62 +9,62 @@ public class RuneMaker : MonoBehaviour
     //current Rune type
     public int current_Type;
 
-    public GameObject[] Rune_Types = new GameObject[9];
+    public GameObject[] Rune_Types;
     GameObject catalystReference = null;
     GameObject reactantReference = null;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Reactant")
-        {
-            reactant_In_Dispenser = other.GetComponent<EmptyRuneData>().this_Object_Reactant;
-            print("Reactant Detected");
-            CheckRune();
-        }
-        if (other.tag == "RuneCatalyst")
-        {
-            print("RuneCatalyst Dectected");
-            catalyst_In_Dispenser = other.GetComponent<EmptyRuneData>().this_Object_Catalyst;
-            CheckRune();
-        }
-        //if (other.GetComponent<EmptyRuneData>() != null)
+        //if (other.tag == "Reactant")
         //{
-        //    if (other.GetComponent<EmptyRuneData>().this_Object_Catalyst != 0)
-        //    {
-        //        catalystReference = other.gameObject;
-        //        catalyst_In_Dispenser = catalystReference.GetComponent<EmptyRuneData>().this_Object_Catalyst;
-        //        CheckRune();
-        //    }
-
-        //    if (other.GetComponent<EmptyRuneData>().this_Object_Reactant != 0)
-        //    {
-        //        catalystReference = other.gameObject;
-        //        reactant_In_Dispenser = reactantReference.GetComponent<EmptyRuneData>().this_Object_Reactant;
-        //        CheckRune();
-        //    }
+        //    reactant_In_Dispenser = other.GetComponent<EmptyRuneData>().this_Object_Reactant;
+        //    print("Reactant Detected");
+        //    CheckRune();
         //}
+        //if (other.tag == "RuneCatalyst")
+        //{
+        //    print("RuneCatalyst Dectected");
+        //    catalyst_In_Dispenser = other.GetComponent<EmptyRuneData>().this_Object_Catalyst;
+        //    CheckRune();
+        //}
+        if (other.GetComponent<EmptyRuneData>() != null)
+        {
+            if (other.GetComponent<EmptyRuneData>().this_Object_Catalyst != 0)
+            {
+                catalystReference = other.gameObject;
+                catalyst_In_Dispenser = other.GetComponent<EmptyRuneData>().this_Object_Catalyst;
+                CheckRune();
+            }
+
+            if (other.GetComponent<EmptyRuneData>().this_Object_Reactant != 0)
+            {
+                reactantReference = other.gameObject;
+                reactant_In_Dispenser = other.GetComponent<EmptyRuneData>().this_Object_Reactant;
+                CheckRune();
+            }
+        }
 
     }
 
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    //Remove Base Rune if left RuneMaker
-    //    if (other.GetComponent<EmptyRuneData>() != null)
-    //    {
-    //        if (other.GetComponent<EmptyRuneData>().this_Object_Catalyst != 0 || other.gameObject == catalystReference)
-    //        {
-    //            catalystReference = null;
-    //            catalyst_In_Dispenser = 0;
-    //        }
+    private void OnTriggerExit(Collider other)
+    {
+        //Remove Base Rune if left RuneMaker
+        if (other.GetComponent<EmptyRuneData>() != null)
+        {
+            if (other.GetComponent<EmptyRuneData>().this_Object_Catalyst != 0 || other.gameObject == catalystReference)
+            {
+                catalystReference = null;
+                catalyst_In_Dispenser = 0;
+            }
 
-    //        if (other.GetComponent<EmptyRuneData>().this_Object_Reactant != 0 || other.gameObject == reactantReference)
-    //        {
-    //            reactantReference = null;
-    //            reactant_In_Dispenser = 0;
-    //        }
+            if (other.GetComponent<EmptyRuneData>().this_Object_Reactant != 0 || other.gameObject == reactantReference)
+            {
+                reactantReference = null;
+                reactant_In_Dispenser = 0;
+            }
 
-    //    }
-    //}
+        }
+    }
 
     void CheckRune()
     {
@@ -138,12 +138,12 @@ public class RuneMaker : MonoBehaviour
 
     public void EmptyPot()
     {
-        catalyst_In_Dispenser = 0;
-        reactant_In_Dispenser = 0;
-        Destroy(catalystReference);
-        Destroy(reactantReference);
+        Destroy(catalystReference.gameObject);
+        Destroy(reactantReference.gameObject);
         catalystReference = null;
         reactantReference = null;
+        catalyst_In_Dispenser = 0;
+        reactant_In_Dispenser = 0;
         current_Type = 0;
     }
 }
