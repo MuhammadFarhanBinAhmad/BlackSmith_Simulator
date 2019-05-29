@@ -7,13 +7,14 @@ public class ButtonPressedDetection : MonoBehaviour
 {
     public VRTK_BaseControllable controllable;
     public int thisObjectNumber; 
+    
 
     protected virtual void OnEnable()
     {
         controllable = (controllable == null ? GetComponent<VRTK_BaseControllable>() : controllable);
         controllable.ValueChanged += ValueChanged;
         controllable.MaxLimitReached += MaxLimitReached;
-        controllable.MinLimitReached += MinLimitReached;
+        controllable.MinLimitReached += MinLimitReached;    
     }
 
     protected virtual void ValueChanged(object sender, ControllableEventArgs e)
@@ -23,15 +24,32 @@ public class ButtonPressedDetection : MonoBehaviour
 
     protected virtual void MaxLimitReached(object sender, ControllableEventArgs e)
     {
-        //when pressed
-        print("Button " + thisObjectNumber + " has been pressed");
+        //print(e.interactingCollider.name);
 
-        FindObjectOfType<PatternRecognition>().number_Receive = thisObjectNumber;//send number to PatternRecognition
-        FindObjectOfType<PatternRecognition>().NumberHolder(); //send number to PatternRecognition
+            //when pressed
+            print("Button " + thisObjectNumber + " has been pressed"); 
+
+            if(FindObjectOfType<PatternRecognition>().numbers_In_Code < 4)
+            {
+                FindObjectOfType<PatternRecognition>().buttonPressedNumber = thisObjectNumber;
+                FindObjectOfType<PatternRecognition>().NumberHolder();
+            GetComponent<VRTK.Controllables.ArtificialBased.VRTK_ArtificialPusher>().SetStayPressed(true);
+            }
+                //send number to PatternRecognition
+
     }
+
+
+    public IEnumerator BaseRuneCheckDelay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        GetComponent<VRTK.Controllables.ArtificialBased.VRTK_ArtificialPusher>().SetStayPressed(false);
+
+    }
+
+
 
     protected virtual void MinLimitReached(object sender, ControllableEventArgs e)
     {
-
     }
 }

@@ -113,7 +113,7 @@ public class Fanvil : MonoBehaviour
         newWeapon.GetComponent<MeshRenderer>().material = weaponTypeMaterials[materialTypeLocal];
         print("Material Change Successful!");
 
-        newWeapon.GetComponent<ThisWeaponData>().this_Material_Type = materialTypeRune;
+        newWeapon.GetComponent<ThisWeaponData>().this_Material_Type = materialTypeLocal;
         for (int i = 0; i < materialCollected.Count; i++)
         {
             print("Destroying item " + i);
