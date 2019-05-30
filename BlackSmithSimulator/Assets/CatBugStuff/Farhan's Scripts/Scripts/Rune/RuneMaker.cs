@@ -130,7 +130,7 @@ public class RuneMaker : MonoBehaviour
             }
             if (current_Type != 0)
             {
-                GameObject P = Instantiate(Rune_Types[current_Type], transform.position, transform.rotation);
+                Instantiate(Rune_Types[current_Type], transform.position, transform.rotation);
                 EmptyPot();
             }
         }

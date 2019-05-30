@@ -48,7 +48,7 @@ public class PatternRecognition : MonoBehaviour
             if (duplicateNumber == false)
             {
                 code_Number.Add(buttonPressedNumber);//Add the number receive in List
-                print("recieved " + buttonPressedNumber);
+                //print("recieved " + buttonPressedNumber);
                 //number_Receive = 0;//reset number receive
                 numbers_In_Code++;
                 if (numbers_In_Code == 4)
@@ -102,7 +102,7 @@ public class PatternRecognition : MonoBehaviour
     }
 
 
-    IEnumerator ResetFeedback()
+    public IEnumerator ResetFeedback()
     {
         GameObject cube = GameObject.Find("Cube (4)");
         Material ogMaterial = cube.GetComponent<MeshRenderer>().material;
@@ -114,7 +114,7 @@ public class PatternRecognition : MonoBehaviour
             StartCoroutine(buttonReferences[i].GetComponent<ButtonPressedDetection>().BaseRuneCheckDelay());
         }
         code_Number.Clear();
-        print("Reset!");
+        //print("Reset!");
     }
 
 }

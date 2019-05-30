@@ -27,7 +27,7 @@ public class ButtonPressedDetection : MonoBehaviour
         //print(e.interactingCollider.name);
 
             //when pressed
-            print("Button " + thisObjectNumber + " has been pressed"); 
+            //print("Button " + thisObjectNumber + " has been pressed"); 
 
             if(FindObjectOfType<PatternRecognition>().numbers_In_Code < 4)
             {

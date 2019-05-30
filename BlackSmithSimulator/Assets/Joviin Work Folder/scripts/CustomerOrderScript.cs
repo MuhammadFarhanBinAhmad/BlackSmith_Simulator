@@ -15,7 +15,6 @@ public class CustomerOrderScript : MonoBehaviour
     int requestedWeapon;
     int requestedEnchantment;
 
-
     private void Start()
     {
         requestedMaterial = 1;
@@ -25,6 +24,7 @@ public class CustomerOrderScript : MonoBehaviour
         requestedMaterialText.text = requestedMaterial.ToString();
         requestedWeaponText.text = requestedWeapon.ToString();
         requestedEnchantmentText.text = requestedEnchantment.ToString();
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -52,23 +52,31 @@ public class CustomerOrderScript : MonoBehaviour
         {
             //Correct case
             print("Weapon Ok! Moving on to next request");
+            Destroy(weaponCollected.gameObject);
+            GameObject.Find("Body").GetComponent<Animation>().Play("WalkingOut");
             CreateNewRequest();
         }
         else
         {
             //Wrong case
+            print("Wrong weapon");
         }
 
     }
 
     void CreateNewRequest()
     {
+        GameObject.Find("Body").GetComponent<Animator>().SetBool("PlayNextCustomer", true);
         requestedMaterial = Random.Range(1, 5);
         requestedWeapon = Random.Range(1, 5);
         requestedEnchantment = Random.Range(1, 5);
 
+        //Prototype only
         requestedMaterialText.text = requestedMaterial.ToString();
         requestedWeaponText.text = requestedWeapon.ToString();
         requestedEnchantmentText.text = requestedEnchantment.ToString();
+        //GameObject.Find("Body").GetComponent<Animator>().SetBool("PlayNextCustomer", false);
+        
+
     }
 }

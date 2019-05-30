@@ -75,13 +75,13 @@ public class Fanvil : MonoBehaviour
             if (other.GetComponent<RuneData>().weapon_Type != 0)
             {
                 runeWeapon = null;
-                print(other.name + " Removed");
+                //print(other.name + " Removed");
             }
 
             if (other.GetComponent<RuneData>().material_Type != 0)
             {
                 runeMaterial = null;
-                print(other.name + " Removed");
+                //print(other.name + " Removed");
             }
         }
     }
@@ -104,19 +104,19 @@ public class Fanvil : MonoBehaviour
     public void CreateWeapon(int weaponTypeLocal, int materialTypeLocal)
     {
         //Instantiate new weapon
-        print("Creating Weapon" + weaponTypeLocal + " With " + materialTypeLocal + "material as base");
+        print("Creating Weapon" + weaponTypeLocal + " With " + materialTypeLocal + " material as base");
         GameObject newWeapon;
         newWeapon = Instantiate(weaponTypeModels[weaponTypeLocal], this.transform.position, Quaternion.Euler(90, 0, 0));
 
         newWeapon.GetComponent<MeshRenderer>().material = weaponTypeMaterials[materialTypeLocal];
-        print("Material Change Successful!");
+        //print("Material Change Successful!");
 
         newWeapon.GetComponent<ThisWeaponData>().this_Material_Type = materialTypeLocal;
 
         //Clearing Fanvil
         for (int i = 0; i < materialCollected.Count; i++)
         {
-            print("Destroying item " + i);
+            //print("Destroying item " + i);
             GameObject.Destroy(materialCollected[i]);
             materialCollected.Clear();
         }
@@ -124,7 +124,7 @@ public class Fanvil : MonoBehaviour
         GameObject.Destroy(runeMaterial);
         runeWeapon = null;
         runeMaterial = null;
-        print("Destroyed runes and reseting Fanvil");
+        //print("Destroyed runes and reseting Fanvil");
         newWeapon = null;
         materialTypeRune = 0;
         weaponTypeRune = 0;
