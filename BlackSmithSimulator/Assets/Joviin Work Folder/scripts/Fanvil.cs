@@ -27,7 +27,7 @@ public class Fanvil : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         //Detect or as Fanvil goes down
-        if (other.GetComponent<BaseOreMaterial>() != null)
+        if (other.GetComponent<BrokenWeapon>() != null)
         {
             for (int i = 0; i <materialCollected.Count; i++)
             {

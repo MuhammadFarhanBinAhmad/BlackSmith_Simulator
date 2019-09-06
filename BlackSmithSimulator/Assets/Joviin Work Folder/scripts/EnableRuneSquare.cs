@@ -12,11 +12,11 @@ public class EnableRuneSquare : MonoBehaviour
     {
         DisableRuneSquare();
     }
-    public void DisableRuneSquare()
+    void DisableRuneSquare()
     {
         RuneSquare.SetActive(false);
     }
-    public void ShowRuneSquare()
+    void ShowRuneSquare()
     {
         RuneSquare.SetActive(true);
     }
