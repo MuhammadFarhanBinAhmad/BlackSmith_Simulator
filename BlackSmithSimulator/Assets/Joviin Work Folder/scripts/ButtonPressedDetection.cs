@@ -6,15 +6,16 @@ using VRTK.Controllables;
 public class ButtonPressedDetection : MonoBehaviour
 {
     public VRTK_BaseControllable controllable;
-    public int thisObjectNumber; 
+    public int thisObjectNumber;
+    public bool isPushed;
     
-
     protected virtual void OnEnable()
     {
         controllable = (controllable == null ? GetComponent<VRTK_BaseControllable>() : controllable);
         controllable.ValueChanged += ValueChanged;
         controllable.MaxLimitReached += MaxLimitReached;
-        controllable.MinLimitReached += MinLimitReached;    
+        controllable.MinLimitReached += MinLimitReached;
+        isPushed = false;
     }
 
     protected virtual void ValueChanged(object sender, ControllableEventArgs e)
@@ -40,7 +41,7 @@ public class ButtonPressedDetection : MonoBehaviour
     }
 
 
-    public IEnumerator BaseRuneCheckDelay()
+    public IEnumerator BaseRuneCheckDelay(float waitTime)
     {
         yield return new WaitForSeconds(0.5f);
         GetComponent<VRTK.Controllables.ArtificialBased.VRTK_ArtificialPusher>().SetStayPressed(false);
