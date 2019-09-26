@@ -15,7 +15,6 @@ public class ButtonPressedDetection : MonoBehaviour
         controllable.ValueChanged += ValueChanged;
         controllable.MaxLimitReached += MaxLimitReached;
         controllable.MinLimitReached += MinLimitReached;
-        isPushed = false;
     }
 
     protected virtual void ValueChanged(object sender, ControllableEventArgs e)
