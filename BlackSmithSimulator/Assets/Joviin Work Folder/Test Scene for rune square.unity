@@ -613,7 +613,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.2637724, g: 0.18098079, b: 0.7830189, a: 1}
-    m_PressedColor: {r: 0.42075622, g: 0.9245283, b: 0.37068352, a: 1}
+    m_PressedColor: {r: 0.990566, g: 0.3423835, b: 0.22895159, a: 0.53333336}
     m_SelectedColor: {r: 0.9528302, g: 0.70780665, b: 0.28315237, a: 1}
     m_DisabledColor: {r: 1, g: 0.0990566, b: 0.0990566, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2154,12 +2154,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runeSequence: 
-  buttonPressedNumber: 0
-  RuneSquareButtonReferenceTest:
-  - {fileID: 330103259}
-  - {fileID: 2074304031}
-  - {fileID: 137179813}
-  - {fileID: 1697328351}
+  RuneSquareButtonReference:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &2074304031
 GameObject:
   m_ObjectHideFlags: 0

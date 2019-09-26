@@ -3,17 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TestNewRuneSquareButton : MonoBehaviour
+public class NewRuneSquareButton : MonoBehaviour
 {
     public int thisButtonNumber;
-    public bool isPressed;
-    public bool isInteractable;
 
     public void OnButtonPressed()
     {
         Debug.Log("Button " + thisButtonNumber + " has been pressed");
         this.GetComponent<Button>().interactable = false;
-        FindObjectOfType<TestNewRuneSquareMaster>().NumberSequenceList(thisButtonNumber);
+        FindObjectOfType<NewRuneSquareMaster>().NumberSequenceList(thisButtonNumber);
     }
 
     public void ReleaseButton()
