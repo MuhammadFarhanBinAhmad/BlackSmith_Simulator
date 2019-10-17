@@ -25,9 +25,10 @@ public class PrototypeSceneTransition : MonoBehaviour
 
     protected virtual void MaxLimitReached(object sender, ControllableEventArgs e)
     {
-
-        SceneManager.LoadScene(scene);
-
+        if(FindObjectOfType<CustomerAI>() != null)
+        {
+            FindObjectOfType<CustomerAI>().CollectingWeapon();
+        }
     }
 
     protected virtual void MinLimitReached(object sender, ControllableEventArgs e)

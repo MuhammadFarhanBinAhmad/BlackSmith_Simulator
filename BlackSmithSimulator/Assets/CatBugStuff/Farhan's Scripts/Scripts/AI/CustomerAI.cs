@@ -45,12 +45,21 @@ public class CustomerAI : MonoBehaviour
         {
             Time.timeScale = 2;
         }
-        if (Input.GetMouseButtonDown(0) && given_Order && !weapon_Recived)//check if customer have given order and has his weapon receive
+        if (Input.GetMouseButtonDown(0))//check if customer have given order and has his weapon receive
+        {
+            CollectingWeapon();
+        }
+    }
+
+    public void CollectingWeapon()
+    {
+        if (given_Order && !weapon_Recived)//check if customer have given order and has his weapon receive
         {
             current_DestinationNumber = 0;
             agent.destination = the_Customer_Point_Of_Interest.point_Of_Interest[current_DestinationNumber].position;//go to counter
             customer_Idel_Chatting[0].Stop();//stop talking
             InvokeRepeating("GoingToCounter", 0.1f, 0.1f);
+            print("CollectWeapon");
         }
     }
     void GoingToCounter()
