@@ -120,11 +120,17 @@ namespace VRTK.Controllables.ArtificialBased
 
         protected override void OnEnable()
         {
+
             base.OnEnable();
+            if (FindObjectOfType<CustomerAI>() != null)
+            {
+                FindObjectOfType<CustomerAI>().CollectingWeapon();
+            }
             isPressed = false;
             isMoving = false;
             isTouched = false;
             setTargetPositionRoutine = StartCoroutine(SetTargetPositionAtEndOfFrame());
+            
         }
 
         protected override void OnDisable()
