@@ -14,6 +14,9 @@ public class ThisWeaponData : MonoBehaviour
     public int this_Material_Type;
     public int this_Enchantment_Type;
 
+    //Prototype Only
+    public GameObject[] ParticleEffects;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,8 +34,9 @@ public class ThisWeaponData : MonoBehaviour
                 Destroy(other.gameObject);
 
                 //Prototype Only
-
-                GameObject.Find("DisplayEnchantmentNumber").GetComponent<Text>().text = this_Enchantment_Type.ToString();
+                GameObject LocalParticle;
+                LocalParticle = Instantiate(ParticleEffects[this_Enchantment_Type], this.gameObject.transform);
+                LocalParticle.transform.localPosition = new Vector3(0, 0, 0);
             }
         }
     }

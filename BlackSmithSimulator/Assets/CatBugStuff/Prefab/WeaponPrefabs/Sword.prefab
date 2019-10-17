@@ -195,6 +195,12 @@ MonoBehaviour:
   this_Weapon_Type: 0
   this_Material_Type: 0
   this_Enchantment_Type: 0
+  ParticleEffects:
+  - {fileID: 0}
+  - {fileID: 6640566353449017477, guid: e89e81d5dfdf45f4ca187149ab670f45, type: 3}
+  - {fileID: 3110690947096203087, guid: c9c72bab877b4f14d800e7a5b7ae0526, type: 3}
+  - {fileID: 5388981489021645287, guid: 7f5dbc92dd9153443bcd40e5eb9b7a19, type: 3}
+  - {fileID: 3252809366016760945, guid: eff2b6f2b77158c48ba811f69024334a, type: 3}
 --- !u!65 &7313458011064729287
 BoxCollider:
   m_ObjectHideFlags: 0
