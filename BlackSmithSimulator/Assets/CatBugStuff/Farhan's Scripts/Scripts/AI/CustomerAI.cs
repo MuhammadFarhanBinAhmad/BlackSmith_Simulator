@@ -31,7 +31,7 @@ public class CustomerAI : MonoBehaviour
     }
     void Start()
     {
-        int moving_Speed = Random.Range(3,10);
+        int moving_Speed = Random.Range(3,7);
 
         the_Customer_Spawner = FindObjectOfType<CustomerSpawner>();
         agent = GetComponent<NavMeshAgent>();
