@@ -3621,18 +3621,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a92266eba3c9764da2a4953b3cd371c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customer_Order: {fileID: 11400000, guid: 4c28667d7c097f5479c8922c526d9a80, type: 2}
+  customer_Order: {fileID: 11400000, guid: ad5aeba71094a68459cd27b70f6f58f8, type: 2}
   customer_Order_Speech:
   - {fileID: 3211060976196243695}
   customer_Idel_Chatting:
   - {fileID: 4671784790624108892}
   correct_Weapon_Receive: 0
-  customer_Anim: {fileID: 0}
-  customer_Animation_Clip:
-  - {fileID: 7400000, guid: 371f6cf5d2234c743ba5a660ed13b51b, type: 2}
-  - {fileID: 7400000, guid: c7e7f883d03574d4597f5f7773e04c30, type: 2}
-  - {fileID: 7400000, guid: b4eb4a4878728ff4abce23f5f76c768e, type: 2}
-  - {fileID: 7400000, guid: e87c2ded033e2574aa41412c203f3604, type: 2}
+  customer_Idling_Animation:
+  - Idling00
+  - Idling01
 --- !u!111 &-4320561305817518247
 Animation:
   m_ObjectHideFlags: 0
@@ -3642,7 +3639,7 @@ Animation:
   m_GameObject: {fileID: 372240657062210236}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: e87c2ded033e2574aa41412c203f3604, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: e87c2ded033e2574aa41412c203f3604, type: 2}
   m_WrapMode: 0

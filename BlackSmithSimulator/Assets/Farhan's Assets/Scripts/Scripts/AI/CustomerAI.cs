@@ -7,15 +7,17 @@ public class CustomerAI : MonoBehaviour
 {
     NavMeshAgent agent;
 
-    public WeaponData customer_Order;
+    WeaponData customer_Order;
 
     CustomerPointOfInterest the_Customer_Point_Of_Interest;
 
+    //Audio speeches
     public List<AudioSource> customer_Order_Speech = new List<AudioSource>();
     public List<AudioSource> customer_Idel_Chatting = new List<AudioSource>();
 
     CustomerSpawner the_Customer_Spawner;
 
+    //weapon check
     public bool correct_Weapon_Receive;
     bool given_Order;
     bool weapon_Recived;
@@ -23,19 +25,20 @@ public class CustomerAI : MonoBehaviour
     bool correct_Weapon_Type;
     bool correct_Enchantment;
 
+    //Location
     int current_DestinationNumber;
 
-    public Animation customer_Anim;
-    public List<AnimationClip> customer_Animation_Clip = new List<AnimationClip>();
+    //Animation
+    Animator customer_Animator;
+    public List<string> customer_Idling_Animation = new List<string>();
 
     private void Awake()
     {
         the_Customer_Point_Of_Interest = FindObjectOfType<CustomerPointOfInterest>();
+        customer_Animator = GetComponent<Animator>();
     }
     void Start()
     {
-        customer_Anim = GetComponent<Animation>();
-        customer_Anim.Play("Walk");
         int moving_Speed = Random.Range(3,5);
 
         the_Customer_Spawner = FindObjectOfType<CustomerSpawner>();
@@ -52,7 +55,6 @@ public class CustomerAI : MonoBehaviour
             agent.destination = the_Customer_Point_Of_Interest.point_Of_Interest[current_DestinationNumber].position;//go to counter
             customer_Idel_Chatting[0].Stop();//stop talking
             InvokeRepeating("GoingToCounter", 0.1f, 0.1f);
-            print("CollectWeapon");
         }
     }
     void GoingToCounter()
@@ -90,6 +92,7 @@ public class CustomerAI : MonoBehaviour
                         else if (!given_Order)
                         {
                             customer_Order_Speech[0].Play();//give order voice line
+                            customer_Animator.SetBool("GivingOrder", true);
                             InvokeRepeating("StartWindowShopping", 0, 0.1f);
                             CancelInvoke("GoingToCounter");
                         }
@@ -106,9 +109,11 @@ public class CustomerAI : MonoBehaviour
     }
     void StartWindowShopping()
     {
+
         //customer start exploring and moving aroud store
         if (!customer_Order_Speech[0].isPlaying)
         {
+            customer_Animator.SetBool("GivingOrder", false);
             MoveToNextPoint();
             given_Order = true;
             RandomChatteringFromAI();
@@ -130,7 +135,6 @@ public class CustomerAI : MonoBehaviour
         if (new_Point_Of_Interest == current_DestinationNumber)
         {
             MoveToNextPoint();
-            print("new number");
         }
         if (new_Point_Of_Interest != current_DestinationNumber)
         {
@@ -179,7 +183,6 @@ public class CustomerAI : MonoBehaviour
                 {
                     the_Customer_Spawner.StartCoroutine("SpawnNextCustomer");//start timer to spawn next customer
                     the_Customer_Spawner.Customer_Already_Serve++;
-                    print("customer server" + the_Customer_Spawner.Customer_Already_Serve);
                     Destroy(gameObject);
                 }
             }
@@ -189,8 +192,12 @@ public class CustomerAI : MonoBehaviour
     IEnumerator CustomerIdling()
     {
         //customer will idle for a period of time before moving to next location
-        int wait_Time = Random.Range(8, 15);
-        yield return new WaitForSeconds(wait_Time);
+        int idle_Animation_Number = Random.Range(0, customer_Idling_Animation.Count);
+
+        customer_Animator.SetBool(customer_Idling_Animation[idle_Animation_Number], true);//play idle animation\
+        yield return new WaitForSeconds(customer_Idling_Animation[idle_Animation_Number].Length/2);
+
+        customer_Animator.SetBool(customer_Idling_Animation[idle_Animation_Number], false);//stop playing idle animation
         MoveToNextPoint();
         InvokeRepeating("GoingToCounter", 0.1f, 0.1f);//Constantly checking Customer Location
     }
