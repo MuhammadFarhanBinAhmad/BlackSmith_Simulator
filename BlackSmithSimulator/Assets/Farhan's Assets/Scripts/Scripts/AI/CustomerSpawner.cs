@@ -6,7 +6,7 @@ public class CustomerSpawner : MonoBehaviour
 {
 
     public static int current_day = 1;
-    public int Customer_Already_Serve;
+    public static int Customer_Already_Serve;
 
     public GameObject the_Sun;
     public List<GameObject> Customer = new List<GameObject>();
@@ -17,19 +17,17 @@ public class CustomerSpawner : MonoBehaviour
     void Start()
     {
         the_Weapon_Collection_Point = FindObjectOfType<WeaponCollectionPoint>();
-        print("day" + current_day);
+        StartCoroutine("SpawnNextCustomer");
     }
     //Spawn Customer
     public void NextDay()
     {
-        print("Nextday");
         current_day++;
         Customer_Already_Serve = 0;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("OpenStore");
     }
     public IEnumerator SpawnNextCustomer()
     {
-        print("STARTDAY");
         the_Weapon_Collection_Point.ready_For_Collection = false;
         //wait before next customer spawn
         yield return new WaitForSeconds(3);
