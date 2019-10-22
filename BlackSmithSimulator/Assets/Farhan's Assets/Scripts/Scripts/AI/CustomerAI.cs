@@ -182,7 +182,7 @@ public class CustomerAI : MonoBehaviour
                 if (!agent.hasPath || agent.velocity.sqrMagnitude == 0)
                 {
                     the_Customer_Spawner.StartCoroutine("SpawnNextCustomer");//start timer to spawn next customer
-                    the_Customer_Spawner.Customer_Already_Serve++;
+                    CustomerSpawner.Customer_Already_Serve++;
                     Destroy(gameObject);
                 }
             }
