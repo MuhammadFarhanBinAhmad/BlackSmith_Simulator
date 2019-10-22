@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PrototypeSceneTransition : MonoBehaviour
 {
     public VRTK_BaseControllable controllable;
+    public string scene;
 
 
     protected virtual void OnEnable()
