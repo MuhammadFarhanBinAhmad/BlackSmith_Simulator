@@ -1,17 +1,20 @@
-﻿namespace VRTK.Examples
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using VRTK.Controllables;
+
+public class UseBook : MonoBehaviour
 {
-    using UnityEngine;
-    using UnityEngine.UI;
-    using VRTK.Controllables;
 
-    public class ControllableReactor : MonoBehaviour
-    {
         public VRTK_BaseControllable controllable;
-        public Text displayText;
-        public string outputOnMax = "Maximum Reached";
-        public string outputOnMin = "Minimum Reached";
+        public BookBehaviour bookBehaviour;
+        public bool isForward;
 
-        protected virtual void OnEnable()
+    public void Start()
+    {
+    }
+
+    protected virtual void OnEnable()
         {
             controllable = (controllable == null ? GetComponent<VRTK_BaseControllable>() : controllable);
             controllable.ValueChanged += ValueChanged;
@@ -21,27 +24,24 @@
 
         protected virtual void ValueChanged(object sender, ControllableEventArgs e)
         {
-            if (displayText != null)
-            {
-                displayText.text = e.value.ToString("F1");
-            }
+
         }
 
         protected virtual void MaxLimitReached(object sender, ControllableEventArgs e)
         {
-            if (outputOnMax != "")
+            if (isForward == true)
             {
-                //BUTTON PRESSED
-                Debug.Log(outputOnMax);
+                bookBehaviour.NextPage();
+            }
+        else
+            {
+                bookBehaviour.PreviousPage();
             }
         }
 
         protected virtual void MinLimitReached(object sender, ControllableEventArgs e)
         {
-            if (outputOnMin != "")
-            {
-                Debug.Log(outputOnMin);
-            }
+
         }
-    }
+    
 }
