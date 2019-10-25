@@ -1013,11 +1013,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae06e5cb58d5fa4992e0e15cf150a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  point_Of_Interest:
+  - {fileID: 1708856169}
+  - {fileID: 1919165028}
+  - {fileID: 532619741}
+  - {fileID: 794677019}
+  - {fileID: 1059068254}
+  - {fileID: 993570452}
+  - {fileID: 875451077}
   the_Sun: {fileID: 0}
   Customer:
   - {fileID: 372240657062210236, guid: 77eada8ec75dc5640b6322707158f83c, type: 3}
   - {fileID: 372240657062210236, guid: 77eada8ec75dc5640b6322707158f83c, type: 3}
   - {fileID: 372240657062210236, guid: 77eada8ec75dc5640b6322707158f83c, type: 3}
+  general_Customer_Anim:
+  - IdleAnim00
+  - IdleAnim01
 --- !u!4 &1040174954
 Transform:
   m_ObjectHideFlags: 0
@@ -1141,7 +1152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0de81c7a810bce64f87a07dd278d0c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  the_Weapon_Data: {fileID: 11400000, guid: 1dedad1d37ea583498f8072a44e45a60, type: 2}
+  the_Weapon_Data: {fileID: 0}
   this_Weapon_Type: 0
   this_Material_Type: 0
   this_Enchantment_Type: 0
@@ -1346,7 +1357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0de81c7a810bce64f87a07dd278d0c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  the_Weapon_Data: {fileID: 11400000, guid: ad5aeba71094a68459cd27b70f6f58f8, type: 2}
+  the_Weapon_Data: {fileID: 0}
   this_Weapon_Type: 0
   this_Material_Type: 0
   this_Enchantment_Type: 0
@@ -1565,7 +1576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0de81c7a810bce64f87a07dd278d0c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  the_Weapon_Data: {fileID: 11400000, guid: 158911b17a52959418574ba4f194ec36, type: 2}
+  the_Weapon_Data: {fileID: 0}
   this_Weapon_Type: 0
   this_Material_Type: 0
   this_Enchantment_Type: 0

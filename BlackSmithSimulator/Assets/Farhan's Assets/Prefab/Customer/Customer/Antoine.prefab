@@ -3518,12 +3518,10 @@ GameObject:
   m_Component:
   - component: {fileID: 372240657061853020}
   - component: {fileID: 372240657071724764}
-  - component: {fileID: 372240657068777208}
   - component: {fileID: 8532379509309681744}
   - component: {fileID: 6357431719437757345}
-  - component: {fileID: -4320561305817518247}
   m_Layer: 0
-  m_Name: unitychan(Test)
+  m_Name: Antoine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3566,27 +3564,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &372240657068777208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 372240657062210236}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a6149a22cf8a47a192a60b00b3becb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isActive: 1
-  ref_SMR_EYE_DEF: {fileID: 372240657075807762}
-  ref_SMR_EL_DEF: {fileID: 372240657075807868}
-  ratio_Close: 85
-  ratio_HalfClose: 20
-  ratio_Open: 0
-  timeBlink: 0.4
-  threshold: 0.3
-  interval: 3
 --- !u!195 &8532379509309681744
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3621,34 +3598,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a92266eba3c9764da2a4953b3cd371c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customer_Order: {fileID: 11400000, guid: 4c28667d7c097f5479c8922c526d9a80, type: 2}
+  customer_Order:
+  - {fileID: 11400000, guid: 33c6953d5598bf044803ca987b63ab08, type: 2}
+  - {fileID: 11400000, guid: 06071ae485e33c04dbff6ab47aa5a661, type: 2}
+  - {fileID: 11400000, guid: 3c1beb7287edb1b48b9ef52178a6eddb, type: 2}
+  - {fileID: 11400000, guid: 436338c77e1ee294f96fc4bf36ab3ba6, type: 2}
   customer_Order_Speech:
   - {fileID: 3211060976196243695}
   customer_Idel_Chatting:
   - {fileID: 4671784790624108892}
   correct_Weapon_Receive: 0
-  customer_Anim: {fileID: 0}
-  customer_Animation_Clip:
-  - {fileID: 7400000, guid: 371f6cf5d2234c743ba5a660ed13b51b, type: 2}
-  - {fileID: 7400000, guid: c7e7f883d03574d4597f5f7773e04c30, type: 2}
-  - {fileID: 7400000, guid: b4eb4a4878728ff4abce23f5f76c768e, type: 2}
-  - {fileID: 7400000, guid: e87c2ded033e2574aa41412c203f3604, type: 2}
---- !u!111 &-4320561305817518247
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 372240657062210236}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: e87c2ded033e2574aa41412c203f3604, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &372240657062210238
 GameObject:
   m_ObjectHideFlags: 0

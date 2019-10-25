@@ -7,14 +7,12 @@ public class CustomerAI : MonoBehaviour
 {
     NavMeshAgent agent;
 
-    public WeaponData customer_Order;
+    public List<WeaponData> customer_Order = new List<WeaponData>();
 
-    CustomerPointOfInterest the_Customer_Point_Of_Interest;
+    CustomerSpawner the_Customer_Spawner;
 
     public List<AudioSource> customer_Order_Speech = new List<AudioSource>();
     public List<AudioSource> customer_Idel_Chatting = new List<AudioSource>();
-
-    CustomerSpawner the_Customer_Spawner;
 
     public bool correct_Weapon_Receive;
     bool given_Order;
@@ -24,24 +22,22 @@ public class CustomerAI : MonoBehaviour
     bool correct_Enchantment;
 
     int current_DestinationNumber;
-
-    public Animation customer_Anim;
-    public List<AnimationClip> customer_Animation_Clip = new List<AnimationClip>();
+    
+    Animator customer_Anim;
 
     private void Awake()
     {
-        the_Customer_Point_Of_Interest = FindObjectOfType<CustomerPointOfInterest>();
+        the_Customer_Spawner = FindObjectOfType<CustomerSpawner>();
+        customer_Anim = GetComponent<Animator>();
     }
     void Start()
     {
-        customer_Anim = GetComponent<Animation>();
-        customer_Anim.Play("Walk");
+
         int moving_Speed = Random.Range(3,5);
 
-        the_Customer_Spawner = FindObjectOfType<CustomerSpawner>();
         agent = GetComponent<NavMeshAgent>();
         agent.speed = moving_Speed;
-        agent.destination = the_Customer_Point_Of_Interest.point_Of_Interest[0].position;
+        agent.destination = the_Customer_Spawner.point_Of_Interest[0].position;
         InvokeRepeating("GoingToCounter", 0.1f, 0.1f);
     }
     public void CollectingWeapon()
@@ -49,10 +45,9 @@ public class CustomerAI : MonoBehaviour
         if (given_Order && !weapon_Recived)//check if customer have given order and has his weapon receive
         {
             current_DestinationNumber = 0;
-            agent.destination = the_Customer_Point_Of_Interest.point_Of_Interest[current_DestinationNumber].position;//go to counter
+            agent.destination = the_Customer_Spawner.point_Of_Interest[current_DestinationNumber].position;//go to counter
             customer_Idel_Chatting[0].Stop();//stop talking
             InvokeRepeating("GoingToCounter", 0.1f, 0.1f);
-            print("CollectWeapon");
         }
     }
     void GoingToCounter()
@@ -89,7 +84,8 @@ public class CustomerAI : MonoBehaviour
                         //customer giving order
                         else if (!given_Order)
                         {
-                            customer_Order_Speech[0].Play();//give order voice line
+                            customer_Order_Speech[CustomerSpawner.current_day].Play();//give order voice line
+                            customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], true);//play customer order animation
                             InvokeRepeating("StartWindowShopping", 0, 0.1f);
                             CancelInvoke("GoingToCounter");
                         }
@@ -109,6 +105,7 @@ public class CustomerAI : MonoBehaviour
         //customer start exploring and moving aroud store
         if (!customer_Order_Speech[0].isPlaying)
         {
+            customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], false);//stop customer order animation
             MoveToNextPoint();
             given_Order = true;
             RandomChatteringFromAI();
@@ -118,7 +115,7 @@ public class CustomerAI : MonoBehaviour
     }
     void RandomChatteringFromAI()//Customer start talking
     {
-        customer_Idel_Chatting[0].Play();
+       customer_Idel_Chatting[0].Play();
     }
     //Customer exploring store
     void MoveToNextPoint()
@@ -126,11 +123,10 @@ public class CustomerAI : MonoBehaviour
         int new_Point_Of_Interest;
 
         //ensure that the same number dont appear twice
-        new_Point_Of_Interest = Random.Range(1, the_Customer_Point_Of_Interest.point_Of_Interest.Count - 2);
+        new_Point_Of_Interest = Random.Range(1, the_Customer_Spawner.point_Of_Interest.Count - 2);
         if (new_Point_Of_Interest == current_DestinationNumber)
         {
             MoveToNextPoint();
-            print("new number");
         }
         if (new_Point_Of_Interest != current_DestinationNumber)
         {
@@ -141,7 +137,7 @@ public class CustomerAI : MonoBehaviour
                     if (!agent.hasPath || agent.velocity.sqrMagnitude == 0)
                     {
                         current_DestinationNumber = new_Point_Of_Interest;//give random point of interest for customer to move
-                        agent.destination = the_Customer_Point_Of_Interest.point_Of_Interest[current_DestinationNumber].position;
+                        agent.destination = the_Customer_Spawner.point_Of_Interest[current_DestinationNumber].position;
                     }
                 }
             }
@@ -152,15 +148,15 @@ public class CustomerAI : MonoBehaviour
 
         WeaponCollectionPoint the_Weapon_Collection_Point = FindObjectOfType<WeaponCollectionPoint>();
         //check all types if correct
-        if (customer_Order.weapon_Material == the_Weapon_Collection_Point.material_Type)
+        if (customer_Order[CustomerSpawner.current_day].weapon_Material == the_Weapon_Collection_Point.material_Type)
         {
             correct_Material = true;
         }
-        if (customer_Order.weapon_Type == the_Weapon_Collection_Point.weapon_Type)
+        if (customer_Order[CustomerSpawner.current_day].weapon_Type == the_Weapon_Collection_Point.weapon_Type)
         {
             correct_Weapon_Type = true;
         }
-        if (customer_Order.weapon_Enchantment == the_Weapon_Collection_Point.enchantment_Type)
+        if (customer_Order[CustomerSpawner.current_day].weapon_Enchantment == the_Weapon_Collection_Point.enchantment_Type)
         {
             correct_Enchantment = true;
         }
@@ -177,9 +173,8 @@ public class CustomerAI : MonoBehaviour
             {
                 if (!agent.hasPath || agent.velocity.sqrMagnitude == 0)
                 {
-                    the_Customer_Spawner.StartCoroutine("SpawnNextCustomer");//start timer to spawn next customer
+                    FindObjectOfType<CustomerSpawner>().StartCoroutine("SpawnNextCustomer");//start timer to spawn next customer
                     CustomerSpawner.Customer_Already_Serve++;
-                    print("customer server" + CustomerSpawner.Customer_Already_Serve);
                     Destroy(gameObject);
                 }
             }
@@ -189,8 +184,13 @@ public class CustomerAI : MonoBehaviour
     IEnumerator CustomerIdling()
     {
         //customer will idle for a period of time before moving to next location
-        int wait_Time = Random.Range(8, 15);
-        yield return new WaitForSeconds(wait_Time);
+        int current_Animation_Element = Random.Range(1, the_Customer_Spawner.general_Customer_Anim.Count);
+        int times_Animation_Loops = Random.Range(2, 4);
+
+
+        customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element], true);//Start idle animation
+        yield return new WaitForSeconds(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element].Length/2 * times_Animation_Loops);
+        customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element], false);//Start idle animation
         MoveToNextPoint();
         InvokeRepeating("GoingToCounter", 0.1f, 0.1f);//Constantly checking Customer Location
     }
@@ -198,8 +198,8 @@ public class CustomerAI : MonoBehaviour
     IEnumerator ExitingStore()
     {
         yield return new WaitForSeconds(1.5f);//place grabing animation time here
-        current_DestinationNumber = the_Customer_Point_Of_Interest.point_Of_Interest.Count - 1;
-        agent.destination = the_Customer_Point_Of_Interest.point_Of_Interest[the_Customer_Point_Of_Interest.point_Of_Interest.Count - 1].position;
+        current_DestinationNumber = the_Customer_Spawner.point_Of_Interest.Count - 1;
+        agent.destination = the_Customer_Spawner.point_Of_Interest[the_Customer_Spawner.point_Of_Interest.Count - 1].position;
         InvokeRepeating("ExitStore", 0, 0.1f);
     }
 }
