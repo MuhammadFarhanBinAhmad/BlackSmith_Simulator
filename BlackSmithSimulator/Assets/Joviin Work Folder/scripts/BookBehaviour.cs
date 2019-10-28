@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BookBehaviour : MonoBehaviour
 {
-    public Material[] Pages;
+    public Material[] Pages;  
     public static int CurrentPage = 0;
     MeshRenderer thisMeshRenderer;
 

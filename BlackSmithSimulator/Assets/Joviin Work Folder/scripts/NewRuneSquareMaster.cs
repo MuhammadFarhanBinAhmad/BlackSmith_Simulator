@@ -110,8 +110,7 @@ public class NewRuneSquareMaster : MonoBehaviour
         {
             Debug.Log("RuneSequence is not recognised");
             ResetRuneSpawner();
-        }
-        
+        }       
     }
 
     public void SpawnBaseRune(int baseToSpawnNumber)
@@ -127,10 +126,9 @@ public class NewRuneSquareMaster : MonoBehaviour
     public void ResetRuneSpawner()
     {
         runeSequence.Clear();
-        
         for (int i = 0; i < RuneSquareButtonReference.Length; i++)
         {
-            RuneSquareButtonReference[i].GetComponent<NewRuneSquareButton>().ReleaseButton();
+            RuneSquareButtonReference[i].GetComponent<NewRuneSquareButton>().Invoke("ReleaseButton", 1);
         }
     }
 
