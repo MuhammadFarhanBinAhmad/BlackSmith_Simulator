@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.24387144, g: 0.34481892, b: 0.4508835, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2516,7 +2516,103 @@ PrefabInstance:
         type: 3}
       propertyPath: weaponTypeModels.Array.data[1]
       value: 
+      objectReference: {fileID: 3573836475121886417, guid: 3b51ab5220b9c5446a87c6feefd2d2de,
+        type: 3}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeMaterials.Array.data[0]
+      value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeModels.Array.data[2]
+      value: 
+      objectReference: {fileID: 3573836475121886417, guid: 34165a248412a974a8dfcadbddca3f4d,
+        type: 3}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeModels.Array.data[3]
+      value: 
+      objectReference: {fileID: 3573836475121886417, guid: 4594db12ab3509e44a6269d4f11648cd,
+        type: 3}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeModels.Array.data[4]
+      value: 
+      objectReference: {fileID: 3573836475121886417, guid: 277c6bcadfda8b34fa9edfefde7012da,
+        type: 3}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeModels.Array.data[5]
+      value: 
+      objectReference: {fileID: 3573836475121886417, guid: 1bcd0232ba84e4d40ae11864aa1e2917,
+        type: 3}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeModels.Array.data[6]
+      value: 
+      objectReference: {fileID: 3573836475121886417, guid: 6f257325e1da25e4f853ba3ba7eb1f1b,
+        type: 3}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeModels.Array.data[7]
+      value: 
+      objectReference: {fileID: 3573836475121886417, guid: 3c4ff3690f2829741a0b06424aca2c6c,
+        type: 3}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeModels.Array.data[8]
+      value: 
+      objectReference: {fileID: 3573836475121886417, guid: 34c6f6c2f51034242841bd8c913ad01f,
+        type: 3}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeModels.Array.data[9]
+      value: 
+      objectReference: {fileID: 3573836475121886417, guid: 65e6185d10918a54ca9a82a75fdd2260,
+        type: 3}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeModels.Array.data[10]
+      value: 
+      objectReference: {fileID: 3573836475121886417, guid: 9d97c19ce9d21dd448299f3fbcd80d2c,
+        type: 3}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeModels.Array.data[11]
+      value: 
+      objectReference: {fileID: 3573836475121886417, guid: 4d874c4c0db922e46ba27d159377b593,
+        type: 3}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeModels.Array.data[12]
+      value: 
+      objectReference: {fileID: 3573836475121886417, guid: f076eebf755c48949a6f45e583708348,
+        type: 3}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeModels.Array.data[13]
+      value: 
+      objectReference: {fileID: 3573836475121886417, guid: 463184c9adbd1824a8218b517a86b828,
+        type: 3}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeModels.Array.data[14]
+      value: 
+      objectReference: {fileID: 3573836475121886417, guid: 7abfa3a6a03613d4aad686f5368571f7,
+        type: 3}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeModels.Array.data[15]
+      value: 
+      objectReference: {fileID: 3573836475121886417, guid: 288cd9f7b1a59a54a94ef2748cbf28f0,
+        type: 3}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeModels.Array.data[16]
+      value: 
+      objectReference: {fileID: 3573836475121886417, guid: 5fa2cfea3501b1343bfb5c50fc4e29d5,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cf80531ac1feca4cbc11d3ba7d72484, type: 3}
 --- !u!1 &1933670538
