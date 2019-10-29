@@ -2482,6 +2482,41 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeModels.Array.size
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeMaterials.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeMaterials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: f107b094db59329439b8349041d6f852, type: 2}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeMaterials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cbbc0c30520e65409aaf6c1892cdef5, type: 2}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeMaterials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 863b16ff0138d6a4a866fc309c326e06, type: 2}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeMaterials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: 51ab5fa3570d6754bb027fcd90fe4aa8, type: 2}
+    - target: {fileID: 5655469572726902123, guid: 9cf80531ac1feca4cbc11d3ba7d72484,
+        type: 3}
+      propertyPath: weaponTypeModels.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cf80531ac1feca4cbc11d3ba7d72484, type: 3}
 --- !u!1 &1933670538

@@ -97,16 +97,81 @@ public class Fanvil : MonoBehaviour
                 CreateWeapon(weaponTypeRune, materialTypeRune);
             }
         }
-
     }
 
     //If Generic material is used
     public void CreateWeapon(int weaponTypeLocal, int materialTypeLocal)
     {
+        int weaponToPrint = 0;
         //Instantiate new weapon
         print("Creating Weapon" + weaponTypeLocal + " With " + materialTypeLocal + " material as base");
+            //Calculate the output weapon
+            if (weaponTypeLocal == 1 && materialTypeLocal == 1)
+            {
+                weaponToPrint = 1;
+            }
+            else if (weaponTypeLocal ==1 && materialTypeLocal ==2)
+            {
+                weaponToPrint = 2;
+            }
+            else if (weaponTypeLocal ==1 && materialTypeLocal ==3)
+            {
+                weaponToPrint = 3;
+            }
+            else if (weaponTypeLocal ==1 && materialTypeLocal ==4)
+            {
+                weaponToPrint = 4;
+            }
+            else if (weaponTypeLocal ==2 && materialTypeLocal ==1)
+            {
+                weaponToPrint = 5;
+            }
+            else if (weaponTypeLocal ==2 && materialTypeLocal ==2)
+            {
+                weaponToPrint = 6;
+            }
+            else if (weaponTypeLocal ==2 && materialTypeLocal ==3)
+            {
+                weaponToPrint = 7;
+            }
+            else if (weaponTypeLocal ==2 && materialTypeLocal ==4)
+            {
+                weaponToPrint = 8;
+            }
+            else if (weaponTypeLocal ==3 && materialTypeLocal ==1)
+            {
+                weaponToPrint = 9;
+            }
+            else if (weaponTypeLocal ==3 && materialTypeLocal ==2)
+            {
+                weaponToPrint = 10;
+            }
+            else if (weaponTypeLocal ==3 && materialTypeLocal ==3)
+            {
+                weaponToPrint = 11;
+            }
+            else if (weaponTypeLocal ==3 && materialTypeLocal ==4)
+            {
+                weaponToPrint = 12;
+            }
+            else if (weaponTypeLocal ==4 && materialTypeLocal ==1)
+            {
+                weaponToPrint = 13;
+            }
+            else if (weaponTypeLocal ==4 && materialTypeLocal ==2)
+            {
+                weaponToPrint = 14;
+            }
+            else if (weaponTypeLocal ==4 && materialTypeLocal ==3)
+            {
+                weaponToPrint = 15;
+            }
+            else if (weaponTypeLocal ==4 && materialTypeLocal ==4)
+            {
+                weaponToPrint = 16;
+            }
         GameObject newWeapon;
-        newWeapon = Instantiate(weaponTypeModels[weaponTypeLocal], this.transform.position, Quaternion.Euler(90, 0, 0));
+        newWeapon = Instantiate(weaponTypeModels[weaponToPrint], this.transform.position, Quaternion.Euler(90, 0, 0));
 
         newWeapon.GetComponent<MeshRenderer>().material = weaponTypeMaterials[materialTypeLocal];
         //print("Material Change Successful!");
