@@ -37,9 +37,17 @@ public class CustomerAI : MonoBehaviour
 
         agent = GetComponent<NavMeshAgent>();
         agent.speed = moving_Speed;
+        agent.destination = the_Customer_Spawner.point_Of_Interest[1].position;
+        StartCoroutine("MovingToCounter");
+    }
+
+    IEnumerator MovingToCounter()
+    {
+        yield return new WaitForSeconds(3);
         agent.destination = the_Customer_Spawner.point_Of_Interest[0].position;
         InvokeRepeating("GoingToCounter", 0.1f, 0.1f);
     }
+
     public void CollectingWeapon()
     {
         if (given_Order && !weapon_Recived)//check if customer have given order and has his weapon receive

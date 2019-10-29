@@ -9,8 +9,7 @@ public class WorkShopDoor : MonoBehaviour
 
     private void Start()
     {
-        scene_Name.Add("AI Test Menu");
-        scene_Name.Add("PauseStore");
+        scene_Name.Add("GameLevel");
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -20,14 +19,7 @@ public class WorkShopDoor : MonoBehaviour
         }
         if (other.name == "StoreCloseBoxCollider")
         {
-            if (CustomerSpawner.Customer_Already_Serve <= 2)
-            {
-                SceneManager.LoadScene(scene_Name[1]);//pause store
-            }
-            else
-            {
-                FindObjectOfType<CustomerSpawner>().NextDay();
-            }
+            FindObjectOfType<CustomerSpawner>().NextDay();
         }
     }
 }

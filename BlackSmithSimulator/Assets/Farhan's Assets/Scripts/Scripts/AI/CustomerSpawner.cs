@@ -18,15 +18,21 @@ public class CustomerSpawner : CustomerPointOfInterest
     // Start is called before the first frame update
     void Start()
     {
+        print(current_day + "CurrentDay");
+        print(Customer_Already_Serve + "Customer_Already_Serve");
+
         the_Weapon_Collection_Point = FindObjectOfType<WeaponCollectionPoint>();
-        StartCoroutine("SpawnNextCustomer");
+        if(Customer_Already_Serve == 0)
+        {
+            StartCoroutine("SpawnNextCustomer");
+        }
     }
     //Spawn Customer
     public void NextDay()
     {
         current_day++;
         Customer_Already_Serve = 0;
-        SceneManager.LoadScene("OpenStore");
+        SceneManager.LoadScene("Pause_Main_Menu");
     }
     public IEnumerator SpawnNextCustomer()
     {

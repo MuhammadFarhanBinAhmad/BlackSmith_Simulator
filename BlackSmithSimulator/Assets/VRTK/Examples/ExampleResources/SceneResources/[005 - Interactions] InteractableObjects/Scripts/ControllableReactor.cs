@@ -2,6 +2,7 @@
 {
     using UnityEngine;
     using UnityEngine.UI;
+    using UnityEngine.SceneManagement;
     using VRTK.Controllables;
 
     public class ControllableReactor : MonoBehaviour
@@ -32,10 +33,16 @@
             if (outputOnMax != "")
             {
                 //BUTTON PRESSED
-                Debug.Log(outputOnMax);
+                if(CustomerSpawner.Customer_Already_Serve == 3)
+                {
+                    SceneManager.LoadScene("EndOfDay");
+                }
+                else
+                {
+                    FindObjectOfType<CustomerAI>().CollectingWeapon();//customer collect weapon
+                }
             }
         }
-
         protected virtual void MinLimitReached(object sender, ControllableEventArgs e)
         {
             if (outputOnMin != "")
