@@ -5,15 +5,19 @@ using UnityEngine.AI;
 
 public class CustomerAI : MonoBehaviour
 {
+
+    /// <summary>
+    /// For Weapon data and customer voice line, go to WeaponData Scripts
+    /// for AI related and Day data, go to weapon CustomerSpawner scripts
+    /// </summary>
+
     NavMeshAgent agent;
 
     public List<WeaponData> customer_Order = new List<WeaponData>();
 
     CustomerSpawner the_Customer_Spawner;
 
-    public List<AudioSource> customer_Order_Speech = new List<AudioSource>();
-    public List<AudioSource> customer_Idel_Chatting = new List<AudioSource>();
-
+    //check weapon given to customer
     public bool correct_Weapon_Receive;
     bool given_Order;
     bool weapon_Recived;
@@ -33,17 +37,15 @@ public class CustomerAI : MonoBehaviour
     void Start()
     {
 
-        int moving_Speed = Random.Range(3,5);
-
         agent = GetComponent<NavMeshAgent>();
-        agent.speed = moving_Speed;
+        agent.speed = 5;
         agent.destination = the_Customer_Spawner.point_Of_Interest[1].position;
         StartCoroutine("MovingToCounter");
     }
 
     IEnumerator MovingToCounter()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         agent.destination = the_Customer_Spawner.point_Of_Interest[0].position;
         InvokeRepeating("GoingToCounter", 0.1f, 0.1f);
     }
@@ -54,7 +56,7 @@ public class CustomerAI : MonoBehaviour
         {
             current_DestinationNumber = 0;
             agent.destination = the_Customer_Spawner.point_Of_Interest[current_DestinationNumber].position;//go to counter
-            customer_Idel_Chatting[0].Stop();//stop talking
+            customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Idel_Chatting[0].Stop();
             InvokeRepeating("GoingToCounter", 0.1f, 0.1f);
         }
     }
@@ -92,7 +94,7 @@ public class CustomerAI : MonoBehaviour
                         //customer giving order
                         else if (!given_Order)
                         {
-                            customer_Order_Speech[CustomerSpawner.current_day].Play();//give order voice line
+                            customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Order_Speech[0].Play();//give order voice line
                             customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], true);//play customer order animation
                             InvokeRepeating("StartWindowShopping", 0, 0.1f);
                             CancelInvoke("GoingToCounter");
@@ -111,7 +113,7 @@ public class CustomerAI : MonoBehaviour
     void StartWindowShopping()
     {
         //customer start exploring and moving aroud store
-        if (!customer_Order_Speech[0].isPlaying)
+        if (!customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Order_Speech[0].isPlaying)
         {
             customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], false);//stop customer order animation
             MoveToNextPoint();
@@ -123,7 +125,13 @@ public class CustomerAI : MonoBehaviour
     }
     void RandomChatteringFromAI()//Customer start talking
     {
-       customer_Idel_Chatting[0].Play();
+        int random_Element = Random.Range(0, customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Idel_Chatting.Count);//create random number range from 0 to the total element in the voice line list
+
+        if (!customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Idel_Chatting[random_Element].isPlaying)
+        {
+            random_Element = Random.Range(0, customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Idel_Chatting.Count);
+            customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Idel_Chatting[random_Element].Play();
+        }
     }
     //Customer exploring store
     void MoveToNextPoint()
