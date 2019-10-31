@@ -25,12 +25,18 @@ public class CustomerAI : MonoBehaviour
     bool correct_Weapon_Type;
     bool correct_Enchantment;
 
+    int current_Animation_Element;
     int current_DestinationNumber;
-    
+    /// <summary>
+    /// 0 = customer order
+    /// </summary>
+    public AudioSource customer_Dialouge;
+
     Animator customer_Anim;
 
     private void Awake()
     {
+        customer_Dialouge = GetComponent<AudioSource>();
         the_Customer_Spawner = FindObjectOfType<CustomerSpawner>();
         customer_Anim = GetComponent<Animator>();
     }
@@ -56,7 +62,8 @@ public class CustomerAI : MonoBehaviour
         {
             current_DestinationNumber = 0;
             agent.destination = the_Customer_Spawner.point_Of_Interest[current_DestinationNumber].position;//go to counter
-            customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Idel_Chatting[0].Stop();
+            customer_Dialouge.Stop();
+            customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element], false);//Stop idle animation
             InvokeRepeating("GoingToCounter", 0.1f, 0.1f);
         }
     }
@@ -94,7 +101,8 @@ public class CustomerAI : MonoBehaviour
                         //customer giving order
                         else if (!given_Order)
                         {
-                            customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Order_Speech[0].Play();//give order voice line
+                            customer_Dialouge.clip = customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[0];
+                            customer_Dialouge.Play();
                             customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], true);//play customer order animation
                             InvokeRepeating("StartWindowShopping", 0, 0.1f);
                             CancelInvoke("GoingToCounter");
@@ -113,24 +121,14 @@ public class CustomerAI : MonoBehaviour
     void StartWindowShopping()
     {
         //customer start exploring and moving aroud store
-        if (!customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Order_Speech[0].isPlaying)
+        if (!customer_Dialouge.isPlaying)
         {
             customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], false);//stop customer order animation
             MoveToNextPoint();
             given_Order = true;
-            RandomChatteringFromAI();
+            StartCoroutine("RandomChatteringFromAI");
             InvokeRepeating("GoingToCounter", 0.1f, 0.1f);//Constantly checking Customer Location
             CancelInvoke("StartWindowShopping");
-        }
-    }
-    void RandomChatteringFromAI()//Customer start talking
-    {
-        int random_Element = Random.Range(0, customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Idel_Chatting.Count);//create random number range from 0 to the total element in the voice line list
-
-        if (!customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Idel_Chatting[random_Element].isPlaying)
-        {
-            random_Element = Random.Range(0, customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Idel_Chatting.Count);
-            customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Idel_Chatting[random_Element].Play();
         }
     }
     //Customer exploring store
@@ -196,17 +194,32 @@ public class CustomerAI : MonoBehaviour
             }
         }
     }
+    IEnumerator RandomChatteringFromAI()
+    {
+        int random_Element;
+
+        current_Animation_Element = Random.Range(1, the_Customer_Spawner.general_Customer_Anim.Count);
+
+        if (!customer_Dialouge.isPlaying)
+        {
+            random_Element = Random.Range(1, customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech.Count);//create random number range from 0 to the total element in the voice line list
+            customer_Dialouge.clip = customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[random_Element];
+            customer_Dialouge.Play();
+            yield return new WaitForSeconds(customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[random_Element].length + 1);
+            StartCoroutine("RandomChatteringFromAI");
+            print("hit");
+        }
+    }
     //place animation here
     IEnumerator CustomerIdling()
     {
         //customer will idle for a period of time before moving to next location
-        int current_Animation_Element = Random.Range(1, the_Customer_Spawner.general_Customer_Anim.Count);
         int times_Animation_Loops = Random.Range(2, 4);
 
 
         customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element], true);//Start idle animation
         yield return new WaitForSeconds(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element].Length/2 * times_Animation_Loops);
-        customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element], false);//Start idle animation
+        customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element], false);//Stop idle animation
         MoveToNextPoint();
         InvokeRepeating("GoingToCounter", 0.1f, 0.1f);//Constantly checking Customer Location
     }
