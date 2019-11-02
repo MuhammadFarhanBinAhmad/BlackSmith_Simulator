@@ -39,7 +39,10 @@
                 }
                 else
                 {
-                    FindObjectOfType<CustomerAI>().CollectingWeapon();//customer collect weapon
+                    if(FindObjectOfType<CustomerAI>() !=null)
+                    {
+                        FindObjectOfType<CustomerAI>().CollectingWeapon();//customer collect weapon
+                    }
                 }
             }
         }
