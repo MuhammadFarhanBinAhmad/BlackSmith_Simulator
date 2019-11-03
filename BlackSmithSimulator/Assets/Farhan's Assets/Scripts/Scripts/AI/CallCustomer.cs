@@ -1,18 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CallCustomer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.name == "Controller (right)" || other.name == "Controller (left)" || other.name == "Cube")
+        {
+            if (CustomerSpawner.Customer_Already_Serve == 3)
+            {
+                SceneManager.LoadScene("EndOfDay");
+            }
+            else
+            {
+                if (FindObjectOfType<CustomerAI>() != null)
+                {
+                    FindObjectOfType<CustomerAI>().CollectingWeapon();//customer collect weapon
+                }
+            }
+        }
     }
 }

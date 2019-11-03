@@ -6,7 +6,7 @@ public class CustomerSpawner : CustomerPointOfInterest
 {
 
     public static int current_day;
-    public static int Customer_Already_Serve;
+    public static int Customer_Already_Serve = 2;
 
     public GameObject the_Sun;
     public List<GameObject> Customer = new List<GameObject>();
@@ -18,11 +18,8 @@ public class CustomerSpawner : CustomerPointOfInterest
     // Start is called before the first frame update
     void Start()
     {
-        print(current_day + "CurrentDay");
-        print(Customer_Already_Serve + "Customer_Already_Serve");
-
         the_Weapon_Collection_Point = FindObjectOfType<WeaponCollectionPoint>();
-        if(Customer_Already_Serve == 0)
+        if(Customer_Already_Serve < 4)
         {
             StartCoroutine("SpawnNextCustomer");
         }

@@ -204,7 +204,6 @@ public class CustomerAI : MonoBehaviour
                 {
                     customer_Dialouge.clip = customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[current_Anim_Element];
                     customer_Dialouge.Play();
-                    print(current_Anim_Element + "= current Elemment");
                     yield return new WaitForSeconds(customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[current_Anim_Element].length + 3);
                     current_Anim_Element++;
                     StartCoroutine("RandomChatteringFromAI");
@@ -228,7 +227,9 @@ public class CustomerAI : MonoBehaviour
     //customer have receive waepon and leaving store
     IEnumerator ExitingStore()
     {
+        customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], true);//stop customer order animation
         yield return new WaitForSeconds(1.5f);//place grabing animation time here
+        customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], false);//stop customer order animation
         current_DestinationNumber = the_Customer_Spawner.point_Of_Interest.Count - 1;
         agent.destination = the_Customer_Spawner.point_Of_Interest[the_Customer_Spawner.point_Of_Interest.Count - 1].position;
         InvokeRepeating("ExitStore", 0, 0.1f);
