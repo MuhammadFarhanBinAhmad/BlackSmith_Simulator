@@ -31,6 +31,7 @@ public class CustomerAI : MonoBehaviour
     /// 0 = customer order
     /// </summary>
     public AudioSource customer_Dialouge;
+    int current_Anim_Element = 1;
 
     Animator customer_Anim;
 
@@ -137,7 +138,7 @@ public class CustomerAI : MonoBehaviour
         int new_Point_Of_Interest;
 
         //ensure that the same number dont appear twice
-        new_Point_Of_Interest = Random.Range(1, the_Customer_Spawner.point_Of_Interest.Count - 2);
+        new_Point_Of_Interest = Random.Range(2, the_Customer_Spawner.point_Of_Interest.Count - 2);
         if (new_Point_Of_Interest == current_DestinationNumber)
         {
             MoveToNextPoint();
@@ -196,18 +197,19 @@ public class CustomerAI : MonoBehaviour
     }
     IEnumerator RandomChatteringFromAI()
     {
-        int random_Element;
-
-        current_Animation_Element = Random.Range(1, the_Customer_Spawner.general_Customer_Anim.Count);
-
-        if (!customer_Dialouge.isPlaying)
         {
-            random_Element = Random.Range(1, customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech.Count);//create random number range from 0 to the total element in the voice line list
-            customer_Dialouge.clip = customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[random_Element];
-            customer_Dialouge.Play();
-            yield return new WaitForSeconds(customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[random_Element].length + 1);
-            StartCoroutine("RandomChatteringFromAI");
-            print("hit");
+            if (current_Anim_Element != customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech.Count)
+            {
+                if (!customer_Dialouge.isPlaying)
+                {
+                    customer_Dialouge.clip = customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[current_Anim_Element];
+                    customer_Dialouge.Play();
+                    print(current_Anim_Element + "= current Elemment");
+                    yield return new WaitForSeconds(customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[current_Anim_Element].length + 3);
+                    current_Anim_Element++;
+                    StartCoroutine("RandomChatteringFromAI");
+                }
+            }
         }
     }
     //place animation here
@@ -216,7 +218,7 @@ public class CustomerAI : MonoBehaviour
         //customer will idle for a period of time before moving to next location
         int times_Animation_Loops = Random.Range(2, 4);
 
-
+        current_Animation_Element = Random.Range(0, the_Customer_Spawner.general_Customer_Anim.Count);
         customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element], true);//Start idle animation
         yield return new WaitForSeconds(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element].Length/2 * times_Animation_Loops);
         customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element], false);//Stop idle animation
