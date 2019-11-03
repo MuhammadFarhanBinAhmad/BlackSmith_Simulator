@@ -197,6 +197,7 @@ public class CustomerAI : MonoBehaviour
     }
     IEnumerator RandomChatteringFromAI()
     {
+        yield return new WaitForSeconds(7);
         {
             if (current_Anim_Element != customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech.Count)
             {
@@ -204,7 +205,7 @@ public class CustomerAI : MonoBehaviour
                 {
                     customer_Dialouge.clip = customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[current_Anim_Element];
                     customer_Dialouge.Play();
-                    yield return new WaitForSeconds(customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[current_Anim_Element].length + 3);
+                    yield return new WaitForSeconds(customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[current_Anim_Element].length);
                     current_Anim_Element++;
                     StartCoroutine("RandomChatteringFromAI");
                 }
