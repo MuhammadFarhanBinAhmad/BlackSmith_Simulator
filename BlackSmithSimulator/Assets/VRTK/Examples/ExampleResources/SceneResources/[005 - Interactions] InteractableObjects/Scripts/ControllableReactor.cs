@@ -11,6 +11,12 @@
         public Text displayText;
         public string outputOnMax = "Maximum Reached";
         public string outputOnMin = "Minimum Reached";
+        Scene current_Scene;
+
+        private void Start()
+        {
+            current_Scene = SceneManager.GetActiveScene();
+        }
 
         protected virtual void OnEnable()
         {
@@ -44,6 +50,14 @@
                         FindObjectOfType<CustomerAI>().CollectingWeapon();//customer collect weapon
                     }
                 }
+            }
+            if (current_Scene.name == "EndOfDay")
+            {
+                SceneManager.LoadScene("Pause_Main_Menu");
+            }
+            if (current_Scene.name == "Pause_Main_Menu")
+            {
+                SceneManager.LoadScene("Game_Level");
             }
         }
         protected virtual void MinLimitReached(object sender, ControllableEventArgs e)

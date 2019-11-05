@@ -15,7 +15,7 @@ public class CallCustomer : MonoBehaviour
     {
         if (other.name == "Controller (right)" || other.name == "Controller (left)" || other.name == "Cube")
         {
-            if(current_Scene.name == "GameLevel")
+            if(current_Scene.name == "Game_Level")
             {
                 if (CustomerSpawner.Customer_Already_Serve == 3)
                 {
@@ -29,15 +29,26 @@ public class CallCustomer : MonoBehaviour
                     }
                 }
             }
-            if (current_Scene.name == "EndOfDay")
-            {
-                SceneManager.LoadScene("Pause_Main_Menu");
-            }
-            if (current_Scene.name == "Pause_Main_Menu")
-            {
-                SceneManager.LoadScene("GameLevel");
-            }
             bell_Ringing.Play();
         }
+    }
+
+    public void BellRing()
+    {
+        if (current_Scene.name == "Game_Level")
+        {
+            if (CustomerSpawner.Customer_Already_Serve == 3)
+            {
+                SceneManager.LoadScene("EndOfDay");
+            }
+            else
+            {
+                if (FindObjectOfType<CustomerAI>() != null)
+                {
+                    FindObjectOfType<CustomerAI>().CollectingWeapon();//customer collect weapon
+                }
+            }
+        }
+        bell_Ringing.Play();
     }
 }

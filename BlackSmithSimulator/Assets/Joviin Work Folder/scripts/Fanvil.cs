@@ -171,7 +171,7 @@ public class Fanvil : MonoBehaviour
                 weaponToPrint = 16;
             }
         GameObject newWeapon;
-        newWeapon = Instantiate(weaponTypeModels[weaponToPrint], this.transform.position, Quaternion.Euler(0, 0, 0));
+        newWeapon = Instantiate(weaponTypeModels[weaponToPrint], this.transform.position, Quaternion.Euler(90, 0, 0));
 
         newWeapon.GetComponent<MeshRenderer>().material = weaponTypeMaterials[materialTypeLocal];
         //print("Material Change Successful!");
