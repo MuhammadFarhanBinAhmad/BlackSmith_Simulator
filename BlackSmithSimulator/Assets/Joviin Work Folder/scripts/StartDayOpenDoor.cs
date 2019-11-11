@@ -7,16 +7,12 @@ using UnityEngine.UI;
 
 public class StartDayOpenDoor : MonoBehaviour
 {
+    public bool changeSceneOnDoorOpen;
     public VRTK_BaseControllable controllable;
     public Text displayText;
     public string outputOnMax = "Maximum Reached";
     public string outputOnMin = "Minimum Reached";
-    Scene current_Scene;
 
-    private void Start()
-    {
-        current_Scene = SceneManager.GetActiveScene();
-    }
 
     protected virtual void OnEnable()
     {
@@ -28,21 +24,23 @@ public class StartDayOpenDoor : MonoBehaviour
 
     protected virtual void ValueChanged(object sender, ControllableEventArgs e)
     {
-
+        Debug.Log(e.value);
     }
 
+
+    //Door Closed
     protected virtual void MaxLimitReached(object sender, ControllableEventArgs e)
     {
- 
-        if (current_Scene.name == "EndOfDay")
+        if (changeSceneOnDoorOpen == false)
         {
             SceneManager.LoadScene("Pause_Main_Menu");
         }
-
     }
+
+    //Door Open
     protected virtual void MinLimitReached(object sender, ControllableEventArgs e)
     {
-        if (current_Scene.name == "Pause_Main_Menu")
+        if (changeSceneOnDoorOpen == true)
         {
             SceneManager.LoadScene("Game_Level");
         }
