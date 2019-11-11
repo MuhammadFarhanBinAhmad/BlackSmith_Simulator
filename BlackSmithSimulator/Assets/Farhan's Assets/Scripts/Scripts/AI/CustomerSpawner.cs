@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 public class CustomerSpawner : CustomerPointOfInterest
 {
 
     public static int current_day;
-    public static int Customer_Already_Serve = 2;
+    public static int Customer_Already_Serve;
 
     public GameObject the_Sun;
     public List<GameObject> Customer = new List<GameObject>();
@@ -18,6 +17,9 @@ public class CustomerSpawner : CustomerPointOfInterest
     // Start is called before the first frame update
     void Start()
     {
+        print("CurrentDay "+ current_day);
+        print("Customer already serve " + Customer_Already_Serve);
+
         the_Weapon_Collection_Point = FindObjectOfType<WeaponCollectionPoint>();
         if(Customer_Already_Serve < 4)
         {
@@ -29,7 +31,6 @@ public class CustomerSpawner : CustomerPointOfInterest
     {
         current_day++;
         Customer_Already_Serve = 0;
-        SceneManager.LoadScene("Pause_Main_Menu");
     }
     public IEnumerator SpawnNextCustomer()
     {

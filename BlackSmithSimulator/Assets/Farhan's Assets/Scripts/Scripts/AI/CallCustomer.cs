@@ -39,6 +39,7 @@ public class CallCustomer : MonoBehaviour
         {
             if (CustomerSpawner.Customer_Already_Serve == 3)
             {
+                FindObjectOfType<CustomerSpawner>().NextDay();
                 SceneManager.LoadScene("EndOfDay");
             }
             else
