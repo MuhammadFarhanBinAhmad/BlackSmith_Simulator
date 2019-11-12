@@ -4402,15 +4402,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4814890938887682727, guid: cb21afeacb8d1384ca6d33b78a2fcce0,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4814890938887682724, guid: cb21afeacb8d1384ca6d33b78a2fcce0,
         type: 3}
       propertyPath: isGlobal
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814890938887682727, guid: cb21afeacb8d1384ca6d33b78a2fcce0,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4814890938887682727, guid: cb21afeacb8d1384ca6d33b78a2fcce0, type: 3}
