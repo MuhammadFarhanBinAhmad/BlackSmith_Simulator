@@ -50,8 +50,6 @@ public class Fanvil : MonoBehaviour
         }
 
         //Take in inputs from Runes
-        
-
           if(other.GetComponent<RuneData>() !=null)
           {
             if (other.GetComponent<RuneData>().weapon_Type != 0)
