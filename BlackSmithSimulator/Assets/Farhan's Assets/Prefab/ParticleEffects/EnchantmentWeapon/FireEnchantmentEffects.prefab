@@ -87,7 +87,7 @@ Light:
   m_BounceIntensity: 0.1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 1.47e-43}
+  m_BoundingSphereOverride: {x: 4.2e-44, y: 2.1e-44, z: 6e-45, w: 2.522e-42}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -133,7 +133,7 @@ ParticleSystem:
   m_GameObject: {fileID: 3244579057120448499}
   serializedVersion: 6
   lengthInSec: 1
-  simulationSpeed: 1
+  simulationSpeed: 1.2
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -197,7 +197,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 1
+  moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -698,7 +698,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -0.1
+      scalar: -0.05
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -751,7 +751,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 4
+    type: 5
     angle: 39.4
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -1073,22 +1073,22 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0.009117126
-          value: 0.8783779
-          inSlope: 0
-          outSlope: 0
+          time: 0
+          value: 1
+          inSlope: -0.2227029
+          outSlope: -0.2227029
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.33333334
+          outWeight: 0.36407766
         - serializedVersion: 3
           time: 1
-          value: 0.36486638
-          inSlope: -1.6180892
-          outSlope: -1.6180892
+          value: 0.24324323
+          inSlope: -1.9613019
+          outSlope: -1.9613019
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.22756495
+          inWeight: 0.21359223
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -1398,14 +1398,14 @@ ParticleSystem:
         key0: {r: 1, g: 0.699889, b: 0.2028302, a: 1}
         key1: {r: 1, g: 0.62205034, b: 0, a: 1}
         key2: {r: 1, g: 0.35196218, b: 0, a: 0}
-        key3: {r: 0.5471698, g: 0.09341924, b: 0, a: 0}
-        key4: {r: 0.6415094, g: 0.10856751, b: 0, a: 0}
+        key3: {r: 0.8301887, g: 0.13973475, b: 0, a: 0}
+        key4: {r: 0.3962264, g: 0.06792452, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 1542
-        ctime1: 19082
-        ctime2: 39321
+        ctime1: 14649
+        ctime2: 44718
         ctime3: 65535
         ctime4: 65535
         ctime5: 0
@@ -1792,7 +1792,7 @@ ParticleSystem:
     orbitalY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
