@@ -4,29 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - SnapCube
-  - ExcludeTeleport
-  - FanvilBase
-  - Ore
-  - Oil
-  - Catalyst
-  - herbs
-  - Reactant
-  - PotionCatalyst
-  - Weapon
-  - Rune
-  - Leg
-  - Arm
-  - SnapCylinder
-  - Saucers
-  - Torso
-  - Head
-  - Cubes
-  - Spheres
-  - OtherSaucers
-  - EnchantmentRune
-  - WeaponRune
-  - MaterialRune
+  - Shootable
   layers:
   - Default
   - TransparentFX
@@ -36,9 +14,9 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
-  - 
-  - 
+  - Lighting
+  - Ground
+  - Postprocessing
   - 
   - 
   - 
@@ -61,6 +39,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Fire
+    uniqueID: 3804908061
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

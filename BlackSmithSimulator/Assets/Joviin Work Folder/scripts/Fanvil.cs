@@ -95,6 +95,16 @@ public class Fanvil : MonoBehaviour
                 CreateWeapon(weaponTypeRune, materialTypeRune);
             }
         }
+        else if( weaponTypeRune == 0 || materialTypeRune == 0)
+        {
+            //Clearing Fanvil
+            for (int i = 0; i < materialCollected.Count; i++)
+            {
+                //print("Destroying item " + i);
+                GameObject.Destroy(materialCollected[i]);
+                materialCollected.Clear();
+            }
+        }
     }
 
     //If Generic material is used

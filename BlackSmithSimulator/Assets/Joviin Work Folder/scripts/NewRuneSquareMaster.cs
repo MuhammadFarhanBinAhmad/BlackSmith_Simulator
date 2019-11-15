@@ -130,6 +130,8 @@ public class NewRuneSquareMaster : MonoBehaviour
         {
             RuneSquareButtonReference[i].GetComponent<NewRuneSquareButton>().Invoke("ReleaseButton", 1);
         }
+
+        //FindObjectOfType<RuneSquareLineRenderer>().ClearRuneLine();
     }
 
 }
