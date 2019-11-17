@@ -15,18 +15,6 @@ public class RuneMaker : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //if (other.tag == "Reactant")
-        //{
-        //    reactant_In_Dispenser = other.GetComponent<EmptyRuneData>().this_Object_Reactant;
-        //    print("Reactant Detected");
-        //    CheckRune();
-        //}
-        //if (other.tag == "RuneCatalyst")
-        //{
-        //    print("RuneCatalyst Dectected");
-        //    catalyst_In_Dispenser = other.GetComponent<EmptyRuneData>().this_Object_Catalyst;
-        //    CheckRune();
-        //}
         if (other.GetComponent<EmptyRuneData>() != null)
         {
             if (other.GetComponent<EmptyRuneData>().this_Object_Catalyst != 0)

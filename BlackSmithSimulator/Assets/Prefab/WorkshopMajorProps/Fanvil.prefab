@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1094067240434359757}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: WeaponSpawnPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,9 +158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9eebb2186ea3244093f7a0d78c1476b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialCollected: []
-  runeWeapon: {fileID: 0}
-  runeMaterial: {fileID: 0}
+  FanvilVFX: {fileID: 0}
+  FanvilSFX: {fileID: 0}
   materialTypeRune: 0
   weaponTypeRune: 0
   weaponTypeModels:

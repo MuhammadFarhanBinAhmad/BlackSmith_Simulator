@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Fanvil : MonoBehaviour
 {
+
+    public GameObject FanvilVFX;
+    public AudioClip FanvilSFX;
+
     //Input material
-    public List<GameObject> materialCollected = new List<GameObject>();
+    private List<GameObject> materialCollected = new List<GameObject>();
 
     //Runes
-    public GameObject runeWeapon;
-    public GameObject runeMaterial;
+    private GameObject runeWeapon;
+    private GameObject runeMaterial;
     public int materialTypeRune;
 
     //Output material
