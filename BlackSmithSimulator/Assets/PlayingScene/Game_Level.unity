@@ -4134,11 +4134,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room Environment Prefab
       objectReference: {fileID: 0}
-    - target: {fileID: 1199575650190547136, guid: e34dee5992dab4144b90989d7928ad74,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2809936561830243027, guid: e34dee5992dab4144b90989d7928ad74,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4203,6 +4198,96 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2553648220345514018, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0155
+      objectReference: {fileID: 0}
+    - target: {fileID: 2553648220345514018, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0666
+      objectReference: {fileID: 0}
+    - target: {fileID: 2553648220345514018, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.023
+      objectReference: {fileID: 0}
+    - target: {fileID: 2642900193766705153, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0172
+      objectReference: {fileID: 0}
+    - target: {fileID: 2642900193766705153, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0571
+      objectReference: {fileID: 0}
+    - target: {fileID: 2642900193766705153, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0127
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083379392627058966, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0263
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083379392627058966, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0283
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083379392627058966, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0118
+      objectReference: {fileID: 0}
+    - target: {fileID: 6278103566841569186, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0153
+      objectReference: {fileID: 0}
+    - target: {fileID: 6278103566841569186, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6278103566841569186, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.017
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232385047893736161, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0104
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232385047893736161, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0183
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232385047893736161, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0291
+      objectReference: {fileID: 0}
+    - target: {fileID: 2581613310120235502, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2581613310120235502, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0036
+      objectReference: {fileID: 0}
+    - target: {fileID: 2581613310120235502, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.035
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e34dee5992dab4144b90989d7928ad74, type: 3}
@@ -4284,8 +4369,8 @@ MonoBehaviour:
   actualHeadset: {fileID: 1000013025205283}
   actualLeftController: {fileID: 1000011676516735}
   actualRightController: {fileID: 1000012623821093}
-  modelAliasLeftController: {fileID: 0}
-  modelAliasRightController: {fileID: 0}
+  modelAliasLeftController: {fileID: 1000011557897617}
+  modelAliasRightController: {fileID: 1000010659409847}
   cachedSystemSDKInfo:
     baseTypeName: VRTK.SDK_BaseSystem
     fallbackTypeName: VRTK.SDK_FallbackSystem

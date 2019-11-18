@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RuneMaker : MonoBehaviour
 {
+    public GameObject runeSpawnLocation;
+
     //ingredient currently in Dispenser
     public int catalyst_In_Dispenser, reactant_In_Dispenser;
     //current Rune type
@@ -118,7 +120,7 @@ public class RuneMaker : MonoBehaviour
             }
             if (current_Type != 0)
             {
-                Instantiate(Rune_Types[current_Type], transform.position, transform.rotation);
+                Instantiate(Rune_Types[current_Type], runeSpawnLocation.transform.position, Quaternion.Euler(0, 0, 0));
                 EmptyPot();
             }
         }

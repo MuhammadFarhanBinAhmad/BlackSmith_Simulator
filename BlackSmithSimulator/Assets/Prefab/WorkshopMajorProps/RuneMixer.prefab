@@ -439,10 +439,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7c73d6eec0b54240b5314d1013e516c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  runeSpawnLocation: {fileID: 3171981134325207038}
   catalyst_In_Dispenser: 0
   reactant_In_Dispenser: 0
   current_Type: 0
-  Rune_Types: []
+  Rune_Types:
+  - {fileID: 0}
+  - {fileID: 3423730603981979813, guid: 69bdc486ff999964a9bcab2295f6367e, type: 3}
+  - {fileID: 3423730603981979813, guid: 11bc653e276dbd14c882d3dd852280d6, type: 3}
+  - {fileID: 3423730603981979813, guid: d3a0778ed0fc710438b356987f6611d9, type: 3}
+  - {fileID: 3423730603981979813, guid: a0e2bdfa77a05d8448f6321b14d6a7e5, type: 3}
+  - {fileID: 3423730603981979813, guid: a339a3cb045c6d7479ca0f497b7392c0, type: 3}
+  - {fileID: 3423730603981979813, guid: a19ed8051b8a5b34d88d534361800811, type: 3}
+  - {fileID: 3423730603981979813, guid: b203e88d2e1f2084796902a0ffde3e2b, type: 3}
+  - {fileID: 3423730603981979813, guid: 60acd87c50a8aa74d8ece1fa747d94e0, type: 3}
+  - {fileID: 3423730603981979813, guid: 12c220a9e53760f47a22ec248c93106e, type: 3}
+  - {fileID: 3423730603981979813, guid: 0e52d71dd420cc743bddd82c99ffc453, type: 3}
+  - {fileID: 3423730603981979813, guid: 9a55e750fa0e2494ea576fbb083a5daf, type: 3}
+  - {fileID: 3423730603981979813, guid: 48fb7e972ea80d649b4bad2adf3234ba, type: 3}
 --- !u!65 &3875112538771782710
 BoxCollider:
   m_ObjectHideFlags: 0

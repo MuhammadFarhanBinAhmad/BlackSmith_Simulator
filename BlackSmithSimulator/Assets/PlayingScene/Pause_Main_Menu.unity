@@ -667,7 +667,7 @@ MonoBehaviour:
   operation: 1
   checkType: 4
   identifiers:
-  - Walkable Terrain
+  - Ground
 --- !u!114 &1933670541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -852,6 +852,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Room Environment Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199575650190547136, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2809936561830243027, guid: e34dee5992dab4144b90989d7928ad74,
         type: 3}
