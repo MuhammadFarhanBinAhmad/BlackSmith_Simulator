@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3354990961964658845}
   - component: {fileID: 3354990961964658846}
+  - component: {fileID: 4287969978940576772}
   m_Layer: 0
   m_Name: CustomerSpawn
   m_TagString: Untagged
@@ -56,6 +57,20 @@ MonoBehaviour:
   - {fileID: 372240657062210236, guid: 77eada8ec75dc5640b6322707158f83c, type: 3}
   - {fileID: 372240657062210236, guid: 69dee1522954b794eaf72a5f1b40fb09, type: 3}
   - {fileID: 372240657062210236, guid: 87efb5092bca0fb43b4798c1dd92d9ee, type: 3}
+  customer_Notes: []
+  note_Spawning_Point: []
   general_Customer_Anim:
   - IdleAnim00
   - IdleAnim01
+--- !u!114 &4287969978940576772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3354990961964658847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 966a3360e85b8a94087b83fd04b7c74c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -4,9 +4,6 @@ using UnityEngine;
 public class CustomerSpawner : CustomerPointOfInterest
 {
 
-    public static int current_day;
-    public static int Customer_Already_Serve;
-
     public GameObject the_Sun;
     public List<GameObject> Customer = new List<GameObject>();
 
@@ -17,11 +14,9 @@ public class CustomerSpawner : CustomerPointOfInterest
     // Start is called before the first frame update
     void Start()
     {
-        print("CurrentDay "+ current_day);
-        print("Customer already serve " + Customer_Already_Serve);
 
         the_Weapon_Collection_Point = FindObjectOfType<WeaponCollectionPoint>();
-        if(Customer_Already_Serve < 4)
+        if(DayAndCustomer.Customer_Already_Serve < 4)
         {
             StartCoroutine("SpawnNextCustomer");
         }
@@ -29,18 +24,18 @@ public class CustomerSpawner : CustomerPointOfInterest
     //Spawn Customer
     public void NextDay()
     {
-        current_day++;
-        Customer_Already_Serve = 0;
+        DayAndCustomer.current_day++;
+        DayAndCustomer.Customer_Already_Serve = 0;
     }
     public IEnumerator SpawnNextCustomer()
     {
         the_Weapon_Collection_Point.ready_For_Collection = false;
         //wait before next customer spawn
         yield return new WaitForSeconds(3);
-        if (Customer_Already_Serve < 3)
+        if (DayAndCustomer.Customer_Already_Serve < 3)
         {
             {
-                Instantiate(Customer[Customer_Already_Serve], transform.position, Quaternion.identity);
+                Instantiate(Customer[DayAndCustomer.Customer_Already_Serve], transform.position, Quaternion.identity);
             }
         }
     }
