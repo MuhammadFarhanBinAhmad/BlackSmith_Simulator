@@ -17,7 +17,7 @@ public class CallCustomer : MonoBehaviour
         {
             if(current_Scene.name == "Game_Level")
             {
-                if (DayAndCustomer.Customer_Already_Serve == 3)
+                if (CustomerSpawner.Customer_Already_Serve == 3)
                 {
                     SceneManager.LoadScene("EndOfDay");
                 }
@@ -37,7 +37,7 @@ public class CallCustomer : MonoBehaviour
     {
         if (current_Scene.name == "Game_Level")
         {
-            if (DayAndCustomer.Customer_Already_Serve == 3)
+            if (CustomerSpawner.Customer_Already_Serve == 3)
             {
                 FindObjectOfType<CustomerSpawner>().NextDay();
                 SceneManager.LoadScene("EndOfDay");

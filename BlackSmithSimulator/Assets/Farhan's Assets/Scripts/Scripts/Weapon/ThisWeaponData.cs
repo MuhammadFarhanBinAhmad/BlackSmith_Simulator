@@ -7,8 +7,6 @@ using UnityEngine.UI;
 
 public class ThisWeaponData : MonoBehaviour
 {
-    //attach Scriptable object
-    public WeaponData the_Weapon_Data;
     //this object data
     public int this_Weapon_Type;
     public int this_Material_Type;
@@ -20,7 +18,6 @@ public class ThisWeaponData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this_Weapon_Type = the_Weapon_Data.weapon_Type;//Weapon type
     }
 
     private void OnTriggerEnter(Collider other)

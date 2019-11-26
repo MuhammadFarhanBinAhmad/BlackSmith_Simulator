@@ -17,9 +17,6 @@ public class CustomerAI : MonoBehaviour
 
     CustomerSpawner the_Customer_Spawner;
 
-    //customer satisfaction
-    public List<GameObject> particle_Effects = new List<GameObject>();
-
     //check weapon given to customer
     public bool correct_Weapon_Receive;
     bool given_Order;
@@ -30,7 +27,9 @@ public class CustomerAI : MonoBehaviour
 
     int current_Animation_Element;
     int current_DestinationNumber;
-
+    /// <summary>
+    /// 0 = customer order
+    /// </summary>
     public AudioSource customer_Dialouge;
     int current_Anim_Element = 1;
 
@@ -103,7 +102,7 @@ public class CustomerAI : MonoBehaviour
                         //customer giving order
                         else if (!given_Order)
                         {
-                            customer_Dialouge.clip = customer_Order[DayAndCustomer.Customer_Already_Serve].customer_Dialouge_Speech[0];
+                            customer_Dialouge.clip = customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[0];
                             customer_Dialouge.Play();
                             customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], true);//play customer order animation
                             InvokeRepeating("StartWindowShopping", 0, 0.1f);
@@ -164,33 +163,21 @@ public class CustomerAI : MonoBehaviour
 
         WeaponCollectionPoint the_Weapon_Collection_Point = FindObjectOfType<WeaponCollectionPoint>();
         //check all types if correct
-        if (customer_Order[DayAndCustomer.current_day].weapon_Material == the_Weapon_Collection_Point.material_Type)
+        if (customer_Order[CustomerSpawner.current_day].weapon_Material == the_Weapon_Collection_Point.material_Type)
         {
             correct_Material = true;
         }
-        if (customer_Order[DayAndCustomer.current_day].weapon_Type == the_Weapon_Collection_Point.weapon_Type)
+        if (customer_Order[CustomerSpawner.current_day].weapon_Type == the_Weapon_Collection_Point.weapon_Type)
         {
             correct_Weapon_Type = true;
         }
-        if (customer_Order[DayAndCustomer.current_day].weapon_Enchantment == the_Weapon_Collection_Point.enchantment_Type)
+        if (customer_Order[CustomerSpawner.current_day].weapon_Enchantment == the_Weapon_Collection_Point.enchantment_Type)
         {
             correct_Enchantment = true;
         }
         if (correct_Material && correct_Weapon_Type && correct_Enchantment)
         {
             correct_Weapon_Receive = true;
-        }
-        if (correct_Material || correct_Enchantment || correct_Weapon_Type)
-        {
-            particle_Effects[0].SetActive(true);
-        }
-        else if (correct_Material && correct_Enchantment && correct_Weapon_Type)
-        {
-            particle_Effects[1].SetActive(true);
-        }
-        else
-        {
-            particle_Effects[2].SetActive(true);
         }
     }
     void ExitStore()
@@ -202,7 +189,7 @@ public class CustomerAI : MonoBehaviour
                 if (!agent.hasPath || agent.velocity.sqrMagnitude == 0)
                 {
                     FindObjectOfType<CustomerSpawner>().StartCoroutine("SpawnNextCustomer");//start timer to spawn next customer
-                    DayAndCustomer.Customer_Already_Serve++;
+                    CustomerSpawner.Customer_Already_Serve++;
                     Destroy(gameObject);
                 }
             }
@@ -212,13 +199,13 @@ public class CustomerAI : MonoBehaviour
     {
         yield return new WaitForSeconds(7);
         {
-            if (current_Anim_Element != customer_Order[DayAndCustomer.Customer_Already_Serve].customer_Dialouge_Speech.Count)
+            if (current_Anim_Element != customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech.Count)
             {
                 if (!customer_Dialouge.isPlaying)
                 {
-                    customer_Dialouge.clip = customer_Order[DayAndCustomer.Customer_Already_Serve].customer_Dialouge_Speech[current_Anim_Element];
+                    customer_Dialouge.clip = customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[current_Anim_Element];
                     customer_Dialouge.Play();
-                    yield return new WaitForSeconds(customer_Order[DayAndCustomer.Customer_Already_Serve].customer_Dialouge_Speech[current_Anim_Element].length);
+                    yield return new WaitForSeconds(customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[current_Anim_Element].length);
                     current_Anim_Element++;
                     StartCoroutine("RandomChatteringFromAI");
                 }

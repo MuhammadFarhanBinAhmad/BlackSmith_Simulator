@@ -39,7 +39,7 @@
             if (outputOnMax != "")
             {
                 //BUTTON PRESSED
-                if(DayAndCustomer.Customer_Already_Serve == 3)
+                if(CustomerSpawner.Customer_Already_Serve == 3)
                 {
                     SceneManager.LoadScene("EndOfDay");
                 }

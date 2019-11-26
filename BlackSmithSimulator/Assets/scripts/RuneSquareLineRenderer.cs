@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class RuneSquareLineRenderer : MonoBehaviour
 {
-    int numOfLine = 0;
+
+    LineRenderer lineRenderer;
+
+    private void Start()
+    {
+        lineRenderer = GetComponent<LineRenderer>();
+    }
 
     public void CreateRuneLine(Vector3 buttonPosition)
-    {   
-            this.GetComponent<LineRenderer>().SetPosition(numOfLine, buttonPosition);
-            numOfLine++;
+    {
+        int currentPos = lineRenderer.positionCount++;
+        lineRenderer.SetPosition(currentPos, buttonPosition);
     }
 
     public void ClearRuneLine()
@@ -23,10 +29,7 @@ public class RuneSquareLineRenderer : MonoBehaviour
         }
         */
 
-        this.GetComponent<LineRenderer>().positionCount = 0;
-        this.GetComponent<LineRenderer>().positionCount = 4;
-
-        numOfLine = 0;
+        lineRenderer.positionCount = 0;
     }
 
 }

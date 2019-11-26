@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NewRuneSquareMaster : MonoBehaviour
 {
+    public RuneSquareLineRenderer LineRenderer;
+
     public List<int> runeSequence = new List<int>();
 
     public GameObject[] RuneSquareButtonReference = new GameObject[4];
@@ -131,7 +133,7 @@ public class NewRuneSquareMaster : MonoBehaviour
             RuneSquareButtonReference[i].GetComponent<NewRuneSquareButton>().Invoke("ReleaseButton", 1);
         }
 
-        //FindObjectOfType<RuneSquareLineRenderer>().ClearRuneLine();
+            LineRenderer.Invoke("ClearRuneLine", 1);
     }
 
 }
