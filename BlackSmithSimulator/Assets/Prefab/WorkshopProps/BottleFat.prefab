@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 6464062546441960464}
   - component: {fileID: 3177229768062686643}
   - component: {fileID: 4423865285810281762}
+  - component: {fileID: 8893978766455583324}
+  - component: {fileID: 3991601269850876099}
   m_Layer: 0
   m_Name: BottleFat
   m_TagString: Untagged
@@ -160,3 +162,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &8893978766455583324
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9132642142460985842}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &3991601269850876099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9132642142460985842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ea6adc877b66d3488776ddd34fdfe71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropEffect: {fileID: 1273915125232972, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
