@@ -1081,6 +1081,11 @@ PrefabInstance:
       propertyPath: angleTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3606817840703674534, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7586683859568839944, guid: e34dee5992dab4144b90989d7928ad74, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e34dee5992dab4144b90989d7928ad74, type: 3}
