@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1919832556948692671}
   - component: {fileID: 692101347846881409}
   - component: {fileID: 1856326243886885544}
+  - component: {fileID: 3042542668539996214}
   m_Layer: 0
   m_Name: BottleTall
   m_TagString: Untagged
@@ -177,3 +178,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09919529, y: 0.19504891, z: 0.099195614}
   m_Center: {x: 0, y: 0, z: 0.000000024214387}
+--- !u!114 &3042542668539996214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5971130306905669581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ea6adc877b66d3488776ddd34fdfe71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropEffect: {fileID: 1273915125232972, guid: 73767e07adddc394d82b994801f89bbb, type: 3}

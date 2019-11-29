@@ -12,6 +12,8 @@ public class NewRuneSquareMaster : MonoBehaviour
 
     public GameObject[] baseRuneToSpawn = new GameObject[7];
 
+    public Transform baseRuneSpawnPos;
+
 
     public void NumberSequenceList(int newIncomingNumber)
     {
@@ -120,7 +122,7 @@ public class NewRuneSquareMaster : MonoBehaviour
         print("Spawning " + baseToSpawnNumber);
         if (runeSequence.Count == 4)
         {
-            Instantiate(baseRuneToSpawn[baseToSpawnNumber], this.transform.position, this.transform.rotation);
+            Instantiate(baseRuneToSpawn[baseToSpawnNumber], baseRuneSpawnPos.position, Quaternion.Euler(0, 0, 0));
         }
     }
 
