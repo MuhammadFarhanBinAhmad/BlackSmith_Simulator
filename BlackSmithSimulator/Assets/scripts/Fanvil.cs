@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Fanvil : MonoBehaviour
 {
@@ -54,6 +55,7 @@ public class Fanvil : MonoBehaviour
             CheckMaterials();
         }
 
+        /*
         //Take in inputs from Runes
           if(other.GetComponent<RuneData>() !=null)
           {
@@ -69,8 +71,9 @@ public class Fanvil : MonoBehaviour
                 materialTypeRune = other.GetComponent<RuneData>().material_Type;
             }       
           }
+          */
     }
-
+    /*
     private void OnTriggerExit(Collider other)
     {
         if (other.GetComponent<RuneData>() != null)
@@ -88,20 +91,147 @@ public class Fanvil : MonoBehaviour
             }
         }
     }
+    */
 
-    public void CheckMaterials()
-    {       
-        if (weaponTypeRune != 0 && materialTypeRune != 0)
+
+    public void AddRunes(GameObject RuneSelected)
+    {
+        if (RuneSelected.GetComponent<RuneData>().weapon_Type != 0)
         {
-            //Check if there are materials in the fanvil to use
-            if (materialCollected.Count != 0)
+            runeWeapon = RuneSelected.gameObject;
+            weaponTypeRune = RuneSelected.GetComponent<RuneData>().weapon_Type;
+        }
+
+        if (RuneSelected.GetComponent<RuneData>().material_Type != 0)
+        {
+            runeMaterial = RuneSelected.gameObject;
+            materialTypeRune = RuneSelected.GetComponent<RuneData>().material_Type;
+        }
+    }
+
+    public void RemoveRunes(GameObject RuneSelected)
+    {
+        if (RuneSelected.GetComponent<RuneData>().weapon_Type != 0)
+        {
+            runeWeapon = null;
+            weaponTypeRune = 0;
+            //print(other.name + " Removed");
+        }
+
+        if (RuneSelected.GetComponent<RuneData>().material_Type != 0)
+        {
+            runeMaterial = null;
+            materialTypeRune = 0;
+            //print(other.name + " Removed");
+        }
+    }
+
+
+        public void CheckMaterials()
+        {
+            if (weaponTypeRune != 0 && materialTypeRune != 0)
             {
-                //print("Material detected, creating weapon");
-                CreateWeapon(weaponTypeRune, materialTypeRune);
+                //Check if there are materials in the fanvil to use
+                if (materialCollected.Count != 0)
+                {
+                    //print("Material detected, creating weapon");
+                    CreateWeapon(weaponTypeRune, materialTypeRune);
+                }
+            }
+            else if (weaponTypeRune == 0 || materialTypeRune == 0)
+            {
+                //Clearing Fanvil
+                for (int i = 0; i < materialCollected.Count; i++)
+                {
+                    //print("Destroying item " + i);
+                    GameObject.Destroy(materialCollected[i]);
+                    materialCollected.Clear();
+                }
             }
         }
-        else if( weaponTypeRune == 0 || materialTypeRune == 0)
+
+        //If Generic material is used
+        public void CreateWeapon(int weaponTypeLocal, int materialTypeLocal)
         {
+            int weaponToPrint = 0;
+            //Instantiate new weapon
+            print("Creating Weapon" + weaponTypeLocal + " With " + materialTypeLocal + " material as base");
+            //Calculate the output weapon
+            if (weaponTypeLocal == 1 && materialTypeLocal == 1)
+            {
+                weaponToPrint = 1;
+            }
+            else if (weaponTypeLocal == 1 && materialTypeLocal == 2)
+            {
+                weaponToPrint = 2;
+            }
+            else if (weaponTypeLocal == 1 && materialTypeLocal == 3)
+            {
+                weaponToPrint = 3;
+            }
+            else if (weaponTypeLocal == 1 && materialTypeLocal == 4)
+            {
+                weaponToPrint = 4;
+            }
+            else if (weaponTypeLocal == 2 && materialTypeLocal == 1)
+            {
+                weaponToPrint = 5;
+            }
+            else if (weaponTypeLocal == 2 && materialTypeLocal == 2)
+            {
+                weaponToPrint = 6;
+            }
+            else if (weaponTypeLocal == 2 && materialTypeLocal == 3)
+            {
+                weaponToPrint = 7;
+            }
+            else if (weaponTypeLocal == 2 && materialTypeLocal == 4)
+            {
+                weaponToPrint = 8;
+            }
+            else if (weaponTypeLocal == 3 && materialTypeLocal == 1)
+            {
+                weaponToPrint = 9;
+            }
+            else if (weaponTypeLocal == 3 && materialTypeLocal == 2)
+            {
+                weaponToPrint = 10;
+            }
+            else if (weaponTypeLocal == 3 && materialTypeLocal == 3)
+            {
+                weaponToPrint = 11;
+            }
+            else if (weaponTypeLocal == 3 && materialTypeLocal == 4)
+            {
+                weaponToPrint = 12;
+            }
+            else if (weaponTypeLocal == 4 && materialTypeLocal == 1)
+            {
+                weaponToPrint = 13;
+            }
+            else if (weaponTypeLocal == 4 && materialTypeLocal == 2)
+            {
+                weaponToPrint = 14;
+            }
+            else if (weaponTypeLocal == 4 && materialTypeLocal == 3)
+            {
+                weaponToPrint = 15;
+            }
+            else if (weaponTypeLocal == 4 && materialTypeLocal == 4)
+            {
+                weaponToPrint = 16;
+            }
+            GameObject newWeapon;
+            GameObject smokeEffect;
+            newWeapon = Instantiate(weaponTypeModels[weaponToPrint], weaponSpawnLocation.transform.position, Quaternion.Euler(0, 0, 0));
+            smokeEffect = Instantiate(FanvilVFX, weaponSpawnLocation.transform.position, Quaternion.Euler(0, 0, 0));
+
+            newWeapon.GetComponent<MeshRenderer>().material = weaponTypeMaterials[materialTypeLocal];
+        //print("Material Change Successful!");
+
+        //newWeapon.GetComponent<ThisWeaponData>().this_Material_Type = materialTypeLocal;
+
+        /*
             //Clearing Fanvil
             for (int i = 0; i < materialCollected.Count; i++)
             {
@@ -109,90 +239,22 @@ public class Fanvil : MonoBehaviour
                 GameObject.Destroy(materialCollected[i]);
                 materialCollected.Clear();
             }
+            GameObject.Destroy(runeWeapon);
+            GameObject.Destroy(runeMaterial);
+            runeWeapon = null;
+            runeMaterial = null;
+            //print("Destroyed runes and reseting Fanvil");
+            newWeapon = null;
+            materialTypeRune = 0;
+            weaponTypeRune = 0;
+
+        */
+            newWeapon = null;
+            ClearFanvil();
         }
-    }
 
-    //If Generic material is used
-    public void CreateWeapon(int weaponTypeLocal, int materialTypeLocal)
+    void ClearFanvil()
     {
-        int weaponToPrint = 0;
-        //Instantiate new weapon
-        print("Creating Weapon" + weaponTypeLocal + " With " + materialTypeLocal + " material as base");
-            //Calculate the output weapon
-            if (weaponTypeLocal == 1 && materialTypeLocal == 1)
-            {
-                weaponToPrint = 1;
-            }
-            else if (weaponTypeLocal ==1 && materialTypeLocal ==2)
-            {
-                weaponToPrint = 2;
-            }
-            else if (weaponTypeLocal ==1 && materialTypeLocal ==3)
-            {
-                weaponToPrint = 3;
-            }
-            else if (weaponTypeLocal ==1 && materialTypeLocal ==4)
-            {
-                weaponToPrint = 4;
-            }
-            else if (weaponTypeLocal ==2 && materialTypeLocal ==1)
-            {
-                weaponToPrint = 5;
-            }
-            else if (weaponTypeLocal ==2 && materialTypeLocal ==2)
-            {
-                weaponToPrint = 6;
-            }
-            else if (weaponTypeLocal ==2 && materialTypeLocal ==3)
-            {
-                weaponToPrint = 7;
-            }
-            else if (weaponTypeLocal ==2 && materialTypeLocal ==4)
-            {
-                weaponToPrint = 8;
-            }
-            else if (weaponTypeLocal ==3 && materialTypeLocal ==1)
-            {
-                weaponToPrint = 9;
-            }
-            else if (weaponTypeLocal ==3 && materialTypeLocal ==2)
-            {
-                weaponToPrint = 10;
-            }
-            else if (weaponTypeLocal ==3 && materialTypeLocal ==3)
-            {
-                weaponToPrint = 11;
-            }
-            else if (weaponTypeLocal ==3 && materialTypeLocal ==4)
-            {
-                weaponToPrint = 12;
-            }
-            else if (weaponTypeLocal ==4 && materialTypeLocal ==1)
-            {
-                weaponToPrint = 13;
-            }
-            else if (weaponTypeLocal ==4 && materialTypeLocal ==2)
-            {
-                weaponToPrint = 14;
-            }
-            else if (weaponTypeLocal ==4 && materialTypeLocal ==3)
-            {
-                weaponToPrint = 15;
-            }
-            else if (weaponTypeLocal ==4 && materialTypeLocal ==4)
-            {
-                weaponToPrint = 16;
-            }
-        GameObject newWeapon;
-        GameObject smokeEffect;
-        newWeapon = Instantiate(weaponTypeModels[weaponToPrint], weaponSpawnLocation.transform.position, Quaternion.Euler(0, 0, 0));
-        smokeEffect = Instantiate(FanvilVFX, weaponSpawnLocation.transform.position, Quaternion.Euler(0, 0, 0));
-
-        newWeapon.GetComponent<MeshRenderer>().material = weaponTypeMaterials[materialTypeLocal];
-        //print("Material Change Successful!");
-
-        //newWeapon.GetComponent<ThisWeaponData>().this_Material_Type = materialTypeLocal;
-
         //Clearing Fanvil
         for (int i = 0; i < materialCollected.Count; i++)
         {
@@ -205,8 +267,8 @@ public class Fanvil : MonoBehaviour
         runeWeapon = null;
         runeMaterial = null;
         //print("Destroyed runes and reseting Fanvil");
-        newWeapon = null;
         materialTypeRune = 0;
         weaponTypeRune = 0;
+
     }
 }
