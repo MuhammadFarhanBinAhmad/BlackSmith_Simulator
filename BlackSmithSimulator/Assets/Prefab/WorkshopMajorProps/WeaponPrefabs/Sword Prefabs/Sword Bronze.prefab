@@ -46,7 +46,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3573836475121886417}
-  m_Mesh: {fileID: -4521598327001553363, guid: 9a030fcf521bfd5499236bfc1adfe2be, type: 3}
+  m_Mesh: {fileID: -2318394159553502182, guid: 983e34beceac3a643af6d10b689d24fe, type: 3}
 --- !u!65 &3573836475121886406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -191,7 +191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0de81c7a810bce64f87a07dd278d0c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  the_Weapon_Data: {fileID: 0}
   this_Weapon_Type: 0
   this_Material_Type: 0
   this_Enchantment_Type: 0

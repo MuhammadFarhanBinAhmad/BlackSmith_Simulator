@@ -1,40 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VRTK;
 
 public class SnapDropZoneDetect : MonoBehaviour
 {
-    public GameObject snappedObject;
     public Fanvil fanvilRef;
+    public VRTK_SnapDropZone toggleZoneA;
 
-    private void Start()
+    protected virtual void OnEnable()
     {
-        snappedObject = null;
+        fanvilRef = FindObjectOfType<Fanvil>();
+        toggleZoneA = GetComponent<VRTK_SnapDropZone>();
+        toggleZoneA.ObjectSnappedToDropZone += OnSnap;
+        toggleZoneA.ObjectUnsnappedFromDropZone += OnUnSnap;
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected virtual void OnSnap(object sender, SnapDropZoneEventArgs e)
     {
-        if (other.GetComponent<RuneData>() != null)
-        {
-            snappedObject = other.gameObject;
-        }
+        //print(e.snappedObject.name + " Has been snapped");
+        fanvilRef.AddRunes(e.snappedObject.gameObject);
     }
 
-    private void OnTriggerExit(Collider other)
+    protected virtual void OnUnSnap(object sender, SnapDropZoneEventArgs e)
     {
-        if (other.GetComponent<RuneData>() != null)
-        {
-            snappedObject = null;
-        }
-    }
-
-    public void AddRuneToFanvil()
-    {
-        fanvilRef.AddRunes(snappedObject);
-    }
-
-    public void RemoveRuneToFanvil()
-    {
-        fanvilRef.RemoveRunes(snappedObject);
+        //print(e.snappedObject.name + " Has been unsnapped");
+        fanvilRef.RemoveRunes(e.snappedObject.gameObject);
     }
 }
