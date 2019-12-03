@@ -115,14 +115,14 @@ public class Fanvil : MonoBehaviour
         {
             runeWeapon = null;
             weaponTypeRune = 0;
-            //print(other.name + " Removed");
+            print(RuneSelected.name + " Removed");
         }
 
         if (RuneSelected.GetComponent<RuneData>().material_Type != 0)
         {
             runeMaterial = null;
             materialTypeRune = 0;
-            //print(other.name + " Removed");
+            print(RuneSelected.name + " Removed");
         }
     }
 
@@ -134,7 +134,7 @@ public class Fanvil : MonoBehaviour
                 //Check if there are materials in the fanvil to use
                 if (materialCollected.Count != 0)
                 {
-                    //print("Material detected, creating weapon");
+                    print("Material detected, creating weapon");
                     CreateWeapon(weaponTypeRune, materialTypeRune);
                 }
             }
@@ -144,7 +144,7 @@ public class Fanvil : MonoBehaviour
                 for (int i = 0; i < materialCollected.Count; i++)
                 {
                     //print("Destroying item " + i);
-                    GameObject.Destroy(materialCollected[i]);
+                    //GameObject.Destroy(materialCollected[i]);
                     materialCollected.Clear();
                 }
             }
