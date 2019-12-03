@@ -45,7 +45,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9132642142460985842}
-  m_Mesh: {fileID: -5141700695902245142, guid: 68eaa47a61b742d40ab951c24054df8c, type: 3}
+  m_Mesh: {fileID: -447490768055965304, guid: e3573af5a13c814408181234c29f2c33, type: 3}
 --- !u!23 &7386325227685573934
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5629084884208175553, guid: 68eaa47a61b742d40ab951c24054df8c, type: 3}
+  - {fileID: 2100000, guid: b62b979d7bb47bd46a78b7866471b0e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -191,3 +191,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropEffect: {fileID: 1273915125232972, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
+  objectType: 0
+  UIEffect: 0
