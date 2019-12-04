@@ -58,8 +58,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.15009408, y: 0.034840703, z: 0.782674}
-  m_Center: {x: -0.0006101355, y: -0.00014150143, z: 0.00040316582}
+  m_Size: {x: 0.26368323, y: 0.05811709, z: 0.830158}
+  m_Center: {x: 0.0003209263, y: 0.0012550652, z: -0.0009934306}
 --- !u!23 &3573836475121886425
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -77,7 +77,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 60b4d44b99973ea4e827c9c46613b856, type: 2}
+  - {fileID: 2100000, guid: ea6d39553ed82e741ab621c30a2585b0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -211,5 +211,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1583511, y: 0.03728342, z: 0.7939332}
-  m_Center: {x: 0.0012204647, y: 0.00041520596, z: 0.0016013682}
+  m_Size: {x: 0.27194023, y: 0.064284146, z: 0.838624}
+  m_Center: {x: 0.00028941035, y: 0.00088074803, z: -0.002122879}

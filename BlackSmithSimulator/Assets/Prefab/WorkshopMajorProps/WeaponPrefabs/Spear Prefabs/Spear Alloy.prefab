@@ -58,8 +58,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.19618642, y: 0.037641943, z: 1.6058788}
-  m_Center: {x: 0.0013520718, y: 0.0013587177, z: 0.004128039}
+  m_Size: {x: 0.19479617, y: 0.038668185, z: 1.590586}
+  m_Center: {x: 0.0006569475, y: 0.0008455962, z: -0.0035184026}
 --- !u!23 &3573836475121886425
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -191,7 +191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0de81c7a810bce64f87a07dd278d0c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  the_Weapon_Data: {fileID: 0}
   this_Weapon_Type: 0
   this_Material_Type: 0
   this_Enchantment_Type: 0
@@ -212,5 +211,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.094451584, y: 0.037579447, z: 1.2315508}
-  m_Center: {x: 0.00045065954, y: 0.0010332912, z: -0.18393028}
+  m_Size: {x: 0.20995198, y: 0.04063335, z: 1.6064923}
+  m_Center: {x: -0.00095472485, y: 0.00052429736, z: -0.002121091}
