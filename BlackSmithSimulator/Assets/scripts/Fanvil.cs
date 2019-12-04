@@ -226,7 +226,7 @@ public class Fanvil : MonoBehaviour
             newWeapon = Instantiate(weaponTypeModels[weaponToPrint], weaponSpawnLocation.transform.position, Quaternion.Euler(0, 0, 0));
             smokeEffect = Instantiate(FanvilVFX, weaponSpawnLocation.transform.position, Quaternion.Euler(0, 0, 0));
 
-            newWeapon.GetComponent<MeshRenderer>().material = weaponTypeMaterials[materialTypeLocal];
+            //newWeapon.GetComponent<MeshRenderer>().material = weaponTypeMaterials[materialTypeLocal];
         //print("Material Change Successful!");
 
         //newWeapon.GetComponent<ThisWeaponData>().this_Material_Type = materialTypeLocal;
