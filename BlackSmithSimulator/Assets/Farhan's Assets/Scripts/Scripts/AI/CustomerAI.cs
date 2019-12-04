@@ -216,11 +216,11 @@ public class CustomerAI : MonoBehaviour
     IEnumerator CustomerIdling()
     {
         //customer will idle for a period of time before moving to next location
-        int times_Animation_Loops = Random.Range(2, 4);
+        int times_Animation_Loops = Random.Range(0, 2);
 
         current_Animation_Element = Random.Range(0, the_Customer_Spawner.general_Customer_Anim.Count);
         customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element], true);//Start idle animation
-        yield return new WaitForSeconds(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element].Length/2 * times_Animation_Loops);
+        yield return new WaitForSeconds(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element].Length/2);
         customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element], false);//Stop idle animation
         MoveToNextPoint();
         InvokeRepeating("GoingToCounter", 0.1f, 0.1f);//Constantly checking Customer Location
