@@ -15,6 +15,14 @@ public class RuneMaker : MonoBehaviour
     GameObject catalystReference = null;
     GameObject reactantReference = null;
 
+
+    public AudioSource rune_Maker_SFX;
+
+    private void Start()
+    {
+        rune_Maker_SFX = GetComponent<AudioSource>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<EmptyRuneData>() != null)
@@ -121,6 +129,7 @@ public class RuneMaker : MonoBehaviour
             if (current_Type != 0)
             {
                 Instantiate(Rune_Types[current_Type], runeSpawnLocation.transform.position, Quaternion.Euler(0, 0, 0));
+                rune_Maker_SFX.Play();
                 EmptyPot();
             }
         }
