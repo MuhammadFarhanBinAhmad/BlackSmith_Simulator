@@ -327,6 +327,7 @@ GameObject:
   - component: {fileID: 4642784583015751217}
   - component: {fileID: 4754527502533003576}
   - component: {fileID: 4754527502533003572}
+  - component: {fileID: 278370833298322935}
   m_Layer: 0
   m_Name: CubeSnapDropZone (1)
   m_TagString: Untagged
@@ -437,6 +438,20 @@ MonoBehaviour:
   unhighlightOnDisable: 1
   emissionDarken: 50
   customMaterial: {fileID: 2100000, guid: 594998006004a3a4da38a6c8f25e5c79, type: 2}
+--- !u!114 &278370833298322935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4753817766237611193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf9dbe723deca7429387035160e7272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runeMixerRef: {fileID: 0}
+  toggleZoneA: {fileID: 0}
 --- !u!1 &4754527501967770109
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,7 +860,7 @@ BoxCollider:
   m_GameObject: {fileID: 6863351875170996136}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0.15, z: 0.2}
@@ -858,7 +873,7 @@ BoxCollider:
   m_GameObject: {fileID: 6863351875170996136}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0.15, z: -0.2}
@@ -1064,6 +1079,7 @@ GameObject:
   - component: {fileID: 8723870685667234182}
   - component: {fileID: 8684180616398096015}
   - component: {fileID: 8684180616398096003}
+  - component: {fileID: 3255517767125777072}
   m_Layer: 0
   m_Name: CubeSnapDropZone
   m_TagString: Untagged
@@ -1174,3 +1190,17 @@ MonoBehaviour:
   unhighlightOnDisable: 1
   emissionDarken: 50
   customMaterial: {fileID: 2100000, guid: 594998006004a3a4da38a6c8f25e5c79, type: 2}
+--- !u!114 &3255517767125777072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8685163029831838478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf9dbe723deca7429387035160e7272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runeMixerRef: {fileID: 0}
+  toggleZoneA: {fileID: 0}

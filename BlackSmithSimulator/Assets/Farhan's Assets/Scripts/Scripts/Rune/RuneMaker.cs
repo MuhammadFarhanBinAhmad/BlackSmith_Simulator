@@ -22,7 +22,7 @@ public class RuneMaker : MonoBehaviour
     {
         rune_Maker_SFX = GetComponent<AudioSource>();
     }
-
+    /*
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<EmptyRuneData>() != null)
@@ -61,6 +61,45 @@ public class RuneMaker : MonoBehaviour
                 reactant_In_Dispenser = 0;
             }
 
+        }
+    }
+    */
+    public void AddRunes(GameObject RuneSelected)
+    {
+        if (RuneSelected.GetComponent<EmptyRuneData>() != null)
+        {
+            if (RuneSelected.GetComponent<EmptyRuneData>().this_Object_Catalyst != 0)
+            {
+                catalystReference = RuneSelected.gameObject;
+                catalyst_In_Dispenser = RuneSelected.GetComponent<EmptyRuneData>().this_Object_Catalyst;
+                CheckRune();
+            }
+
+            if (RuneSelected.GetComponent<EmptyRuneData>().this_Object_Reactant != 0)
+            {
+                reactantReference = RuneSelected.gameObject;
+                reactant_In_Dispenser = RuneSelected.GetComponent<EmptyRuneData>().this_Object_Reactant;
+                CheckRune();
+            }
+        }
+    }
+
+    public void RemoveRunes(GameObject RuneSelected)
+    {
+        //Remove Base Rune if left RuneMaker
+        if (RuneSelected.GetComponent<EmptyRuneData>() != null)
+        {
+            if (RuneSelected.GetComponent<EmptyRuneData>().this_Object_Catalyst != 0 || RuneSelected.gameObject == catalystReference)
+            {
+                catalystReference = null;
+                catalyst_In_Dispenser = 0;
+            }
+
+            if (RuneSelected.GetComponent<EmptyRuneData>().this_Object_Reactant != 0 || RuneSelected.gameObject == reactantReference)
+            {
+                reactantReference = null;
+                reactant_In_Dispenser = 0;
+            }
         }
     }
 
