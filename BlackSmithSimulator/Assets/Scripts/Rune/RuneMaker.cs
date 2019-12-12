@@ -168,7 +168,10 @@ public class RuneMaker : MonoBehaviour
             if (current_Type != 0)
             {
                 Instantiate(Rune_Types[current_Type], runeSpawnLocation.transform.position, Quaternion.Euler(0, 0, 0));
-                rune_Maker_SFX.Play();
+                if (rune_Maker_SFX != null)
+                {
+                    rune_Maker_SFX.Play();
+                }
                 EmptyPot();
             }
         }

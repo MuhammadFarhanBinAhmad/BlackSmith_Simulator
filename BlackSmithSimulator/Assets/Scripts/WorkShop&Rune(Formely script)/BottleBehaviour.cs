@@ -13,7 +13,7 @@ public class BottleBehaviour : MonoBehaviour
     public GameobjectType objectType;
     public InteractableUIEffect UIEffect;
 
-    public AudioSource glass_Braking;
+    public AudioSource bottleBreakSFX;
 
     public enum GameobjectType
     {
@@ -31,7 +31,7 @@ public class BottleBehaviour : MonoBehaviour
 
     private void Start()
     {
-        glass_Braking = GetComponent<AudioSource>();
+        bottleBreakSFX = GetComponent<AudioSource>();
 
         if (this.gameObject.activeInHierarchy == true)
         {
@@ -73,17 +73,15 @@ public class BottleBehaviour : MonoBehaviour
 
     void OnDrop()
     {
+        bottleBreakSFX.Play();
+        print("Velocity is " + Mathf.Round(rigidBody.velocity.magnitude * rigidBody.velocity.magnitude));
         switch (objectType)
         {
             case GameobjectType.Prop:
-                print("Velocity is " + Mathf.Round(rigidBody.velocity.magnitude * rigidBody.velocity.magnitude));
                 Instantiate(dropEffect, this.transform.position, Quaternion.Euler(0, 0, 0));
-                glass_Braking.Play();
                 Destroy(this.gameObject);
                 break;
             case GameobjectType.InteractableUI:
-                print("Velocity is " + Mathf.Round(rigidBody.velocity.magnitude * rigidBody.velocity.magnitude));
-                glass_Braking.Play();
                 InteractableEffect();
                 Destroy(this.gameObject);
                 break;

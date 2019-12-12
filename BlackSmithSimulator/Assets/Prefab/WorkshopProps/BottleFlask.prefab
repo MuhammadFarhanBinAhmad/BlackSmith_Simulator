@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7701363555685398604}
   - component: {fileID: 4382809484500171416}
   - component: {fileID: 7442264897964311055}
+  - component: {fileID: 4588146963664813801}
   m_Layer: 0
   m_Name: BottleFlask
   m_TagString: Untagged
@@ -34,8 +35,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 249167211822291464}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -181,7 +181,7 @@ MonoBehaviour:
   dropEffect: {fileID: 1273915125232972, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
   objectType: 0
   UIEffect: 0
-  glass_Braking: {fileID: 4461625577609002126}
+  bottleBreakSFX: {fileID: 4588146963664813801}
 --- !u!65 &7442264897964311055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -195,49 +195,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09421943, y: 0.18897045, z: 0.09665243}
   m_Center: {x: 0.000000007450581, y: 0.00000016391277, z: -0.0008280929}
---- !u!1 &7882378715148079225
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 249167211822291464}
-  - component: {fileID: 4461625577609002126}
-  m_Layer: 0
-  m_Name: Audio Source
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &249167211822291464
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7882378715148079225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 406401173635491382}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &4461625577609002126
+--- !u!82 &4588146963664813801
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7882378715148079225}
+  m_GameObject: {fileID: 3744895296171054117}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b6fcdc0cbba1e5a4c9cf5855d25d3b39, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -246,7 +215,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 0.9934492
+  MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 1
