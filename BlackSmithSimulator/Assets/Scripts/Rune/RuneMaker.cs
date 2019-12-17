@@ -18,52 +18,15 @@ public class RuneMaker : MonoBehaviour
 
     public AudioSource rune_Maker_SFX;
 
+
+    Animator animatorReference;
+
     private void Start()
     {
         rune_Maker_SFX = GetComponent<AudioSource>();
-    }
-    /*
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.GetComponent<EmptyRuneData>() != null)
-        {
-            if (other.GetComponent<EmptyRuneData>().this_Object_Catalyst != 0)
-            {
-                catalystReference = other.gameObject;
-                catalyst_In_Dispenser = other.GetComponent<EmptyRuneData>().this_Object_Catalyst;
-                CheckRune();
-            }
-
-            if (other.GetComponent<EmptyRuneData>().this_Object_Reactant != 0)
-            {
-                reactantReference = other.gameObject;
-                reactant_In_Dispenser = other.GetComponent<EmptyRuneData>().this_Object_Reactant;
-                CheckRune();
-            }
-        }
-
+        animatorReference = GetComponent<Animator>();
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        //Remove Base Rune if left RuneMaker
-        if (other.GetComponent<EmptyRuneData>() != null)
-        {
-            if (other.GetComponent<EmptyRuneData>().this_Object_Catalyst != 0 || other.gameObject == catalystReference)
-            {
-                catalystReference = null;
-                catalyst_In_Dispenser = 0;
-            }
-
-            if (other.GetComponent<EmptyRuneData>().this_Object_Reactant != 0 || other.gameObject == reactantReference)
-            {
-                reactantReference = null;
-                reactant_In_Dispenser = 0;
-            }
-
-        }
-    }
-    */
     public void AddRunes(GameObject RuneSelected)
     {
         if (RuneSelected.GetComponent<EmptyRuneData>() != null)
@@ -167,6 +130,7 @@ public class RuneMaker : MonoBehaviour
             }
             if (current_Type != 0)
             {
+                animatorReference.SetTrigger("CreatingRune");
                 Instantiate(Rune_Types[current_Type], runeSpawnLocation.transform.position, Quaternion.Euler(0, 0, 0));
                 if (rune_Maker_SFX != null)
                 {
