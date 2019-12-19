@@ -14,6 +14,7 @@ public class SnapDropZoneDetect : MonoBehaviour
         toggleZoneA = GetComponent<VRTK_SnapDropZone>();
         toggleZoneA.ObjectSnappedToDropZone += OnSnap;
         toggleZoneA.ObjectUnsnappedFromDropZone += OnUnSnap;
+        
     }
 
     protected virtual void OnSnap(object sender, SnapDropZoneEventArgs e)

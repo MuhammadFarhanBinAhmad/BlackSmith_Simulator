@@ -81,51 +81,53 @@ public class RuneMaker : MonoBehaviour
                 {
                     current_Type = 2;
                 }
+                /* Old Axe Rune
                 if (reactant_In_Dispenser == 3)
                 {
                     current_Type = 3;
                 }
+                */
                 if (reactant_In_Dispenser == 4)
                 {
-                    current_Type = 4;
+                    current_Type = 3;
                 }
             }
             if (catalyst_In_Dispenser == 2)
             {
                 if (reactant_In_Dispenser == 1)
                 {
-                    current_Type = 5;
+                    current_Type = 4;
                 }
                 if (reactant_In_Dispenser == 2)
                 {
-                    current_Type = 6;
+                    current_Type = 5;
                 }
                 if (reactant_In_Dispenser == 3)
                 {
-                    current_Type = 7;
+                    current_Type = 6;
                 }
                 if (reactant_In_Dispenser == 4)
                 {
-                    current_Type = 8;
+                    current_Type = 7;
                 }
             }
             if (catalyst_In_Dispenser == 3)
             {
                 if (reactant_In_Dispenser == 1)
                 {
-                    current_Type = 9;
+                    current_Type = 8;
                 }
                 if (reactant_In_Dispenser == 2)
                 {
-                    current_Type = 10;
+                    current_Type = 9;
                 }
                 if (reactant_In_Dispenser == 3)
                 {
-                    current_Type = 11;
+                    current_Type = 10;
                 }
                 if (reactant_In_Dispenser == 4)
                 {
-                    current_Type = 12;
+                    current_Type = 11;
                 }
             }
             if (current_Type != 0)
