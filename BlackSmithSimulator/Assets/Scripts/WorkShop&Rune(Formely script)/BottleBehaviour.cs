@@ -18,7 +18,7 @@ public class BottleBehaviour : MonoBehaviour
     public enum GameobjectType
     {
         Prop,
-        InteractableUI
+        Interactable
     }
 
     public enum InteractableUIEffect
@@ -29,19 +29,6 @@ public class BottleBehaviour : MonoBehaviour
         QuitGame,
     }
 
-    private void Start()
-    {
-        bottleBreakSFX = GetComponent<AudioSource>();
-
-        if (this.gameObject.activeInHierarchy == true)
-        {
-            isEnabled = true;
-        }
-        else
-        {
-            isEnabled = false;
-        }
-    }
 
     private void OnEnable()
     {
@@ -73,15 +60,12 @@ public class BottleBehaviour : MonoBehaviour
 
     void OnDrop()
     {
-        bottleBreakSFX.Play();
         print("Velocity is " + Mathf.Round(rigidBody.velocity.magnitude * rigidBody.velocity.magnitude));
         switch (objectType)
         {
             case GameobjectType.Prop:
-                Instantiate(dropEffect, this.transform.position, Quaternion.Euler(0, 0, 0));
-                Destroy(this.gameObject);
                 break;
-            case GameobjectType.InteractableUI:
+            case GameobjectType.Interactable:
                 InteractableEffect();
                 Destroy(this.gameObject);
                 break;
@@ -93,16 +77,21 @@ public class BottleBehaviour : MonoBehaviour
         switch (UIEffect)
         {
             case InteractableUIEffect.NoEffect:
+                Instantiate(dropEffect, this.transform.position, Quaternion.Euler(0, 0, 0));
+                this.GetComponent<AudioSource>().Play();
                 break;
             case InteractableUIEffect.Teleport:
                 Instantiate(dropEffect, this.transform.position, Quaternion.Euler(0, 0, 0));
+                this.GetComponent<AudioSource>().Play();
                 break;
             case InteractableUIEffect.MainMenu:
                 Instantiate(dropEffect, this.transform.position, Quaternion.Euler(0, 0, 0));
+                this.GetComponent<AudioSource>().Play();
                 SceneManager.LoadScene("Pause_Main_Menu");
                 break;
             case InteractableUIEffect.QuitGame:
                 Instantiate(dropEffect, this.transform.position, Quaternion.Euler(0, 0, 0));
+                this.GetComponent<AudioSource>().Play();
                 Application.Quit();
                 break;
         }
