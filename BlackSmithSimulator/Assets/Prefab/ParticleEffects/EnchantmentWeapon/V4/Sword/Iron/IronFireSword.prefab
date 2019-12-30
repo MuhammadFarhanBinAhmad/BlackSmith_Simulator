@@ -9461,7 +9461,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 443ee4d01ea473048a95f826bcc1d5da, type: 2}
+  - {fileID: 2100000, guid: a5736592aed67d04c85846527af01f7a, type: 2}
   - {fileID: 2100000, guid: 443ee4d01ea473048a95f826bcc1d5da, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -14217,7 +14217,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3349fc02d104e2b458470ec533f51c16, type: 2}
+  - {fileID: 2100000, guid: 443ee4d01ea473048a95f826bcc1d5da, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -14349,7 +14349,7 @@ Light:
   m_BounceIntensity: 0.1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.0561224e-38, y: 11, z: 11, w: 0}
+  m_BoundingSphereOverride: {x: 0.03125, y: 0.09765625, z: 0.0234375, w: -0.02734375}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
