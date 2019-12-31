@@ -1317,15 +1317,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1787700375, guid: e34dee5992dab4144b90989d7928ad74, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1301701526428956318, guid: e34dee5992dab4144b90989d7928ad74,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6400328191098296912, guid: e34dee5992dab4144b90989d7928ad74,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1340,6 +1331,15 @@ PrefabInstance:
         type: 3}
       propertyPath: angleTarget
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1787700375, guid: e34dee5992dab4144b90989d7928ad74, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301701526428956318, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5042064689155013288, guid: e34dee5992dab4144b90989d7928ad74,
         type: 3}
