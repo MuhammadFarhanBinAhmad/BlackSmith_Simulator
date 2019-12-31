@@ -50,4 +50,11 @@ public class TutorialManager : MonoBehaviour
         yield return new WaitForSeconds(7);
         dsManager.LevelModeSwitch("Pause_Main_Menu");
     }
+
+    public void CheckTeleportDuringTutorial(){
+        if (tutorialText.text == "teleport with x button"){
+            Tutorial4();
+        }
+
+    }
 }

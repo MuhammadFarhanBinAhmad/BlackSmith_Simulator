@@ -2012,7 +2012,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783027782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.182, z: 0.506}
+  m_LocalPosition: {x: -0.84, y: 1.182, z: 0.506}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1077501408}
@@ -2603,6 +2603,7 @@ GameObject:
   - component: {fileID: 1167239139}
   - component: {fileID: 1167239137}
   - component: {fileID: 1167239136}
+  - component: {fileID: 1167239138}
   m_Layer: 0
   m_Name: RightController
   m_TagString: Untagged
@@ -2659,6 +2660,35 @@ MonoBehaviour:
   targetListPolicy: {fileID: 1167239136}
   navMeshData: {fileID: 0}
   navMeshLimitDistance: 0
+--- !u!114 &1167239138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167239134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a5b9ffe9b896854886ce4e3c883f0b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTeleporting:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTeleported:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 783027783}
+        m_MethodName: Tutorial4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1167239139
 MonoBehaviour:
   m_ObjectHideFlags: 0
