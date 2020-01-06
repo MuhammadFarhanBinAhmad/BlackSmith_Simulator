@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
 
+
 public class SnapDropZoneDetect : MonoBehaviour
 {
     public Fanvil fanvilRef;
