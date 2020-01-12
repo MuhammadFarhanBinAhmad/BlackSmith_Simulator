@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 911890082808173629}
-  - component: {fileID: 915043744421099839}
   - component: {fileID: 946249213235867767}
   - component: {fileID: 949713757152032995}
   - component: {fileID: 898239311602664771}
@@ -35,21 +34,6 @@ Transform:
   m_Father: {fileID: 5987175737165769920}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 135, y: 0, z: 0}
---- !u!114 &915043744421099839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 915043744421099833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d0679b84a756e24eb5446d0a5832c8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  linkedObject: {fileID: 949713757152032995}
-  bookBehaviour: {fileID: 5987175738118605607}
-  pageflip: 1
 --- !u!114 &946249213235867767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,7 +137,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5987175737165769921}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.472, y: 0.929, z: -1.95}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5987175738118605604}
@@ -171,7 +155,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5987175737852081766}
-  - component: {fileID: 5987175737852081785}
   - component: {fileID: 5987175737852081786}
   - component: {fileID: 5987175737852081787}
   - component: {fileID: 5987175737852081764}
@@ -197,21 +180,6 @@ Transform:
   m_Father: {fileID: 5987175737165769920}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 135, y: 0, z: 0}
---- !u!114 &5987175737852081785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5987175737852081767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d0679b84a756e24eb5446d0a5832c8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  linkedObject: {fileID: 5987175737852081787}
-  bookBehaviour: {fileID: 5987175738118605607}
-  pageflip: 0
 --- !u!114 &5987175737852081786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,7 +351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pages:
-  - {fileID: 2100000, guid: 60ebef43fec0e3743bf4d9de9e4f8bd5, type: 2}
+  - {fileID: 0}
   - {fileID: 2100000, guid: 319c3d89c2e15284fae93832b58ee3b1, type: 2}
   - {fileID: 2100000, guid: e1815beab60f4bd4b8b243d45d1dae0a, type: 2}
   - {fileID: 2100000, guid: cd08ec4fb5a3a3d4797448c30288694e, type: 2}
