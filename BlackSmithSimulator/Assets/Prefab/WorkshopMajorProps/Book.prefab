@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 949713757152032995}
   - component: {fileID: 898239311602664771}
   - component: {fileID: 915043744421099832}
+  - component: {fileID: 2395828292440008121}
   m_Layer: 0
   m_Name: NextPageCollider
   m_TagString: Untagged
@@ -113,6 +114,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: -0.5, y: 0, z: 0}
+--- !u!114 &2395828292440008121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915043744421099833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92344c07bf2a82d4ba286f892f076025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  linkedObject: {fileID: 0}
+  bookBehaviour: {fileID: 5987175738118605607}
+  pageflip: 1
 --- !u!1 &5987175737165769921
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,6 +175,7 @@ GameObject:
   - component: {fileID: 5987175737852081787}
   - component: {fileID: 5987175737852081764}
   - component: {fileID: 5987175737852081765}
+  - component: {fileID: 8922226561428455910}
   m_Layer: 0
   m_Name: PreviousPageCollider
   m_TagString: Untagged
@@ -259,6 +276,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0.5, y: 0, z: 0}
+--- !u!114 &8922226561428455910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5987175737852081767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92344c07bf2a82d4ba286f892f076025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  linkedObject: {fileID: 0}
+  bookBehaviour: {fileID: 5987175738118605607}
+  pageflip: 0
 --- !u!1 &5987175738118605600
 GameObject:
   m_ObjectHideFlags: 0
