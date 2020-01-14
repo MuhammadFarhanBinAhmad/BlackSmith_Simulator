@@ -1,21 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ColourChange : MonoBehaviour
 {
+    public GameObject glowing_Object;
+
+    private void Start()
+    {
+        glowing_Object.SetActive(false);
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.name =="Hand")
         {
-            GetComponent<MeshRenderer>().material.color = new Color(.75f, .75f, .75f, 1);
+            glowing_Object.SetActive(true);
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.name == "Hand")
         {
-            GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 1);
+            glowing_Object.SetActive(false);
         }
     }
 }
