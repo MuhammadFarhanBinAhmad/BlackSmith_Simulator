@@ -221,11 +221,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3573836475121886430}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 5373b704f0688714bbea6faa7d21c578,
-        type: 3}
-      propertyPath: m_Name
-      value: AlloyKnifeBL
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5373b704f0688714bbea6faa7d21c578,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -290,6 +285,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 5373b704f0688714bbea6faa7d21c578,
+        type: 3}
+      propertyPath: m_Name
+      value: AlloyKnifeBL
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: 5373b704f0688714bbea6faa7d21c578,
         type: 3}

@@ -1,14 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class CustomerSpawner : CustomerPointOfInterest
+public class CustomerSpawner : MonoBehaviour
 {
 
     public static int current_day;
     public static int Customer_Already_Serve;
 
     public GameObject the_Sun;
+    public Transform[] destPointsOfInterest;
+    public Transform destCounter;
+    public Transform destExit;
     public List<GameObject> Customer = new List<GameObject>();
+    public List<GameObject> brokenWeapon = new List<GameObject>();
 
     WeaponCollectionPoint the_Weapon_Collection_Point;
 

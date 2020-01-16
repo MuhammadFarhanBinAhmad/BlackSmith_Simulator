@@ -33,7 +33,7 @@ public class Tutorial2 : MonoBehaviour
        tListner = FindObjectOfType<TutorialListner>();
     }
 
-    public void TutorialEventSend(TutorialEvent tEvent)
+    public void TutorialEventSend()
     {
         switch (tEvents)
         {

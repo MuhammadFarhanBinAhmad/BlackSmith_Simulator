@@ -293,19 +293,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: LookingOutWindow
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Idle001
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -431,13 +431,13 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -8492546054719047822}
-    m_Position: {x: 220, y: -50, z: 0}
+    m_Position: {x: 210, y: -120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1022464727937500926}
-    m_Position: {x: 440, y: 10, z: 0}
+    m_Position: {x: 470, y: 0, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5816009284963469400}
-    m_Position: {x: 220, y: 70, z: 0}
+    m_Position: {x: 230, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6682697224603773590}
     m_Position: {x: 220, y: 10, z: 0}

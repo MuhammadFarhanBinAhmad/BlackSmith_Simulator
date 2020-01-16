@@ -78,7 +78,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ea6d39553ed82e741ab621c30a2585b0, type: 2}
+  - {fileID: 2100000, guid: 661380cff8a47ad449c84a04e831c593, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -221,11 +221,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3573836475121886430}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: d768177474092174782c2f37258a1390,
-        type: 3}
-      propertyPath: m_Name
-      value: IronSWBlade
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d768177474092174782c2f37258a1390,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -281,11 +276,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d768177474092174782c2f37258a1390,
+        type: 3}
+      propertyPath: m_Name
+      value: IronSWBlade
+      objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: d768177474092174782c2f37258a1390,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ea6d39553ed82e741ab621c30a2585b0, type: 2}
+      objectReference: {fileID: 2100000, guid: 661380cff8a47ad449c84a04e831c593, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d768177474092174782c2f37258a1390, type: 3}
 --- !u!4 &8086773192314267039 stripped

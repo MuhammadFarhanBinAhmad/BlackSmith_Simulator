@@ -43,17 +43,21 @@ public class CustomerAI : MonoBehaviour
     }
     void Start()
     {
-
         agent = GetComponent<NavMeshAgent>();
-        agent.speed = 5;
-        agent.destination = the_Customer_Spawner.point_Of_Interest[1].position;
+        //StartCoroutine(AIEntrance());
+        agent.destination = the_Customer_Spawner.destPointsOfInterest[0].position;
         StartCoroutine("MovingToCounter");
     }
 
+    IEnumerator AIEntrance()
+    {
+        MoveTo(the_Customer_Spawner.destCounter, 5);
+        yield return new WaitForSeconds(1);
+    }
     IEnumerator MovingToCounter()
     {
         yield return new WaitForSeconds(1);
-        agent.destination = the_Customer_Spawner.point_Of_Interest[0].position;
+        agent.destination = the_Customer_Spawner.destCounter.position;
         InvokeRepeating("GoingToCounter", 0.1f, 0.1f);
     }
 
@@ -62,7 +66,7 @@ public class CustomerAI : MonoBehaviour
         if (given_Order && !weapon_Recived)//check if customer have given order and has his weapon receive
         {
             current_DestinationNumber = 0;
-            agent.destination = the_Customer_Spawner.point_Of_Interest[current_DestinationNumber].position;//go to counter
+            agent.destination = the_Customer_Spawner.destCounter.position;//go to counter
             customer_Dialouge.Stop();
             customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element], false);//Stop idle animation
             InvokeRepeating("GoingToCounter", 0.1f, 0.1f);
@@ -70,34 +74,30 @@ public class CustomerAI : MonoBehaviour
     }
     void GoingToCounter()
     {
-        //check if AI has reach his destination
-        if (!agent.pathPending)
-        {
-            if (agent.remainingDistance <= agent.stoppingDistance)
+
+        if (agent.remainingDistance <= agent.stoppingDistance)
             {
-                if (!agent.hasPath || agent.velocity.sqrMagnitude == 0)
+                if (current_DestinationNumber == 0)
                 {
-                    if (current_DestinationNumber == 0)
+                    //if order have been given...
+                    if (given_Order)
                     {
-                        //if order have been given...
-                        if (given_Order)
+                        //and weapon is present
+                        if (FindObjectOfType<WeaponCollectionPoint>().ready_For_Collection)
                         {
-                            //and weapon is present
-                            if (FindObjectOfType<WeaponCollectionPoint>().ready_For_Collection)
-                            {
-                                //Exit Store
-                                StartCoroutine("ExitingStore");
-                                weapon_Recived = true;
-                                Destroy(FindObjectOfType<ThisWeaponData>().gameObject);
-                                CheckWeapon();
-                                CancelInvoke("GoingToCounter");
-                            }
-                            //if no weapon is present
-                            else
-                            {
-                                //Go back to Window Shopping
-                                InvokeRepeating("StartWindowShopping", 0, 0.1f);
-                            }
+                            //Exit Store
+                            StartCoroutine("ExitingStore");
+                            weapon_Recived = true;
+                            Destroy(FindObjectOfType<ThisWeaponData>().gameObject);
+                            CheckWeapon();
+                            CancelInvoke("GoingToCounter");
+                        }
+                        //if no weapon is present
+                        else
+                        {
+                            //Go back to Window Shopping
+                            InvokeRepeating("StartWindowShopping", 0, 0.1f);
+                        }
                         }
                         //customer giving order
                         else if (!given_Order)
@@ -105,19 +105,20 @@ public class CustomerAI : MonoBehaviour
                             customer_Dialouge.clip = customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[0];
                             customer_Dialouge.Play();
                             customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], true);//play customer order animation
+                            
                             InvokeRepeating("StartWindowShopping", 0, 0.1f);
                             CancelInvoke("GoingToCounter");
                         }
-                    }
-                    else
-                    //customer moving and looking around store
-                    {
-                        StartCoroutine("CustomerIdling");
-                        CancelInvoke("GoingToCounter");
-                    }
                 }
-            }
+                else
+                //customer moving and looking around store
+                {
+                    StartCoroutine("CustomerIdling");
+                    CancelInvoke("GoingToCounter");
+                }
+                
         }
+        
     }
     void StartWindowShopping()
     {
@@ -138,7 +139,7 @@ public class CustomerAI : MonoBehaviour
         int new_Point_Of_Interest;
 
         //ensure that the same number dont appear twice
-        new_Point_Of_Interest = Random.Range(2, the_Customer_Spawner.point_Of_Interest.Count - 2);
+        new_Point_Of_Interest = Random.Range(2, the_Customer_Spawner.destPointsOfInterest.Length - 2);
         if (new_Point_Of_Interest == current_DestinationNumber)
         {
             MoveToNextPoint();
@@ -152,7 +153,7 @@ public class CustomerAI : MonoBehaviour
                     if (!agent.hasPath || agent.velocity.sqrMagnitude == 0)
                     {
                         current_DestinationNumber = new_Point_Of_Interest;//give random point of interest for customer to move
-                        agent.destination = the_Customer_Spawner.point_Of_Interest[current_DestinationNumber].position;
+                        agent.destination = the_Customer_Spawner.destPointsOfInterest[current_DestinationNumber].position;
                     }
                 }
             }
@@ -160,7 +161,6 @@ public class CustomerAI : MonoBehaviour
     }
     void CheckWeapon()
     {
-
         WeaponCollectionPoint the_Weapon_Collection_Point = FindObjectOfType<WeaponCollectionPoint>();
         //check all types if correct
         if (customer_Order[CustomerSpawner.current_day].weapon_Material == the_Weapon_Collection_Point.material_Type)
@@ -195,7 +195,7 @@ public class CustomerAI : MonoBehaviour
             }
         }
     }
-    IEnumerator RandomChatteringFromAI()
+    IEnumerator RandomChatteringFromAI() //Animation, Navagent and Audio
     {
         yield return new WaitForSeconds(7);
         {
@@ -213,7 +213,7 @@ public class CustomerAI : MonoBehaviour
         }
     }
     //place animation here
-    IEnumerator CustomerIdling()
+    IEnumerator CustomerIdling() //Animation and Navagent only
     {
         //customer will idle for a period of time before moving to next location
         int times_Animation_Loops = Random.Range(0, 2);
@@ -226,13 +226,34 @@ public class CustomerAI : MonoBehaviour
         InvokeRepeating("GoingToCounter", 0.1f, 0.1f);//Constantly checking Customer Location
     }
     //customer have receive waepon and leaving store
-    IEnumerator ExitingStore()
+    IEnumerator ExitingStore() //Animation and Navagent only
     {
         customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], true);//stop customer order animation
         yield return new WaitForSeconds(1.5f);//place grabing animation time here
         customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], false);//stop customer order animation
-        current_DestinationNumber = the_Customer_Spawner.point_Of_Interest.Count - 1;
-        agent.destination = the_Customer_Spawner.point_Of_Interest[the_Customer_Spawner.point_Of_Interest.Count - 1].position;
+        //current_DestinationNumber = the_Customer_Spawner.point_Of_Interest.Count - 1;
+        agent.destination = the_Customer_Spawner.destExit.position;
         InvokeRepeating("ExitStore", 0, 0.1f);
+    }
+
+    void MoveTo(Transform transformM)
+    {
+        agent.SetDestination(new Vector3(transformM.position.x,transformM.position.y, transformM.position.z));
+        InvokeRepeating("Walking",0.1f,0.1f);
+    }
+
+    void MoveTo(Transform transformM, float speedM)
+    {
+        agent.SetDestination(new Vector3(transformM.position.x,transformM.position.y, transformM.position.z));
+        agent.speed = speedM;
+        InvokeRepeating("Walking",0.1f,0.1f);
+    }
+
+    void Walking()
+    {
+        if (agent.remainingDistance <= agent.stoppingDistance)
+        {
+            //animation for walking
+        }
     }
 }

@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using VRTK;
 
 public class BookBehaviour : MonoBehaviour
 {
-    public Material[] Pages;  
+    public Material[] Pages;
     public static int CurrentPage = 0;
     MeshRenderer thisMeshRenderer;
 
@@ -22,8 +23,6 @@ public class BookBehaviour : MonoBehaviour
 
     protected virtual void OnPageFlip(object sender, InteractableObjectEventArgs e)
     {
-
-
     }
 
     public void NextPage()
@@ -32,7 +31,14 @@ public class BookBehaviour : MonoBehaviour
         {
             CurrentPage++;
             thisMeshRenderer.material = Pages[CurrentPage];
+            print("Turning to page "+CurrentPage);
         }
+        //Tutorial scene only
+        if(SceneManager.GetActiveScene().name == "Tutorial_Level" && this.GetComponent<Tutorial2>() != null)
+        {
+            this.GetComponent<Tutorial2>().TutorialEventSend();
+        }
+        ////
     }
 
     public void PreviousPage()
@@ -41,6 +47,7 @@ public class BookBehaviour : MonoBehaviour
         {
             CurrentPage--;
             thisMeshRenderer.material = Pages[CurrentPage];
+            print("Turning to page "+CurrentPage);
         }
     }
 

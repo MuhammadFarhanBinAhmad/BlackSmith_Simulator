@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NewRuneSquareMaster : MonoBehaviour
 {
@@ -65,6 +66,10 @@ public class NewRuneSquareMaster : MonoBehaviour
         if (runeSequence[0] == 1 && runeSequence[1] ==2 & runeSequence[2] == 3 && runeSequence[3] == 4)
         {
             //Debug.Log("RuneSequence is the same as sequence 1");
+            if (SceneManager.GetActiveScene().name == "Tutorial_Level" && this.GetComponent<Tutorial2>() != null)
+            {
+                this.GetComponent<Tutorial2>().TutorialEventSend();
+            }
             SpawnBaseRune(0);
             ResetRuneSpawner();
         }
@@ -134,8 +139,6 @@ public class NewRuneSquareMaster : MonoBehaviour
         {
             RuneSquareButtonReference[i].GetComponent<NewRuneSquareButton>().Invoke("ReleaseButton", 1);
         }
-
-            LineRenderer.Invoke("ClearRuneLine", 1);
+        LineRenderer.Invoke("ClearRuneLine", 1);
     }
-
 }

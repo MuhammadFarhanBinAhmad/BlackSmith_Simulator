@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3354990961964658845}
   - component: {fileID: 3354990961964658846}
-  - component: {fileID: 4287969978940576772}
   m_Layer: 0
   m_Name: CustomerSpawn
   m_TagString: Untagged
@@ -25,8 +24,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3354990961964658847}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.9856424, y: 3.6174905, z: -9.144617}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -44,33 +43,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae06e5cb58d5fa4992e0e15cf150a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  point_Of_Interest:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   the_Sun: {fileID: 0}
+  destPointsOfInterest:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  destCounter: {fileID: 0}
+  destExit: {fileID: 0}
   Customer:
-  - {fileID: 372240657062210236, guid: 77eada8ec75dc5640b6322707158f83c, type: 3}
-  - {fileID: 372240657062210236, guid: 69dee1522954b794eaf72a5f1b40fb09, type: 3}
-  - {fileID: 372240657062210236, guid: 87efb5092bca0fb43b4798c1dd92d9ee, type: 3}
-  customer_Notes: []
-  note_Spawning_Point: []
+  - {fileID: 372240657062210236, guid: 2a002d01c2c7f4c4cba59edfa5ffc390, type: 3}
+  - {fileID: 372240657062210236, guid: 2a002d01c2c7f4c4cba59edfa5ffc390, type: 3}
+  - {fileID: 372240657062210236, guid: 2a002d01c2c7f4c4cba59edfa5ffc390, type: 3}
+  brokenWeapon: []
   general_Customer_Anim:
-  - IdleAnim00
-  - IdleAnim01
---- !u!114 &4287969978940576772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3354990961964658847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 966a3360e85b8a94087b83fd04b7c74c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  - GivingOrder
+  - LookingOutWindow
+  - Idle001

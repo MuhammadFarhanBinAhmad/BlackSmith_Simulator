@@ -13,4 +13,9 @@ public class EmptyRuneData : MonoBehaviour
         this_Object_Catalyst = the_Rune_Creation_Data.type_Catalyst_Data;
         this_Object_Reactant = the_Rune_Creation_Data.type_Reactant_Data;
     }
+
+    public void TutorialBaseRune()
+    {
+        
+    }
 }
