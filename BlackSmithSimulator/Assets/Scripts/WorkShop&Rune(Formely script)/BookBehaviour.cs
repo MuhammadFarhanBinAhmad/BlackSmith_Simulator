@@ -7,15 +7,15 @@ using VRTK;
 public class BookBehaviour : MonoBehaviour
 {
     public Material[] Pages;
-    public static int CurrentPage = 0;
-    MeshRenderer thisMeshRenderer;
+    public int CurrentPage = 0;
+    public MeshRenderer thisMeshRenderer;
 
-    public VRTK_InteractableObject bookZone;
+    //public VRTK_InteractableObject bookZone;
 
     private void Start()
     {
-        bookZone = GetComponentInParent<VRTK_InteractableObject>();
-        bookZone.InteractableObjectUsed += OnPageFlip;
+        //bookZone = GetComponentInParent<VRTK_InteractableObject>();
+        //bookZone.InteractableObjectUsed += OnPageFlip;
 
         thisMeshRenderer = this.gameObject.GetComponent<MeshRenderer>();
         thisMeshRenderer.material = Pages[CurrentPage];
@@ -33,12 +33,6 @@ public class BookBehaviour : MonoBehaviour
             thisMeshRenderer.material = Pages[CurrentPage];
             print("Turning to page "+CurrentPage);
         }
-        //Tutorial scene only
-        if(SceneManager.GetActiveScene().name == "Tutorial_Level" && this.GetComponent<Tutorial2>() != null)
-        {
-            this.GetComponent<Tutorial2>().TutorialEventSend();
-        }
-        ////
     }
 
     public void PreviousPage()

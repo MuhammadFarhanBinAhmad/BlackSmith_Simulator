@@ -1642,6 +1642,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisButtonNumber: 3
   thisButtonPos: {x: 0, y: 0, z: 0}
+--- !u!23 &824602218 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8205848058841840921, guid: e34dee5992dab4144b90989d7928ad74,
+    type: 3}
+  m_PrefabInstance: {fileID: 102163452592180395}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &840010781
 Mesh:
   m_ObjectHideFlags: 0
@@ -4173,6 +4179,31 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8205848058841840920, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: Pages.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f711865cb208fda4fbe831076bdceb43, type: 2}
+    - target: {fileID: 8205848058841840920, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: bookZone
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205848058841840920, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: thisMeshRenderer
+      value: 
+      objectReference: {fileID: 824602218}
+    - target: {fileID: 1730596017219914035, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205848058841840921, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f711865cb208fda4fbe831076bdceb43, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e34dee5992dab4144b90989d7928ad74, type: 3}
 --- !u!114 &114000009608037439
@@ -4607,13 +4638,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point_Of_Interest:
-  - {fileID: 7372090299438760628}
   - {fileID: 7372090299093988281}
   - {fileID: 7372090297393786880}
   - {fileID: 7372090298205232838}
   - {fileID: 7372090297940805763}
   - {fileID: 7372090297872105289}
-  - {fileID: 7372090298124714776}
 --- !u!4 &7372090297838278463
 Transform:
   m_ObjectHideFlags: 0
