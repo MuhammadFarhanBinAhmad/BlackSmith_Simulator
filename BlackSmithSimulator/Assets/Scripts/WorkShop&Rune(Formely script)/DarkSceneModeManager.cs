@@ -17,7 +17,7 @@ public class DarkSceneModeManager : MonoBehaviour
     }
     public void Awake()
     {
-        LevelModeSwitch(levelMode);
+        LevelModeSwitch();
     }
     public void LevelModeSwitch()
     {
@@ -25,19 +25,16 @@ public class DarkSceneModeManager : MonoBehaviour
         {
             case LevelModeType.Null:
                 break;
-        }
-    }
-    public void LevelModeSwitch(LevelModeType modeType)
-    {
-        switch (levelMode)
-        {
-            case LevelModeType.Null:
-                break;
             case LevelModeType.Tutorial:
+                Debug.Log("Starting Tutorial");
                 Tutorial();
                 break;
+            case LevelModeType.LevelLoad:
+                StartCoroutine(LevelToLoad("Pause_Main_Menu"));
+                break;
         }
     }
+
     public void LevelModeSwitch(string levelToLoad)
     {
         StartCoroutine(LevelToLoad(levelToLoad));
@@ -53,22 +50,19 @@ public class DarkSceneModeManager : MonoBehaviour
 
     IEnumerator LevelToLoad(string levelToLoad)
     {
+        Debug.Log("Loading " + levelToLoad);
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levelToLoad);
-
+        asyncLoad.allowSceneActivation = false;
         while (!asyncLoad.isDone)
         {
+            if (asyncLoad.isDone)
+            {
+                yield return new WaitForSecondsRealtime(3f);
+                asyncLoad.allowSceneActivation = true;
+            }
+
             yield return null;
         }
     }
 
-    /*
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            // Use a coroutine to load the Scene in the background
-            LevelModeSwitch("Pause_Main_Menu");
-        }
-    }
-    */
 }

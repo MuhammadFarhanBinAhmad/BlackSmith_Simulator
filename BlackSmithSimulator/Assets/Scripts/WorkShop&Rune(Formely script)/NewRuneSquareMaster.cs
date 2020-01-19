@@ -135,7 +135,10 @@ public class NewRuneSquareMaster : MonoBehaviour
         if (runeSequence.Count == 4)
         {
             Instantiate(baseRuneToSpawn[baseToSpawnNumber], baseRuneSpawnPos.position, Quaternion.Euler(0, 0, 0));
-            Instantiate(stone_Circle_Effect, baseRuneSpawnPos.position, Quaternion.Euler(0, 0, 0));
+            if (stone_Circle_Effect != null)
+            {
+                Instantiate(stone_Circle_Effect, baseRuneSpawnPos.position, Quaternion.Euler(0, 0, 0));
+            }
             if (spawning_Sound != null)
             {
                 spawning_Sound.Play();
