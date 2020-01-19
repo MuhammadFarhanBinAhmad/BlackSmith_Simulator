@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class NewRuneSquareMaster : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class NewRuneSquareMaster : MonoBehaviour
 
     public Transform baseRuneSpawnPos;
 
+    public Image runeSquareUIRef;
+    public Sprite[] runeSquareUISprites;
+
     private void Start()
     {
         spawning_Sound = GetComponent<AudioSource>();
@@ -32,7 +36,7 @@ public class NewRuneSquareMaster : MonoBehaviour
             bool duplicateNumber = false;
             if (runeSequence.Count != 0)
             {
-
+                runeSquareUIRef.sprite = runeSquareUISprites[1];
                 for (int i = 0; i < runeSequence.Count; i++)
                 {
                     if (runeSequence[i] == newIncomingNumber)
@@ -47,6 +51,7 @@ public class NewRuneSquareMaster : MonoBehaviour
             else if (runeSequence.Count == 0)
             {
                 duplicateNumber = false;
+                runeSquareUIRef.sprite = runeSquareUISprites[0];
             }
 
             //Add to sequence
