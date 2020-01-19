@@ -8,7 +8,8 @@ public class TutorialManager : MonoBehaviour
 
     //Tutorial mode
     public GameObject tutorialBoard;
-    public Text tutorialText;
+    public Image darkSceneTutorialImage;
+    public Sprite[] darkSceneTutorialImages;
     public GameObject bottleToGrab;
     public Transform posToSpawn;
 
@@ -23,7 +24,8 @@ public class TutorialManager : MonoBehaviour
     {
         //grabbing objects
         tutorialBoard.SetActive(true);
-        tutorialText.text = "Grab object with x button";
+        //tutorialText.text = "Grab object with x button";
+        darkSceneTutorialImage.sprite = darkSceneTutorialImages[0];
 
         grabBottle = Instantiate(bottleToGrab, posToSpawn.position, Quaternion.Euler(0, 0, 0));
     }
@@ -31,28 +33,32 @@ public class TutorialManager : MonoBehaviour
     public void Tutorial2()
     {
         //throwing objects
-        tutorialText.text = "Throw object with x button";
+        //tutorialText.text = "Throw object with x button";
+        darkSceneTutorialImage.sprite = darkSceneTutorialImages[1];
     }
 
     public void Tutorial3()
     {
         //teleporting
-        tutorialText.text = "teleport with X button";
+        //tutorialText.text = "teleport with X button";
+        darkSceneTutorialImage.sprite = darkSceneTutorialImages[2];
 
     }
     public void Tutorial4()
     {
-        tutorialText.text = "Well done! you can teleport before and after serivce periods";
+        //tutorialText.text = "Well done! you can teleport before and after serivce periods";
+        darkSceneTutorialImage.sprite = darkSceneTutorialImages[3];
         StartCoroutine(TutorialEnd());
     }
     public IEnumerator TutorialEnd()
     {
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(5);
         dsManager.LevelModeSwitch("Pause_Main_Menu");
+        darkSceneTutorialImage.sprite = darkSceneTutorialImages[4];
     }
 
     public void CheckTeleportDuringTutorial(){
-        if (tutorialText.text == "teleport with x button"){
+        if (darkSceneTutorialImage.sprite == darkSceneTutorialImages[2]){
             Tutorial4();
         }
 

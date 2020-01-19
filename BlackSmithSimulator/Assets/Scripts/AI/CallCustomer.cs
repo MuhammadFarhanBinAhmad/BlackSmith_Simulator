@@ -40,13 +40,35 @@ public class CallCustomer : MonoBehaviour
             if (CustomerSpawner.Customer_Already_Serve == 3)
             {
                 FindObjectOfType<CustomerSpawner>().NextDay();
-                SceneManager.LoadScene("EndOfDay");
+                AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("EndOfDay");
+                asyncLoad.allowSceneActivation = false;
+                while (!asyncLoad.isDone)
+                {
+                    if (asyncLoad.isDone)
+                    {
+                        FindObjectOfType<GameManager>().AddDay();
+                        asyncLoad.allowSceneActivation = true;
+                    }
+                }
             }
             else
             {
                 if (FindObjectOfType<CustomerAI>() != null)
                 {
                     FindObjectOfType<CustomerAI>().CollectingWeapon();//customer collect weapon
+                }
+            }
+        }
+        else if (current_Scene.name == "Tutorial_Level")
+        {
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Game_Level");
+            asyncLoad.allowSceneActivation = false;
+            while (!asyncLoad.isDone)
+            {
+                if (asyncLoad.isDone)
+                {
+                    FindObjectOfType<GameManager>().AddDay();
+                    asyncLoad.allowSceneActivation = true;
                 }
             }
         }
