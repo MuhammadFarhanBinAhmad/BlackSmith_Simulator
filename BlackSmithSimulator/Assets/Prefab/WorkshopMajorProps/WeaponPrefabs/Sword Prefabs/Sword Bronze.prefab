@@ -47,7 +47,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3573836475121886417}
-  m_Mesh: {fileID: -2318394159553502182, guid: c6e06d164a8193e49be9246ca3ef9190, type: 3}
+  m_Mesh: {fileID: -5569386175325515348, guid: 3bf140247936c214897e6f6388dd3c61, type: 3}
 --- !u!65 &3573836475121886406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -78,7 +78,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fd3692ca6ab23a84eb984ce1e9635e9f, type: 2}
+  - {fileID: 2100000, guid: 340914d6690ca524b8b4bf2f399fbbfc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -229,7 +229,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 0563ed6b07eb10e4d887a46579b2327b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.0076
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0563ed6b07eb10e4d887a46579b2327b,
         type: 3}
@@ -239,7 +239,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 0563ed6b07eb10e4d887a46579b2327b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.4181
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0563ed6b07eb10e4d887a46579b2327b,
         type: 3}
@@ -295,7 +295,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd3692ca6ab23a84eb984ce1e9635e9f, type: 2}
+      objectReference: {fileID: 2100000, guid: 340914d6690ca524b8b4bf2f399fbbfc, type: 2}
+    - target: {fileID: -5178661895559278292, guid: 0563ed6b07eb10e4d887a46579b2327b,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -6443874696290964316, guid: e8139711e03f1bc42ab73d6d26ace6f1,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0563ed6b07eb10e4d887a46579b2327b, type: 3}
 --- !u!4 &2818053400691297891 stripped
