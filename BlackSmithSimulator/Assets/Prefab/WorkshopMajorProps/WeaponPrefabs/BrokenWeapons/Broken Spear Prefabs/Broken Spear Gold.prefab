@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 1188063902944372166}
   - component: {fileID: 7626109218913758121}
   m_Layer: 0
-  m_Name: Spear Alloy
+  m_Name: Broken Spear Gold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,8 +35,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 3081901462484353032}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47,7 +46,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3573836475121886417}
-  m_Mesh: {fileID: 7951230867453911249, guid: 0d3e48a7ecaa95743a652e3feec794c1, type: 3}
+  m_Mesh: {fileID: 8194139314018030572, guid: 936d0d993ff2f6942b0a6500d8547d0d, type: 3}
 --- !u!65 &3573836475121886406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59,8 +58,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1387066, y: 0.05000782, z: 1.8929632}
-  m_Center: {x: 0.0024342537, y: 0.00042790174, z: 0.18270004}
+  m_Size: {x: 0.07322115, y: 0.038668185, z: 1.4592443}
+  m_Center: {x: -0.00011251867, y: 0.0008455962, z: 0.010834932}
 --- !u!23 &3573836475121886425
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -78,7 +77,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6d234bfb7d6830948bbfaa3231376bab, type: 2}
+  - {fileID: 2100000, guid: 2c0da4777b01e574cbed85ba3a2ca6d2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -198,9 +197,9 @@ MonoBehaviour:
   ParticleEffects:
   - {fileID: 0}
   - {fileID: 6640566353449017477, guid: e89e81d5dfdf45f4ca187149ab670f45, type: 3}
-  - {fileID: 2880482827932437801, guid: 67f82cdfe2060d34b81f1380d852b8a4, type: 3}
-  - {fileID: 6758680619719954645, guid: ea8fc766e4bd3cf478e7aa90c5c4b5ec, type: 3}
-  - {fileID: 4369040043676061453, guid: a6640e569158fa742a7b8142674cc799, type: 3}
+  - {fileID: 8197511818096569268, guid: 7bf0c184142922d4abf6f7ba71576fb0, type: 3}
+  - {fileID: 5113552902516209772, guid: c0c6bdde5268f7c4ca64c30e8ec4d2a9, type: 3}
+  - {fileID: 1387353667470009069, guid: e399258bc4137a044a1cd852b4a7cd87, type: 3}
 --- !u!65 &7626109218913758121
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -212,101 +211,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.14689995, y: 0.048544407, z: 1.8055875}
-  m_Center: {x: 0.0038614944, y: 0.00054192543, z: -0.0020045042}
---- !u!1001 &8052341316727253778
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 3573836475121886430}
-    m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 68789efe64411d444b51802ea60abbc5,
-        type: 3}
-      propertyPath: m_Name
-      value: Alloy Spear Blade
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 68789efe64411d444b51802ea60abbc5,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.0141
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 68789efe64411d444b51802ea60abbc5,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 68789efe64411d444b51802ea60abbc5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.8854
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 68789efe64411d444b51802ea60abbc5,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 68789efe64411d444b51802ea60abbc5,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 68789efe64411d444b51802ea60abbc5,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 68789efe64411d444b51802ea60abbc5,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 68789efe64411d444b51802ea60abbc5,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 68789efe64411d444b51802ea60abbc5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 68789efe64411d444b51802ea60abbc5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 68789efe64411d444b51802ea60abbc5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 68789efe64411d444b51802ea60abbc5,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.0000005
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 68789efe64411d444b51802ea60abbc5,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.0000005
-      objectReference: {fileID: 0}
-    - target: {fileID: -1504981713932161579, guid: 68789efe64411d444b51802ea60abbc5,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 6d234bfb7d6830948bbfaa3231376bab, type: 2}
-    - target: {fileID: -5178661895559278292, guid: 68789efe64411d444b51802ea60abbc5,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -7792080453330752737, guid: 73eb8019232b8544cb031d929463a21f,
-        type: 3}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68789efe64411d444b51802ea60abbc5, type: 3}
---- !u!4 &3081901462484353032 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 68789efe64411d444b51802ea60abbc5,
-    type: 3}
-  m_PrefabInstance: {fileID: 8052341316727253778}
-  m_PrefabAsset: {fileID: 0}
+  m_Size: {x: 0.20995198, y: 0.04063335, z: 1.9054166}
+  m_Center: {x: -0.00095472485, y: 0.00052429736, z: 0.14734107}

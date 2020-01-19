@@ -9,5 +9,7 @@ public class WeaponData : ScriptableObject
     public int weapon_Type;
     public int weapon_Enchantment;
 
+    public GameObject broken_Weapon;
+
     public List<AudioClip> customer_Dialouge_Speech = new List<AudioClip>();    
 }

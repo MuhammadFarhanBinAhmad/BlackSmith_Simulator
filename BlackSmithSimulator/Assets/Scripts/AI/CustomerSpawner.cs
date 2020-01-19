@@ -25,7 +25,7 @@ public class CustomerSpawner : MonoBehaviour
         print("Customer already serve " + Customer_Already_Serve);
 
         the_Weapon_Collection_Point = FindObjectOfType<WeaponCollectionPoint>();
-        if(Customer_Already_Serve < 4)
+        if(Customer_Already_Serve < 2)
         {
             StartCoroutine("SpawnNextCustomer");
         }

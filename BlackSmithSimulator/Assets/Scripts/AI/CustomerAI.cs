@@ -17,6 +17,8 @@ public class CustomerAI : MonoBehaviour
 
     CustomerSpawner the_Customer_Spawner;
 
+    GameObject weapon_Drop_Point;
+
     //check weapon given to customer
     public bool correct_Weapon_Receive;
     bool given_Order;
@@ -40,6 +42,7 @@ public class CustomerAI : MonoBehaviour
         customer_Dialouge = GetComponent<AudioSource>();
         the_Customer_Spawner = FindObjectOfType<CustomerSpawner>();
         customer_Anim = GetComponent<Animator>();
+        weapon_Drop_Point = GameObject.Find("BrokenWeaponSpawnPoint");
     }
     void Start()
     {
@@ -105,7 +108,10 @@ public class CustomerAI : MonoBehaviour
                             customer_Dialouge.clip = customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[0];
                             customer_Dialouge.Play();
                             customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], true);//play customer order animation
-                            
+                            if(customer_Order[CustomerSpawner.current_day].broken_Weapon!=null)
+                            {
+                                Instantiate(customer_Order[CustomerSpawner.current_day].broken_Weapon, weapon_Drop_Point.transform.position, weapon_Drop_Point.transform.rotation);
+                            }
                             InvokeRepeating("StartWindowShopping", 0, 0.1f);
                             CancelInvoke("GoingToCounter");
                         }
