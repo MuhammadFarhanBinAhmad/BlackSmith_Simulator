@@ -13,9 +13,16 @@ public class NewRuneSquareMaster : MonoBehaviour
 
     public GameObject[] baseRuneToSpawn = new GameObject[7];
 
+    public GameObject stone_Circle_Effect;
+
+    public AudioSource spawning_Sound;
+
     public Transform baseRuneSpawnPos;
 
-
+    private void Start()
+    {
+        spawning_Sound = GetComponent<AudioSource>();
+    }
     public void NumberSequenceList(int newIncomingNumber)
     {
         if (runeSequence.Count < 4)
@@ -128,6 +135,11 @@ public class NewRuneSquareMaster : MonoBehaviour
         if (runeSequence.Count == 4)
         {
             Instantiate(baseRuneToSpawn[baseToSpawnNumber], baseRuneSpawnPos.position, Quaternion.Euler(0, 0, 0));
+            Instantiate(stone_Circle_Effect, baseRuneSpawnPos.position, Quaternion.Euler(0, 0, 0));
+            if (spawning_Sound != null)
+            {
+                spawning_Sound.Play();
+            }
         }
     }
 

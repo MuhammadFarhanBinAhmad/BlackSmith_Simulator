@@ -59,8 +59,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.12059502, y: 0.031945303, z: 0.4137597}
-  m_Center: {x: -0.0000026151538, y: 0.00031196326, z: -0.00013678521}
+  m_Size: {x: 0.13059992, y: 0.031945303, z: 0.42419317}
+  m_Center: {x: 0.00083112717, y: 0.00031196326, z: 0.00030331314}
 --- !u!23 &3573836475121886425
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -198,9 +198,9 @@ MonoBehaviour:
   ParticleEffects:
   - {fileID: 0}
   - {fileID: 6640566353449017477, guid: e89e81d5dfdf45f4ca187149ab670f45, type: 3}
-  - {fileID: 7342135301632725317, guid: 2ca2f83a77df34541babf7372209ad6f, type: 3}
-  - {fileID: 3244579057120448499, guid: 942607c52ead2794c86f44b2fda3c8c6, type: 3}
-  - {fileID: 7213728245019608289, guid: b596a480d8a16fc46ae55245954b1bd6, type: 3}
+  - {fileID: 4359330486084109997, guid: 60142c986c30a1d4e85412e19022c488, type: 3}
+  - {fileID: 4844186205589464028, guid: 6f08a51b2a4141444a450a864cd8c4b4, type: 3}
+  - {fileID: 5202263762726482276, guid: bb29bcac022cd7c4db7848674058e9e6, type: 3}
 --- !u!65 &4607385213884647692
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -212,8 +212,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.12535676, y: 0.033371687, z: 0.4156639}
-  m_Center: {x: 0.00030848384, y: 0.0002079159, z: -0.0005611405}
+  m_Size: {x: 0.1445016, y: 0.033371687, z: 0.4156639}
+  m_Center: {x: 0.009880884, y: 0.0002079159, z: -0.0005611479}
 --- !u!1001 &3416263861829359938
 PrefabInstance:
   m_ObjectHideFlags: 0

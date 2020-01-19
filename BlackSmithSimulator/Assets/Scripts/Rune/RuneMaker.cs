@@ -5,6 +5,7 @@ using UnityEngine;
 public class RuneMaker : MonoBehaviour
 {
     public GameObject runeSpawnLocation;
+    public GameObject rune_Spawning_Effect;
 
     //ingredient currently in Dispenser
     public int catalyst_In_Dispenser, reactant_In_Dispenser;
@@ -133,6 +134,7 @@ public class RuneMaker : MonoBehaviour
             if (current_Type != 0)
             {
                 animatorReference.SetTrigger("CreatingRune");
+                Instantiate(rune_Spawning_Effect, runeSpawnLocation.transform.position, Quaternion.Euler(0, 0, 0));
                 Instantiate(Rune_Types[current_Type], runeSpawnLocation.transform.position, Quaternion.Euler(0, 0, 0));
                 if (rune_Maker_SFX != null)
                 {

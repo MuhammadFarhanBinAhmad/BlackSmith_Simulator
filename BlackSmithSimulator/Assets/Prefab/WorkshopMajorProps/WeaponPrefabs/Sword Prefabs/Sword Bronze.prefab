@@ -59,8 +59,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.21510105, y: 0.07701644, z: 0.90932065}
-  m_Center: {x: 0.0011059865, y: 0.000535205, z: -0.0006457865}
+  m_Size: {x: 0.21510105, y: 0.07701644, z: 0.31213778}
+  m_Center: {x: 0.0011059865, y: 0.000535205, z: -0.29923722}
 --- !u!23 &3573836475121886425
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -198,9 +198,9 @@ MonoBehaviour:
   ParticleEffects:
   - {fileID: 0}
   - {fileID: 6640566353449017477, guid: e89e81d5dfdf45f4ca187149ab670f45, type: 3}
-  - {fileID: 7342135301632725317, guid: 2ca2f83a77df34541babf7372209ad6f, type: 3}
-  - {fileID: 3301846355954835120, guid: b17fac65c160fbd4d8c38d3b748e7c2e, type: 3}
-  - {fileID: 4454176924978342332, guid: bfe6c8da2ea6cfb40b1782ca4a7ad887, type: 3}
+  - {fileID: 8009517816077424937, guid: 3cf55d0be32ef704c86139060a09440b, type: 3}
+  - {fileID: 3363265013475242877, guid: 8c2bca4f67c99854ca2772845bf84a26, type: 3}
+  - {fileID: 3821975982910403318, guid: 6d13cd1c28902dc43b918ca4172dd189, type: 3}
 --- !u!65 &7313458011064729287
 BoxCollider:
   m_ObjectHideFlags: 0

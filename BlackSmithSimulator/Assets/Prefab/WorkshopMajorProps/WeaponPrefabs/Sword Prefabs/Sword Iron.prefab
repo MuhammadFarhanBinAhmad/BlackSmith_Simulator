@@ -59,8 +59,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.26368323, y: 0.05811709, z: 0.830158}
-  m_Center: {x: 0.0003209263, y: 0.0012550652, z: -0.0009934306}
+  m_Size: {x: 0.26368323, y: 0.05811709, z: 0.2814271}
+  m_Center: {x: 0.0003209263, y: 0.0012550652, z: -0.2753589}
 --- !u!23 &3573836475121886425
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -198,7 +198,7 @@ MonoBehaviour:
   ParticleEffects:
   - {fileID: 0}
   - {fileID: 6640566353449017477, guid: e89e81d5dfdf45f4ca187149ab670f45, type: 3}
-  - {fileID: 7342135301632725317, guid: 2ca2f83a77df34541babf7372209ad6f, type: 3}
+  - {fileID: 8009517816077424937, guid: 3cf55d0be32ef704c86139060a09440b, type: 3}
   - {fileID: 3363265013475242877, guid: 8c2bca4f67c99854ca2772845bf84a26, type: 3}
   - {fileID: 3821975982910403318, guid: 6d13cd1c28902dc43b918ca4172dd189, type: 3}
 --- !u!65 &7313458011064729287
@@ -212,8 +212,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.27194023, y: 0.064284146, z: 0.838624}
-  m_Center: {x: 0.00028941035, y: 0.00088074803, z: -0.002122879}
+  m_Size: {x: 0.2864837, y: 0.064284146, z: 0.84880435}
+  m_Center: {x: -0.005527973, y: 0.00088074803, z: 0.002967298}
 --- !u!1001 &3837992198638571141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -221,6 +221,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3573836475121886430}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: d768177474092174782c2f37258a1390,
+        type: 3}
+      propertyPath: m_Name
+      value: IronSWBlade
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d768177474092174782c2f37258a1390,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -275,11 +280,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: d768177474092174782c2f37258a1390,
-        type: 3}
-      propertyPath: m_Name
-      value: IronSWBlade
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: d768177474092174782c2f37258a1390,
         type: 3}
