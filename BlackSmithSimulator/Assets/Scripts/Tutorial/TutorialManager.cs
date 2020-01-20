@@ -53,7 +53,8 @@ public class TutorialManager : MonoBehaviour
     public IEnumerator TutorialEnd()
     {
         yield return new WaitForSeconds(5);
-        dsManager.LevelModeSwitch("Pause_Main_Menu");
+        StartCoroutine(dsManager.LevelToLoad("Pause_Main_Menu"));
+        //dsManager.LevelModeSwitch("Pause_Main_Menu");
         darkSceneTutorialImage.sprite = darkSceneTutorialImages[4];
     }
 

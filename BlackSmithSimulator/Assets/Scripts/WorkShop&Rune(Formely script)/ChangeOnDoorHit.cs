@@ -26,42 +26,19 @@ public class ChangeOnDoorHit : MonoBehaviour
     {
         if (OnDoorClose == true)
         {
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Pause_Main_Menu");
-            asyncLoad.allowSceneActivation = false;
-            while (!asyncLoad.isDone)
-            {
-                if (asyncLoad.isDone)
-                {
-                    asyncLoad.allowSceneActivation = true;
-                }
-            }
+            SceneManager.LoadScene("Pause_Main_Menu");
+
         }
 
         else if(OnDoorClose == false)
         {
             if (GameManager.counterDay == 0)
             {
-                AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Tutorial_Level");
-                asyncLoad.allowSceneActivation = false;
-                while (!asyncLoad.isDone)
-                {
-                    if (asyncLoad.isDone)
-                    {
-                        asyncLoad.allowSceneActivation = true;
-                    }
-                }
+                SceneManager.LoadScene("Tutorial_Level");
             }
             else if (GameManager.counterDay > 0)
             {
-                AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Game_Level");
-                asyncLoad.allowSceneActivation = false;
-                while (!asyncLoad.isDone)
-                {
-                    if (asyncLoad.isDone)
-                    {
-                        asyncLoad.allowSceneActivation = true;
-                    }
-                }
+                SceneManager.LoadScene("Game_Level");
             }
         }
     }

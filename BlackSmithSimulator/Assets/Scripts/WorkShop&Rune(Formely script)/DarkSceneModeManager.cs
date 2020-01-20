@@ -48,21 +48,11 @@ public class DarkSceneModeManager : MonoBehaviour
 
     }
 
-    IEnumerator LevelToLoad(string levelToLoad)
+    public IEnumerator LevelToLoad(string levelToLoad)
     {
         Debug.Log("Loading " + levelToLoad);
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levelToLoad);
-        asyncLoad.allowSceneActivation = false;
-        while (!asyncLoad.isDone)
-        {
-            if (asyncLoad.isDone)
-            {
-                yield return new WaitForSecondsRealtime(3f);
-                asyncLoad.allowSceneActivation = true;
-            }
-
-            yield return null;
-        }
+        yield return new WaitForSeconds(0.1f);
+        SceneManager.LoadScene("Pause_Main_Menu");
     }
 
 }

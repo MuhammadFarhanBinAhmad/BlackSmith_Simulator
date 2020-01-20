@@ -6,11 +6,13 @@ public class CallCustomer : MonoBehaviour
 
     public AudioSource bell_Ringing;
     Scene current_Scene;
+    public bool isTutorialLevel;
 
     private void Start()
     {
         current_Scene = SceneManager.GetActiveScene();
     }
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.name == "Controller (right)" || other.name == "Controller (left)" || other.name == "Cube")
@@ -29,27 +31,23 @@ public class CallCustomer : MonoBehaviour
                     }
                 }
             }
+            else if(current_Scene.name == "Tutorial_Level")
+            {
+                SceneManager.LoadScene("Game_Level");
+            }
             bell_Ringing.Play();
         }
     }
+    
 
     public void BellRing()
     {
         if (current_Scene.name == "Game_Level")
         {
-            if (CustomerSpawner.Customer_Already_Serve == 3)
+            if (CustomerSpawner.Customer_Already_Serve == 2  && current_Scene.name != "Tutorial_Level")
             {
-                FindObjectOfType<CustomerSpawner>().NextDay();
-                AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("EndOfDay");
-                asyncLoad.allowSceneActivation = false;
-                while (!asyncLoad.isDone)
-                {
-                    if (asyncLoad.isDone)
-                    {
-                        FindObjectOfType<GameManager>().AddDay();
-                        asyncLoad.allowSceneActivation = true;
-                    }
-                }
+                FindObjectOfType<GameManager>().AddDay();
+                SceneManager.LoadScene("EndOfDay");
             }
             else
             {
@@ -59,18 +57,14 @@ public class CallCustomer : MonoBehaviour
                 }
             }
         }
-        else if (current_Scene.name == "Tutorial_Level")
+        else if (isTutorialLevel == true)
         {
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Game_Level");
-            asyncLoad.allowSceneActivation = false;
-            while (!asyncLoad.isDone)
+            SceneManager.LoadScene("Game_Level");
+            if (FindObjectOfType<GameManager>() != null)
             {
-                if (asyncLoad.isDone)
-                {
-                    FindObjectOfType<GameManager>().AddDay();
-                    asyncLoad.allowSceneActivation = true;
-                }
+                FindObjectOfType<GameManager>().AddDay();
             }
+
         }
         bell_Ringing.Play();
     }
