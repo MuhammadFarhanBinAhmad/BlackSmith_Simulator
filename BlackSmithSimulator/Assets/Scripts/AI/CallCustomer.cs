@@ -13,6 +13,7 @@ public class CallCustomer : MonoBehaviour
         current_Scene = SceneManager.GetActiveScene();
     }
     
+    /*
     private void OnTriggerEnter(Collider other)
     {
         if (other.name == "Controller (right)" || other.name == "Controller (left)" || other.name == "Cube")
@@ -38,6 +39,7 @@ public class CallCustomer : MonoBehaviour
             bell_Ringing.Play();
         }
     }
+    */
     
 
     public void BellRing()

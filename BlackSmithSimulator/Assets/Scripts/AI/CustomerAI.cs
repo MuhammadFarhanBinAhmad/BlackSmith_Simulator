@@ -51,12 +51,6 @@ public class CustomerAI : MonoBehaviour
         agent.destination = the_Customer_Spawner.destPointsOfInterest[0].position;
         StartCoroutine("MovingToCounter");
     }
-
-    IEnumerator AIEntrance()
-    {
-        MoveTo(the_Customer_Spawner.destCounter, 5);
-        yield return new WaitForSeconds(1);
-    }
     IEnumerator MovingToCounter()
     {
         yield return new WaitForSeconds(1);
@@ -77,7 +71,6 @@ public class CustomerAI : MonoBehaviour
     }
     void GoingToCounter()
     {
-
         if (agent.remainingDistance <= agent.stoppingDistance)
             {
                 if (current_DestinationNumber == 0)
@@ -240,26 +233,5 @@ public class CustomerAI : MonoBehaviour
         //current_DestinationNumber = the_Customer_Spawner.point_Of_Interest.Count - 1;
         agent.destination = the_Customer_Spawner.destExit.position;
         InvokeRepeating("ExitStore", 0, 0.1f);
-    }
-
-    void MoveTo(Transform transformM)
-    {
-        agent.SetDestination(new Vector3(transformM.position.x,transformM.position.y, transformM.position.z));
-        InvokeRepeating("Walking",0.1f,0.1f);
-    }
-
-    void MoveTo(Transform transformM, float speedM)
-    {
-        agent.SetDestination(new Vector3(transformM.position.x,transformM.position.y, transformM.position.z));
-        agent.speed = speedM;
-        InvokeRepeating("Walking",0.1f,0.1f);
-    }
-
-    void Walking()
-    {
-        if (agent.remainingDistance <= agent.stoppingDistance)
-        {
-            //animation for walking
-        }
     }
 }

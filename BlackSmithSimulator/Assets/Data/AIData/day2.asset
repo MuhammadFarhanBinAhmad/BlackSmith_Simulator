@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 600b0b89ae14df5479050b3d566637bc, type: 3}
+  m_Name: day2
+  m_EditorClassIdentifier: 
+  day: 2
+  dialogueHumanEntrance1: {fileID: 8300000, guid: 09c54c19ab259d842a1c445df50cddd9,
+    type: 3}
+  dialogueHumanEntrance2: {fileID: 0}
+  dialogueHumanEntrance3: {fileID: 0}
+  dialogueHumanIdle:
+  - {fileID: 8300000, guid: 5c5774356f2ad5549a8211079d0a5ae5, type: 3}
+  - {fileID: 8300000, guid: 4bb5190f8fb28644a8122572d29fd1a9, type: 3}
+  - {fileID: 8300000, guid: d67503189b73d584888a9f890b91e08a, type: 3}
+  - {fileID: 8300000, guid: d51da45543308a9439729188e2aee9ca, type: 3}
+  dialogueHumanWeapon1: {fileID: 8300000, guid: 59d596482f5db574cb0d0047bbc6a649,
+    type: 3}
+  dialogueHumanWeapon2: {fileID: 8300000, guid: 1e10c80354fc9bd4885978ecadafef64,
+    type: 3}
+  dialogueDrowEntrance1: {fileID: 0}
+  dialogueDrowEntrance2: {fileID: 0}
+  dialogueDrowEntrance3: {fileID: 0}
+  dialogueDrowIdle: []
+  dialogueDrowWeapon1: {fileID: 0}
+  dialogueDrowWeapon2: {fileID: 0}
