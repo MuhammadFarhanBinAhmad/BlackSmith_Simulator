@@ -665,7 +665,7 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0, y: 0, z: 0}
+    m_Position: {x: 0, y: 0, z: 0.83}
     m_Rotation: {x: 0, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
@@ -5418,7 +5418,7 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0, y: 0, z: 0}
+    m_Position: {x: 0, y: 0, z: 0.83}
     m_Rotation: {x: 0, y: 0, z: 0}
     m_Scale: {x: 0.05, y: 0.043214925, z: 0.13098748}
     placementMode: 1
@@ -14431,7 +14431,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.38
+      scalar: 2.57
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -14547,7 +14547,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.07
+      scalar: 1.4
       minScalar: 1.5
       maxCurve:
         serializedVersion: 2
@@ -14928,7 +14928,7 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0, y: 0, z: 0}
+    m_Position: {x: 0, y: 0, z: 0.99}
     m_Rotation: {x: 0, y: 0, z: 0}
     m_Scale: {x: 0.16622317, y: 0.14164004, z: 0.6682718}
     placementMode: 0
@@ -15130,7 +15130,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 200
+      scalar: 75
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -15246,23 +15246,23 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
+          time: 0.006210327
+          value: 0.52459717
+          inSlope: -0.43095702
+          outSlope: -0.43095702
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0
-          outWeight: 0
+          inWeight: 0.33333334
+          outWeight: 0.15312573
         - serializedVersion: 3
           time: 1
-          value: 1
-          inSlope: 2
-          outSlope: 2
+          value: 0.85245895
+          inSlope: 2.6910956
+          outSlope: 2.6910956
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0
-          outWeight: 0
+          inWeight: 0.15937486
+          outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
@@ -19105,7 +19105,7 @@ Light:
   m_BounceIntensity: 0.1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.5e-44, z: 1.1643e-41, w: 6e-44}
+  m_BoundingSphereOverride: {x: 9.78e-43, y: 17.511185, z: 9.78e-43, w: 21.573761}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
