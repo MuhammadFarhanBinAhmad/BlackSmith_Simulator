@@ -16,10 +16,9 @@ GameObject:
   - component: {fileID: 3573836475121886427}
   - component: {fileID: 3573836475121886426}
   - component: {fileID: 3573836475121886429}
-  - component: {fileID: 1188063902944372166}
   - component: {fileID: 7313458011064729287}
   m_Layer: 0
-  m_Name: Sword Bronze
+  m_Name: Broken Sword Bronze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,27 +179,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1188063902944372166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3573836475121886417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0de81c7a810bce64f87a07dd278d0c8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  this_Weapon_Type: 0
-  this_Material_Type: 0
-  this_Enchantment_Type: 0
-  ParticleEffects:
-  - {fileID: 0}
-  - {fileID: 6640566353449017477, guid: e89e81d5dfdf45f4ca187149ab670f45, type: 3}
-  - {fileID: 8009517816077424937, guid: 3cf55d0be32ef704c86139060a09440b, type: 3}
-  - {fileID: 3363265013475242877, guid: 8c2bca4f67c99854ca2772845bf84a26, type: 3}
-  - {fileID: 3821975982910403318, guid: 6d13cd1c28902dc43b918ca4172dd189, type: 3}
 --- !u!65 &7313458011064729287
 BoxCollider:
   m_ObjectHideFlags: 0

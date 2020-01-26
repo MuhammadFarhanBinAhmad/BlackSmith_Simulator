@@ -19,6 +19,9 @@ public class CustomerAI : MonoBehaviour
 
     GameObject weapon_Drop_Point;
 
+    CustomerPointOfInterest 
+        customer_Point_Of_Interest;
+
     //check weapon given to customer
     public bool correct_Weapon_Receive;
     bool given_Order;
@@ -26,6 +29,7 @@ public class CustomerAI : MonoBehaviour
     bool correct_Material;
     bool correct_Weapon_Type;
     bool correct_Enchantment;
+    bool correct_Weapon;
 
     int current_Animation_Element;
     int current_DestinationNumber;
@@ -33,14 +37,14 @@ public class CustomerAI : MonoBehaviour
     /// 0 = customer order
     /// </summary>
     public AudioSource customer_Dialouge;
-    int current_Anim_Element = 1;
-
+    int current_Voiceline = 0;
     Animator customer_Anim;
 
     private void Awake()
     {
         customer_Dialouge = GetComponent<AudioSource>();
         the_Customer_Spawner = FindObjectOfType<CustomerSpawner>();
+        customer_Point_Of_Interest = FindObjectOfType<CustomerPointOfInterest>();
         customer_Anim = GetComponent<Animator>();
         weapon_Drop_Point = GameObject.Find("BrokenWeaponSpawnPoint");
     }
@@ -75,39 +79,42 @@ public class CustomerAI : MonoBehaviour
             {
                 if (current_DestinationNumber == 0)
                 {
-                    //if order have been given...
-                    if (given_Order)
+                //if order have been given...
+                if (given_Order)
+                {
+                    //and weapon is present
+                    if (FindObjectOfType<WeaponCollectionPoint>().ready_For_Collection)
                     {
-                        //and weapon is present
-                        if (FindObjectOfType<WeaponCollectionPoint>().ready_For_Collection)
-                        {
-                            //Exit Store
-                            StartCoroutine("ExitingStore");
-                            weapon_Recived = true;
-                            Destroy(FindObjectOfType<ThisWeaponData>().gameObject);
-                            CheckWeapon();
-                            CancelInvoke("GoingToCounter");
-                        }
-                        //if no weapon is present
-                        else
-                        {
-                            //Go back to Window Shopping
-                            InvokeRepeating("StartWindowShopping", 0, 0.1f);
-                        }
-                        }
-                        //customer giving order
-                        else if (!given_Order)
-                        {
-                            customer_Dialouge.clip = customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[0];
-                            customer_Dialouge.Play();
-                            customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], true);//play customer order animation
-                            if(customer_Order[CustomerSpawner.current_day].broken_Weapon!=null)
-                            {
-                                Instantiate(customer_Order[CustomerSpawner.current_day].broken_Weapon, weapon_Drop_Point.transform.position, weapon_Drop_Point.transform.rotation);
-                            }
-                            InvokeRepeating("StartWindowShopping", 0, 0.1f);
-                            CancelInvoke("GoingToCounter");
-                        }
+                        print(FindObjectOfType<WeaponCollectionPoint>().ready_For_Collection);
+                        //Exit Store
+                        StartCoroutine("ExitingStore");
+                        weapon_Recived = true;
+                        Destroy(FindObjectOfType<ThisWeaponData>().gameObject);
+                        CheckWeapon();
+                        CancelInvoke("GoingToCounter");
+                    }
+                    //if no weapon is present
+                    else
+                    {
+                        //Go back to Window Shopping
+                        InvokeRepeating("StartWindowShopping", 0, 0.1f);
+                    }
+                }
+                //customer giving order
+                else if (!given_Order)
+                {
+                    customer_Dialouge.clip = customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[current_Voiceline];
+                    customer_Dialouge.Play();
+                    current_Voiceline++;
+                    customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], true);//play customer order animation
+
+                    if (customer_Order[CustomerSpawner.current_day].broken_Weapon != null)
+                    {
+                        Instantiate(customer_Order[CustomerSpawner.current_day].broken_Weapon, weapon_Drop_Point.transform.position, weapon_Drop_Point.transform.rotation);//spawn ustomer broken weapon
+                    }
+                    InvokeRepeating("StartWindowShopping", 0, 0.1f);
+                    CancelInvoke("GoingToCounter");
+                }
                 }
                 else
                 //customer moving and looking around store
@@ -138,7 +145,7 @@ public class CustomerAI : MonoBehaviour
         int new_Point_Of_Interest;
 
         //ensure that the same number dont appear twice
-        new_Point_Of_Interest = Random.Range(2, the_Customer_Spawner.destPointsOfInterest.Length - 2);
+        new_Point_Of_Interest = Random.Range(0, customer_Point_Of_Interest.point_Of_Interest.Count-1);
         if (new_Point_Of_Interest == current_DestinationNumber)
         {
             MoveToNextPoint();
@@ -174,6 +181,10 @@ public class CustomerAI : MonoBehaviour
         {
             correct_Enchantment = true;
         }
+        if (correct_Enchantment && correct_Weapon_Type && correct_Material)
+        {
+            correct_Weapon = true;
+        }
         if (correct_Material && correct_Weapon_Type && correct_Enchantment)
         {
             correct_Weapon_Receive = true;
@@ -198,15 +209,18 @@ public class CustomerAI : MonoBehaviour
     {
         yield return new WaitForSeconds(7);
         {
-            if (current_Anim_Element != customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech.Count)
+            if (current_Voiceline != customer_Order[CustomerSpawner.current_day].customer_Dialouge_Speech.Count)
             {
                 if (!customer_Dialouge.isPlaying)
                 {
-                    customer_Dialouge.clip = customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[current_Anim_Element];
-                    customer_Dialouge.Play();
-                    yield return new WaitForSeconds(customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[current_Anim_Element].length);
-                    current_Anim_Element++;
-                    StartCoroutine("RandomChatteringFromAI");
+                    if (current_Voiceline < 5)
+                    {
+                        customer_Dialouge.clip = customer_Order[CustomerSpawner.current_day].customer_Dialouge_Speech[current_Voiceline];
+                        customer_Dialouge.Play();
+                        yield return new WaitForSeconds(customer_Order[CustomerSpawner.current_day].customer_Dialouge_Speech[current_Voiceline].length);
+                        current_Voiceline++;
+                        StartCoroutine("RandomChatteringFromAI");
+                    }
                 }
             }
         }
@@ -217,7 +231,7 @@ public class CustomerAI : MonoBehaviour
         //customer will idle for a period of time before moving to next location
         int times_Animation_Loops = Random.Range(0, 2);
 
-        current_Animation_Element = Random.Range(0, the_Customer_Spawner.general_Customer_Anim.Count);
+        current_Animation_Element = Random.Range(0, the_Customer_Spawner.general_Customer_Anim.Count-1);
         customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element], true);//Start idle animation
         yield return new WaitForSeconds(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element].Length/2);
         customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element], false);//Stop idle animation
@@ -227,8 +241,19 @@ public class CustomerAI : MonoBehaviour
     //customer have receive waepon and leaving store
     IEnumerator ExitingStore() //Animation and Navagent only
     {
+        CancelInvoke("StartWindowShopping");
+        if (correct_Weapon)
+        {
+            current_Voiceline = 5;
+        }
+        else
+        {
+            current_Voiceline = 6;
+        }
         customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], true);//stop customer order animation
-        yield return new WaitForSeconds(1.5f);//place grabing animation time here
+        customer_Dialouge.clip = customer_Order[CustomerSpawner.current_day].customer_Dialouge_Speech[current_Voiceline];
+        customer_Dialouge.Play();
+        yield return new WaitForSeconds(customer_Order[CustomerSpawner.current_day].customer_Dialouge_Speech[current_Voiceline].length);//place grabing animation time here
         customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], false);//stop customer order animation
         //current_DestinationNumber = the_Customer_Spawner.point_Of_Interest.Count - 1;
         agent.destination = the_Customer_Spawner.destExit.position;
