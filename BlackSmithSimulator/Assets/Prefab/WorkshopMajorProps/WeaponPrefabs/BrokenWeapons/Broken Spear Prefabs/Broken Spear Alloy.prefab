@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 3573836475121886427}
   - component: {fileID: 3573836475121886426}
   - component: {fileID: 3573836475121886429}
-  - component: {fileID: 1188063902944372166}
   - component: {fileID: 7626109218913758121}
   m_Layer: 0
   m_Name: Broken Spear Alloy
@@ -179,27 +178,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1188063902944372166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3573836475121886417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0de81c7a810bce64f87a07dd278d0c8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  this_Weapon_Type: 0
-  this_Material_Type: 0
-  this_Enchantment_Type: 0
-  ParticleEffects:
-  - {fileID: 0}
-  - {fileID: 6640566353449017477, guid: e89e81d5dfdf45f4ca187149ab670f45, type: 3}
-  - {fileID: 2880482827932437801, guid: 67f82cdfe2060d34b81f1380d852b8a4, type: 3}
-  - {fileID: 6758680619719954645, guid: ea8fc766e4bd3cf478e7aa90c5c4b5ec, type: 3}
-  - {fileID: 4369040043676061453, guid: a6640e569158fa742a7b8142674cc799, type: 3}
 --- !u!65 &7626109218913758121
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -13,12 +13,17 @@ public class CallCustomer : MonoBehaviour
         current_Scene = SceneManager.GetActiveScene();
     }
     
-    /*
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.name == "Controller (right)" || other.name == "Controller (left)" || other.name == "Cube")
         {
-            if(current_Scene.name == "Game_Level")
+            if (FindObjectOfType<CustomerAI>() != null)
+            {
+                FindObjectOfType<CustomerAI>().CollectingWeapon();//customer collect weapon
+            }
+        }
+            /*if(current_Scene.name == "Game_Level")
             {
                 if (CustomerSpawner.Customer_Already_Serve == 3)
                 {
@@ -37,9 +42,9 @@ public class CallCustomer : MonoBehaviour
                 SceneManager.LoadScene("Game_Level");
             }
             bell_Ringing.Play();
+        }*/
         }
-    }
-    */
+    
     
 
     public void BellRing()

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3868894330360383226}
   - component: {fileID: 1085033065700296174}
   m_Layer: 0
-  m_Name: CopperRune
+  m_Name: BronzeRune
   m_TagString: MaterialRune
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
   the_Rune_Dispenser_Station_Data: {fileID: 11400000, guid: 9c0f4a133ad6cb34bbf782dce5b79195,
     type: 2}
   weapon_Type: 0
-  material_Type: 0
+  material_Type: 1
   enchantment_Type: 0
 --- !u!54 &3868894330360383226
 Rigidbody:

@@ -192,8 +192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0de81c7a810bce64f87a07dd278d0c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  this_Weapon_Type: 0
-  this_Material_Type: 0
+  this_Weapon_Type: 4
+  this_Material_Type: 1
   this_Enchantment_Type: 0
   ParticleEffects:
   - {fileID: 0}
@@ -291,17 +291,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 33eb163b4bc625c479303d1ae0b3d22f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b705cf5b65c102d42a28dc8dabfb2b9f, type: 2}
     - target: {fileID: -5178661895559278292, guid: 33eb163b4bc625c479303d1ae0b3d22f,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -40902317837582018, guid: 6572349f99b03f148afdd4002b5e82e5,
         type: 3}
-    - target: {fileID: -1504981713932161579, guid: 33eb163b4bc625c479303d1ae0b3d22f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b705cf5b65c102d42a28dc8dabfb2b9f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33eb163b4bc625c479303d1ae0b3d22f, type: 3}
 --- !u!4 &1547920508481979610 stripped
