@@ -127,11 +127,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 116433894}
     m_Modifications:
-    - target: {fileID: 2880482827932437801, guid: 67f82cdfe2060d34b81f1380d852b8a4,
-        type: 3}
-      propertyPath: m_Name
-      value: GoldWindSpear
-      objectReference: {fileID: 0}
     - target: {fileID: 2880482827932437800, guid: 67f82cdfe2060d34b81f1380d852b8a4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -186,6 +181,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.000015258789
+      objectReference: {fileID: 0}
+    - target: {fileID: 2880482827932437801, guid: 67f82cdfe2060d34b81f1380d852b8a4,
+        type: 3}
+      propertyPath: m_Name
+      value: GoldWindSpear
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67f82cdfe2060d34b81f1380d852b8a4, type: 3}
@@ -326,11 +326,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 33eb163b4bc625c479303d1ae0b3d22f,
-        type: 3}
-      propertyPath: m_Name
-      value: Bronze Spear Blade
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 33eb163b4bc625c479303d1ae0b3d22f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -385,6 +380,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 33eb163b4bc625c479303d1ae0b3d22f,
+        type: 3}
+      propertyPath: m_Name
+      value: Bronze Spear Blade
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33eb163b4bc625c479303d1ae0b3d22f, type: 3}
@@ -779,10 +779,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1528772285}
     m_Modifications:
-    - target: {fileID: 3947782860448635012, guid: 4ef8eeeed5983a24fb074198689ffe0b,
+    - target: {fileID: 232160463012171581, guid: 4ef8eeeed5983a24fb074198689ffe0b,
         type: 3}
-      propertyPath: m_Name
-      value: BronzeWindKnife
+      propertyPath: InitialModule.rotation3D
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 232160463012171581, guid: 4ef8eeeed5983a24fb074198689ffe0b,
+        type: 3}
+      propertyPath: InitialModule.randomizeRotationDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232160463012171581, guid: 4ef8eeeed5983a24fb074198689ffe0b,
+        type: 3}
+      propertyPath: RotationModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 855673182431816872, guid: 4ef8eeeed5983a24fb074198689ffe0b,
+        type: 3}
+      propertyPath: InitialModule.rotation3D
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 855673182431816872, guid: 4ef8eeeed5983a24fb074198689ffe0b,
+        type: 3}
+      propertyPath: InitialModule.randomizeRotationDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 855673182431816872, guid: 4ef8eeeed5983a24fb074198689ffe0b,
+        type: 3}
+      propertyPath: RotationModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2856035382315431786, guid: 4ef8eeeed5983a24fb074198689ffe0b,
+        type: 3}
+      propertyPath: InitialModule.rotation3D
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2856035382315431786, guid: 4ef8eeeed5983a24fb074198689ffe0b,
+        type: 3}
+      propertyPath: InitialModule.randomizeRotationDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2856035382315431786, guid: 4ef8eeeed5983a24fb074198689ffe0b,
+        type: 3}
+      propertyPath: RotationModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3480486769879634876, guid: 4ef8eeeed5983a24fb074198689ffe0b,
         type: 3}
@@ -839,62 +879,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4130047096050884198, guid: 4ef8eeeed5983a24fb074198689ffe0b,
+    - target: {fileID: 3947782860448635012, guid: 4ef8eeeed5983a24fb074198689ffe0b,
         type: 3}
-      propertyPath: InitialModule.rotation3D
-      value: 0
+      propertyPath: m_Name
+      value: BronzeWindKnife
       objectReference: {fileID: 0}
     - target: {fileID: 4130047096050884198, guid: 4ef8eeeed5983a24fb074198689ffe0b,
         type: 3}
+      propertyPath: InitialModule.rotation3D
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4130047096050884198, guid: 4ef8eeeed5983a24fb074198689ffe0b,
+        type: 3}
       propertyPath: InitialModule.randomizeRotationDirection
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4130047096050884198, guid: 4ef8eeeed5983a24fb074198689ffe0b,
-        type: 3}
-      propertyPath: RotationModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8722155143959600531, guid: 4ef8eeeed5983a24fb074198689ffe0b,
-        type: 3}
-      propertyPath: InitialModule.randomizeRotationDirection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8722155143959600531, guid: 4ef8eeeed5983a24fb074198689ffe0b,
-        type: 3}
-      propertyPath: RotationModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8722155143959600531, guid: 4ef8eeeed5983a24fb074198689ffe0b,
-        type: 3}
-      propertyPath: InitialModule.rotation3D
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2856035382315431786, guid: 4ef8eeeed5983a24fb074198689ffe0b,
-        type: 3}
-      propertyPath: InitialModule.rotation3D
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2856035382315431786, guid: 4ef8eeeed5983a24fb074198689ffe0b,
-        type: 3}
-      propertyPath: InitialModule.randomizeRotationDirection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2856035382315431786, guid: 4ef8eeeed5983a24fb074198689ffe0b,
-        type: 3}
-      propertyPath: RotationModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7133356042522803206, guid: 4ef8eeeed5983a24fb074198689ffe0b,
-        type: 3}
-      propertyPath: InitialModule.rotation3D
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7133356042522803206, guid: 4ef8eeeed5983a24fb074198689ffe0b,
-        type: 3}
-      propertyPath: InitialModule.randomizeRotationDirection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7133356042522803206, guid: 4ef8eeeed5983a24fb074198689ffe0b,
         type: 3}
       propertyPath: RotationModule.enabled
       value: 0
@@ -914,17 +914,17 @@ PrefabInstance:
       propertyPath: RotationModule.enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 855673182431816872, guid: 4ef8eeeed5983a24fb074198689ffe0b,
+    - target: {fileID: 7133356042522803206, guid: 4ef8eeeed5983a24fb074198689ffe0b,
         type: 3}
       propertyPath: InitialModule.rotation3D
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 855673182431816872, guid: 4ef8eeeed5983a24fb074198689ffe0b,
+    - target: {fileID: 7133356042522803206, guid: 4ef8eeeed5983a24fb074198689ffe0b,
         type: 3}
       propertyPath: InitialModule.randomizeRotationDirection
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 855673182431816872, guid: 4ef8eeeed5983a24fb074198689ffe0b,
+    - target: {fileID: 7133356042522803206, guid: 4ef8eeeed5983a24fb074198689ffe0b,
         type: 3}
       propertyPath: RotationModule.enabled
       value: 0
@@ -944,21 +944,6 @@ PrefabInstance:
       propertyPath: RotationModule.enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 232160463012171581, guid: 4ef8eeeed5983a24fb074198689ffe0b,
-        type: 3}
-      propertyPath: InitialModule.rotation3D
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 232160463012171581, guid: 4ef8eeeed5983a24fb074198689ffe0b,
-        type: 3}
-      propertyPath: InitialModule.randomizeRotationDirection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 232160463012171581, guid: 4ef8eeeed5983a24fb074198689ffe0b,
-        type: 3}
-      propertyPath: RotationModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7471725644028614099, guid: 4ef8eeeed5983a24fb074198689ffe0b,
         type: 3}
       propertyPath: InitialModule.rotation3D
@@ -972,6 +957,21 @@ PrefabInstance:
     - target: {fileID: 7471725644028614099, guid: 4ef8eeeed5983a24fb074198689ffe0b,
         type: 3}
       propertyPath: RotationModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722155143959600531, guid: 4ef8eeeed5983a24fb074198689ffe0b,
+        type: 3}
+      propertyPath: InitialModule.randomizeRotationDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722155143959600531, guid: 4ef8eeeed5983a24fb074198689ffe0b,
+        type: 3}
+      propertyPath: RotationModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722155143959600531, guid: 4ef8eeeed5983a24fb074198689ffe0b,
+        type: 3}
+      propertyPath: InitialModule.rotation3D
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1146,11 +1146,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 226171494}
     m_Modifications:
-    - target: {fileID: 3821975982910403318, guid: 6d13cd1c28902dc43b918ca4172dd189,
-        type: 3}
-      propertyPath: m_Name
-      value: IronIceSword
-      objectReference: {fileID: 0}
     - target: {fileID: 3312291370744338928, guid: 6d13cd1c28902dc43b918ca4172dd189,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1206,6 +1201,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3821975982910403318, guid: 6d13cd1c28902dc43b918ca4172dd189,
+        type: 3}
+      propertyPath: m_Name
+      value: IronIceSword
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d13cd1c28902dc43b918ca4172dd189, type: 3}
 --- !u!1001 &461189926
@@ -1215,11 +1215,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1825814528}
     m_Modifications:
-    - target: {fileID: 8554918217538994347, guid: bc3ab4fc5fe2f884abbbdf8f9c8c28d3,
-        type: 3}
-      propertyPath: m_Name
-      value: IronIceSpear
-      objectReference: {fileID: 0}
     - target: {fileID: 7945705788651219885, guid: bc3ab4fc5fe2f884abbbdf8f9c8c28d3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1275,6 +1270,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8554918217538994347, guid: bc3ab4fc5fe2f884abbbdf8f9c8c28d3,
+        type: 3}
+      propertyPath: m_Name
+      value: IronIceSpear
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc3ab4fc5fe2f884abbbdf8f9c8c28d3, type: 3}
 --- !u!1001 &463334066
@@ -1284,11 +1284,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 226171494}
     m_Modifications:
-    - target: {fileID: 8009517816077424937, guid: 3cf55d0be32ef704c86139060a09440b,
-        type: 3}
-      propertyPath: m_Name
-      value: IronWindEffect
-      objectReference: {fileID: 0}
     - target: {fileID: 8009517816077424936, guid: 3cf55d0be32ef704c86139060a09440b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1344,6 +1339,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8009517816077424937, guid: 3cf55d0be32ef704c86139060a09440b,
+        type: 3}
+      propertyPath: m_Name
+      value: IronWindEffect
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cf55d0be32ef704c86139060a09440b, type: 3}
 --- !u!1001 &466806928
@@ -1353,11 +1353,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 650980749}
     m_Modifications:
-    - target: {fileID: 8982908071421785337, guid: 18b888a0e1f9e614f9ead8d9db8a1ce4,
-        type: 3}
-      propertyPath: m_Name
-      value: BronzeIceSpear
-      objectReference: {fileID: 0}
     - target: {fileID: 7229489990779641855, guid: 18b888a0e1f9e614f9ead8d9db8a1ce4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1413,6 +1408,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8982908071421785337, guid: 18b888a0e1f9e614f9ead8d9db8a1ce4,
+        type: 3}
+      propertyPath: m_Name
+      value: BronzeIceSpear
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18b888a0e1f9e614f9ead8d9db8a1ce4, type: 3}
 --- !u!1001 &490125308
@@ -1422,11 +1422,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 650980749}
     m_Modifications:
-    - target: {fileID: 1757058557427917553, guid: dc079d8fa011af44e99653ca0334ad91,
-        type: 3}
-      propertyPath: m_Name
-      value: BronzeWindSpear
-      objectReference: {fileID: 0}
     - target: {fileID: 1757058557427917552, guid: dc079d8fa011af44e99653ca0334ad91,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1481,6 +1476,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 179.99998
+      objectReference: {fileID: 0}
+    - target: {fileID: 1757058557427917553, guid: dc079d8fa011af44e99653ca0334ad91,
+        type: 3}
+      propertyPath: m_Name
+      value: BronzeWindSpear
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc079d8fa011af44e99653ca0334ad91, type: 3}
@@ -1743,11 +1743,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2095085312}
     m_Modifications:
-    - target: {fileID: 6327358900463398177, guid: 48bf381e52e5f0245833229e9557d6f9,
-        type: 3}
-      propertyPath: m_Name
-      value: GoldWindEffect
-      objectReference: {fileID: 0}
     - target: {fileID: 6327358900463398176, guid: 48bf381e52e5f0245833229e9557d6f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1802,6 +1797,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6327358900463398177, guid: 48bf381e52e5f0245833229e9557d6f9,
+        type: 3}
+      propertyPath: m_Name
+      value: GoldWindEffect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48bf381e52e5f0245833229e9557d6f9, type: 3}
@@ -1910,11 +1910,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1773677788}
     m_Modifications:
-    - target: {fileID: 7447070119874191904, guid: 0854d21630457cc40b404e42fde85135,
-        type: 3}
-      propertyPath: m_Name
-      value: AlloyFireKnife
-      objectReference: {fileID: 0}
     - target: {fileID: 6340111385888725446, guid: 0854d21630457cc40b404e42fde85135,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1970,6 +1965,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7447070119874191904, guid: 0854d21630457cc40b404e42fde85135,
+        type: 3}
+      propertyPath: m_Name
+      value: AlloyFireKnife
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0854d21630457cc40b404e42fde85135, type: 3}
 --- !u!1001 &851129933
@@ -1979,11 +1979,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 5fb5873694bb0b64699c4ca10e4ded86,
-        type: 3}
-      propertyPath: m_Name
-      value: Bronze Spear Handle
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5fb5873694bb0b64699c4ca10e4ded86,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2038,6 +2033,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 5fb5873694bb0b64699c4ca10e4ded86,
+        type: 3}
+      propertyPath: m_Name
+      value: Bronze Spear Handle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fb5873694bb0b64699c4ca10e4ded86, type: 3}
@@ -6885,11 +6885,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 790404996}
     m_Modifications:
-    - target: {fileID: 4454176924978342332, guid: bfe6c8da2ea6cfb40b1782ca4a7ad887,
-        type: 3}
-      propertyPath: m_Name
-      value: BronzeIceSword
-      objectReference: {fileID: 0}
     - target: {fileID: 2678964253983982266, guid: bfe6c8da2ea6cfb40b1782ca4a7ad887,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6944,6 +6939,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454176924978342332, guid: bfe6c8da2ea6cfb40b1782ca4a7ad887,
+        type: 3}
+      propertyPath: m_Name
+      value: BronzeIceSword
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfe6c8da2ea6cfb40b1782ca4a7ad887, type: 3}
@@ -6954,11 +6954,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 116433894}
     m_Modifications:
-    - target: {fileID: 6758680619719954645, guid: ea8fc766e4bd3cf478e7aa90c5c4b5ec,
-        type: 3}
-      propertyPath: m_Name
-      value: GoldFireSpear
-      objectReference: {fileID: 0}
     - target: {fileID: 1759022199485090132, guid: ea8fc766e4bd3cf478e7aa90c5c4b5ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7013,6 +7008,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758680619719954645, guid: ea8fc766e4bd3cf478e7aa90c5c4b5ec,
+        type: 3}
+      propertyPath: m_Name
+      value: GoldFireSpear
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea8fc766e4bd3cf478e7aa90c5c4b5ec, type: 3}
@@ -7100,6 +7100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1113890960}
   - component: {fileID: 1113890959}
+  - component: {fileID: 1113890961}
   m_Layer: 0
   m_Name: Directional Light (1)
   m_TagString: Untagged
@@ -7174,13 +7175,25 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1113890958}
-  m_LocalRotation: {x: 0.015853068, y: -0.93598247, z: 0.3491118, w: 0.0425027}
+  m_LocalRotation: {x: 0, y: -0.99897057, z: 0, w: 0.04536297}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 40.91, y: -174.8, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -174.8, z: 0}
+--- !u!114 &1113890961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113890958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 709714660dcbb804e983c6a2439b3014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1131157973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7188,11 +7201,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1528772286}
     m_Modifications:
-    - target: {fileID: 5223514953279759946, guid: 48b3483959c76b744a563b93e9e71463,
-        type: 3}
-      propertyPath: m_Name
-      value: BronzeFireKnife
-      objectReference: {fileID: 0}
     - target: {fileID: 3744762349635001609, guid: 48b3483959c76b744a563b93e9e71463,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7247,6 +7255,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223514953279759946, guid: 48b3483959c76b744a563b93e9e71463,
+        type: 3}
+      propertyPath: m_Name
+      value: BronzeFireKnife
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48b3483959c76b744a563b93e9e71463, type: 3}
@@ -7340,11 +7353,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7342135301632725317, guid: 2ca2f83a77df34541babf7372209ad6f,
-        type: 3}
-      propertyPath: m_Name
-      value: WindEnchantmentEffects
-      objectReference: {fileID: 0}
     - target: {fileID: 2544420761512645649, guid: 2ca2f83a77df34541babf7372209ad6f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7430,6 +7438,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.7071066
       objectReference: {fileID: 0}
+    - target: {fileID: 7342135301632725317, guid: 2ca2f83a77df34541babf7372209ad6f,
+        type: 3}
+      propertyPath: m_Name
+      value: WindEnchantmentEffects
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ca2f83a77df34541babf7372209ad6f, type: 3}
 --- !u!1001 &1192473096
@@ -7439,11 +7452,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1900070336}
     m_Modifications:
-    - target: {fileID: 4359330486084109997, guid: 60142c986c30a1d4e85412e19022c488,
-        type: 3}
-      propertyPath: m_Name
-      value: GoldWindKnife
-      objectReference: {fileID: 0}
     - target: {fileID: 4359330486084109996, guid: 60142c986c30a1d4e85412e19022c488,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7499,6 +7507,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4359330486084109997, guid: 60142c986c30a1d4e85412e19022c488,
+        type: 3}
+      propertyPath: m_Name
+      value: GoldWindKnife
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60142c986c30a1d4e85412e19022c488, type: 3}
 --- !u!1001 &1266283087
@@ -7517,6 +7530,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3573836475121886429, guid: 34165a248412a974a8dfcadbddca3f4d,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3573836475121886430, guid: 34165a248412a974a8dfcadbddca3f4d,
         type: 3}
@@ -7571,11 +7589,6 @@ PrefabInstance:
     - target: {fileID: 3573836475121886430, guid: 34165a248412a974a8dfcadbddca3f4d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3573836475121886429, guid: 34165a248412a974a8dfcadbddca3f4d,
-        type: 3}
-      propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -7760,11 +7773,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3423730603981979813, guid: 9a55e750fa0e2494ea576fbb083a5daf,
-        type: 3}
-      propertyPath: m_Name
-      value: FireRune
-      objectReference: {fileID: 0}
     - target: {fileID: 1279966499959961066, guid: 9a55e750fa0e2494ea576fbb083a5daf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7819,6 +7827,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423730603981979813, guid: 9a55e750fa0e2494ea576fbb083a5daf,
+        type: 3}
+      propertyPath: m_Name
+      value: FireRune
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a55e750fa0e2494ea576fbb083a5daf, type: 3}
@@ -8097,6 +8110,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1572596323}
     m_Modifications:
+    - target: {fileID: 303965616331098914, guid: 3b51ab5220b9c5446a87c6feefd2d2de,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3573836475121886417, guid: 3b51ab5220b9c5446a87c6feefd2d2de,
         type: 3}
       propertyPath: m_Name
@@ -8106,6 +8124,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3573836475121886429, guid: 3b51ab5220b9c5446a87c6feefd2d2de,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3573836475121886430, guid: 3b51ab5220b9c5446a87c6feefd2d2de,
         type: 3}
@@ -8162,16 +8185,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3573836475121886429, guid: 3b51ab5220b9c5446a87c6feefd2d2de,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 303965616331098914, guid: 3b51ab5220b9c5446a87c6feefd2d2de,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b51ab5220b9c5446a87c6feefd2d2de, type: 3}
 --- !u!4 &1528772285 stripped
@@ -8193,11 +8206,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 116433894}
     m_Modifications:
-    - target: {fileID: 4369040043676061453, guid: a6640e569158fa742a7b8142674cc799,
-        type: 3}
-      propertyPath: m_Name
-      value: GoldIceSpear
-      objectReference: {fileID: 0}
     - target: {fileID: 2619985981578208267, guid: a6640e569158fa742a7b8142674cc799,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8252,6 +8260,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4369040043676061453, guid: a6640e569158fa742a7b8142674cc799,
+        type: 3}
+      propertyPath: m_Name
+      value: GoldIceSpear
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6640e569158fa742a7b8142674cc799, type: 3}
@@ -8527,6 +8540,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3573836475121886429, guid: 277c6bcadfda8b34fa9edfefde7012da,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3573836475121886430, guid: 277c6bcadfda8b34fa9edfefde7012da,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8580,11 +8598,6 @@ PrefabInstance:
     - target: {fileID: 3573836475121886430, guid: 277c6bcadfda8b34fa9edfefde7012da,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3573836475121886429, guid: 277c6bcadfda8b34fa9edfefde7012da,
-        type: 3}
-      propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -8801,6 +8814,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3573836475121886429, guid: 4594db12ab3509e44a6269d4f11648cd,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3573836475121886430, guid: 4594db12ab3509e44a6269d4f11648cd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8856,11 +8874,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3573836475121886429, guid: 4594db12ab3509e44a6269d4f11648cd,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5868738424990597406, guid: 4594db12ab3509e44a6269d4f11648cd,
         type: 3}
       propertyPath: m_RootOrder
@@ -8887,11 +8900,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1900070336}
     m_Modifications:
-    - target: {fileID: 4844186205589464028, guid: 6f08a51b2a4141444a450a864cd8c4b4,
-        type: 3}
-      propertyPath: m_Name
-      value: GoldFireKnife
-      objectReference: {fileID: 0}
     - target: {fileID: 4089188303561021599, guid: 6f08a51b2a4141444a450a864cd8c4b4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8946,6 +8954,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844186205589464028, guid: 6f08a51b2a4141444a450a864cd8c4b4,
+        type: 3}
+      propertyPath: m_Name
+      value: GoldFireKnife
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f08a51b2a4141444a450a864cd8c4b4, type: 3}
@@ -9383,11 +9396,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 650980749}
     m_Modifications:
-    - target: {fileID: 7529634938264901024, guid: f3e8bedabc39f5e4ba13449b570c9f05,
-        type: 3}
-      propertyPath: m_Name
-      value: BronzeFireSpear
-      objectReference: {fileID: 0}
     - target: {fileID: 3304593730329775137, guid: f3e8bedabc39f5e4ba13449b570c9f05,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9442,6 +9450,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529634938264901024, guid: f3e8bedabc39f5e4ba13449b570c9f05,
+        type: 3}
+      propertyPath: m_Name
+      value: BronzeFireSpear
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3e8bedabc39f5e4ba13449b570c9f05, type: 3}
@@ -9452,235 +9465,65 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1827072801}
     m_Modifications:
+    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
+      value: 0.5409851
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 2209353884859453032, guid: c50cdbd025490ba4caf006cd2bd2c77e,
         type: 3}
       propertyPath: m_Name
       value: AlloyFireSword
-      objectReference: {fileID: 0}
-    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
-      value: 0.5409851
-      objectReference: {fileID: 0}
-    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].inSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outWeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inWeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 0.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: simulationSpeed
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
-      value: 0.5409851
-      objectReference: {fileID: 0}
-    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].inSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outWeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inWeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 0.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 2112317564806311319, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: simulationSpeed
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
-      value: 0.5409851
-      objectReference: {fileID: 0}
-    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].inSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outWeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inWeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 0.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
-        type: 3}
-      propertyPath: simulationSpeed
-      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 5037705494885269680, guid: c50cdbd025490ba4caf006cd2bd2c77e,
         type: 3}
@@ -9702,6 +9545,121 @@ PrefabInstance:
       propertyPath: simulationSpeed
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
+      value: 0.5409851
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899002026632591892, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290348198781220139, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7368402191009021901, guid: c50cdbd025490ba4caf006cd2bd2c77e,
         type: 3}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
@@ -9761,6 +9719,61 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
+      value: 0.5409851
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486727262312995255, guid: c50cdbd025490ba4caf006cd2bd2c77e,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 0.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c50cdbd025490ba4caf006cd2bd2c77e, type: 3}
@@ -10034,11 +10047,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1528772286}
     m_Modifications:
-    - target: {fileID: 3947782860448635012, guid: 4ef8eeeed5983a24fb074198689ffe0b,
-        type: 3}
-      propertyPath: m_Name
-      value: BronzeWindKnife
-      objectReference: {fileID: 0}
     - target: {fileID: 3480486769879634876, guid: 4ef8eeeed5983a24fb074198689ffe0b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10094,6 +10102,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3947782860448635012, guid: 4ef8eeeed5983a24fb074198689ffe0b,
+        type: 3}
+      propertyPath: m_Name
+      value: BronzeWindKnife
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ef8eeeed5983a24fb074198689ffe0b, type: 3}
 --- !u!33 &2798943883601503740
@@ -10111,11 +10124,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1266283088}
     m_Modifications:
-    - target: {fileID: 4023878935814968368, guid: 433de196d0ccfe24c88e3d53102de919,
-        type: 3}
-      propertyPath: m_Name
-      value: IronIceKnife
-      objectReference: {fileID: 0}
     - target: {fileID: 3398613571680190262, guid: 433de196d0ccfe24c88e3d53102de919,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10170,6 +10178,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023878935814968368, guid: 433de196d0ccfe24c88e3d53102de919,
+        type: 3}
+      propertyPath: m_Name
+      value: IronIceKnife
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 433de196d0ccfe24c88e3d53102de919, type: 3}
@@ -10304,16 +10317,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1900070335}
     m_Modifications:
-    - target: {fileID: 4844186205589464028, guid: 6f08a51b2a4141444a450a864cd8c4b4,
-        type: 3}
-      propertyPath: m_Name
-      value: GoldFireKnife
-      objectReference: {fileID: 0}
-    - target: {fileID: 4844186205589464028, guid: 6f08a51b2a4141444a450a864cd8c4b4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4089188303561021599, guid: 6f08a51b2a4141444a450a864cd8c4b4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10367,6 +10370,16 @@ PrefabInstance:
     - target: {fileID: 4089188303561021599, guid: 6f08a51b2a4141444a450a864cd8c4b4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844186205589464028, guid: 6f08a51b2a4141444a450a864cd8c4b4,
+        type: 3}
+      propertyPath: m_Name
+      value: GoldFireKnife
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844186205589464028, guid: 6f08a51b2a4141444a450a864cd8c4b4,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -10590,11 +10603,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 226171494}
     m_Modifications:
-    - target: {fileID: 3363265013475242877, guid: 8c2bca4f67c99854ca2772845bf84a26,
-        type: 3}
-      propertyPath: m_Name
-      value: IronFireSword
-      objectReference: {fileID: 0}
     - target: {fileID: 1750361165194015822, guid: 8c2bca4f67c99854ca2772845bf84a26,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10649,6 +10657,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363265013475242877, guid: 8c2bca4f67c99854ca2772845bf84a26,
+        type: 3}
+      propertyPath: m_Name
+      value: IronFireSword
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c2bca4f67c99854ca2772845bf84a26, type: 3}
@@ -10836,11 +10849,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7790900851681009735, guid: 1366ccdecf980454aa560c5b07f0cb73,
-        type: 3}
-      propertyPath: m_Name
-      value: Candle/LanternFire
-      objectReference: {fileID: 0}
     - target: {fileID: 7785404753536233525, guid: 1366ccdecf980454aa560c5b07f0cb73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10895,6 +10903,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790900851681009735, guid: 1366ccdecf980454aa560c5b07f0cb73,
+        type: 3}
+      propertyPath: m_Name
+      value: Candle/LanternFire
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1366ccdecf980454aa560c5b07f0cb73, type: 3}
@@ -10974,11 +10987,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1528772286}
     m_Modifications:
-    - target: {fileID: 3788338178745284801, guid: e8e162b13e318f44e8bf049778d0b1c0,
-        type: 3}
-      propertyPath: m_Name
-      value: BronzeIceKnife
-      objectReference: {fileID: 0}
     - target: {fileID: 3201808764413252551, guid: e8e162b13e318f44e8bf049778d0b1c0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11033,6 +11041,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788338178745284801, guid: e8e162b13e318f44e8bf049778d0b1c0,
+        type: 3}
+      propertyPath: m_Name
+      value: BronzeIceKnife
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8e162b13e318f44e8bf049778d0b1c0, type: 3}
@@ -11163,11 +11176,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1773677788}
     m_Modifications:
-    - target: {fileID: 9089108367992549477, guid: c660919bd76003f4d9fef839038f7beb,
-        type: 3}
-      propertyPath: m_Name
-      value: AlloyIceKnife
-      objectReference: {fileID: 0}
     - target: {fileID: 7412646245413804899, guid: c660919bd76003f4d9fef839038f7beb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11222,6 +11230,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9089108367992549477, guid: c660919bd76003f4d9fef839038f7beb,
+        type: 3}
+      propertyPath: m_Name
+      value: AlloyIceKnife
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c660919bd76003f4d9fef839038f7beb, type: 3}
