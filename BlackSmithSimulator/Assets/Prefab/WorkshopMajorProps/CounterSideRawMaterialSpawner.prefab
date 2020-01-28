@@ -17,8 +17,9 @@ GameObject:
   - component: {fileID: 4351461294595589351}
   - component: {fileID: 2622052399600836641}
   - component: {fileID: 1455792500541006513}
+  - component: {fileID: 3460513694512096296}
   m_Layer: 0
-  m_Name: CounterSide
+  m_Name: CounterSideRawMaterialSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,3 +163,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.012837946, y: 0.86863625, z: 0.6035416}
   m_Center: {x: -0.22802189, y: -1.3584121e-16, z: 0.3172356}
+--- !u!65 &3460513694512096296
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8180354059870544710}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.42667663, y: 0.7519933, z: 0.52084553}
+  m_Center: {x: 0.02110257, y: -0.017394155, z: 0.272636}
