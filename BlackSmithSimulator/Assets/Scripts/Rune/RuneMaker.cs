@@ -69,6 +69,7 @@ public class RuneMaker : MonoBehaviour
 
     void CheckRune()
     {
+        GameObject runeRef;
         if (catalyst_In_Dispenser != 0 && reactant_In_Dispenser != 0)
         {
             //All Combination for runes
@@ -135,11 +136,12 @@ public class RuneMaker : MonoBehaviour
             {
                 animatorReference.SetTrigger("CreatingRune");
                 Instantiate(rune_Spawning_Effect, runeSpawnLocation.transform.position, Quaternion.Euler(0, 0, 0));
-                Instantiate(Rune_Types[current_Type], runeSpawnLocation.transform.position, Quaternion.Euler(0, 0, 0));
+                runeRef = Instantiate(Rune_Types[current_Type], runeSpawnLocation.transform.position, Quaternion.Euler(0, 0, 0));
                 if (rune_Maker_SFX != null)
                 {
                     rune_Maker_SFX.Play();
                 }
+                runeRef.GetComponent<RuneData>().runeMakerRef = this.GetComponent<RuneMaker>();
                 EmptyPot();
             }
         }
@@ -154,5 +156,11 @@ public class RuneMaker : MonoBehaviour
         catalyst_In_Dispenser = 0;
         reactant_In_Dispenser = 0;
         current_Type = 0;
+    }
+
+    public void OnPickUpRuneMixer()
+    {
+        //rune has been picked up
+        print("Rune has been picked up from maker");
     }
 }
