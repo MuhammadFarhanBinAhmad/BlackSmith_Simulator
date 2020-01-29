@@ -185,7 +185,14 @@ public class CustomerAI : MonoBehaviour
         {
             correct_Weapon = true;
         }
-        if (correct_Material && correct_Weapon_Type && correct_Enchantment)
+        if (CustomerSpawner.current_day == 1)
+        {
+            if (correct_Material && correct_Weapon_Type)
+            {
+                correct_Weapon_Receive = true;
+            }
+        }
+        else if (correct_Material && correct_Weapon_Type && correct_Enchantment)
         {
             correct_Weapon_Receive = true;
         }

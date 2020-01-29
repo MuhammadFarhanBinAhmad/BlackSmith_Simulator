@@ -7,7 +7,6 @@ public class CustomerSpawner : MonoBehaviour
     public static int current_day;
     public static int Customer_Already_Serve;
 
-    public GameObject the_Sun;
     public Transform[] destPointsOfInterest;
     public Transform destCounter;
     public Transform destExit;
