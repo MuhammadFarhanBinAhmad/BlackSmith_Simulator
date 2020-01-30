@@ -244,6 +244,7 @@ public class CustomerAI : MonoBehaviour
                 {
                     FindObjectOfType<CustomerSpawner>().StartCoroutine("SpawnNextCustomer");//start timer to spawn next customer
                     CustomerSpawner.Customer_Already_Serve++;
+                    print(CustomerSpawner.Customer_Already_Serve);
                     Destroy(gameObject);
                 }
             }
