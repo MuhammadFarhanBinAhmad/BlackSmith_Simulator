@@ -122,9 +122,9 @@ public class CustomerAI : MonoBehaviour
                 else if (!given_Order)
                 {
 
-                    if (customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[current_Voiceline] != null)
+                    if (customer_Order[GameManager.counterDay].customer_Dialouge_Speech[current_Voiceline] != null)
                     {
-                        customer_Dialouge.clip = customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[current_Voiceline];
+                        customer_Dialouge.clip = customer_Order[GameManager.counterDay].customer_Dialouge_Speech[current_Voiceline];
                         customer_Dialouge.Play();
                         current_Voiceline++;
                     }
