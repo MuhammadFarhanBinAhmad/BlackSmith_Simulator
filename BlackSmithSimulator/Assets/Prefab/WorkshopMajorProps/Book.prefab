@@ -94,8 +94,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: -0.5, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1.0140711}
+  m_Center: {x: -0.5, y: -0.0000000022852196, z: -0.50703365}
 --- !u!114 &2395828292440008121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,8 +238,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0.5, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1.0099233}
+  m_Center: {x: 0.5, y: -0.0000000022327562, z: -0.50495905}
 --- !u!114 &8922226561428455910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,16 +348,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pages:
   - {fileID: 0}
-  - {fileID: 2100000, guid: 319c3d89c2e15284fae93832b58ee3b1, type: 2}
-  - {fileID: 2100000, guid: e1815beab60f4bd4b8b243d45d1dae0a, type: 2}
-  - {fileID: 2100000, guid: cd08ec4fb5a3a3d4797448c30288694e, type: 2}
-  - {fileID: 2100000, guid: f56f9751be64e664b9e327024c2cbb85, type: 2}
-  - {fileID: 2100000, guid: bc028f26eae48484298df4775e519815, type: 2}
-  - {fileID: 2100000, guid: c756d3c8551f06b408a70fc3f4b7bef1, type: 2}
-  - {fileID: 2100000, guid: 8c1018f027491134a82d202dd9fa2a39, type: 2}
-  - {fileID: 2100000, guid: 46fdb4b704892994183b62535e940931, type: 2}
-  - {fileID: 2100000, guid: f6d83bd0e94a3aa49a7587e143f5f34a, type: 2}
-  - {fileID: 2100000, guid: 5b71686d489065846851b90a136e98c2, type: 2}
-  - {fileID: 2100000, guid: fc786a282368c38488072df3e887af18, type: 2}
-  - {fileID: 2100000, guid: 8e2d19896f02f2b4c8b55ae5a4d2394a, type: 2}
-  bookZone: {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  CurrentPage: 0
+  thisMeshRenderer: {fileID: 0}

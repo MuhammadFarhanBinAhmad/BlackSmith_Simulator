@@ -12,6 +12,9 @@ public class TutorialManager : MonoBehaviour
     public Sprite[] darkSceneTutorialImages;
     public GameObject bottleToGrab;
     public Transform posToSpawn;
+    public GameObject bottleSpotLight;
+
+    public GameObject teleportSpotLight;
 
     GameObject grabBottle;
 
@@ -28,6 +31,7 @@ public class TutorialManager : MonoBehaviour
         darkSceneTutorialImage.sprite = darkSceneTutorialImages[0];
 
         grabBottle = Instantiate(bottleToGrab, posToSpawn.position, Quaternion.Euler(0, 0, 0));
+        bottleSpotLight.SetActive(true);
     }
 
     public void Tutorial2()
@@ -35,6 +39,7 @@ public class TutorialManager : MonoBehaviour
         //throwing objects
         //tutorialText.text = "Throw object with x button";
         darkSceneTutorialImage.sprite = darkSceneTutorialImages[1];
+        bottleSpotLight.SetActive(false);
     }
 
     public void Tutorial3()
@@ -42,20 +47,25 @@ public class TutorialManager : MonoBehaviour
         //teleporting
         //tutorialText.text = "teleport with X button";
         darkSceneTutorialImage.sprite = darkSceneTutorialImages[2];
+        teleportSpotLight.SetActive(true);
 
     }
     public void Tutorial4()
     {
         //tutorialText.text = "Well done! you can teleport before and after serivce periods";
-        darkSceneTutorialImage.sprite = darkSceneTutorialImages[3];
-        StartCoroutine(TutorialEnd());
+        if (darkSceneTutorialImage.sprite == darkSceneTutorialImages[2])
+        {
+            teleportSpotLight.SetActive(false);
+            darkSceneTutorialImage.sprite = darkSceneTutorialImages[3];
+            StartCoroutine(TutorialEnd());
+        }
     }
     public IEnumerator TutorialEnd()
     {
         yield return new WaitForSeconds(5);
+        darkSceneTutorialImage.sprite = darkSceneTutorialImages[4];
         StartCoroutine(dsManager.LevelToLoad("Pause_Main_Menu"));
         //dsManager.LevelModeSwitch("Pause_Main_Menu");
-        darkSceneTutorialImage.sprite = darkSceneTutorialImages[4];
     }
 
     public void CheckTeleportDuringTutorial(){
