@@ -68,10 +68,6 @@ public class CallCustomer : MonoBehaviour
         else if (isTutorialLevel == true)
         {
             SceneManager.LoadScene("Game_Level");
-            if (FindObjectOfType<GameManager>() != null)
-            {
-                FindObjectOfType<GameManager>().AddDay();
-            }
 
         }
         bell_Ringing.Play();
