@@ -233,7 +233,6 @@ public class CustomerAI : MonoBehaviour
                 AddRougeScore();
             }
         }
-        CustomerSpawner.Customer_Already_Serve++:
     }
     void ExitStore()
     {
