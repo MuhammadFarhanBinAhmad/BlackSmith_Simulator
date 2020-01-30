@@ -30,7 +30,14 @@ public class GameManager : MonoBehaviour
 
     public void AddDay()
     {
-        counterDay++;
+        if (GameManager.counterDay == 4)
+        {
+            GameManager.counterDay = 0;
+        }
+        else
+        {
+            counterDay++;
+        }
         Debug.Log("Current Day defined by the Game Manager is " + counterDay);
     }
 

@@ -197,7 +197,7 @@ MonoBehaviour:
   this_Enchantment_Type: 0
   ParticleEffects:
   - {fileID: 0}
-  - {fileID: 6640566353449017477, guid: e89e81d5dfdf45f4ca187149ab670f45, type: 3}
+  - {fileID: 4359330486084109997, guid: 6d425ee18cc09984281fffb22fabcf1b, type: 3}
   - {fileID: 4359330486084109997, guid: 60142c986c30a1d4e85412e19022c488, type: 3}
   - {fileID: 4844186205589464028, guid: 6f08a51b2a4141444a450a864cd8c4b4, type: 3}
   - {fileID: 5202263762726482276, guid: bb29bcac022cd7c4db7848674058e9e6, type: 3}
@@ -221,11 +221,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3573836475121886430}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 9f08e8d2ef27fab448df8541c76f9403,
-        type: 3}
-      propertyPath: m_Name
-      value: GoldKnifeBL
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9f08e8d2ef27fab448df8541c76f9403,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -296,6 +291,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 79f5ad32d5e44fb48b2d8f149fca86d1, type: 2}
+    - target: {fileID: -927199367670048503, guid: 9f08e8d2ef27fab448df8541c76f9403,
+        type: 3}
+      propertyPath: m_Name
+      value: GoldKnifeBL
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f08e8d2ef27fab448df8541c76f9403, type: 3}
 --- !u!4 &7643652207502324312 stripped

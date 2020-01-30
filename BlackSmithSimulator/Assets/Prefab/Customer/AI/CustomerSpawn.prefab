@@ -43,7 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae06e5cb58d5fa4992e0e15cf150a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  the_Sun: {fileID: 0}
   destPointsOfInterest:
   - {fileID: 0}
   - {fileID: 0}
@@ -56,7 +55,8 @@ MonoBehaviour:
   - {fileID: 372240657062210236, guid: 2a002d01c2c7f4c4cba59edfa5ffc390, type: 3}
   - {fileID: 372240657062210236, guid: 2a002d01c2c7f4c4cba59edfa5ffc390, type: 3}
   - {fileID: 372240657062210236, guid: 2a002d01c2c7f4c4cba59edfa5ffc390, type: 3}
-  brokenWeapon: []
+  bell_Sparkle: {fileID: 6970434889856610973, guid: ccd1ac641bd41604b8acc99ee3102322,
+    type: 3}
   general_Customer_Anim:
   - GivingOrder
   - LookingOutWindow

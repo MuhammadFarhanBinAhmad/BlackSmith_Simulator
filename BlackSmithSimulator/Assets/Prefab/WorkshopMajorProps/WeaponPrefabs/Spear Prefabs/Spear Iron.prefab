@@ -198,7 +198,7 @@ MonoBehaviour:
   this_Enchantment_Type: 0
   ParticleEffects:
   - {fileID: 0}
-  - {fileID: 6640566353449017477, guid: e89e81d5dfdf45f4ca187149ab670f45, type: 3}
+  - {fileID: 131004704841560908, guid: 6abd690a621d93c44ae60fca91b1d212, type: 3}
   - {fileID: 131004704841560908, guid: 5e5bc4edf7513754da134b39b6152734, type: 3}
   - {fileID: 964666819669089943, guid: c66f5e2b90ce2804a82c4a163fefed9b, type: 3}
   - {fileID: 8554918217538994347, guid: bc3ab4fc5fe2f884abbbdf8f9c8c28d3, type: 3}
@@ -222,11 +222,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3573836475121886430}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: b9f0d6fbbcdafdf4d8ce4cc51fa727f6,
+    - target: {fileID: -5178661895559278292, guid: b9f0d6fbbcdafdf4d8ce4cc51fa727f6,
         type: 3}
-      propertyPath: m_Name
-      value: Iron Spear Blade
-      objectReference: {fileID: 0}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -3097596203862752226, guid: c498d40408556d64f9bcac14cb5de0a3,
+        type: 3}
     - target: {fileID: -4216859302048453862, guid: b9f0d6fbbcdafdf4d8ce4cc51fa727f6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -292,17 +293,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0000005
       objectReference: {fileID: 0}
-    - target: {fileID: -5178661895559278292, guid: b9f0d6fbbcdafdf4d8ce4cc51fa727f6,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -3097596203862752226, guid: c498d40408556d64f9bcac14cb5de0a3,
-        type: 3}
     - target: {fileID: -1504981713932161579, guid: b9f0d6fbbcdafdf4d8ce4cc51fa727f6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f193d25c3334d9d4fad650e88d4c3bd9, type: 2}
+    - target: {fileID: -927199367670048503, guid: b9f0d6fbbcdafdf4d8ce4cc51fa727f6,
+        type: 3}
+      propertyPath: m_Name
+      value: Iron Spear Blade
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9f0d6fbbcdafdf4d8ce4cc51fa727f6, type: 3}
 --- !u!4 &1844895370763303696 stripped
@@ -318,11 +318,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3573836475121886430}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 1f9e43305b75f7946b05dd85c46e5c00,
+    - target: {fileID: -5178661895559278292, guid: 1f9e43305b75f7946b05dd85c46e5c00,
         type: 3}
-      propertyPath: m_Name
-      value: Iron Spear Blade Side
-      objectReference: {fileID: 0}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1379632729767656447, guid: 32c1119c53ca47a4e883ecb5ae4d8dcf,
+        type: 3}
     - target: {fileID: -4216859302048453862, guid: 1f9e43305b75f7946b05dd85c46e5c00,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -388,17 +389,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0000005
       objectReference: {fileID: 0}
-    - target: {fileID: -5178661895559278292, guid: 1f9e43305b75f7946b05dd85c46e5c00,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1379632729767656447, guid: 32c1119c53ca47a4e883ecb5ae4d8dcf,
-        type: 3}
     - target: {fileID: -1504981713932161579, guid: 1f9e43305b75f7946b05dd85c46e5c00,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f193d25c3334d9d4fad650e88d4c3bd9, type: 2}
+    - target: {fileID: -927199367670048503, guid: 1f9e43305b75f7946b05dd85c46e5c00,
+        type: 3}
+      propertyPath: m_Name
+      value: Iron Spear Blade Side
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f9e43305b75f7946b05dd85c46e5c00, type: 3}
 --- !u!4 &3903140447571108743 stripped

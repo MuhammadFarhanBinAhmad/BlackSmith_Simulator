@@ -197,7 +197,7 @@ MonoBehaviour:
   this_Enchantment_Type: 0
   ParticleEffects:
   - {fileID: 0}
-  - {fileID: 6640566353449017477, guid: e89e81d5dfdf45f4ca187149ab670f45, type: 3}
+  - {fileID: 3947782860448635012, guid: 8040253dc6dd00743a7c8e08eae06264, type: 3}
   - {fileID: 3947782860448635012, guid: 4ef8eeeed5983a24fb074198689ffe0b, type: 3}
   - {fileID: 5223514953279759946, guid: 48b3483959c76b744a563b93e9e71463, type: 3}
   - {fileID: 3788338178745284801, guid: e8e162b13e318f44e8bf049778d0b1c0, type: 3}
@@ -221,16 +221,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3573836475121886430}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: dafe1b53bb6f2574690fc35a036a76b6,
-        type: 3}
-      propertyPath: m_Name
-      value: BronzeKnifeBL
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: dafe1b53bb6f2574690fc35a036a76b6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: dafe1b53bb6f2574690fc35a036a76b6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -301,6 +291,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 923480d2d035e784da683ccdef614f24, type: 2}
+    - target: {fileID: -927199367670048503, guid: dafe1b53bb6f2574690fc35a036a76b6,
+        type: 3}
+      propertyPath: m_Name
+      value: BronzeKnifeBL
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: dafe1b53bb6f2574690fc35a036a76b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dafe1b53bb6f2574690fc35a036a76b6, type: 3}
 --- !u!4 &303965616331098914 stripped

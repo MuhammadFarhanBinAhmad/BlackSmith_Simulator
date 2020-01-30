@@ -86,6 +86,7 @@ public class CustomerAI : MonoBehaviour
             agent.destination = the_Customer_Spawner.destCounter.position;//go to counter
             customer_Dialouge.Stop();
             customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element], false);//Stop idle animation
+            CancelInvoke("StartWindowShopping");
             InvokeRepeating("GoingToCounter", 0.1f, 0.1f);
         }
     }
@@ -105,7 +106,6 @@ public class CustomerAI : MonoBehaviour
                     {
                         print(FindObjectOfType<WeaponCollectionPoint>().ready_For_Collection);
                         //Exit Store
-                        StartCoroutine("ExitingStore");
                         weapon_Recived = true;
                         Destroy(FindObjectOfType<ThisWeaponData>().gameObject);
                         CheckWeapon();
@@ -143,7 +143,6 @@ public class CustomerAI : MonoBehaviour
                     StartCoroutine("CustomerIdling");
                     CancelInvoke("GoingToCounter");
                 }
-
 
         }
 
@@ -195,44 +194,57 @@ public class CustomerAI : MonoBehaviour
         if (customer_Order[GameManager.counterDay].weapon_Material == the_Weapon_Collection_Point.material_Type)
         {
             correct_Material = true;
+            print("hit1");
         }
         if (customer_Order[GameManager.counterDay].weapon_Type == the_Weapon_Collection_Point.weapon_Type)
         {
             correct_Weapon_Type = true;
+            print("hit2");
+
         }
         if (customer_Order[GameManager.counterDay].weapon_Enchantment == the_Weapon_Collection_Point.enchantment_Type)
         {
             correct_Enchantment = true;
+            print("hit3");
+
         }
         if (correct_Enchantment && correct_Weapon_Type && correct_Material)
         {
             correct_Weapon = true;
+            print("hit4");
+
         }
         if (GameManager.counterDay == 1)
         {
-            if (correct_Material && correct_Weapon_Type)
+            if (correct_Material && correct_Weapon_Type )
             {
-                if (this.name == "Antoine")
+                if (this.name == "Antoine(Clone)")
                 {
                     AddKnightScore();
                 }
-                if (this.name == "Solana")
+                if (this.name == "Solana(Clone)")
                 {
                     AddRougeScore();
+                    print("hit5.1");
+
                 }
+                current_Voiceline = 4;
             }
         }
-        else if (correct_Material && correct_Weapon_Type && correct_Enchantment)
+        else if (correct_Weapon)
         {
-            if (this.name == "Antoine")
+            if (this.name == "Antoine(Clone)")
             {
                 AddKnightScore();
             }
-            if (this.name == "Solana")
+            if (this.name == "Solana(Clone)")
             {
                 AddRougeScore();
+                print("hit5.2");
             }
+            current_Voiceline = 5;
         }
+        StartCoroutine("ExitingStore");
     }
     void ExitStore()
     {
@@ -298,14 +310,11 @@ public class CustomerAI : MonoBehaviour
     IEnumerator ExitingStore() //Animation and Navagent only
     {
         CancelInvoke("StartWindowShopping");
-        if (correct_Weapon)
-        {
-            current_Voiceline = 5;
-        }
-        else
+        if (!correct_Weapon)
         {
             current_Voiceline = 6;
         }
+        print(current_Voiceline);
         customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], true);//stop customer order animation
         customer_Dialouge.clip = customer_Order[GameManager.counterDay].customer_Dialouge_Speech[current_Voiceline];
         customer_Dialouge.Play();
