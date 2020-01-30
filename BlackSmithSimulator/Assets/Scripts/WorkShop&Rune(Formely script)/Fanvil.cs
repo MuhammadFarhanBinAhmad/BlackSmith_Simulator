@@ -54,44 +54,8 @@ public class Fanvil : MonoBehaviour
             print("Material Check Starting");
             CheckMaterials();
         }
-
-        /*
-        //Take in inputs from Runes
-          if(other.GetComponent<RuneData>() !=null)
-          {
-            if (other.GetComponent<RuneData>().weapon_Type != 0)
-            {
-                runeWeapon = other.gameObject;
-                weaponTypeRune = other.GetComponent<RuneData>().weapon_Type;
-            }
-
-            if (other.GetComponent<RuneData>().material_Type != 0)
-            {
-                runeMaterial = other.gameObject;
-                materialTypeRune = other.GetComponent<RuneData>().material_Type;
-            }       
-          }
-          */
     }
-    /*
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.GetComponent<RuneData>() != null)
-        {
-            if (other.GetComponent<RuneData>().weapon_Type != 0)
-            {
-                runeWeapon = null;
-                //print(other.name + " Removed");
-            }
 
-            if (other.GetComponent<RuneData>().material_Type != 0)
-            {
-                runeMaterial = null;
-                //print(other.name + " Removed");
-            }
-        }
-    }
-    */
 
 
     public void AddRunes(GameObject RuneSelected)

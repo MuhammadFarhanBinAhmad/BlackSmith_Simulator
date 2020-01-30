@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1609955504746669411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3071504430341613572}
+  m_Layer: 0
+  m_Name: GMaterialSpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3071504430341613572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609955504746669411}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.059, y: 0.2609, z: 0.289}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5178345131309584725}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8180354059870544710
 GameObject:
   m_ObjectHideFlags: 0
@@ -17,6 +47,7 @@ GameObject:
   - component: {fileID: 4351461294595589351}
   - component: {fileID: 2622052399600836641}
   - component: {fileID: 1455792500541006513}
+  - component: {fileID: 1883480514776963751}
   - component: {fileID: 3460513694512096296}
   m_Layer: 0
   m_Name: CounterSideRawMaterialSpawner
@@ -35,7 +66,8 @@ Transform:
   m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 3071504430341613572}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -163,6 +195,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.012837946, y: 0.86863625, z: 0.6035416}
   m_Center: {x: -0.22802189, y: -1.3584121e-16, z: 0.3172356}
+--- !u!114 &1883480514776963751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8180354059870544710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d6e8bc3c2894b047a4b354fa5aec872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GenericMaterialPrefab: {fileID: 3311600501997356566, guid: 4fc42e24bd80c494d8cc968d3f622642,
+    type: 3}
+  GenericMaterialNo: []
+  materialSpawnPos: {fileID: 3071504430341613572}
 --- !u!65 &3460513694512096296
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -174,5 +222,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.42667663, y: 0.7519933, z: 0.52084553}
-  m_Center: {x: 0.02110257, y: -0.017394155, z: 0.272636}
+  m_Size: {x: 0.42667663, y: 0.39755177, z: 0.52084553}
+  m_Center: {x: 0.021102577, y: 0.1598266, z: 0.272636}

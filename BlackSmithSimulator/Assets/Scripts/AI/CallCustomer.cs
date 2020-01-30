@@ -67,7 +67,18 @@ public class CallCustomer : MonoBehaviour
         }
         else if (isTutorialLevel == true)
         {
-            SceneManager.LoadScene("Game_Level");
+            if (FindObjectOfType<TutorialItemCheck>() != null)
+            {
+                if (FindObjectOfType<TutorialItemCheck>().weaponenchantedItemCheck == true)
+                {
+                    SceneManager.LoadScene("Game_Level");
+                }
+            }
+            else
+            {
+                SceneManager.LoadScene("Game_Level");
+            }
+
 
         }
         bell_Ringing.Play();
