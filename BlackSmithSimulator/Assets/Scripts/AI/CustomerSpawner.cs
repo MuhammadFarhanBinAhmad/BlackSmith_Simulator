@@ -20,6 +20,7 @@ public class CustomerSpawner : MonoBehaviour
     {
         print("CurrentDay ");
         print("Customer already serve " + Customer_Already_Serve);
+        Customer_Already_Serve = 0;
 
         the_Weapon_Collection_Point = FindObjectOfType<WeaponCollectionPoint>();
         if(Customer_Already_Serve < 2)
@@ -31,7 +32,6 @@ public class CustomerSpawner : MonoBehaviour
     public void NextDay()
     {
         FindObjectOfType<GameManager>().AddDay();
-        Customer_Already_Serve = 0;
     }
     public IEnumerator SpawnNextCustomer()
     {

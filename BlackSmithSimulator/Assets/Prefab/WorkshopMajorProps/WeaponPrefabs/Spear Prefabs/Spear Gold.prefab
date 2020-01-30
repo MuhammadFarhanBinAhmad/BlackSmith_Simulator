@@ -200,9 +200,9 @@ MonoBehaviour:
   ParticleEffects:
   - {fileID: 0}
   - {fileID: 6640566353449017477, guid: e89e81d5dfdf45f4ca187149ab670f45, type: 3}
-  - {fileID: 8197511818096569268, guid: 7bf0c184142922d4abf6f7ba71576fb0, type: 3}
-  - {fileID: 5113552902516209772, guid: c0c6bdde5268f7c4ca64c30e8ec4d2a9, type: 3}
-  - {fileID: 1387353667470009069, guid: e399258bc4137a044a1cd852b4a7cd87, type: 3}
+  - {fileID: 2880482827932437801, guid: 67f82cdfe2060d34b81f1380d852b8a4, type: 3}
+  - {fileID: 6758680619719954645, guid: ea8fc766e4bd3cf478e7aa90c5c4b5ec, type: 3}
+  - {fileID: 4369040043676061453, guid: a6640e569158fa742a7b8142674cc799, type: 3}
 --- !u!65 &7626109218913758121
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -223,11 +223,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3573836475121886430}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 49f037575911327448a7378cc84e2ffb,
+    - target: {fileID: -5178661895559278292, guid: 49f037575911327448a7378cc84e2ffb,
         type: 3}
-      propertyPath: m_Name
-      value: Gold Spear Blade R
-      objectReference: {fileID: 0}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -7324755663884914933, guid: 6bf2b6c142d3a8d4996413f9de08960c,
+        type: 3}
     - target: {fileID: -4216859302048453862, guid: 49f037575911327448a7378cc84e2ffb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -293,17 +294,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0000005
       objectReference: {fileID: 0}
-    - target: {fileID: -5178661895559278292, guid: 49f037575911327448a7378cc84e2ffb,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -7324755663884914933, guid: 6bf2b6c142d3a8d4996413f9de08960c,
-        type: 3}
     - target: {fileID: -1504981713932161579, guid: 49f037575911327448a7378cc84e2ffb,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2c0da4777b01e574cbed85ba3a2ca6d2, type: 2}
+    - target: {fileID: -927199367670048503, guid: 49f037575911327448a7378cc84e2ffb,
+        type: 3}
+      propertyPath: m_Name
+      value: Gold Spear Blade R
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49f037575911327448a7378cc84e2ffb, type: 3}
 --- !u!4 &8325349564502585648 stripped
@@ -319,11 +319,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3573836475121886430}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: a2a41653cbf6c6141ab97ffb568b786b,
+    - target: {fileID: -5178661895559278292, guid: a2a41653cbf6c6141ab97ffb568b786b,
         type: 3}
-      propertyPath: m_Name
-      value: Gold Spear Blade
-      objectReference: {fileID: 0}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -6661395141149765642, guid: 686e1198e83745444ba38b77eb6e548b,
+        type: 3}
     - target: {fileID: -4216859302048453862, guid: a2a41653cbf6c6141ab97ffb568b786b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -394,12 +395,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2c0da4777b01e574cbed85ba3a2ca6d2, type: 2}
-    - target: {fileID: -5178661895559278292, guid: a2a41653cbf6c6141ab97ffb568b786b,
+    - target: {fileID: -927199367670048503, guid: a2a41653cbf6c6141ab97ffb568b786b,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -6661395141149765642, guid: 686e1198e83745444ba38b77eb6e548b,
-        type: 3}
+      propertyPath: m_Name
+      value: Gold Spear Blade
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2a41653cbf6c6141ab97ffb568b786b, type: 3}
 --- !u!4 &1283318058658263574 stripped
@@ -415,11 +415,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3573836475121886430}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 86d0b08fce5ed6f43806d4f1b3ca1198,
+    - target: {fileID: -5178661895559278292, guid: 86d0b08fce5ed6f43806d4f1b3ca1198,
         type: 3}
-      propertyPath: m_Name
-      value: Gold Spear Blade L
-      objectReference: {fileID: 0}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 7820567496400473359, guid: 827b9ce430314d34ab16cf106c784a7d,
+        type: 3}
     - target: {fileID: -4216859302048453862, guid: 86d0b08fce5ed6f43806d4f1b3ca1198,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -490,12 +491,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2c0da4777b01e574cbed85ba3a2ca6d2, type: 2}
-    - target: {fileID: -5178661895559278292, guid: 86d0b08fce5ed6f43806d4f1b3ca1198,
+    - target: {fileID: -927199367670048503, guid: 86d0b08fce5ed6f43806d4f1b3ca1198,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 7820567496400473359, guid: 827b9ce430314d34ab16cf106c784a7d,
-        type: 3}
+      propertyPath: m_Name
+      value: Gold Spear Blade L
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86d0b08fce5ed6f43806d4f1b3ca1198, type: 3}
 --- !u!4 &4184643686743319722 stripped
