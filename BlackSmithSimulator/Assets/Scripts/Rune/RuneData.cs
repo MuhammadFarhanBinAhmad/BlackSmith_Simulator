@@ -21,9 +21,9 @@ public class RuneData : MonoBehaviour
 
     public void OnRunePickup()
     {
+        this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         if (runeMakerRef != null)
         {
-            this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             runeMakerRef.OnPickUpRuneMixer();
             runeMakerRef = null;
         }

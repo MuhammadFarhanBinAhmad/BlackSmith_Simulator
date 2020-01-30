@@ -36,7 +36,6 @@ public class NewRuneSquareMaster : MonoBehaviour
             bool duplicateNumber = false;
             if (runeSequence.Count != 0)
             {
-                runeSquareUIRef.sprite = runeSquareUISprites[1];
                 for (int i = 0; i < runeSequence.Count; i++)
                 {
                     if (runeSequence[i] == newIncomingNumber)
@@ -51,7 +50,7 @@ public class NewRuneSquareMaster : MonoBehaviour
             else if (runeSequence.Count == 0)
             {
                 duplicateNumber = false;
-                runeSquareUIRef.sprite = runeSquareUISprites[0];
+                //runeSquareUIRef.sprite = runeSquareUISprites[0];
             }
 
             //Add to sequence
@@ -78,10 +77,6 @@ public class NewRuneSquareMaster : MonoBehaviour
         if (runeSequence[0] == 1 && runeSequence[1] ==2 & runeSequence[2] == 3 && runeSequence[3] == 4)
         {
             //Debug.Log("RuneSequence is the same as sequence 1");
-            if (SceneManager.GetActiveScene().name == "Tutorial_Level" && this.GetComponent<Tutorial2>() != null)
-            {
-                this.GetComponent<Tutorial2>().TutorialEventSend();
-            }
             SpawnBaseRune(0);
             ResetRuneSpawner();
         }
@@ -160,5 +155,17 @@ public class NewRuneSquareMaster : MonoBehaviour
             RuneSquareButtonReference[i].GetComponent<NewRuneSquareButton>().Invoke("ReleaseButton", 1);
         }
         LineRenderer.Invoke("ClearRuneLine", 1);
+    }
+
+    public void RuneSpawnerUI(bool isOn)
+    {
+        if(isOn == true)
+        {
+            runeSquareUIRef.sprite = runeSquareUISprites[1];
+        }
+        else
+        {
+            runeSquareUIRef.sprite = runeSquareUISprites[0];
+        }
     }
 }

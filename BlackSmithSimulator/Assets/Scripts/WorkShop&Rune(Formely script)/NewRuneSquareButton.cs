@@ -17,12 +17,14 @@ public class NewRuneSquareButton : MonoBehaviour
     {
         //Debug.Log("Button " + thisButtonNumber + " has been pressed");
         this.GetComponent<Button>().interactable = false;
+        this.GetComponent<Image>().color = Color.yellow;
         FindObjectOfType<NewRuneSquareMaster>().NumberSequenceList(thisButtonNumber);
         FindObjectOfType<RuneSquareLineRenderer>().CreateRuneLine(thisButtonPos);
     }
 
     public void ReleaseButton()
     {
+        this.GetComponent<Image>().color = Color.white;
         this.GetComponent<Button>().interactable = true;
         //Debug.Log("Button" + thisButtonNumber + " has been released");
     }

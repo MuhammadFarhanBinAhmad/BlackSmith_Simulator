@@ -7,8 +7,6 @@ public class DarkSceneModeManager : MonoBehaviour
 {
     public LevelModeType levelMode;
 
-
-
     public enum LevelModeType
     {
         Null,
@@ -50,9 +48,21 @@ public class DarkSceneModeManager : MonoBehaviour
 
     public IEnumerator LevelToLoad(string levelToLoad)
     {
+        /*
         Debug.Log("Loading " + levelToLoad);
         yield return new WaitForSeconds(0.1f);
         SceneManager.LoadScene("Pause_Main_Menu");
+        */
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(levelToLoad);
+        asyncOperation.allowSceneActivation = false;
+        while (!asyncOperation.isDone)
+        {
+            if (asyncOperation.progress >= 0.9f)
+            {
+                yield return new WaitForSeconds(3f);
+                asyncOperation.allowSceneActivation = true;
+            }
+        }
     }
 
 }
