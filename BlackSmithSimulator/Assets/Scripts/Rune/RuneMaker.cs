@@ -134,7 +134,7 @@ public class RuneMaker : MonoBehaviour
             }
             if (current_Type != 0)
             {
-                animatorReference.SetTrigger("CreatingRune");
+                animatorReference.SetBool("CreatingRune",true);
                 Instantiate(rune_Spawning_Effect, runeSpawnLocation.transform.position, Quaternion.Euler(0, 0, 0));
                 runeRef = Instantiate(Rune_Types[current_Type], runeSpawnLocation.transform.position, Quaternion.Euler(0, 0, 0));
                 if (rune_Maker_SFX != null)
@@ -161,6 +161,7 @@ public class RuneMaker : MonoBehaviour
     public void OnPickUpRuneMixer()
     {
         //rune has been picked up
+        animatorReference.SetBool("CreatingRune", false);
         print("Rune has been picked up from maker");
     }
 }

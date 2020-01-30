@@ -19,8 +19,7 @@ public class CustomerAI : MonoBehaviour
 
     GameObject weapon_Drop_Point;
 
-    CustomerPointOfInterest 
-        customer_Point_Of_Interest;
+    CustomerPointOfInterest customer_Point_Of_Interest;
 
     //check weapon given to customer
     public bool correct_Weapon_Receive;
@@ -30,6 +29,9 @@ public class CustomerAI : MonoBehaviour
     bool correct_Weapon_Type;
     bool correct_Enchantment;
     bool correct_Weapon;
+
+    //bool turning;
+    //float t = 0;
 
     int current_Animation_Element;
     int current_DestinationNumber;
@@ -55,6 +57,20 @@ public class CustomerAI : MonoBehaviour
         agent.destination = the_Customer_Spawner.destPointsOfInterest[0].position;
         StartCoroutine("MovingToCounter");
     }
+    private void Update()
+    {
+
+        /*if (turning)
+        {
+            if (t < 1)
+            {
+                t += .1f;
+                customer_Anim.SetFloat("Blend", t);
+                print("hit1");
+            }
+        }*/
+    }
+
     IEnumerator MovingToCounter()
     {
         yield return new WaitForSeconds(1);
@@ -77,7 +93,9 @@ public class CustomerAI : MonoBehaviour
     {
         if (agent.remainingDistance <= agent.stoppingDistance)
             {
-                if (current_DestinationNumber == 0)
+            agent.updateRotation = true;
+
+            if (current_DestinationNumber == 0)
                 {
                 //if order have been given...
                 if (given_Order)
@@ -103,14 +121,17 @@ public class CustomerAI : MonoBehaviour
                 //customer giving order
                 else if (!given_Order)
                 {
-                    customer_Dialouge.clip = customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[current_Voiceline];
-                    customer_Dialouge.Play();
-                    current_Voiceline++;
-                    customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], true);//play customer order animation
 
-                    if (customer_Order[CustomerSpawner.current_day].broken_Weapon != null)
+                    if (customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[current_Voiceline] != null)
                     {
-                        Instantiate(customer_Order[CustomerSpawner.current_day].broken_Weapon, weapon_Drop_Point.transform.position, weapon_Drop_Point.transform.rotation);//spawn ustomer broken weapon
+                        customer_Dialouge.clip = customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[current_Voiceline];
+                        customer_Dialouge.Play();
+                        current_Voiceline++;
+                    }
+                    customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], true);//play customer order animation
+                    if (customer_Order[GameManager.counterDay].broken_Weapon != null)
+                    {
+                        Instantiate(customer_Order[GameManager.counterDay].broken_Weapon, weapon_Drop_Point.transform.position, weapon_Drop_Point.transform.rotation);//spawn ustomer broken weapon
                     }
                     InvokeRepeating("StartWindowShopping", 0, 0.1f);
                     CancelInvoke("GoingToCounter");
@@ -122,12 +143,14 @@ public class CustomerAI : MonoBehaviour
                     StartCoroutine("CustomerIdling");
                     CancelInvoke("GoingToCounter");
                 }
-                
+
+
         }
-        
+
     }
     void StartWindowShopping()
     {
+        
         //customer start exploring and moving aroud store
         if (!customer_Dialouge.isPlaying)
         {
@@ -145,7 +168,7 @@ public class CustomerAI : MonoBehaviour
         int new_Point_Of_Interest;
 
         //ensure that the same number dont appear twice
-        new_Point_Of_Interest = Random.Range(0, customer_Point_Of_Interest.point_Of_Interest.Count-1);
+        new_Point_Of_Interest = Random.Range(1, customer_Point_Of_Interest.point_Of_Interest.Count-1);
         if (new_Point_Of_Interest == current_DestinationNumber)
         {
             MoveToNextPoint();
@@ -169,15 +192,15 @@ public class CustomerAI : MonoBehaviour
     {
         WeaponCollectionPoint the_Weapon_Collection_Point = FindObjectOfType<WeaponCollectionPoint>();
         //check all types if correct
-        if (customer_Order[CustomerSpawner.current_day].weapon_Material == the_Weapon_Collection_Point.material_Type)
+        if (customer_Order[GameManager.counterDay].weapon_Material == the_Weapon_Collection_Point.material_Type)
         {
             correct_Material = true;
         }
-        if (customer_Order[CustomerSpawner.current_day].weapon_Type == the_Weapon_Collection_Point.weapon_Type)
+        if (customer_Order[GameManager.counterDay].weapon_Type == the_Weapon_Collection_Point.weapon_Type)
         {
             correct_Weapon_Type = true;
         }
-        if (customer_Order[CustomerSpawner.current_day].weapon_Enchantment == the_Weapon_Collection_Point.enchantment_Type)
+        if (customer_Order[GameManager.counterDay].weapon_Enchantment == the_Weapon_Collection_Point.enchantment_Type)
         {
             correct_Enchantment = true;
         }
@@ -185,16 +208,30 @@ public class CustomerAI : MonoBehaviour
         {
             correct_Weapon = true;
         }
-        if (CustomerSpawner.current_day == 1)
+        if (GameManager.counterDay == 1)
         {
             if (correct_Material && correct_Weapon_Type)
             {
-                correct_Weapon_Receive = true;
+                if (this.name == "Antoine")
+                {
+                    AddKnightScore();
+                }
+                if (this.name == "Solana")
+                {
+                    AddRougeScore();
+                }
             }
         }
         else if (correct_Material && correct_Weapon_Type && correct_Enchantment)
         {
-            correct_Weapon_Receive = true;
+            if (this.name == "Antoine")
+            {
+                AddKnightScore();
+            }
+            if (this.name == "Solana")
+            {
+                AddRougeScore();
+            }
         }
     }
     void ExitStore()
@@ -212,21 +249,32 @@ public class CustomerAI : MonoBehaviour
             }
         }
     }
+    void AddKnightScore()
+    {
+        GameManager.scoreKnight++;
+    }
+    void AddRougeScore()
+    {
+        GameManager.scoreDrow++;
+    }
     IEnumerator RandomChatteringFromAI() //Animation, Navagent and Audio
     {
         yield return new WaitForSeconds(7);
         {
-            if (current_Voiceline != customer_Order[CustomerSpawner.current_day].customer_Dialouge_Speech.Count)
+            if (customer_Order[CustomerSpawner.Customer_Already_Serve].customer_Dialouge_Speech[current_Voiceline] != null)
             {
-                if (!customer_Dialouge.isPlaying)
+                if (current_Voiceline != customer_Order[GameManager.counterDay].customer_Dialouge_Speech.Count)
                 {
-                    if (current_Voiceline < 5)
+                    if (!customer_Dialouge.isPlaying)
                     {
-                        customer_Dialouge.clip = customer_Order[CustomerSpawner.current_day].customer_Dialouge_Speech[current_Voiceline];
-                        customer_Dialouge.Play();
-                        yield return new WaitForSeconds(customer_Order[CustomerSpawner.current_day].customer_Dialouge_Speech[current_Voiceline].length);
-                        current_Voiceline++;
-                        StartCoroutine("RandomChatteringFromAI");
+                        if (current_Voiceline < 5)
+                        {
+                            customer_Dialouge.clip = customer_Order[GameManager.counterDay].customer_Dialouge_Speech[current_Voiceline];
+                            customer_Dialouge.Play();
+                            yield return new WaitForSeconds(customer_Order[GameManager.counterDay].customer_Dialouge_Speech[current_Voiceline].length);
+                            current_Voiceline++;
+                            StartCoroutine("RandomChatteringFromAI");
+                        }
                     }
                 }
             }
@@ -238,7 +286,7 @@ public class CustomerAI : MonoBehaviour
         //customer will idle for a period of time before moving to next location
         int times_Animation_Loops = Random.Range(0, 2);
 
-        current_Animation_Element = Random.Range(0, the_Customer_Spawner.general_Customer_Anim.Count-1);
+        current_Animation_Element = Random.Range(1, the_Customer_Spawner.general_Customer_Anim.Count-1);
         customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element], true);//Start idle animation
         yield return new WaitForSeconds(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element].Length/2);
         customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[current_Animation_Element], false);//Stop idle animation
@@ -258,9 +306,9 @@ public class CustomerAI : MonoBehaviour
             current_Voiceline = 6;
         }
         customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], true);//stop customer order animation
-        customer_Dialouge.clip = customer_Order[CustomerSpawner.current_day].customer_Dialouge_Speech[current_Voiceline];
+        customer_Dialouge.clip = customer_Order[GameManager.counterDay].customer_Dialouge_Speech[current_Voiceline];
         customer_Dialouge.Play();
-        yield return new WaitForSeconds(customer_Order[CustomerSpawner.current_day].customer_Dialouge_Speech[current_Voiceline].length);//place grabing animation time here
+        yield return new WaitForSeconds(customer_Order[GameManager.counterDay].customer_Dialouge_Speech[current_Voiceline].length);//place grabing animation time here
         customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], false);//stop customer order animation
         //current_DestinationNumber = the_Customer_Spawner.point_Of_Interest.Count - 1;
         agent.destination = the_Customer_Spawner.destExit.position;

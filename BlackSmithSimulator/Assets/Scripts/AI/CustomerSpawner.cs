@@ -4,14 +4,12 @@ using UnityEngine;
 public class CustomerSpawner : MonoBehaviour
 {
 
-    public static int current_day;
     public static int Customer_Already_Serve;
 
     public Transform[] destPointsOfInterest;
     public Transform destCounter;
     public Transform destExit;
     public List<GameObject> Customer = new List<GameObject>();
-    public List<GameObject> brokenWeapon = new List<GameObject>();
 
     WeaponCollectionPoint the_Weapon_Collection_Point;
 
@@ -20,7 +18,7 @@ public class CustomerSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        print("CurrentDay "+ current_day);
+        print("CurrentDay ");
         print("Customer already serve " + Customer_Already_Serve);
 
         the_Weapon_Collection_Point = FindObjectOfType<WeaponCollectionPoint>();
@@ -32,7 +30,7 @@ public class CustomerSpawner : MonoBehaviour
     //Spawn Customer
     public void NextDay()
     {
-        current_day++;
+        FindObjectOfType<GameManager>().AddDay();
         Customer_Already_Serve = 0;
     }
     public IEnumerator SpawnNextCustomer()
