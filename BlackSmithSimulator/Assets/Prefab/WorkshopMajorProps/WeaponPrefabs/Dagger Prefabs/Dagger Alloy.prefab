@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 3573836475121886406}
   - component: {fileID: 3573836475121886425}
   - component: {fileID: 3573836475121886424}
-  - component: {fileID: 3573836475121886427}
   - component: {fileID: 3573836475121886426}
   - component: {fileID: 3573836475121886429}
   - component: {fileID: -2339719642386298541}
   - component: {fileID: 4607385213884647692}
+  - component: {fileID: -6651651781211314135}
   m_Layer: 0
   m_Name: Dagger Alloy
   m_TagString: Untagged
@@ -121,7 +121,7 @@ MonoBehaviour:
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 3573836475121886427}
+  grabAttachMechanicScript: {fileID: -6651651781211314135}
   secondaryGrabActionScript: {fileID: 3573836475121886426}
   isUsable: 0
   holdButtonToUse: 1
@@ -132,26 +132,6 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
---- !u!114 &3573836475121886427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3573836475121886417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
-  destroyImmediatelyOnThrow: 1
-  breakForce: 1500
 --- !u!114 &3573836475121886426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,6 +194,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.15728733, y: 0.0420357, z: 0.42976895}
   m_Center: {x: -0.0004518628, y: -0.00047951937, z: -0.0028199106}
+--- !u!114 &-6651651781211314135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3573836475121886417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
 --- !u!1001 &3080582228676653457
 PrefabInstance:
   m_ObjectHideFlags: 0

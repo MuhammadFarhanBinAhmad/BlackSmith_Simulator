@@ -15,6 +15,7 @@ public class TutorialManager : MonoBehaviour
     public GameObject bottleSpotLight;
 
     public GameObject teleportSpotLight;
+    public GameObject teleportPointer;
 
     GameObject grabBottle;
 
@@ -48,6 +49,8 @@ public class TutorialManager : MonoBehaviour
         //tutorialText.text = "teleport with X button";
         darkSceneTutorialImage.sprite = darkSceneTutorialImages[2];
         teleportSpotLight.SetActive(true);
+        teleportPointer.SetActive(true);
+
 
     }
     public void Tutorial4()

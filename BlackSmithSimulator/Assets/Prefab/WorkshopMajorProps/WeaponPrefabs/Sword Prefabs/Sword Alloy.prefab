@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 3573836475121886406}
   - component: {fileID: 3573836475121886425}
   - component: {fileID: 3573836475121886424}
-  - component: {fileID: 3573836475121886427}
   - component: {fileID: 3573836475121886426}
   - component: {fileID: 3573836475121886429}
   - component: {fileID: 1188063902944372166}
   - component: {fileID: 7313458011064729287}
+  - component: {fileID: -5602184728280970030}
   m_Layer: 0
   m_Name: Sword Alloy
   m_TagString: Untagged
@@ -121,7 +121,7 @@ MonoBehaviour:
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 3573836475121886427}
+  grabAttachMechanicScript: {fileID: -5602184728280970030}
   secondaryGrabActionScript: {fileID: 3573836475121886426}
   isUsable: 0
   holdButtonToUse: 1
@@ -132,26 +132,6 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
---- !u!114 &3573836475121886427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3573836475121886417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
-  destroyImmediatelyOnThrow: 1
-  breakForce: 1500
 --- !u!114 &3573836475121886426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,6 +194,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.14037311, y: 0.052574337, z: 0.85636675}
   m_Center: {x: 0.0009826608, y: 0.00013157725, z: 0.0012247562}
+--- !u!114 &-5602184728280970030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3573836475121886417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
 --- !u!1001 &1739817275308889548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -221,11 +219,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3573836475121886430}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: e7cec42841392a04d932dc41a015b29a,
-        type: 3}
-      propertyPath: m_Name
-      value: AlloySWBlade
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e7cec42841392a04d932dc41a015b29a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -296,6 +289,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f92c0731aeed64942a6613bf41ef6150, type: 2}
+    - target: {fileID: -927199367670048503, guid: e7cec42841392a04d932dc41a015b29a,
+        type: 3}
+      propertyPath: m_Name
+      value: AlloySWBlade
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7cec42841392a04d932dc41a015b29a, type: 3}
 --- !u!4 &6728279258982416086 stripped
