@@ -135,8 +135,8 @@ public class RuneMaker : MonoBehaviour
             if (current_Type != 0)
             {
                 animatorReference.SetBool("CreatingRune",true);
-                Instantiate(rune_Spawning_Effect, runeSpawnLocation.transform.position, Quaternion.Euler(0, 0, 0));
-                runeRef = Instantiate(Rune_Types[current_Type], runeSpawnLocation.transform.position, Quaternion.Euler(0, 0, 0));
+                Instantiate(rune_Spawning_Effect, runeSpawnLocation.transform.position, Quaternion.Euler(0, 0, -110));
+                runeRef = Instantiate(Rune_Types[current_Type], runeSpawnLocation.transform.position, Quaternion.Euler(0, 0, -110));
                 if (rune_Maker_SFX != null)
                 {
                     rune_Maker_SFX.Play();
