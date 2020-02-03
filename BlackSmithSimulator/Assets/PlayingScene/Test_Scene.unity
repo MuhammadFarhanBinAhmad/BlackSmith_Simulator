@@ -609,6 +609,7 @@ MonoBehaviour:
   weapon_Type: 0
   material_Type: 0
   enchantment_Type: 0
+  created_Weapon: {fileID: 0}
 --- !u!4 &1220831910
 Transform:
   m_ObjectHideFlags: 0
@@ -1356,7 +1357,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Customer.Array.data[0]
       value: 
-      objectReference: {fileID: 372240657062210236, guid: 2a002d01c2c7f4c4cba59edfa5ffc390,
+      objectReference: {fileID: 372240657062210236, guid: 5b386bc47a0928840ae00f8d1f61a85d,
         type: 3}
     - target: {fileID: 3354990961964658847, guid: f32b06ed9a17e00449ac5ec2bb52d1ac,
         type: 3}

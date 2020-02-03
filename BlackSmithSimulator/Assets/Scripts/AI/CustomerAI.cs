@@ -96,7 +96,6 @@ public class CustomerAI : MonoBehaviour
                         print(FindObjectOfType<WeaponCollectionPoint>().ready_For_Collection);
                         //Exit Store
                         weapon_Recived = true;
-                        Destroy(FindObjectOfType<ThisWeaponData>().gameObject);
                         CheckWeapon();
                         CancelInvoke("GoingToCounter");
                     }
@@ -184,30 +183,23 @@ public class CustomerAI : MonoBehaviour
     void CheckWeapon()
     {
         WeaponCollectionPoint the_Weapon_Collection_Point = FindObjectOfType<WeaponCollectionPoint>();
-        customer_Anim.SetBool("PickingUp", true);
+        StopCoroutine("CustomerIdling");
         //check all types if correct
         if (customer_Order[GameManager.counterDay].weapon_Material == the_Weapon_Collection_Point.material_Type)
         {
             correct_Material = true;
-            print("hit1");
         }
         if (customer_Order[GameManager.counterDay].weapon_Type == the_Weapon_Collection_Point.weapon_Type)
         {
             correct_Weapon_Type = true;
-            print("hit2");
-
         }
         if (customer_Order[GameManager.counterDay].weapon_Enchantment == the_Weapon_Collection_Point.enchantment_Type)
         {
             correct_Enchantment = true;
-            print("hit3");
-
         }
         if (correct_Enchantment && correct_Weapon_Type && correct_Material)
         {
             correct_Weapon = true;
-            print("hit4");
-
         }
         if (GameManager.counterDay == 1)
         {
@@ -220,8 +212,6 @@ public class CustomerAI : MonoBehaviour
                 if (this.name == "Solana(Clone)")
                 {
                     AddRougeScore();
-                    print("hit5.1");
-
                 }
                 current_Voiceline = 4;
             }
@@ -316,22 +306,19 @@ public class CustomerAI : MonoBehaviour
         {
             current_Voiceline = 6;
         }
-        print(current_Voiceline);
-        customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], true);//stop customer order animation
+        customer_Anim.SetBool("PickingUp", true);
+        //transform.LookAt(FindObjectOfType<VRTK.VRTK_SDKManager>().transform);
+        transform.LookAt(GameObject.Find("Test").transform);
+        yield return new WaitForSeconds(0.18f);
+        FindObjectOfType<WeaponCollectionPoint>().created_Weapon.GetComponent<Rigidbody>().useGravity = false;
+        FindObjectOfType<WeaponCollectionPoint>().created_Weapon.transform.SetParent(hand.transform);
+        FindObjectOfType<WeaponCollectionPoint>().created_Weapon.transform.position = hand.transform.position;
         customer_Dialouge.clip = customer_Order[GameManager.counterDay].customer_Dialouge_Speech[current_Voiceline];
         customer_Dialouge.Play();
         yield return new WaitForSeconds(customer_Order[GameManager.counterDay].customer_Dialouge_Speech[current_Voiceline].length);//place grabing animation time here
-        customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], false);//stop customer order animation
+        customer_Anim.SetBool("PickingUp", false);
         //current_DestinationNumber = the_Customer_Spawner.point_Of_Interest.Count - 1;
         agent.destination = the_Customer_Spawner.destExit.position;
         InvokeRepeating("ExitStore", 0, 0.1f);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.GetComponent<ThisWeaponData>() != null)
-        {
-            other.transform.SetParent(hand.transform);
-        }
     }
 }
