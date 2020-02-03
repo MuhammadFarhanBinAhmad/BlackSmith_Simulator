@@ -1852,9 +1852,9 @@ MonoBehaviour:
   tutorialBoard: {fileID: 1077501407}
   darkSceneTutorialImage: {fileID: 1372653893}
   darkSceneTutorialImages:
+  - {fileID: 21300000, guid: 8ee82d8cd2e19fe47af755f3508f9696, type: 3}
   - {fileID: 21300000, guid: 1176e62a2c470e44b97491fea929252d, type: 3}
   - {fileID: 21300000, guid: 72ea928f93d53ae40bacfa8162fc23dc, type: 3}
-  - {fileID: 21300000, guid: 8ee82d8cd2e19fe47af755f3508f9696, type: 3}
   - {fileID: 21300000, guid: 78593a7e18bfe4846b0d60e526d4a896, type: 3}
   - {fileID: 21300000, guid: b382e75df3ceccb41b9cdb2d73f19348, type: 3}
   bottleToGrab: {fileID: 1172220631700427365, guid: bdc7f1e36631946479f8db11c811e112,
@@ -2529,7 +2529,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 783027783}
-        m_MethodName: Tutorial4
+        m_MethodName: Tutorial2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3605,7 +3605,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeToBlack: 0
+  lightReference: {fileID: 0}
+  lightRange: 0
+  lightRangeTemp: 0
+  lightRangeSpeed: 1
+  lightIntensity: 0
+  lightIntensityTemp: 0
+  lightIntensitySpeed: 1
   fadeTime: 5
+  fadeTimeTemp: 0
+  percentToChange: 0
 --- !u!108 &1625351492
 Light:
   m_ObjectHideFlags: 0
@@ -3715,10 +3724,10 @@ Light:
   serializedVersion: 9
   m_Type: 0
   m_Color: {r: 0.9716981, g: 0.9540167, b: 0.7654414, a: 1}
-  m_Intensity: 3
-  m_Range: 9.38
-  m_SpotAngle: 71
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 1
+  m_Range: 5
+  m_SpotAngle: 45
+  m_InnerSpotAngle: 4
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -3791,7 +3800,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeToBlack: 0
+  lightReference: {fileID: 0}
+  lightRange: 0
+  lightRangeTemp: 0
+  lightRangeSpeed: 1
+  lightIntensity: 0
+  lightIntensityTemp: 0
+  lightIntensitySpeed: 1
   fadeTime: 5
+  fadeTimeTemp: 0
+  percentToChange: 0
 --- !u!1 &1670237636
 GameObject:
   m_ObjectHideFlags: 0
@@ -4332,7 +4350,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1905625700}
   - component: {fileID: 1905625702}
-  - component: {fileID: 1905625701}
   m_Layer: 0
   m_Name: Point Light2
   m_TagString: Untagged
@@ -4354,20 +4371,6 @@ Transform:
   m_Father: {fileID: 783027784}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &1905625701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1905625699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 522a2391b5fd76e4f8c2b24a156d11bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeToBlack: 0
-  fadeTime: 5
 --- !u!108 &1905625702
 Light:
   m_ObjectHideFlags: 0

@@ -13,11 +13,11 @@ public class FloatingObjectGrab : MonoBehaviour
     public void UnfreezeObjectTutorial()
     {
         this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-        FindObjectOfType<TutorialManager>().Tutorial2();
+        FindObjectOfType<TutorialManager>().Tutorial3();
     }
     public void TutorialDrop()
     {
-        FindObjectOfType<TutorialManager>().Tutorial3();
+        FindObjectOfType<TutorialManager>().Tutorial4();
     }
     private void OnCollisionEnter(Collision collision)
     {

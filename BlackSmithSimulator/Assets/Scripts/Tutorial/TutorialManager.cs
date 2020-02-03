@@ -25,32 +25,29 @@ public class TutorialManager : MonoBehaviour
     }
 
     public void Tutorial1()
-    {
-        //grabbing objects
+    {  
         tutorialBoard.SetActive(true);
         //tutorialText.text = "Grab object with x button";
         darkSceneTutorialImage.sprite = darkSceneTutorialImages[0];
-
-        grabBottle = Instantiate(bottleToGrab, posToSpawn.position, Quaternion.Euler(0, 0, 0));
-        bottleSpotLight.SetActive(true);
+        teleportSpotLight.SetActive(true);
+        teleportPointer.SetActive(true);
     }
 
     public void Tutorial2()
     {
-        //throwing objects
-        //tutorialText.text = "Throw object with x button";
+
+        //new grabbing objects
         darkSceneTutorialImage.sprite = darkSceneTutorialImages[1];
-        bottleSpotLight.SetActive(false);
+        grabBottle = Instantiate(bottleToGrab, posToSpawn.position, Quaternion.Euler(0, 0, 0));
+        bottleSpotLight.SetActive(true);
     }
 
     public void Tutorial3()
     {
-        //teleporting
-        //tutorialText.text = "teleport with X button";
+ 
+        //new throwing objects
         darkSceneTutorialImage.sprite = darkSceneTutorialImages[2];
-        teleportSpotLight.SetActive(true);
-        teleportPointer.SetActive(true);
-
+        bottleSpotLight.SetActive(false);
 
     }
     public void Tutorial4()
