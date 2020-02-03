@@ -601,18 +601,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisButtonNumber: 1
   thisButtonPos: {x: 0, y: 0, z: 0}
---- !u!114 &446673802 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8205848058588528708, guid: e34dee5992dab4144b90989d7928ad74,
-    type: 3}
-  m_PrefabInstance: {fileID: 102163452592180395}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3abaf4521bf2344ea21ed3020b98eb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &489300186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,18 +1514,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisButtonNumber: 3
   thisButtonPos: {x: 0, y: 0, z: 0}
---- !u!114 &841928574 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3447980954195594972, guid: e34dee5992dab4144b90989d7928ad74,
-    type: 3}
-  m_PrefabInstance: {fileID: 102163452592180395}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3abaf4521bf2344ea21ed3020b98eb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!21 &1012094369
 Material:
   serializedVersion: 6
@@ -3547,11 +3523,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 272484179596972934, guid: e34dee5992dab4144b90989d7928ad74,
-        type: 3}
-      propertyPath: linkedObject
-      value: 
-      objectReference: {fileID: 841928574}
     - target: {fileID: 334796211198547456, guid: e34dee5992dab4144b90989d7928ad74,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3857,11 +3828,6 @@ PrefabInstance:
       propertyPath: m_Shadows.m_Type
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6423718567031781337, guid: e34dee5992dab4144b90989d7928ad74,
-        type: 3}
-      propertyPath: linkedObject
-      value: 
-      objectReference: {fileID: 446673802}
     - target: {fileID: 6472520312487626328, guid: e34dee5992dab4144b90989d7928ad74,
         type: 3}
       propertyPath: m_CastShadows

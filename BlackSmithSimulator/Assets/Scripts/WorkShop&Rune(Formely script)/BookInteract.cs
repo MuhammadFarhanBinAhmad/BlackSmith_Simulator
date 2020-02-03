@@ -38,25 +38,22 @@ public class BookInteract : MonoBehaviour
         }
     }
 
+    
     protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
     {
         //Object used = toggle on
 
-        switch (pageflip)
-        {
-            case PageFlipDirection.PreviousPage:
-                bookBehaviour.PreviousPage();
-                break;
-            case PageFlipDirection.NextPage:
-                bookBehaviour.NextPage();
-                break;
-        }
-        //bookBehaviour.NextPage();
+        //TurnPage();
     }
 
     protected virtual void InteractableObjectUnused(object sender, InteractableObjectEventArgs e)
     {
         //Object unused = toggle off
+        //TurnPage();
+    }
+    
+    public void TurnPage()
+    {
         switch (pageflip)
         {
             case PageFlipDirection.PreviousPage:
@@ -66,8 +63,6 @@ public class BookInteract : MonoBehaviour
                 bookBehaviour.NextPage();
                 break;
         }
-        //bookBehaviour.NextPage();
     }
-
 
 }

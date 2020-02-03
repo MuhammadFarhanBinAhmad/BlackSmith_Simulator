@@ -8,6 +8,8 @@ public class TutorialItemCheck : MonoBehaviour
     public bool weaponItemCheck;
     public bool weaponenchantedItemCheck;
 
+    GameObject weaponRef;
+
     void Start()
     {
         runeItemCheck = false;
@@ -26,10 +28,16 @@ public class TutorialItemCheck : MonoBehaviour
         {
             weaponItemCheck = true;
 
-            if (other.GetComponent<ThisWeaponData>().this_Material_Type != 0 && other.GetComponent<ThisWeaponData>().this_Weapon_Type != 0 && other.GetComponent<ThisWeaponData>().this_Enchantment_Type != 0)
-            {
-                weaponenchantedItemCheck = true;
-            }
+            weaponRef = other.gameObject;
+            WeaponCompletedCheck();
+        }
+    }
+
+    public void WeaponCompletedCheck()
+    {
+        if (weaponRef.GetComponent<ThisWeaponData>().this_Material_Type != 0 && weaponRef.GetComponent<ThisWeaponData>().this_Weapon_Type != 0 && weaponRef.GetComponent<ThisWeaponData>().this_Enchantment_Type != 0)
+        {
+            weaponenchantedItemCheck = true;
         }
     }
 }
