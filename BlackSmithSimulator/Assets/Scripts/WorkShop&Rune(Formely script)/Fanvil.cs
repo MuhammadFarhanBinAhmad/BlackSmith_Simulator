@@ -51,7 +51,6 @@ public class Fanvil : MonoBehaviour
         //Check materials gathered when hit the base
         if (other.tag == "FanvilBase")
         {
-            print("Material Check Starting");
             CheckMaterials();
         }
     }

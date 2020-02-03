@@ -21,6 +21,8 @@ public class CustomerAI : MonoBehaviour
 
     CustomerPointOfInterest customer_Point_Of_Interest;
 
+    public GameObject hand;
+
     //check weapon given to customer
     public bool correct_Weapon_Receive;
     bool given_Order;
@@ -56,19 +58,6 @@ public class CustomerAI : MonoBehaviour
         //StartCoroutine(AIEntrance());
         agent.destination = the_Customer_Spawner.destPointsOfInterest[0].position;
         StartCoroutine("MovingToCounter");
-    }
-    private void Update()
-    {
-
-        /*if (turning)
-        {
-            if (t < 1)
-            {
-                t += .1f;
-                customer_Anim.SetFloat("Blend", t);
-                print("hit1");
-            }
-        }*/
     }
 
     IEnumerator MovingToCounter()
@@ -128,10 +117,12 @@ public class CustomerAI : MonoBehaviour
                         customer_Dialouge.Play();
                         current_Voiceline++;
                     }
-                    customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], true);//play customer order animation
                     if (customer_Order[GameManager.counterDay].broken_Weapon != null)
                     {
-                        Instantiate(customer_Order[GameManager.counterDay].broken_Weapon, weapon_Drop_Point.transform.position, weapon_Drop_Point.transform.rotation);//spawn ustomer broken weapon
+                        customer_Anim.SetBool("Giving", true);
+                        StartCoroutine("GivingNote");
+                        //transform.LookAt(FindObjectOfType<VRTK.VRTK_SDKManager>().transform);
+                        transform.LookAt(GameObject.Find("Test").transform);
                     }
                     InvokeRepeating("StartWindowShopping", 0, 0.1f);
                     CancelInvoke("GoingToCounter");
@@ -172,6 +163,9 @@ public class CustomerAI : MonoBehaviour
         {
             MoveToNextPoint();
         }
+
+        //transform.LookAt(the_Customer_Spawner.destPointsOfInterest[current_DestinationNumber]);
+
         if (new_Point_Of_Interest != current_DestinationNumber)
         {
             if (!agent.pathPending)
@@ -190,6 +184,7 @@ public class CustomerAI : MonoBehaviour
     void CheckWeapon()
     {
         WeaponCollectionPoint the_Weapon_Collection_Point = FindObjectOfType<WeaponCollectionPoint>();
+        customer_Anim.SetBool("PickingUp", true);
         //check all types if correct
         if (customer_Order[GameManager.counterDay].weapon_Material == the_Weapon_Collection_Point.material_Type)
         {
@@ -240,7 +235,6 @@ public class CustomerAI : MonoBehaviour
             if (this.name == "Solana(Clone)")
             {
                 AddRougeScore();
-                print("hit5.2");
             }
             current_Voiceline = 5;
         }
@@ -269,6 +263,14 @@ public class CustomerAI : MonoBehaviour
     void AddRougeScore()
     {
         GameManager.scoreDrow++;
+    }
+    IEnumerator GivingNote()
+    {
+        yield return new WaitForSeconds(customer_Anim.GetCurrentAnimatorClipInfo(0).Length);
+        Instantiate(customer_Order[GameManager.counterDay].broken_Weapon, weapon_Drop_Point.transform.position, weapon_Drop_Point.transform.rotation);//spawn ustomer broken weapon
+        customer_Anim.SetBool("Giving", false);
+        customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], true);//play customer order animation
+
     }
     IEnumerator RandomChatteringFromAI() //Animation, Navagent and Audio
     {
@@ -323,5 +325,13 @@ public class CustomerAI : MonoBehaviour
         //current_DestinationNumber = the_Customer_Spawner.point_Of_Interest.Count - 1;
         agent.destination = the_Customer_Spawner.destExit.position;
         InvokeRepeating("ExitStore", 0, 0.1f);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<ThisWeaponData>() != null)
+        {
+            other.transform.SetParent(hand.transform);
+        }
     }
 }

@@ -20,8 +20,6 @@ public class CustomerSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        print("CurrentDay ");
-        print("Customer already serve " + Customer_Already_Serve);
         Customer_Already_Serve = 0;
 
         the_Weapon_Collection_Point = FindObjectOfType<WeaponCollectionPoint>();
@@ -37,13 +35,14 @@ public class CustomerSpawner : MonoBehaviour
     }
     public IEnumerator SpawnNextCustomer()
     {
-        print(Customer_Already_Serve);
+
         the_Weapon_Collection_Point.ready_For_Collection = false;
         //wait before next customer spawn
         yield return new WaitForSeconds(3);
         if (Customer_Already_Serve == 2)
         {
             Instantiate(bell_Sparkle, FindObjectOfType<CallCustomer>().transform.position, FindObjectOfType<CallCustomer>().transform.rotation);
+            print("hit");
         }
         if (Customer_Already_Serve <= Customer.Count - 1)
         {
