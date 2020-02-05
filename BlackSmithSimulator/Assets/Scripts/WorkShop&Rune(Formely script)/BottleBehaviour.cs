@@ -24,7 +24,6 @@ public class BottleBehaviour : MonoBehaviour
     public enum InteractableUIEffect
     {
         NoEffect,
-        Teleport,
         MainMenu,
         QuitGame,
     }
@@ -76,10 +75,6 @@ public class BottleBehaviour : MonoBehaviour
         switch (UIEffect)
         {
             case InteractableUIEffect.NoEffect:
-                Instantiate(dropEffect, this.transform.position, Quaternion.Euler(0, 0, 0));
-                this.GetComponent<AudioSource>().Play();
-                break;
-            case InteractableUIEffect.Teleport:
                 Instantiate(dropEffect, this.transform.position, Quaternion.Euler(0, 0, 0));
                 this.GetComponent<AudioSource>().Play();
                 break;
