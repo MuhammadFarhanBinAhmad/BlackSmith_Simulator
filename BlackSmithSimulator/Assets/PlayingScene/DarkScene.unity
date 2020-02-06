@@ -1458,7 +1458,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443845904}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.328}
+  m_LocalPosition: {x: 0, y: 0, z: 6.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 783027784}
@@ -2430,7 +2430,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142030787}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0.2}
+  m_LocalPosition: {x: 0, y: 0, z: 4.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1884456649}
@@ -3584,37 +3584,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1625351493}
   - component: {fileID: 1625351492}
-  - component: {fileID: 1625351491}
   m_Layer: 0
-  m_Name: Point Light2 (1)
+  m_Name: TeleportLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1625351491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1625351490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 522a2391b5fd76e4f8c2b24a156d11bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeToBlack: 0
-  lightReference: {fileID: 0}
-  lightRange: 0
-  lightRangeTemp: 0
-  lightRangeSpeed: 1
-  lightIntensity: 0
-  lightIntensityTemp: 0
-  lightIntensitySpeed: 1
-  fadeTime: 5
-  fadeTimeTemp: 0
-  percentToChange: 0
 --- !u!108 &1625351492
 Light:
   m_ObjectHideFlags: 0
@@ -3683,7 +3659,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1625351490}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.061, y: 3, z: -6.36}
+  m_LocalPosition: {x: -0.061, y: 3, z: 0.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3799,17 +3775,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 522a2391b5fd76e4f8c2b24a156d11bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeToBlack: 0
-  lightReference: {fileID: 0}
-  lightRange: 0
-  lightRangeTemp: 0
-  lightRangeSpeed: 1
-  lightIntensity: 0
-  lightIntensityTemp: 0
-  lightIntensitySpeed: 1
-  fadeTime: 5
-  fadeTimeTemp: 0
-  percentToChange: 0
 --- !u!1 &1670237636
 GameObject:
   m_ObjectHideFlags: 0
@@ -4351,7 +4316,7 @@ GameObject:
   - component: {fileID: 1905625700}
   - component: {fileID: 1905625702}
   m_Layer: 0
-  m_Name: Point Light2
+  m_Name: BottleLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4365,7 +4330,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905625699}
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 1.938, z: 0}
+  m_LocalPosition: {x: 0, y: 1.938, z: 5.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 783027784}

@@ -22,7 +22,7 @@ public class subtitletest : MonoBehaviour
 
         if (tmProGUI.text.Length > 1)
         {
-
+            
         }
     }
 }
