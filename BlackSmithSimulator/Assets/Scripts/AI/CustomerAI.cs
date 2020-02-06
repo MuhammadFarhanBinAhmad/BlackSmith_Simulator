@@ -120,8 +120,14 @@ public class CustomerAI : MonoBehaviour
                     {
                         customer_Anim.SetBool("Giving", true);
                         StartCoroutine("GivingNote");
-                        //transform.LookAt(FindObjectOfType<VRTK.VRTK_SDKManager>().transform);
-                        transform.LookAt(GameObject.Find("Test").transform);
+                        if (FindObjectOfType<VRTK.VRTK_SDKManager>() != null)
+                        {
+                            transform.LookAt(FindObjectOfType<VRTK.VRTK_SDKManager>().transform);
+                        }
+                        if (GameObject.Find("Test") != null)
+                        {
+                            transform.LookAt(GameObject.Find("Test").transform);
+                        }
                     }
                     InvokeRepeating("StartWindowShopping", 0, 0.1f);
                     CancelInvoke("GoingToCounter");
@@ -310,9 +316,7 @@ public class CustomerAI : MonoBehaviour
         //transform.LookAt(FindObjectOfType<VRTK.VRTK_SDKManager>().transform);
         transform.LookAt(GameObject.Find("Test").transform);
         yield return new WaitForSeconds(0.18f);
-        FindObjectOfType<WeaponCollectionPoint>().created_Weapon.GetComponent<Rigidbody>().useGravity = false;
-        FindObjectOfType<WeaponCollectionPoint>().created_Weapon.transform.SetParent(hand.transform);
-        FindObjectOfType<WeaponCollectionPoint>().created_Weapon.transform.position = hand.transform.position;
+        WeaponPosition();
         customer_Dialouge.clip = customer_Order[GameManager.counterDay].customer_Dialouge_Speech[current_Voiceline];
         customer_Dialouge.Play();
         yield return new WaitForSeconds(customer_Order[GameManager.counterDay].customer_Dialouge_Speech[current_Voiceline].length);//place grabing animation time here
@@ -320,5 +324,13 @@ public class CustomerAI : MonoBehaviour
         //current_DestinationNumber = the_Customer_Spawner.point_Of_Interest.Count - 1;
         agent.destination = the_Customer_Spawner.destExit.position;
         InvokeRepeating("ExitStore", 0, 0.1f);
+    }
+    void WeaponPosition()
+    {
+        FindObjectOfType<WeaponCollectionPoint>().created_Weapon.GetComponent<Rigidbody>().useGravity = false;
+        FindObjectOfType<WeaponCollectionPoint>().created_Weapon.transform.SetParent(hand.transform);
+        FindObjectOfType<WeaponCollectionPoint>().created_Weapon.transform.localPosition = new Vector3(0,0,0);
+        FindObjectOfType<WeaponCollectionPoint>().created_Weapon.transform.localEulerAngles = new Vector3(-172,0,0);
+
     }
 }
