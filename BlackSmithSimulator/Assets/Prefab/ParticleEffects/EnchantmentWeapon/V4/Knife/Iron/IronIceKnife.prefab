@@ -14183,6 +14183,7 @@ Transform:
   - {fileID: 4277503378648645527}
   - {fileID: 5168211013852973146}
   - {fileID: 3403743849671557496}
+  - {fileID: 6080160990568836069}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23656,3 +23657,78 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!1001 &6576299835764619028
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3398613571680190262}
+    m_Modifications:
+    - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121625737935069152, guid: 9b3b011a5ecaf254185871d566766eb3,
+        type: 3}
+      propertyPath: m_Name
+      value: WeaponSoundEffects
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9b3b011a5ecaf254185871d566766eb3, type: 3}
+--- !u!4 &6080160990568836069 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 6576299835764619028}
+  m_PrefabAsset: {fileID: 0}
