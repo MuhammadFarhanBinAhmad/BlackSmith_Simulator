@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class TutorialItemCheck : MonoBehaviour
 {
@@ -9,8 +8,7 @@ public class TutorialItemCheck : MonoBehaviour
     public bool weaponItemCheck;
     public bool weaponenchantedItemCheck;
 
-    public Sprite[] checkboxSprites;
-    public Image[] checkboxImages;
+    public GameObject[] tickImages;
 
     GameObject weaponRef;
 
@@ -26,13 +24,13 @@ public class TutorialItemCheck : MonoBehaviour
         if (other.GetComponent<RuneData>() != null)
         {
             runeItemCheck = true;
-            checkboxImages[0].sprite = checkboxSprites[1];
+            tickImages[0].SetActive(true);
         }
 
         if (other.GetComponent<ThisWeaponData>() != null)
         {
             weaponItemCheck = true;
-            checkboxImages[1].sprite = checkboxSprites[1];
+            tickImages[1].SetActive(true);
             weaponRef = other.gameObject;
             WeaponCompletedCheck();
         }
@@ -43,7 +41,7 @@ public class TutorialItemCheck : MonoBehaviour
         if (weaponRef.GetComponent<ThisWeaponData>().this_Material_Type != 0 && weaponRef.GetComponent<ThisWeaponData>().this_Weapon_Type != 0 && weaponRef.GetComponent<ThisWeaponData>().this_Enchantment_Type != 0)
         {
             weaponenchantedItemCheck = true;
-            checkboxImages[2].sprite = checkboxSprites[1];
+            tickImages[2].SetActive(true);
         }
     }
 }
