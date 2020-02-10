@@ -31,7 +31,7 @@ public class BookBehaviour : MonoBehaviour
         {
             CurrentPage++;
             thisMeshRenderer.material = Pages[CurrentPage];
-            print("Turning to page "+CurrentPage);
+            //print("Turning to page "+CurrentPage);
         }
     }
 
@@ -41,7 +41,7 @@ public class BookBehaviour : MonoBehaviour
         {
             CurrentPage--;
             thisMeshRenderer.material = Pages[CurrentPage];
-            print("Turning to page "+CurrentPage);
+            //print("Turning to page "+CurrentPage);
         }
     }
 
