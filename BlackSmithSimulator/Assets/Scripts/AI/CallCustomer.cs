@@ -23,26 +23,7 @@ public class CallCustomer : MonoBehaviour
                 FindObjectOfType<CustomerAI>().CollectingWeapon();//customer collect weapon
             }
         }
-            /*if(current_Scene.name == "Game_Level")
-            {
-                if (CustomerSpawner.Customer_Already_Serve == 3)
-                {
-                    SceneManager.LoadScene("EndOfDay");
-                }
-                else
-                {
-                    if (FindObjectOfType<CustomerAI>() != null)
-                    {
-                        FindObjectOfType<CustomerAI>().CollectingWeapon();//customer collect weapon
-                    }
-                }
-            }
-            else if(current_Scene.name == "Tutorial_Level")
-            {
-                SceneManager.LoadScene("Game_Level");
-            }
-            bell_Ringing.Play();
-        }*/
+
         }
     
     

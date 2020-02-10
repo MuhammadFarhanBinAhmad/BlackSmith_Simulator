@@ -313,8 +313,8 @@ public class CustomerAI : MonoBehaviour
             current_Voiceline = 6;
         }
         customer_Anim.SetBool("PickingUp", true);
-        //transform.LookAt(FindObjectOfType<VRTK.VRTK_SDKManager>().transform);
-        transform.LookAt(GameObject.Find("Test").transform);
+        transform.LookAt(FindObjectOfType<VRTK.VRTK_SDKManager>().transform);
+        //transform.LookAt(GameObject.Find("Test").transform);
         yield return new WaitForSeconds(0.18f);
         WeaponPosition();
         customer_Dialouge.clip = customer_Order[GameManager.counterDay].customer_Dialouge_Speech[current_Voiceline];

@@ -20,7 +20,7 @@ public class TutorialUIHelp : MonoBehaviour
 
     public void ShowHelpUI()
     {
-        StartCoroutine(HelpUi((FindObjectOfType<BookBehaviour>().CurrentPage) * 2 + 1, (FindObjectOfType<BookBehaviour>().CurrentPage) * 2 + 1));
+        StartCoroutine(HelpUi((FindObjectOfType<BookBehaviour>().CurrentPage) * 2, (FindObjectOfType<BookBehaviour>().CurrentPage) * 2 + 1));
     }
 
     IEnumerator HelpUi(int pageNoLeft, int pageNoRight)
