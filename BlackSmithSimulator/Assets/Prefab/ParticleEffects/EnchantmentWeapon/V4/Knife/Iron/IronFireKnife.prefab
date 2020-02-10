@@ -23811,7 +23811,7 @@ Transform:
   - {fileID: 3268520054369775692}
   - {fileID: 8854401617666125600}
   - {fileID: 4375326516183265867}
-  - {fileID: 8397378098206004939}
+  - {fileID: 6344305058917228277}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27580,7 +27580,7 @@ ParticleSystem:
   LightsModule:
     enabled: 1
     ratio: 1
-    light: {fileID: 0}
+    light: {fileID: 7842266249205223860}
     randomDistribution: 1
     color: 0
     range: 1
@@ -66642,7 +66642,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 0.4512357, b: 0.16509432, a: 1}
   m_Intensity: 0.1
-  m_Range: 1
+  m_Range: 0.427011
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -71444,7 +71444,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!1001 &8911459335436601914
+--- !u!1001 &6280788894875566596
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -71509,13 +71509,23 @@ PrefabInstance:
     - target: {fileID: 1121625737935069152, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
       propertyPath: m_Name
-      value: WeaponSoundEffects
+      value: FireWeaponSoundEffects
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925794036710688193, guid: 9b3b011a5ecaf254185871d566766eb3,
+        type: 3}
+      propertyPath: MinDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925794036710688193, guid: 9b3b011a5ecaf254185871d566766eb3,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 0.3252462
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b3b011a5ecaf254185871d566766eb3, type: 3}
---- !u!4 &8397378098206004939 stripped
+--- !u!4 &6344305058917228277 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
     type: 3}
-  m_PrefabInstance: {fileID: 8911459335436601914}
+  m_PrefabInstance: {fileID: 6280788894875566596}
   m_PrefabAsset: {fileID: 0}

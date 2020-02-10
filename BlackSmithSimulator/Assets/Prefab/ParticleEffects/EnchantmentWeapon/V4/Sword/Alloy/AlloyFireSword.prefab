@@ -1,5 +1,96 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &387077781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 387077782}
+  - component: {fileID: 387077783}
+  m_Layer: 0
+  m_Name: FireLight (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &387077782
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387077781}
+  m_LocalRotation: {x: -0.014005644, y: 0.0000004768371, z: 0.99990195, w: 0.0000002980232}
+  m_LocalPosition: {x: -0.01, y: -0.084, z: 0.325}
+  m_LocalScale: {x: 0.28571472, y: 0.28571498, z: 0.28571483}
+  m_Children: []
+  m_Father: {fileID: 7290348198781220139}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &387077783
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387077781}
+  m_Enabled: 1
+  serializedVersion: 9
+  m_Type: 2
+  m_Color: {r: 1, g: 0.5725106, b: 0.18396229, a: 1}
+  m_Intensity: 0.55
+  m_Range: 0.46802455
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0.1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 1e-45}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &1009523302
 GameObject:
   m_ObjectHideFlags: 0
@@ -8515,7 +8606,7 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 1
+    enabled: 0
     ratio: 1
     light: {fileID: 0}
     randomDistribution: 1
@@ -13268,7 +13359,7 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 1
+    enabled: 0
     ratio: 1
     light: {fileID: 0}
     randomDistribution: 1
@@ -14300,7 +14391,7 @@ ParticleSystem:
   m_GameObject: {fileID: 2147655141227860852}
   serializedVersion: 6
   lengthInSec: 1.6
-  simulationSpeed: 0.25
+  simulationSpeed: 0.75
   stopAction: 0
   cullingMode: 3
   ringBufferMode: 0
@@ -18023,7 +18114,7 @@ ParticleSystem:
   LightsModule:
     enabled: 1
     ratio: 1
-    light: {fileID: 0}
+    light: {fileID: 387077783}
     randomDistribution: 1
     color: 0
     range: 1
@@ -19048,7 +19139,8 @@ Transform:
   - {fileID: 5037705493857409693}
   - {fileID: 1009523303}
   - {fileID: 890664954998111828}
-  - {fileID: 4929090302677408878}
+  - {fileID: 1266276218671507388}
+  - {fileID: 387077782}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22814,7 +22906,7 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 1
+    enabled: 0
     ratio: 1
     light: {fileID: 0}
     randomDistribution: 1
@@ -23830,7 +23922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5037705493857409692}
   m_LocalRotation: {x: -0.014005644, y: 0.0000004768371, z: 0.99990195, w: 0.0000002980232}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.003, y: 0, z: -0.139}
   m_LocalScale: {x: 0.28571472, y: 0.28571498, z: 0.28571483}
   m_Children: []
   m_Father: {fileID: 7290348198781220139}
@@ -23846,9 +23938,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
-  m_Color: {r: 1, g: 0.4512357, b: 0.16509432, a: 1}
-  m_Intensity: 0.1
-  m_Range: 1
+  m_Color: {r: 1, g: 0.5725106, b: 0.18396229, a: 1}
+  m_Intensity: 0
+  m_Range: 0.26877236
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -23892,7 +23984,7 @@ Light:
   m_BounceIntensity: 0.1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.5904e-41, y: 6.0277584e+13, z: NaN, w: 3e-45}
+  m_BoundingSphereOverride: {x: 6.2e-43, y: -0.069624126, z: 6.2e-43, w: 96}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -27660,7 +27752,7 @@ ParticleSystem:
   LightsModule:
     enabled: 1
     ratio: 1
-    light: {fileID: 0}
+    light: {fileID: 5037705493857409694}
     randomDistribution: 1
     color: 0
     range: 1
@@ -32411,7 +32503,7 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 1
+    enabled: 0
     ratio: 1
     light: {fileID: 0}
     randomDistribution: 1
@@ -38155,7 +38247,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!1001 &5423743991933272223
+--- !u!1001 &2211285474730834765
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -38175,7 +38267,7 @@ PrefabInstance:
     - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.129
       objectReference: {fileID: 0}
     - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
@@ -38220,13 +38312,23 @@ PrefabInstance:
     - target: {fileID: 1121625737935069152, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
       propertyPath: m_Name
-      value: WeaponSoundEffects
+      value: FireWeaponSoundEffects
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925794036710688193, guid: 9b3b011a5ecaf254185871d566766eb3,
+        type: 3}
+      propertyPath: MinDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925794036710688193, guid: 9b3b011a5ecaf254185871d566766eb3,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 0.5811603
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b3b011a5ecaf254185871d566766eb3, type: 3}
---- !u!4 &4929090302677408878 stripped
+--- !u!4 &1266276218671507388 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
     type: 3}
-  m_PrefabInstance: {fileID: 5423743991933272223}
+  m_PrefabInstance: {fileID: 2211285474730834765}
   m_PrefabAsset: {fileID: 0}

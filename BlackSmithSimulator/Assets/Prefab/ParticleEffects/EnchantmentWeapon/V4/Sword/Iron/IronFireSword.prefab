@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2288295420611486329}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 0, z: -0.512}
+  m_LocalPosition: {x: -0.054, y: 0, z: -3.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1750361165194015822}
@@ -3762,7 +3762,7 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 1
+    enabled: 0
     ratio: 1
     light: {fileID: 5768101762593053122}
     randomDistribution: 1
@@ -4779,7 +4779,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2564345772142010902}
   m_LocalRotation: {x: -0.9999941, y: -0.000000045751214, z: -0.0034381216, w: -0.000008761882}
-  m_LocalPosition: {x: 0.039, y: 0, z: 1.311}
+  m_LocalPosition: {x: -0.045, y: 0, z: -1.697}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1750361165194015822}
@@ -8515,7 +8515,7 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 1
+    enabled: 0
     ratio: 0
     light: {fileID: 0}
     randomDistribution: 1
@@ -9539,7 +9539,7 @@ Transform:
   - {fileID: 3857831164889457724}
   - {fileID: 1972583008216134183}
   - {fileID: 4931680845116202549}
-  - {fileID: 4324878526642136524}
+  - {fileID: 6124401485722659593}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -179.99998}
@@ -9569,7 +9569,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3732860028847498889}
   m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: 0.03, y: 0, z: -0.519}
+  m_LocalPosition: {x: -0.054, y: 0, z: -3.527}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1750361165194015822}
@@ -14322,7 +14322,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4913676453338601281}
   m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: 0.03, y: 0, z: -0.512}
+  m_LocalPosition: {x: -0.054, y: 0, z: -3.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1750361165194015822}
@@ -18058,7 +18058,7 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 1
+    enabled: 0
     ratio: 1
     light: {fileID: 5768101762593053122}
     randomDistribution: 1
@@ -19075,7 +19075,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8584841195923244080}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.03, y: 0, z: -0.506}
+  m_LocalPosition: {x: -0.054, y: 0, z: -3.514}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1750361165194015822}
@@ -23827,7 +23827,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9108524850663492729}
   m_LocalRotation: {x: 0.0000005066394, y: 0.014005709, z: -0.00000020442528, w: 0.9999019}
-  m_LocalPosition: {x: 0.028, y: -0, z: 0.572}
+  m_LocalPosition: {x: -0.045, y: -0, z: -2.039}
   m_LocalScale: {x: 0.2, y: 0.20000038, z: 0.20000033}
   m_Children: []
   m_Father: {fileID: 1750361165194015822}
@@ -23843,9 +23843,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
-  m_Color: {r: 1, g: 0.4512357, b: 0.16509432, a: 1}
-  m_Intensity: 0.1
-  m_Range: 1
+  m_Color: {r: 1, g: 0.54308414, b: 0.10849059, a: 1}
+  m_Intensity: 0.75
+  m_Range: 0.55878025
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -23889,11 +23889,11 @@ Light:
   m_BounceIntensity: 0.1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.561e-42, y: 6e-44, z: 3, w: 8e-45}
+  m_BoundingSphereOverride: {x: NaN, y: 1.05e-43, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1001 &3686101687577573693
+--- !u!1001 &6619334174914443256
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -23903,7 +23903,7 @@ PrefabInstance:
     - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.068
       objectReference: {fileID: 0}
     - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
@@ -23913,7 +23913,7 @@ PrefabInstance:
     - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2.318
       objectReference: {fileID: 0}
     - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
@@ -23958,13 +23958,23 @@ PrefabInstance:
     - target: {fileID: 1121625737935069152, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
       propertyPath: m_Name
-      value: WeaponSoundEffects
+      value: FireWeaponSoundEffects
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925794036710688193, guid: 9b3b011a5ecaf254185871d566766eb3,
+        type: 3}
+      propertyPath: MinDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925794036710688193, guid: 9b3b011a5ecaf254185871d566766eb3,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 0.44930118
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b3b011a5ecaf254185871d566766eb3, type: 3}
---- !u!4 &4324878526642136524 stripped
+--- !u!4 &6124401485722659593 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
     type: 3}
-  m_PrefabInstance: {fileID: 3686101687577573693}
+  m_PrefabInstance: {fileID: 6619334174914443256}
   m_PrefabAsset: {fileID: 0}

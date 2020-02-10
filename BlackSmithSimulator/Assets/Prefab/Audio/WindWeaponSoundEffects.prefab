@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1090618706515418353}
   - component: {fileID: 4925794036710688193}
   m_Layer: 0
-  m_Name: WeaponSoundEffects
+  m_Name: WindWeaponSoundEffects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,7 +41,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6da169dd7eca9164aaeebd8eb34a8803, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
