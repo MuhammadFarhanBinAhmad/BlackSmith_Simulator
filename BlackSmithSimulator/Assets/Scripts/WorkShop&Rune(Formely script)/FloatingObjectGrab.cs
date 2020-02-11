@@ -21,7 +21,7 @@ public class FloatingObjectGrab : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (Mathf.Round(collision.relativeVelocity.magnitude) >= 5 && collision.gameObject.layer == 9)
+        if (Mathf.Round(collision.relativeVelocity.magnitude) >= 5)
         {
             TutorialDrop();
         }

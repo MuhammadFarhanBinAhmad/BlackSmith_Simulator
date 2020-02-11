@@ -35,7 +35,7 @@ public class TutorialManager : MonoBehaviour
     {
         //new grabbing objects
         darkSceneTutorialImage.sprite = darkSceneTutorialImages[1];
-        grabBottle.SetActive(true);
+        bottleToGrab.SetActive(true);
         bottleSpotLight.SetActive(true);
     }
 

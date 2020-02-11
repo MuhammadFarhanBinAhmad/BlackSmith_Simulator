@@ -56,6 +56,7 @@ public class CallCustomer : MonoBehaviour
                 if (FindObjectOfType<TutorialItemCheck>().weaponenchantedItemCheck == true)
                 {
                     StartCoroutine(LevelLoad("Game_Level"));
+                    //SceneManager.LoadScene("Game_Level");
                 }
         
                 
@@ -70,13 +71,13 @@ public class CallCustomer : MonoBehaviour
         bell_Ringing.Play();
     }
 
-    IEnumerator LevelLoad(string leveltoload)
+    IEnumerator LevelLoad(string level)
     {
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(leveltoload);
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(level);
         asyncOperation.allowSceneActivation = false;
         while (!asyncOperation.isDone)
         {
-            if (asyncOperation.progress > 0.9f)
+            if (asyncOperation.progress >= 0.9f)
             {
                 yield return new WaitForSeconds(3f);
                 asyncOperation.allowSceneActivation = true;
