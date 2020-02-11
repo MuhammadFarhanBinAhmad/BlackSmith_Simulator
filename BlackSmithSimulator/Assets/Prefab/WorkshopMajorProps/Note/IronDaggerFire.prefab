@@ -410,6 +410,7 @@ GameObject:
   - component: {fileID: 6401966316383237005}
   - component: {fileID: 4126309681678198336}
   - component: {fileID: -4937849987161847665}
+  - component: {fileID: 4940404581949587452}
   m_Layer: 0
   m_Name: IronDaggerFire
   m_TagString: Untagged
@@ -426,7 +427,7 @@ Transform:
   m_GameObject: {fileID: 4591020058734449639}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children:
   - {fileID: 1747382531048840233}
   - {fileID: 6664353735558687658}
@@ -480,6 +481,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.025}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &4940404581949587452
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4591020058734449639}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5248524915530293681
 GameObject:
   m_ObjectHideFlags: 0
