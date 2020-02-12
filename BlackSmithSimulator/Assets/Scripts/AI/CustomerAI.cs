@@ -263,7 +263,7 @@ public class CustomerAI : MonoBehaviour
     IEnumerator GivingNote()
     {
         yield return new WaitForSeconds(customer_Anim.GetCurrentAnimatorClipInfo(0).Length);
-        Instantiate(customer_Order[GameManager.counterDay].broken_Weapon, weapon_Drop_Point.transform.position, weapon_Drop_Point.transform.rotation);//spawn ustomer broken weapon
+        Instantiate(customer_Order[GameManager.counterDay].broken_Weapon, weapon_Drop_Point.transform.position, Quaternion.Euler(90,0,0));//spawn ustomer broken weapon
         customer_Anim.SetBool("Giving", false);
         customer_Anim.SetBool(the_Customer_Spawner.general_Customer_Anim[0], true);//play customer order animation
 
