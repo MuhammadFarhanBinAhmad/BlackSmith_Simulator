@@ -22,6 +22,7 @@ public class CustomerAI : MonoBehaviour
     CustomerPointOfInterest customer_Point_Of_Interest;
 
     public GameObject hand;
+    public GameObject current_Weapon;
 
     //check weapon given to customer
     public bool correct_Weapon_Receive;
@@ -313,24 +314,31 @@ public class CustomerAI : MonoBehaviour
             current_Voiceline = 6;
         }
         customer_Anim.SetBool("PickingUp", true);
-        transform.LookAt(FindObjectOfType<VRTK.VRTK_SDKManager>().transform);
-        //transform.LookAt(GameObject.Find("Test").transform);
+        if (FindObjectOfType<VRTK.VRTK_SDKManager>() != null)
+        {
+            transform.LookAt(FindObjectOfType<VRTK.VRTK_SDKManager>().transform);
+        }
+        if (GameObject.Find("Test") != null)
+        {
+            transform.LookAt(GameObject.Find("Test").transform);
+        }
         yield return new WaitForSeconds(0.18f);
         WeaponPosition();
         customer_Dialouge.clip = customer_Order[GameManager.counterDay].customer_Dialouge_Speech[current_Voiceline];
         customer_Dialouge.Play();
         yield return new WaitForSeconds(customer_Order[GameManager.counterDay].customer_Dialouge_Speech[current_Voiceline].length);//place grabing animation time here
         customer_Anim.SetBool("PickingUp", false);
+        Destroy(current_Weapon.gameObject);
         //current_DestinationNumber = the_Customer_Spawner.point_Of_Interest.Count - 1;
         agent.destination = the_Customer_Spawner.destExit.position;
         InvokeRepeating("ExitStore", 0, 0.1f);
     }
     void WeaponPosition()
     {
+        current_Weapon = FindObjectOfType<WeaponCollectionPoint>().created_Weapon.gameObject;
         FindObjectOfType<WeaponCollectionPoint>().created_Weapon.GetComponent<Rigidbody>().useGravity = false;
         FindObjectOfType<WeaponCollectionPoint>().created_Weapon.transform.SetParent(hand.transform);
         FindObjectOfType<WeaponCollectionPoint>().created_Weapon.transform.localPosition = new Vector3(0,0,0);
         FindObjectOfType<WeaponCollectionPoint>().created_Weapon.transform.localEulerAngles = new Vector3(-172,0,0);
-
     }
 }

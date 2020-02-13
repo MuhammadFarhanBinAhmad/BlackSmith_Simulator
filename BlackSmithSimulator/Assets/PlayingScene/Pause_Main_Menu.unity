@@ -540,6 +540,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cec40be71afb0448a8ff8fa4516b726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  solana_Customer_Notes:
+  - {fileID: 5536702474748235814, guid: c1157fbb7c4924049aee31b7b808ba82, type: 3}
+  - {fileID: 1398086686356054106, guid: 588c86e777b3f7b41ad015beae0849d6, type: 3}
+  antoine_Customer_Notes:
+  - {fileID: 7392965038437481053, guid: 4261762bf93ee7344a8372a71dcbea62, type: 3}
+  - {fileID: 6574417885893011026, guid: a008ee38a8be7ab4da0ae48b1cb5d72f, type: 3}
+  note_Spawning_Point:
+  - {fileID: 1311914415}
+  - {fileID: 2144249701}
 --- !u!4 &332863872
 Transform:
   m_ObjectHideFlags: 0
@@ -650,6 +659,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1311914415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1311914416}
+  m_Layer: 0
+  m_Name: NoteSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1311914416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311914415}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.36, y: 0.073, z: -0.379}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1370341443
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,6 +1518,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 12.87, y: 492.989, z: 206.04999}
+--- !u!1 &2144249701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2144249702}
+  m_Layer: 0
+  m_Name: NoteSpawnPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2144249702
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144249701}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.36, y: 0.073, z: -1.435}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1460663550441273354
 Transform:
   m_ObjectHideFlags: 0
