@@ -34,21 +34,30 @@ public class GameManager : MonoBehaviour
     {
         if (GameManager.counterDay == 4)
         {
-            if (scoreKnight != 4)
+            if(scoreKnight == 4 && scoreDrow == 4)
             {
                 Instantiate(antoine_Customer_Notes[0], note_Spawning_Point[0].transform.position, note_Spawning_Point[0].transform.rotation);
-            }
-            else
-            {
-                Instantiate(antoine_Customer_Notes[1], note_Spawning_Point[0].transform.position, note_Spawning_Point[0].transform.rotation);
-            }
-            if (scoreDrow != 4)
-            {
                 Instantiate(solana_Customer_Notes[0], note_Spawning_Point[1].transform.position, note_Spawning_Point[1].transform.rotation);
             }
-            else
+            else if (scoreKnight != 4 && scoreDrow != 4)
             {
-                Instantiate(solana_Customer_Notes[1], note_Spawning_Point[1].transform.position, note_Spawning_Point[1].transform.rotation);
+                //knight score higher
+                if (scoreKnight > scoreDrow)
+                {
+                    Instantiate(antoine_Customer_Notes[1], note_Spawning_Point[0].transform.position, note_Spawning_Point[0].transform.rotation);
+                    Instantiate(solana_Customer_Notes[1], note_Spawning_Point[1].transform.position, note_Spawning_Point[1].transform.rotation);
+                }
+                //drow score higher
+                if (scoreDrow > scoreKnight || scoreDrow == scoreKnight)
+                {
+                    Instantiate(antoine_Customer_Notes[2], note_Spawning_Point[0].transform.position, note_Spawning_Point[0].transform.rotation);
+                    Instantiate(solana_Customer_Notes[2], note_Spawning_Point[1].transform.position, note_Spawning_Point[1].transform.rotation);
+                }
+                if (scoreKnight == 0 && scoreDrow == 0)
+                {
+                    Instantiate(antoine_Customer_Notes[3], note_Spawning_Point[0].transform.position, note_Spawning_Point[0].transform.rotation);
+                    Instantiate(solana_Customer_Notes[3], note_Spawning_Point[1].transform.position, note_Spawning_Point[1].transform.rotation);
+                }
             }
             ResetPoint();
         }
@@ -58,6 +67,7 @@ public class GameManager : MonoBehaviour
         }
         Debug.Log("Current Day defined by the Game Manager is " + counterDay);
     }
+
     void ResetPoint()
     {
         GameManager.counterDay = 0;

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &519317027050134776
+--- !u!1 &744373023954546253
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8757299942103945059}
-  - component: {fileID: 1176294058145452696}
-  - component: {fileID: 1726705524225221772}
+  - component: {fileID: 7504241697635040122}
+  - component: {fileID: 3897299458556325500}
+  - component: {fileID: 4151695236013492912}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &8757299942103945059
+--- !u!224 &7504241697635040122
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519317027050134776}
+  m_GameObject: {fileID: 744373023954546253}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -37,21 +37,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1176294058145452696
+--- !u!222 &3897299458556325500
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519317027050134776}
+  m_GameObject: {fileID: 744373023954546253}
   m_CullTransparentMesh: 0
---- !u!114 &1726705524225221772
+--- !u!114 &4151695236013492912
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519317027050134776}
+  m_GameObject: {fileID: 744373023954546253}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -63,20 +63,24 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Dear sir,
+  m_text: 'Dear Wizard,
 
 
-    You have been summoned to witness the execution of the thieving Dark Elf that
-    goes by the name Solana Tal''shel. She has personally invited you to witness her
-    execution as her only request.
+    Some, complications have come up and so I won''t be able to tell you this in person.
 
 
-    The execution will be held at dawn on Monday.
+    Last night that Paladin brought me into the Chambers. The original plan was to
+    knock him out and escape with as much gems as I could carry in my pouch. That
+    was until the Royal Guard showed up. I had already considered inviting you to
+    my execution when, Philip saved me. He managed to get the Royal Guard off me while
+    insisting that I was his "date". At least I still have my head.
+
+    I need to head back to my hometown in the mean time.
 
 
-    With Regards,
+    Until next time,
 
-    The Royal Court'
+    Solana Tal''shel'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cd85503e599866441b3e5f9e60a232bc, type: 2}
   m_sharedMaterial: {fileID: 7465237086064542134, guid: cd85503e599866441b3e5f9e60a232bc,
@@ -145,13 +149,13 @@ MonoBehaviour:
   m_pageToDisplay: 1
   m_margin: {x: 0.9730458, y: 0.123287216, z: 0, w: 1.4209048}
   m_textInfo:
-    textComponent: {fileID: 1726705524225221772}
-    characterCount: 277
+    textComponent: {fileID: 4151695236013492912}
+    characterCount: 567
     spriteCount: 0
-    spaceCount: 51
-    wordCount: 49
+    spaceCount: 112
+    wordCount: 110
     linkCount: 0
-    lineCount: 13
+    lineCount: 19
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -199,7 +203,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: -0.001}
   m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
   m_Children:
-  - {fileID: 8757299942103945059}
+  - {fileID: 7504241697635040122}
   m_Father: {fileID: 5453346667025854482}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -436,10 +440,10 @@ GameObject:
   - component: {fileID: 8288429774135668881}
   - component: {fileID: 854393440004450631}
   - component: {fileID: 5868815242504613593}
-  - component: {fileID: -375099446735403708}
-  - component: {fileID: -3165591915436267952}
+  - component: {fileID: 1440240819773015854}
+  - component: {fileID: -5667358204095152845}
   m_Layer: 0
-  m_Name: BadNote(Solana)
+  m_Name: AntoineScoreMore(Solana)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -524,7 +528,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-375099446735403708
+--- !u!114 &1440240819773015854
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -544,7 +548,7 @@ MonoBehaviour:
   onGrabCollisionDelay: 0
   destroyImmediatelyOnThrow: 1
   breakForce: 1500
---- !u!114 &-3165591915436267952
+--- !u!114 &-5667358204095152845
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

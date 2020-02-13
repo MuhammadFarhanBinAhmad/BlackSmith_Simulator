@@ -55,15 +55,14 @@ public class CallCustomer : MonoBehaviour
                 FindObjectOfType<TutorialItemCheck>().WeaponCompletedCheck();
                 if (FindObjectOfType<TutorialItemCheck>().weaponenchantedItemCheck == true)
                 {
-                    StartCoroutine(LevelLoad("Game_Level"));
-                    //SceneManager.LoadScene("Game_Level");
+                    SceneManager.LoadScene("Game_Level");
                 }
         
                 
             }
             else
             {
-                //SceneManager.LoadScene("Game_Level");
+                SceneManager.LoadScene("Game_Level");
             }
 
 
