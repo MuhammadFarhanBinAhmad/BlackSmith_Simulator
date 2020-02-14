@@ -166,6 +166,7 @@ GameObject:
   - component: {fileID: 8532379509309681744}
   - component: {fileID: 6357431719437757345}
   - component: {fileID: -7579985483471011156}
+  - component: {fileID: 4664457521109244444}
   m_Layer: 0
   m_Name: Solana
   m_TagString: Untagged
@@ -267,6 +268,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: de3e9c46c3ef221418b8744bbef14530, type: 2}
   - {fileID: 11400000, guid: 77eeedc73afa26f429b8faf8a0fce072, type: 2}
   hand: {fileID: 9103775853590440906}
+  current_Weapon: {fileID: 0}
   correct_Weapon_Receive: 0
   customer_Dialouge: {fileID: -7579985483471011156}
 --- !u!82 &-7579985483471011156
@@ -365,6 +367,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &4664457521109244444
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372240657062210236}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4642102, y: 1.7601804, z: 0.36804292}
+  m_Center: {x: -0.0022896826, y: 0.8884035, z: 0.036635116}
 --- !u!1 &383308022880647032
 GameObject:
   m_ObjectHideFlags: 0
