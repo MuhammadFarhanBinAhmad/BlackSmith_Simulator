@@ -36,6 +36,7 @@ Transform:
   - {fileID: 6592443659995717163}
   - {fileID: 4226756096817042360}
   - {fileID: 1877308988176107598}
+  - {fileID: 4534504314489884307}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90.00001}
@@ -37831,7 +37832,7 @@ PrefabInstance:
     - target: {fileID: 1090618706515418353, guid: eec3ad0427610594f8a5e328bc4ea2eb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.187
+      value: 0.397
       objectReference: {fileID: 0}
     - target: {fileID: 1090618706515418353, guid: eec3ad0427610594f8a5e328bc4ea2eb,
         type: 3}
@@ -37886,7 +37887,7 @@ PrefabInstance:
     - target: {fileID: 4925794036710688193, guid: eec3ad0427610594f8a5e328bc4ea2eb,
         type: 3}
       propertyPath: MaxDistance
-      value: 0.5767489
+      value: 0.27746868
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eec3ad0427610594f8a5e328bc4ea2eb, type: 3}
@@ -37895,4 +37896,89 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1090618706515418353, guid: eec3ad0427610594f8a5e328bc4ea2eb,
     type: 3}
   m_PrefabInstance: {fileID: 1526488806731928767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3589206490346033762
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2128302069399982050}
+    m_Modifications:
+    - target: {fileID: 1090618706515418353, guid: eec3ad0427610594f8a5e328bc4ea2eb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090618706515418353, guid: eec3ad0427610594f8a5e328bc4ea2eb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090618706515418353, guid: eec3ad0427610594f8a5e328bc4ea2eb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.101
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090618706515418353, guid: eec3ad0427610594f8a5e328bc4ea2eb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090618706515418353, guid: eec3ad0427610594f8a5e328bc4ea2eb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090618706515418353, guid: eec3ad0427610594f8a5e328bc4ea2eb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090618706515418353, guid: eec3ad0427610594f8a5e328bc4ea2eb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090618706515418353, guid: eec3ad0427610594f8a5e328bc4ea2eb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090618706515418353, guid: eec3ad0427610594f8a5e328bc4ea2eb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090618706515418353, guid: eec3ad0427610594f8a5e328bc4ea2eb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090618706515418353, guid: eec3ad0427610594f8a5e328bc4ea2eb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121625737935069152, guid: eec3ad0427610594f8a5e328bc4ea2eb,
+        type: 3}
+      propertyPath: m_Name
+      value: IceWeaponSoundEffects (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925794036710688193, guid: eec3ad0427610594f8a5e328bc4ea2eb,
+        type: 3}
+      propertyPath: MinDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925794036710688193, guid: eec3ad0427610594f8a5e328bc4ea2eb,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 0.25575924
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eec3ad0427610594f8a5e328bc4ea2eb, type: 3}
+--- !u!4 &4534504314489884307 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1090618706515418353, guid: eec3ad0427610594f8a5e328bc4ea2eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 3589206490346033762}
   m_PrefabAsset: {fileID: 0}
