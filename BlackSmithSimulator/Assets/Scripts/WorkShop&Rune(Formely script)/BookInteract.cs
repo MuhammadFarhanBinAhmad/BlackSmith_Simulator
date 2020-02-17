@@ -16,41 +16,6 @@ public class BookInteract : MonoBehaviour
         PreviousPage,
         NextPage
     }
-
-    protected virtual void OnEnable()
-    {
-        linkedObject = (linkedObject == null ? GetComponent<VRTK_InteractableObject>() : linkedObject);
-
-        if (linkedObject != null)
-        {
-            linkedObject.InteractableObjectUsed += InteractableObjectUsed;
-            linkedObject.InteractableObjectUnused += InteractableObjectUnused;
-        }
-    }
-
-    protected virtual void OnDisable()
-    {
-
-        if (linkedObject != null)
-        {
-            linkedObject.InteractableObjectUsed -= InteractableObjectUsed;
-            linkedObject.InteractableObjectUnused -= InteractableObjectUnused;
-        }
-    }
-
-    
-    protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
-    {
-        //Object used = toggle on
-
-        //TurnPage();
-    }
-
-    protected virtual void InteractableObjectUnused(object sender, InteractableObjectEventArgs e)
-    {
-        //Object unused = toggle off
-        //TurnPage();
-    }
     
     public void TurnPage()
     {
