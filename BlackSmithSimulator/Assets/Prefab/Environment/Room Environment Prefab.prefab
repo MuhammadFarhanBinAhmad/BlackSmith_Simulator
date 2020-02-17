@@ -6267,6 +6267,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystalball
       objectReference: {fileID: 0}
+    - target: {fileID: 5345827295431529287, guid: 8b1089dfea7851e4aaddc32a8f6ece71,
+        type: 3}
+      propertyPath: m_BoxSize.x
+      value: 7.0075207
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345827295431529287, guid: 8b1089dfea7851e4aaddc32a8f6ece71,
+        type: 3}
+      propertyPath: m_BoxOffset.x
+      value: -2.0037603
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345827295431529287, guid: 8b1089dfea7851e4aaddc32a8f6ece71,
+        type: 3}
+      propertyPath: m_BoxSize.z
+      value: 8.511757
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345827295431529287, guid: 8b1089dfea7851e4aaddc32a8f6ece71,
+        type: 3}
+      propertyPath: m_BoxOffset.z
+      value: -1.6735592
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345827295431529287, guid: 8b1089dfea7851e4aaddc32a8f6ece71,
+        type: 3}
+      propertyPath: m_BoxSize.y
+      value: 4.2774057
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345827295431529287, guid: 8b1089dfea7851e4aaddc32a8f6ece71,
+        type: 3}
+      propertyPath: m_BoxOffset.y
+      value: 0.63870287
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345827295431529287, guid: 8b1089dfea7851e4aaddc32a8f6ece71,
+        type: 3}
+      propertyPath: m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b1089dfea7851e4aaddc32a8f6ece71, type: 3}
 --- !u!4 &5940233817840356860 stripped
@@ -8729,22 +8764,22 @@ PrefabInstance:
     - target: {fileID: 1098929374374427749, guid: 1f61013e01a694844b1bf0f6ce66d44e,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 323
+      value: 312
       objectReference: {fileID: 0}
     - target: {fileID: 1098929374374427749, guid: 1f61013e01a694844b1bf0f6ce66d44e,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 49
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 1098929374374427749, guid: 1f61013e01a694844b1bf0f6ce66d44e,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 50
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 1098929374374427749, guid: 1f61013e01a694844b1bf0f6ce66d44e,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1098929374374427749, guid: 1f61013e01a694844b1bf0f6ce66d44e,
         type: 3}
