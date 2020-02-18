@@ -18,10 +18,10 @@ public class NewRuneSquareButton : MonoBehaviour
     {
         //Debug.Log("Button " + thisButtonNumber + " has been pressed");
         this.GetComponent<Button>().interactable = false;
-        this.GetComponent<Image>().color = Color.yellow;
+        this.GetComponent<Image>().color = new Color(1, 0.92f, 0.016f);
         FindObjectOfType<NewRuneSquareMaster>().NumberSequenceList(thisButtonNumber);
         FindObjectOfType<RuneSquareLineRenderer>().CreateRuneLine(thisButtonPos);
-        Instantiate(sparkle, thisButtonPos, Quaternion.identity);
+        Instantiate(sparkle, this.transform.position, Quaternion.identity);
     }
 
     public void ReleaseButton()
