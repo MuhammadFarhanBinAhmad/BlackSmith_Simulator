@@ -196,6 +196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 401301866}
+  - component: {fileID: 401301867}
   m_Layer: 0
   m_Name: Test
   m_TagString: Untagged
@@ -217,6 +218,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!123 &401301867
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401301865}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &502089766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1585,6 +1602,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1273288023550358201, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8354447367a7e274aa24bd9b389dcbd3,
+        type: 3}
     - target: {fileID: 1568258421737532098, guid: e34dee5992dab4144b90989d7928ad74,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1955,6 +1978,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8205848057966189310, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8205848058841840920, guid: e34dee5992dab4144b90989d7928ad74,
         type: 3}
       propertyPath: Pages.Array.size
@@ -2049,6 +2077,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.955
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352007752023357440, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: MinDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352007752023357440, guid: e34dee5992dab4144b90989d7928ad74,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 2.6666155
       objectReference: {fileID: 0}
     - target: {fileID: 8468788527938768419, guid: e34dee5992dab4144b90989d7928ad74,
         type: 3}

@@ -804,7 +804,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4c6c7429c309bf34d974d99c512a7f23, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8cb592f4a59c604dafc1ecfcadea984, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -836,6 +836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisButtonNumber: 1
   thisButtonPos: {x: 0, y: 0, z: 0}
+  sparkle: {fileID: 0}
 --- !u!1 &489300186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1750,7 +1751,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4c6c7429c309bf34d974d99c512a7f23, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 11f20e38ae6060e4fb0ae05ec60c0809, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1782,6 +1783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisButtonNumber: 3
   thisButtonPos: {x: 0, y: 0, z: 0}
+  sparkle: {fileID: 0}
 --- !u!23 &824602218 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 8205848058841840921, guid: e34dee5992dab4144b90989d7928ad74,
@@ -2138,7 +2140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4c6c7429c309bf34d974d99c512a7f23, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6904c42cb631fb942b00205b154033f1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2170,6 +2172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisButtonNumber: 4
   thisButtonPos: {x: 0, y: 0, z: 0}
+  sparkle: {fileID: 7375823707707088897, guid: 89e290983ef7586439dbd6e6b6a37ddc, type: 3}
 --- !u!1 &1147491301
 GameObject:
   m_ObjectHideFlags: 0
@@ -2282,7 +2285,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4c6c7429c309bf34d974d99c512a7f23, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b51f74763f0d68c4ca906e653ebe6b3f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2314,6 +2317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisButtonNumber: 2
   thisButtonPos: {x: 0, y: 0, z: 0}
+  sparkle: {fileID: 0}
 --- !u!1 &1179462410
 GameObject:
   m_ObjectHideFlags: 0

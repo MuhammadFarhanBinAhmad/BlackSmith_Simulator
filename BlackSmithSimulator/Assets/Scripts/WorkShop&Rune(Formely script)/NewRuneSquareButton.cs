@@ -7,6 +7,7 @@ public class NewRuneSquareButton : MonoBehaviour
 {
     public int thisButtonNumber;
     public Vector3 thisButtonPos;
+    public GameObject sparkle;
 
     public void Start()
     {
@@ -20,6 +21,7 @@ public class NewRuneSquareButton : MonoBehaviour
         this.GetComponent<Image>().color = Color.yellow;
         FindObjectOfType<NewRuneSquareMaster>().NumberSequenceList(thisButtonNumber);
         FindObjectOfType<RuneSquareLineRenderer>().CreateRuneLine(thisButtonPos);
+        Instantiate(sparkle, thisButtonPos, Quaternion.identity);
     }
 
     public void ReleaseButton()
