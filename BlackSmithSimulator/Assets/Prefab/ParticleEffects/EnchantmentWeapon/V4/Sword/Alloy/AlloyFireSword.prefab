@@ -87,7 +87,7 @@ Light:
   m_BounceIntensity: 0.1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0.20703125, y: 0.08203125, z: 0.015625, w: -0.08203125}
+  m_BoundingSphereOverride: {x: 1.3743895e+11, y: 1.5e-44, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -23941,7 +23941,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 0.5725106, b: 0.18396229, a: 1}
   m_Intensity: 0
-  m_Range: 0.32573062
+  m_Range: 0.39877033
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -23985,7 +23985,7 @@ Light:
   m_BounceIntensity: 0.1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.11e-43, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 2.1e-44, z: 7.685e-42, w: 6e-44}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -38268,7 +38268,7 @@ PrefabInstance:
     - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.349
+      value: 0.338
       objectReference: {fileID: 0}
     - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
@@ -38323,7 +38323,7 @@ PrefabInstance:
     - target: {fileID: 4925794036710688193, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
       propertyPath: MaxDistance
-      value: 0.26630774
+      value: 0.2602
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b3b011a5ecaf254185871d566766eb3, type: 3}
@@ -38353,7 +38353,7 @@ PrefabInstance:
     - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.119
+      value: -0.145
       objectReference: {fileID: 0}
     - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
@@ -38408,7 +38408,7 @@ PrefabInstance:
     - target: {fileID: 4925794036710688193, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
       propertyPath: MaxDistance
-      value: 0.24257511
+      value: 0.24187356
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b3b011a5ecaf254185871d566766eb3, type: 3}

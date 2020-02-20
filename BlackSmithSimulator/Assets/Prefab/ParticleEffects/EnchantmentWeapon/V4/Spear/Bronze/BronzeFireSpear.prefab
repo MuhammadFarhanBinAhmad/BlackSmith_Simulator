@@ -66671,7 +66671,7 @@ Light:
   m_BounceIntensity: 0.1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1, y: 1, z: 1, w: 1}
+  m_BoundingSphereOverride: {x: 0.05078125, y: 0.015625, z: 0.013671875, w: -0.015625}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -66824,7 +66824,7 @@ PrefabInstance:
     - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0099
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
@@ -66834,7 +66834,7 @@ PrefabInstance:
     - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.599
+      value: 0.608
       objectReference: {fileID: 0}
     - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
@@ -66889,7 +66889,7 @@ PrefabInstance:
     - target: {fileID: 4925794036710688193, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
       propertyPath: MaxDistance
-      value: 0.17632663
+      value: 0.1649134
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b3b011a5ecaf254185871d566766eb3, type: 3}
@@ -66909,7 +66909,7 @@ PrefabInstance:
     - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0099
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
@@ -66919,7 +66919,7 @@ PrefabInstance:
     - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.9585
+      value: 0.958
       objectReference: {fileID: 0}
     - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
@@ -66974,7 +66974,7 @@ PrefabInstance:
     - target: {fileID: 4925794036710688193, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
       propertyPath: MaxDistance
-      value: 0.22536893
+      value: 0.19285822
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b3b011a5ecaf254185871d566766eb3, type: 3}
@@ -67059,7 +67059,7 @@ PrefabInstance:
     - target: {fileID: 4925794036710688193, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
       propertyPath: MaxDistance
-      value: 0.08674216
+      value: 0.070647486
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b3b011a5ecaf254185871d566766eb3, type: 3}

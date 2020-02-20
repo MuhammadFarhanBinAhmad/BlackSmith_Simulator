@@ -66624,7 +66624,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7842266249205223862}
   m_LocalRotation: {x: -0.014005644, y: 0.0000004768371, z: 0.99990195, w: 0.0000002980232}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.054}
   m_LocalScale: {x: 0.28571472, y: 0.28571498, z: 0.28571483}
   m_Children: []
   m_Father: {fileID: 5480969676908232193}
@@ -66642,7 +66642,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 0.4512357, b: 0.16509432, a: 1}
   m_Intensity: 0.1
-  m_Range: 0.427011
+  m_Range: 0.28855824
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -66686,7 +66686,7 @@ Light:
   m_BounceIntensity: 0.1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.4e-44, z: 8.846e-42, w: 6e-44}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -71464,7 +71464,7 @@ PrefabInstance:
     - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0439
+      value: 0.058
       objectReference: {fileID: 0}
     - target: {fileID: 1090618706515418353, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
@@ -71519,7 +71519,7 @@ PrefabInstance:
     - target: {fileID: 4925794036710688193, guid: 9b3b011a5ecaf254185871d566766eb3,
         type: 3}
       propertyPath: MaxDistance
-      value: 0.26867864
+      value: 0.2757815
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b3b011a5ecaf254185871d566766eb3, type: 3}
