@@ -336,9 +336,14 @@ public class CustomerAI : MonoBehaviour
     void WeaponPosition()
     {
         current_Weapon = FindObjectOfType<WeaponCollectionPoint>().created_Weapon.gameObject;
-        FindObjectOfType<WeaponCollectionPoint>().created_Weapon.GetComponent<Rigidbody>().useGravity = false;
+        /*FindObjectOfType<WeaponCollectionPoint>().created_Weapon.GetComponent<Rigidbody>().isKinematic = false;
         FindObjectOfType<WeaponCollectionPoint>().created_Weapon.transform.SetParent(hand.transform);
         FindObjectOfType<WeaponCollectionPoint>().created_Weapon.transform.localPosition = new Vector3(0,0,0);
-        FindObjectOfType<WeaponCollectionPoint>().created_Weapon.transform.localEulerAngles = new Vector3(-172,0,0);
+        FindObjectOfType<WeaponCollectionPoint>().created_Weapon.transform.localEulerAngles = new Vector3(-172,0,0);*/
+        current_Weapon.GetComponent<Rigidbody>().useGravity = false;
+        current_Weapon.GetComponent<Rigidbody>().isKinematic = true;
+        current_Weapon.transform.SetParent(hand.transform);
+        current_Weapon.transform.localPosition = new Vector3(0, 0, 0);
+        current_Weapon.transform.localEulerAngles = new Vector3(-172, 0, 0);
     }
 }

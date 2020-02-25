@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     public static int counterCustomer = 0;
     public static int scoreKnight = 0;
     public static int scoreDrow = 0;
-
     public List<GameObject> solana_Customer_Notes = new List<GameObject>();
     public List<GameObject> antoine_Customer_Notes = new List<GameObject>();
     public List<GameObject> note_Spawning_Point = new List<GameObject>();
@@ -19,6 +18,7 @@ public class GameManager : MonoBehaviour
     {
         //Always force one instance of this object;
         DontDestroyOnLoad(this.gameObject);
+
         if(gameManager == null)
         {
             gameManager = this.GetComponent<GameManager>();
@@ -27,17 +27,22 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        if (counterDay == 4)
+        {
+            AddDay();
+        }
         Debug.Log("Current Day defined by the Game Manager is " + counterDay);
     }
 
     public void AddDay()
     {
-        if (GameManager.counterDay == 4)
+        if (counterDay == 4)
         {
             if(scoreKnight == 4 && scoreDrow == 4)
             {
                 Instantiate(antoine_Customer_Notes[0], note_Spawning_Point[0].transform.position, note_Spawning_Point[0].transform.rotation);
                 Instantiate(solana_Customer_Notes[0], note_Spawning_Point[1].transform.position, note_Spawning_Point[1].transform.rotation);
+                print("hit");
             }
             else if (scoreKnight != 4 && scoreDrow != 4)
             {
@@ -47,16 +52,17 @@ public class GameManager : MonoBehaviour
                     Instantiate(antoine_Customer_Notes[1], note_Spawning_Point[0].transform.position, note_Spawning_Point[0].transform.rotation);
                     Instantiate(solana_Customer_Notes[1], note_Spawning_Point[1].transform.position, note_Spawning_Point[1].transform.rotation);
                 }
-                //drow score higher
-                if (scoreDrow > scoreKnight || scoreDrow == scoreKnight)
-                {
-                    Instantiate(antoine_Customer_Notes[2], note_Spawning_Point[0].transform.position, note_Spawning_Point[0].transform.rotation);
-                    Instantiate(solana_Customer_Notes[2], note_Spawning_Point[1].transform.position, note_Spawning_Point[1].transform.rotation);
-                }
-                if (scoreKnight == 0 && scoreDrow == 0)
+                else if (scoreKnight == 0 && scoreDrow == 0)
                 {
                     Instantiate(antoine_Customer_Notes[3], note_Spawning_Point[0].transform.position, note_Spawning_Point[0].transform.rotation);
                     Instantiate(solana_Customer_Notes[3], note_Spawning_Point[1].transform.position, note_Spawning_Point[1].transform.rotation);
+                }
+                //drow score higher
+                else if (scoreDrow > scoreKnight || scoreDrow == scoreKnight)
+                {
+                    Instantiate(antoine_Customer_Notes[2], note_Spawning_Point[0].transform.position, note_Spawning_Point[0].transform.rotation);
+                    Instantiate(solana_Customer_Notes[2], note_Spawning_Point[1].transform.position, note_Spawning_Point[1].transform.rotation);
+                    print("hit1");
                 }
             }
             ResetPoint();
