@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
 
     private static GameManager gameManager;
-    public static int counterDay = -1;
+    public static int counterDay = 0;
     public static int counterCustomer = 0;
     public static int scoreKnight = 4;
     public static int scoreDrow = 4;
@@ -28,12 +28,14 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
         Debug.Log("Current Day defined by the Game Manager is " + counterDay);
-        AddDay();
+        CheckDay();
     }
     public void AddDay()
     {
         counterDay++;
-        print("day" + counterDay);
+    }
+    void CheckDay()
+    {
         if (counterDay == 4)
         {
             SpawnNote();
@@ -72,7 +74,8 @@ public class GameManager : MonoBehaviour
 
     void ResetPoint()
     {
-        GameManager.counterDay = -1;
+        print("reset");
+        GameManager.counterDay = 0;
         scoreKnight = 0;
         scoreDrow = 0;
     }
