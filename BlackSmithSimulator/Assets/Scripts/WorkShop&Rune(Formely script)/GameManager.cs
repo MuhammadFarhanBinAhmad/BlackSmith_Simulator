@@ -9,8 +9,8 @@ public class GameManager : MonoBehaviour
     private static GameManager gameManager;
     public static int counterDay = -1;
     public static int counterCustomer = 0;
-    public static int scoreKnight = 0;
-    public static int scoreDrow = 0;
+    public static int scoreKnight = 4;
+    public static int scoreDrow = 4;
     public List<GameObject> solana_Customer_Notes = new List<GameObject>();
     public List<GameObject> antoine_Customer_Notes = new List<GameObject>();
     public List<GameObject> note_Spawning_Point = new List<GameObject>();
@@ -27,22 +27,19 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        AddDay();
         Debug.Log("Current Day defined by the Game Manager is " + counterDay);
+        AddDay();
     }
-
     public void AddDay()
     {
+        counterDay++;
+        print("day" + counterDay);
         if (counterDay == 4)
         {
             SpawnNote();
         }
-        else
-        {
-            counterDay++;
-        }
     }
-
+    
     void SpawnNote()
     {
         if (scoreKnight == 4 && scoreDrow == 4)
@@ -75,7 +72,7 @@ public class GameManager : MonoBehaviour
 
     void ResetPoint()
     {
-        GameManager.counterDay = 0;
+        GameManager.counterDay = -1;
         scoreKnight = 0;
         scoreDrow = 0;
     }

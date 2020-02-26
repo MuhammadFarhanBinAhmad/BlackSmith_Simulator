@@ -37,7 +37,7 @@ public class CallCustomer : MonoBehaviour
             if (CustomerSpawner.Customer_Already_Serve == 2  && current_Scene.name != "Tutorial_Level")
             {
                 
-                FindObjectOfType<GameManager>().AddDay();
+                //FindObjectOfType<GameManager>().AddDay();
                 SceneManager.LoadScene("EndOfDay");
             }
             else
